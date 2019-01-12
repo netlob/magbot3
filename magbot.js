@@ -25,7 +25,7 @@ getSchools(user.magister.school)
  * Adds event to user's school calendar.
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
-function pushCalendar(auth) {
+function pushCalendar(m, auth) {
     delEvents(auth)
     const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
