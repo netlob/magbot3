@@ -1,0 +1,29 @@
+{
+  "name": "magbot3",
+  "version": "1.0.0",
+  "description": "Third installment of Magbot.",
+  "main": "magbot.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamorgen/magbot3.git"
+  },
+  "keywords": [
+    "magister",
+    "magbot",
+    "google",
+    "calendar",
+    "googlecalendar"
+  ],
+  "author": "Sj3rd, 7kasper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mamorgen/magbot3/issues"
+  },
+  "homepage": "https://github.com/mamorgen/magbot3#readme",
+  "dependencies": {
+    "magister.js": "^2.0.0-alpha.5"
+  }
+}
