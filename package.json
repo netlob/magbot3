@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/mamorgen/magbot3#readme",
   "dependencies": {
-    "magister.js": "^2.0.0-alpha.5"
+    "googleapis": "^36.0.0",
+    "magister.js": "^2.0.0-alpha.5",
+    "moment-business-days": "^1.1.3"
   }
 }
