@@ -1,11 +1,7 @@
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
 
-var user = [];
-user.username = 'username'
-user.password = 'password'
-user.school = 'school'
-
+var user = require('./login');
 
 getSchools(user.school)
 	.then((schools) => schools[0])
