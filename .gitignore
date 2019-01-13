@@ -61,3 +61,5 @@ typings/
 .next
 
 login.js
+
+secret.js
