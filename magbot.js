@@ -1,5 +1,6 @@
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
+const {google} = require('googleapis');
 
 var user = require('./login');
 
