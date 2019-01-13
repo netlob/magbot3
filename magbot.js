@@ -2,8 +2,8 @@ const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
 const {google} = require('googleapis');
 
-var user = require('./login');
-
+var user = require('./login.var');
+console
 getSchools(user.magister.school)
 	.then((schools) => schools[0])
 	.then((school) => magister({
@@ -21,11 +21,6 @@ getSchools(user.magister.school)
 		console.error('something went wrong:', err);
     });
 
-// 
-/**
- * Adds event to user's school calendar.
- * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
- */
 function pushCalendar(m, auth) {
     delEvents(auth)
     const calendar = google.calendar({version: 'v3', auth});
@@ -56,10 +51,6 @@ function pushCalendar(m, auth) {
 	}
 }
 
-/**
- * Deletes the events on the user's school calendar.
- * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
- */
 function delEvents(auth) {
 	const calendar = google.calendar({version: 'v3', auth});
 	calendar.events.list({
