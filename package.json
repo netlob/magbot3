@@ -16,7 +16,8 @@
     "magbot",
     "google",
     "calendar",
-    "googlecalendar"
+    "googlecalendar",
+    "netlob"
   ],
   "author": "Sj3rd, 7kasper",
   "license": "MIT",
