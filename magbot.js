@@ -3,7 +3,7 @@ var moment = require('moment-business-days');
 const {google} = require('googleapis');
 const RestNio = require('restnio');
 
-var user = require('./login.var');
+var user = require('./login');
 console
 getSchools(user.magister.school)
 	.then((schools) => schools[0])
