@@ -60,6 +60,6 @@ typings/
 # next.js build output
 .next
 
-login.js
+login.var.js
 
-secret.js
+secret.var.js
