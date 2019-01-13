@@ -1,6 +1,7 @@
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
 const {google} = require('googleapis');
+const RestNio = require('restnio');
 
 var user = require('./login.var');
 console
@@ -20,6 +21,44 @@ getSchools(user.magister.school)
 	}, (err) => {
 		console.error('something went wrong:', err);
     });
+var user = require('./login');
+
+
+let server = new RestNio((router, restnio) => {
+	router.all('/', {
+		func: (params, client) => {
+			return getSchools(user.magister.school)
+			.then((schools) => schools[0])
+			.then((school) => magister({
+				school,
+				username: user.magister.username,
+				password: user.magister.password,
+			}))
+			.then((m) => m.appointments(day(-1), day(4)));
+		}
+	});
+}, {
+	port: 8080
+});
+server.bind();
+
+
+// getSchools(user.magister.school)
+// 	.then((schools) => schools[0])
+// 	.then((school) => magister({
+// 		school,
+// 		username: user.magister.username,
+// 		password: user.magister.password,
+// 	}))
+// 	.then((m) => {
+//         m.appointments(day(-1), day(4))
+//         .then((m => {
+// 			console.dir(m)
+// 			//pushCalendar(m)
+//         }))
+// 	}, (err) => {
+// 		console.error('something went wrong:', err);
+//     });
 
 function pushCalendar(m, auth) {
     delEvents(auth)
