@@ -5,7 +5,7 @@ var secret = require('./secret');
 const oauth2Client = new google.auth.OAuth2(
     '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
     secret.clientsecret,
-    'https://magbot.nl'
+    'http://localhost:8080'
 );
 
 const scopes = [
@@ -13,7 +13,7 @@ const scopes = [
 ];
 
 const url = oauth2Client.generateAuthUrl({
-  access_type: 'offline',
-
-  scope: scopes
+    access_type: 'offline',
+    scope: scopes
 });
+console.log(url)
