@@ -4,7 +4,8 @@
   "description": "Third installment of Magbot.",
   "main": "magbot.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node magbot.js"
   },
   "repository": {
     "type": "git",
