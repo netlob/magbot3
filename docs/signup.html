@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>MagBot - Magister to calendar</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav class="magister-blue" role="navigation">
+      <div class="nav-wrapper container"><img src="logo.png" style="margin-top: 15px; margin-right: 5px;" height="35px" width="auto"></img><a id="logo-container" href="/index.html" class="brand-logo">MagBot</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/signup.html">Inloggen</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="/signup.html">Inloggen</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <div class="signup-form">
+        <div class="input-field">
+          <i class="material-icons prefix magister-blue-text">school</i>
+          <input type="text" id="autocomplete-input" class="autocomplete magister-blue-text">
+          <label for="autocomplete-input" style="user-select: none !important">School</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix magister-blue-text">person</i>
+          <input id="username" type="text" class="validate">
+          <label for="username">Magister gebruikersnaam</label>
+        </div>
+        <div class="input-field">
+            <i class="material-icons prefix magister-blue-text">lock</i>
+            <input id="password" type="password" class="validate">
+            <label for="password">Magister wachtwoord</label>
+          </div>
+      </div>
+      <br><br><br>
+      <br><br><br>
+    </div>
+  </div>
+
+
+  <div class="magister-blue">
+    <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center white-text"><i class="material-icons">alarm</i></h2>
+              <h5 class="center white-text">Altijd optijd</h5>
+
+              <p class="light white-text">5 minuten voor de les krijg je een notificatie waar je moet zijn. Zo weet je altijd waar je moet zijn, en kom je nooit meer te laat ;)</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center white-text"><i class="material-icons">all_inclusive</i></h2>
+              <h5 class="center white-text">Automatisch</h5>
+
+              <p class="light white-text">Nadat je het systeem één keer hebt opgezet, zal hij oneindig lang je magister afspraken elke X tijd blijven synchroniseren met je calendar. Je hoeft er zelf niks meer voor te doen :)</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center white-text"><i class="material-icons">attach_money</i></h2>
+              <h5 class="center white-text">Gratis</h5>
+
+              <p class="light white-text">Dit systeem is gratis, en zal altijd gratis blijven.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+
+  <footer class="page-footer magister-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">MagBot credits</h5>
+          <p class="grey-text text-lighten-4">hier komen de credits</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Site made by <a class="orange-text text-lighten-3" href="https://netlob.app">Netlob</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script>
+      $('input.autocomplete').autocomplete({
+        data: {
+          "Kaj Munk": null,
+          "Christian Lyceum": null
+        },
+      });
+    </script>
+
+  </body>
+</html>
