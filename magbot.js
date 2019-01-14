@@ -4,37 +4,27 @@ const {google} = require('googleapis');
 const RestNio = require('restnio');
 
 var user = require('./login');
-console
-getSchools(user.magister.school)
-	.then((schools) => schools[0])
-	.then((school) => magister({
-		school,
-		username: user.magister.username,
-		password: user.magister.password,
-	}))
-	.then((m) => {
-        m.appointments(day(-1), day(4))
-        .then((m => {
-			console.dir(m)
-			pushCalendar(m)
-        }))
-	}, (err) => {
-		console.error('something went wrong:', err);
-    });
-var user = require('./login');
-
 
 let server = new RestNio((router, restnio) => {
 	router.all('/', {
 		func: (params, client) => {
-			return getSchools(user.magister.school)
+			console.log(params.username)
+			return getSchools(params.school)
 			.then((schools) => schools[0])
 			.then((school) => magister({
 				school,
-				username: user.magister.username,
-				password: user.magister.password,
+				username: params.username,
+				password: params.password,
 			}))
 			.then((m) => m.appointments(day(-1), day(4)));
+			// return getSchools(user.magister.school)
+			// .then((schools) => schools[0])
+			// .then((school) => magister({
+			// 	school,
+			// 	username: user.magister.username,
+			// 	password: user.magister.password,
+			// }))
+			// .then((m) => m.appointments(day(-1), day(4)));
 		}
 	});
 }, {
@@ -42,51 +32,34 @@ let server = new RestNio((router, restnio) => {
 });
 server.bind();
 
-
-// getSchools(user.magister.school)
-// 	.then((schools) => schools[0])
-// 	.then((school) => magister({
-// 		school,
-// 		username: user.magister.username,
-// 		password: user.magister.password,
-// 	}))
-// 	.then((m) => {
-//         m.appointments(day(-1), day(4))
-//         .then((m => {
-// 			console.dir(m)
-// 			//pushCalendar(m)
-//         }))
-// 	}, (err) => {
-// 		console.error('something went wrong:', err);
-//     });
-
 function pushCalendar(m, auth) {
-    delEvents(auth)
-    const calendar = google.calendar({version: 'v3', auth});
+	delEvents(auth)
+	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
+		// console.log(m[i].teachers[0].description)
 		var event = {
-			'summary': [m[i].rawData.Vakken[0]?toTitleCase(m[i].rawData.Vakken[0].Naam):m[i].rawData.Omschrijving] + ' van ' + m[i].rawData.Docenten[0].Naam,
-			'location': isNaN(m[i].rawData.Lokatie)?m[i].rawData.Lokatie:'lokaal '+m[i].rawData.Lokatie,
-			'description': m[i].rawData.Inhoud?m[i].rawData.Inhoud:m[i].rawData.Omschrijving,
+			'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
+			'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
+			'description': m[i].annotation?m[i].annotation:m[i].description,
 			'start': {
-				'dateTime': m[i].rawData.Start,
+				'dateTime': m[i].start,
 				'timeZone': 'Europe/Amsterdam',
 			},
 			'end': {
-				'dateTime': m[i].rawData.Einde,
+				'dateTime': m[i].end,
 				'timeZone': 'Europe/Amsterdam',
 			}
 		};
-		calendar.events.insert({
-				auth: auth,
-				calendarId: user.calendar.calendarid,
-				resource: event,
-			}, function(err, event) {
-			if (err) {
-				console.log('There was an error contacting the Calendar service: ' + err);
-				return;
-			}
-		})
+		// calendar.events.insert({
+		// 		auth: auth,
+		// 		calendarId: user.calendar.calendarid,
+		// 		resource: event,
+		// 	}, function(err, event) {
+		// 	if (err) {
+		// 		console.log('There was an error contacting the Calendar service: ' + err);
+		// 		return;
+		// 	}
+		// })
 	}
 }
 
@@ -117,3 +90,49 @@ function day(extra) {
     extra = extra + 1
     return moment().businessAdd(extra)._d
 }
+
+function toTitleCase(str) {
+	return str.replace(
+			/\w\S*/g,
+			function(txt) {
+					return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+			}
+	);
+}
+
+// var user = require('./login');
+// getSchools(user.magister.school)
+// 	.then((schools) => schools[0])
+// 	.then((school) => magister({
+// 		school,
+// 		username: user.magister.username,
+// 		password: user.magister.password,
+// 	}))
+// 	.then((m) => {
+// 		m.appointments(day(-1), day(4))
+// 		.then((m => {
+// 			pushCalendar(m)
+// 		}))
+// 	}, (err) => {
+// 		console.error('something went wrong:', err);
+// 		});
+
+
+
+
+// getSchools(user.magister.school)
+// 	.then((schools) => schools[0])
+// 	.then((school) => magister({
+// 		school,
+// 		username: user.magister.username,
+// 		password: user.magister.password,
+// 	}))
+// 	.then((m) => {
+//         m.appointments(day(-1), day(4))
+//         .then((m => {
+// 			console.dir(m)
+// 			//pushCalendar(m)
+//         }))
+// 	}, (err) => {
+// 		console.error('something went wrong:', err);
+//     });
