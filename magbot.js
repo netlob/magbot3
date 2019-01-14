@@ -16,7 +16,11 @@ let server = new RestNio((router, restnio) => {
 				username: params.username,
 				password: params.password,
 			}))
-			.then((m) => m.appointments(day(-1), day(4)));
+			.then((m) => m.appointments(day(-1), day(4)))
+			// .then((m) = {
+			// 	pushCalendar(m)
+			// })
+
 			// return getSchools(user.magister.school)
 			// .then((schools) => schools[0])
 			// .then((school) => magister({
@@ -33,10 +37,9 @@ let server = new RestNio((router, restnio) => {
 server.bind();
 
 function pushCalendar(m, auth) {
-	delEvents(auth)
+	// delEvents(auth)
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
-		// console.log(m[i].teachers[0].description)
 		var event = {
 			'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
 			'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
