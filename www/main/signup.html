@@ -168,6 +168,7 @@
   <script>
       function onSuccess(googleUser) {
         console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        console.dir(googleUser)
       }
       function onFailure(error) {
         console.log(error);
