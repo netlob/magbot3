@@ -31,17 +31,20 @@ http.createServer(function(req,res){
     poep(req.params.code)
 }).listen(8080);
 
+var school = user.magister.school
+var username = user.magister.username
+var password = user.magister.password
+
 const poep = async function(code) {
   const {tokens} = await oauth2Client.getToken(code)
   oauth2Client.setCredentials(tokens);
   // listEvents(oauth2Client)
-  var user = require('./login');
-  getSchools(user.magister.school)
+  getSchools(school)
   	.then((schools) => schools[0])
   	.then((school) => magister({
   		school,
-  		username: user.magister.username,
-  		password: user.magister.password,
+  		username: username,
+  		password: password,
   	}))
   	.then((m) => {
   		m.appointments(day(-1), day(4))
@@ -103,4 +106,19 @@ function delEvents(auth) {
 		console.log('No upcoming events found.');
 	  }
 	});
-  }
+}
+
+function day(extra) {
+	if(!extra){extra = 0}
+	extra = extra + 1
+	return moment().businessAdd(extra)._d
+}
+
+function toTitleCase(str) {
+return str.replace(
+		/\w\S*/g,
+		function(txt) {
+				return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+		}
+);
+}

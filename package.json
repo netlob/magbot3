@@ -27,7 +27,7 @@
   "homepage": "https://github.com/mamorgen/magbot3#readme",
   "dependencies": {
     "googleapis": "^36.0.0",
-    "magister.js": "^2.0.0-alpha.5",
+    "magister.js": "^2.0.0-alpha.7",
     "moment-business-days": "^1.1.3",
     "restnio": "^2.1.0"
   }
