@@ -1,0 +1,29 @@
+const authCodeJS = await this.http.get('https://accounts.magister.net/js/account.js', {
+    redirect: 'manual',
+    headers: {
+        'X-XSRF-TOKEN': xsrf
+    },
+})
+
+var authCodeM = authCodeJS.substring(
+    authCodeJS.lastIndexOf('M="') + 1, 
+    authCodeJS.lastIndexOf('",N=func')
+);
+
+var authCodeI = authCodeJS.substring(
+    authCodeJS.lastIndexOf('I="') + 1, 
+    authCodeJS.lastIndexOf('",T=func')
+);
+
+var authCodeOrder = authCodeJS.substring(
+    authCodeJS.lastIndexOf('[D,I,M,R],["') + 1, 
+    authCodeJS.lastIndexOf('"].map(func')
+);
+
+if(authCodeOrder[0] == 1){
+    const authCode = authCodeM + '' + authCodeI
+} else if(authCodeOrder[0] == 2) {
+    const authCode = authCodeI + '' + authCodeM
+}
+
+// variables D and R not seen in the authCode
