@@ -63,3 +63,5 @@ typings/
 login.js
 
 secret.js
+
+db

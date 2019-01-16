@@ -16,13 +16,15 @@ $('document').ready(function(){
 });
 
 function autocompleteDropdown() {
-  document.getElementById("autocomplete-input").click()
+  // document.getElementById("autocomplete-input").click()
+  // simulateKeyPress("return");
   console.log('poep')
+
 }
-// $('#autocomplete-input').change(function() {
-//   document.getElementById("autocomplete-input").click()
-//   console.log('poep')
-// });
+
+// function simulateKeyPress(character) {
+//   jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
+// }
 
 var schools = {
   "De Faam": null,

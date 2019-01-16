@@ -6135,7 +6135,7 @@ input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #0096db;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -6178,8 +6178,8 @@ input[type=search]:not(.browser-default):disabled,
 input[type=search]:not(.browser-default)[readonly="readonly"],
 textarea.materialize-textarea:disabled,
 textarea.materialize-textarea[readonly="readonly"] {
-  color: rgba(0, 0, 0, 0.42);
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.42);
+  color: #0096db;
+  border-bottom: 1px dotted #0096db;
 }
 
 input:not([type]):disabled + label,
@@ -6208,7 +6208,7 @@ input[type=search]:not(.browser-default):disabled + label,
 input[type=search]:not(.browser-default)[readonly="readonly"] + label,
 textarea.materialize-textarea:disabled + label,
 textarea.materialize-textarea[readonly="readonly"] + label {
-  color: rgba(0, 0, 0, 0.42);
+  color: #0096db;
 }
 
 input:not([type]):focus:not([readonly]),
@@ -6224,9 +6224,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #0096db;
+  -webkit-box-shadow: 0 1px 0 0 #0096db;
+          box-shadow: 0 1px 0 0 #0096db;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6242,7 +6242,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: #0096db;
 }
 
 input:not([type]):focus.valid ~ label,
@@ -6258,7 +6258,7 @@ input[type=tel]:not(.browser-default):focus.valid ~ label,
 input[type=number]:not(.browser-default):focus.valid ~ label,
 input[type=search]:not(.browser-default):focus.valid ~ label,
 textarea.materialize-textarea:focus.valid ~ label {
-  color: #4CAF50;
+  color: #0096db;
 }
 
 input:not([type]):focus.invalid ~ label,
@@ -6274,7 +6274,7 @@ input[type=tel]:not(.browser-default):focus.invalid ~ label,
 input[type=number]:not(.browser-default):focus.invalid ~ label,
 input[type=search]:not(.browser-default):focus.invalid ~ label,
 textarea.materialize-textarea:focus.invalid ~ label {
-  color: #F44336;
+  color: #0096db;
 }
 
 input:not([type]).validate + label,

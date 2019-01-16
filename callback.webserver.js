@@ -2,6 +2,7 @@ var http = require('http');
 const {google} = require('googleapis');
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
+const fs = require('fs');
 
 var user = require('./login');
 var secret = require('./secret');
@@ -37,8 +38,32 @@ var password = user.magister.password
 
 const poep = async function(code) {
   const {tokens} = await oauth2Client.getToken(code)
-  oauth2Client.setCredentials(tokens);
-  // listEvents(oauth2Client)
+	oauth2Client.setCredentials(tokens);
+	var login = {
+		school: user.magister.school,
+		username: user.magister.username,
+		password: user.magister.password,
+		calendarid: user.magister.calendarid
+	}
+
+	if(!fs.existsSync('db/'+school)){
+		fs.mkdirSync('db/'+school);
+		if(!fs.existsSync('db/'+school+'/'+username)){
+			fs.mkdirSync('db/'+school+'/'+username);
+		}
+	} else {
+		if(!fs.existsSync('db/'+school+'/'+username)){
+			fs.mkdirSync('db/'+school+'/'+username);
+		}
+	}
+	
+	fs.writeFile('db/'+school+'/'+username+'/tokens.json', JSON.stringify(tokens), 'utf8', () => {
+		console.log('Code saved at: db/'+school+'/'+username+'/tokens.json');
+	});
+	fs.writeFile('db/'+school+'/'+username+'/login.json', JSON.stringify(login), 'utf8', () => {
+		console.log('Login saved at: db/'+school+'/'+username+'/login.json');
+	});
+
   getSchools(school)
   	.then((schools) => schools[0])
   	.then((school) => magister({
@@ -57,32 +82,35 @@ const poep = async function(code) {
 }
 
 function pushCalendar(auth, m) {
-	delEvents(auth)
+	// delEvents(auth)
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
-		var event = {
-			'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
-			'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
-			'description': m[i].annotation?m[i].annotation:m[i].description,
-			'start': {
-				'dateTime': m[i].start,
-				'timeZone': 'Europe/Amsterdam',
-			},
-			'end': {
-				'dateTime': m[i].end,
-				'timeZone': 'Europe/Amsterdam',
-			}
-		};
-		calendar.events.insert({
-				auth: auth,
-				calendarId: user.calendar.calendarid,
-				resource: event,
-			}, function(err, event) {
-			if (err) {
-				console.log('There was an error contacting the Calendar service: ' + err);
-				return;
-			}
-		})
+		if(!m[i].isCancelled){
+			console.log(m[i].isCancelled)
+			var event = {
+				'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
+				'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
+				'description': m[i].annotation?m[i].annotation:m[i].description,
+				'start': {
+					'dateTime': m[i].start,
+					'timeZone': 'Europe/Amsterdam',
+				},
+				'end': {
+					'dateTime': m[i].end,
+					'timeZone': 'Europe/Amsterdam',
+				}
+			};
+			calendar.events.insert({
+					auth: auth,
+					calendarId: user.calendar.calendarid,
+					resource: event,
+				}, function(err, event) {
+				if (err) {
+					console.log('There was an error contacting the Calendar service: ' + err);
+					return;
+				}
+			})
+		}
 	}
 }
 
@@ -115,10 +143,10 @@ function day(extra) {
 }
 
 function toTitleCase(str) {
-return str.replace(
-		/\w\S*/g,
-		function(txt) {
-				return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-		}
-);
+	return str.replace(
+			/\w\S*/g,
+			function(txt) {
+					return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+			}
+	);
 }
