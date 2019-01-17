@@ -22,9 +22,56 @@ function autocompleteDropdown() {
 
 }
 
+function signInCallback(authResult) {
+  if (authResult['code']) {
+    var cancelled = $("#cancelled").is(":checked") ? true : false;
+    var assistant = $("#assistant").is(":checked") ? true : false;
+    var login = {
+      school: document.getElementById('autocomplete-input').value,
+      username: document.getElementById('username').value,
+      password: document.getElementById('password').value,
+      notify: document.getElementById('notify').value,
+      cancelled: cancelled,
+      assistant: assistant
+    }
+
+    $('#signinButton').attr('style', 'display: none');
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "http://localhost:8080?code="+authResult.code+'&login='+JSON.stringify(login),
+      "method": "GET",
+      "headers": {
+        "cache-control": "no-cache"
+      }
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+
+  } else {
+    // There was an error.
+  }
+}
 // function simulateKeyPress(character) {
 //   jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var schools = {
   "De Faam": null,

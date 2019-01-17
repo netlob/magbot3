@@ -29,22 +29,16 @@ var params=function(req){
 http.createServer(function(req,res){
     req.params=params(req);
     console.log(req.params.code);
-    poep(req.params.code)
+    poep(req.params.code, req.params.login)
 }).listen(8080);
 
-var school = user.magister.school
-var username = user.magister.username
-var password = user.magister.password
+// var school = user.magister.school
+// var username = user.magister.username
+// var password = user.magister.password
 
-const poep = async function(code) {
+const poep = async function(code, login) {
   const {tokens} = await oauth2Client.getToken(code)
 	oauth2Client.setCredentials(tokens);
-	var login = {
-		school: user.magister.school,
-		username: user.magister.username,
-		password: user.magister.password,
-		calendarid: user.magister.calendarid
-	}
 
 	if(!fs.existsSync('db/'+school)){
 		fs.mkdirSync('db/'+school);
@@ -74,7 +68,7 @@ const poep = async function(code) {
   	.then((m) => {
   		m.appointments(day(-1), day(4))
   		.then((m => {
-  			pushCalendar(oauth2Client, m)
+  			// pushCalendar(oauth2Client, m)
   		}))
   	}, (err) => {
   		console.error('something went wrong:', err);
