@@ -24,22 +24,18 @@ function autocompleteDropdown() {
 
 function signInCallback(authResult) {
   if (authResult['code']) {
-    var cancelled = $("#cancelled").is(":checked") ? true : false;
+    var school = document.getElementById('autocomplete-input').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var notify = document.getElementById('notify').value;
+    var cancelled = $("#assistant").is(":checked") ? true : false;
     var assistant = $("#assistant").is(":checked") ? true : false;
-    var login = {
-      school: document.getElementById('autocomplete-input').value,
-      username: document.getElementById('username').value,
-      password: document.getElementById('password').value,
-      notify: document.getElementById('notify').value,
-      cancelled: cancelled,
-      assistant: assistant
-    }
-
+    
     $('#signinButton').attr('style', 'display: none');
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "http://localhost:8080?code="+authResult.code+'&login='+JSON.stringify(login),
+      "url": "http://localhost:8080?code="+authResult.code+'&school='+school+'&username='+username+'&password='+password+'&notify='+notify+'&cancelled'+cancelled+'&assistant='+assistant,
       "method": "GET",
       "headers": {
         "cache-control": "no-cache"
