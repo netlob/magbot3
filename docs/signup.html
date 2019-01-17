@@ -4,12 +4,26 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <meta name="google-signin-client_id" content="312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+  </script>
   <title>MagBot - Magister to calendar</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script>
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
+          scope: 'https://www.googleapis.com/auth/calendar'
+        });
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="navbar-fixed">
@@ -48,14 +62,14 @@
         <div class="input-field">
           <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">notifications_active</i>
           <p class="range-field" style="width: calc(100% - 3rem); margin-left: calc(0% + 3rem)">
-            <input type="range" id="test5" min="0" max="10" />
+            <input type="range" id="notify" min="0" max="10" />
           </p>
         </div>
         <div class="input-field">
           <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
           <p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
             <label>
-              <input type="checkbox" class="filled-in" />
+              <input type="checkbox" id="cancelled" class="filled-in" />
               <span style="margin-top: -10px">Laat uitgevallen lessen zien</span>
             </label>
           </p>
@@ -63,7 +77,7 @@
         <div class="input-field">
           <p style="margin-left: calc(0% + 3rem);">
             <label>
-              <input type="checkbox" class="filled-in" />
+              <input type="checkbox" id="assistant" class="filled-in" />
               <span style="margin-top: -10px">Voeg tweede agenda toe voor gebruik met Google Calendar</span>
             </label>
           </p>
@@ -71,7 +85,13 @@
         <br>
       
         <!-- Google Sign in button -->
-        <center><div id="my-signin2"></div></center>
+        <center><button id="signinButton">Sign in with Google</button></center>
+        <script>
+          $('#signinButton').click(function() {
+            // signInCallback defined in step 6.
+            auth2.grantOfflineAccess().then(signInCallback);
+          });
+        </script>
     
         <br><br><br>
       </div>
@@ -162,39 +182,7 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script>
-      function onSuccess(googleUser) {
-        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        console.dir(googleUser)
-      }
-      function onFailure(error) {
-        console.log(error);
-      }
-      function renderButton() {
-        gapi.signin2.render('my-signin2', {
-          'scope': 'profile email',
-          'width': 240,
-          'height': 50,
-          'longtitle': true,
-          'theme': 'dark',
-          'onsuccess': onSuccess,
-          'onfailure': onFailure
-        });
-      }
-    </script>
-
-  <script>
-      $('input.autocomplete').autocomplete({
-        data: {
-          "Kaj Munk": null,
-          "Christian Lyceum": null
-        },
-      });
-    </script>
-
   </body>
 </html>
