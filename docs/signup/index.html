@@ -86,10 +86,9 @@
         <br>
       
         <!-- Google Sign in button -->
-        <center><button id="signinButton">Sign in with Google</button></center>
+        <a id="signinButton" class="waves-effect waves-light btn magister-blue" style="zoom: 120%; width: 100%">Continue with Google</a>
         <script>
           $('#signinButton').click(function() {
-            // signInCallback defined in step 6.
             auth2.grantOfflineAccess().then(signInCallback);
           });
         </script>
