@@ -4,39 +4,19 @@ const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
 const fs = require('fs');
 
-var user = require('./login');
-var secret = require('./secret');
+var secret = require('./secret')
 const oauth2Client = new google.auth.OAuth2(
   '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
   secret.clientsecret,
   'http://localhost:8080'
 );
 
-var params=function(req){
-    let q=req.url.split('?'),result={};
-    if(q.length>=2){
-        q[1].split('&').forEach((item)=>{
-             try {
-               result[item.split('=')[0]]=item.split('=')[1];
-             } catch (e) {
-               result[item.split('=')[0]]='';
-             }
-        })
-    }
-    return result;
-}
-
 http.createServer(function(req,res){
     req.params=params(req);
-    console.log(req.params.code);
-    poep(req.params.code, req.params.login)
+    login(req.params.code, req.params.login)
 }).listen(8080);
 
-// var school = user.magister.school
-// var username = user.magister.username
-// var password = user.magister.password
-
-const poep = async function(code, login) {
+const login = async function(code, login) {
   const {tokens} = await oauth2Client.getToken(code)
 	oauth2Client.setCredentials(tokens);
 
@@ -128,6 +108,20 @@ function delEvents(auth) {
 		console.log('No upcoming events found.');
 	  }
 	});
+}
+
+var params=function(req){
+	let q=req.url.split('?'),result={};
+	if(q.length>=2){
+			q[1].split('&').forEach((item)=>{
+					 try {
+						 result[item.split('=')[0]]=item.split('=')[1];
+					 } catch (e) {
+						 result[item.split('=')[0]]='';
+					 }
+			})
+	}
+	return result;
 }
 
 function day(extra) {
