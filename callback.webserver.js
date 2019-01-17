@@ -38,21 +38,33 @@ const login = async function(code, login) {
 		console.log('Login saved at: db/'+school+'/'+username+'/login.json');
 	});
 
-  getSchools(school)
-  	.then((schools) => schools[0])
-  	.then((school) => magister({
-  		school,
-  		username: username,
-  		password: password,
-  	}))
-  	.then((m) => {
-  		m.appointments(day(-1), day(4))
-  		.then((m => {
-  			// pushCalendar(oauth2Client, m)
-  		}))
-  	}, (err) => {
-  		console.error('something went wrong:', err);
-  		});
+	var authcode = ''
+	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
+		let data = '';
+		resp.on('data', (chunk) => {
+			data += chunk;
+		});
+		resp.on('end', () => {
+			authcode = data.replace('"','').replace('"','').replace(/(\r\n\t|\n|\r\t)/gm, "");
+			getSchools(school)
+			.then((schools) => schools[0])
+			.then((school) => magister({
+				school,
+				username: username,
+				password: password,
+			}))
+			.then((m) => {
+				m.appointments(day(-1), day(4))
+				.then((m => {
+					// pushCalendar(oauth2Client, m)
+				}))
+			}, (err) => {
+				console.error('something went wrong:', err);
+				});
+		});
+	}).on("error", (err) => {
+		console.log("Error: " + err.message);
+	});
 }
 
 function pushCalendar(auth, m) {
