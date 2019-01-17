@@ -1,4 +1,5 @@
 var http = require('http');
+var https = require('https');
 const {google} = require('googleapis');
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
@@ -8,34 +9,43 @@ var secret = require('./secret')
 const oauth2Client = new google.auth.OAuth2(
   '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
   secret.clientsecret,
-  'http://localhost:8080'
+  'http://localhost'
 );
 
 http.createServer(function(req,res){
     req.params=params(req);
-    login(req.params.code, req.params.login)
+		login(req.params)
 }).listen(8080);
 
-const login = async function(code, login) {
-  const {tokens} = await oauth2Client.getToken(code)
+const login = async function(params) {
+  const {tokens} = await oauth2Client.getToken(params.code)
 	oauth2Client.setCredentials(tokens);
 
-	if(!fs.existsSync('db/'+school)){
-		fs.mkdirSync('db/'+school);
-		if(!fs.existsSync('db/'+school+'/'+username)){
-			fs.mkdirSync('db/'+school+'/'+username);
+	var login = {
+		school: decodeURI(params.school),
+		username: decodeURI(params.username),
+		password: decodeURI(params.password),
+		notify: decodeURI(params.notify),
+		cancelled: params.cancelled,
+		assistant: params.assistant
+	}
+
+	if(!fs.existsSync('db/'+login.school)){
+		fs.mkdirSync('db/'+login.school);
+		if(!fs.existsSync('db/'+login.school+'/'+login.username)){
+			fs.mkdirSync('db/'+login.school+'/'+login.username);
 		}
 	} else {
-		if(!fs.existsSync('db/'+school+'/'+username)){
-			fs.mkdirSync('db/'+school+'/'+username);
+		if(!fs.existsSync('db/'+login.school+'/'+login.username)){
+			fs.mkdirSync('db/'+login.school+'/'+login.username);
 		}
 	}
 	
-	fs.writeFile('db/'+school+'/'+username+'/tokens.json', JSON.stringify(tokens), 'utf8', () => {
-		console.log('Code saved at: db/'+school+'/'+username+'/tokens.json');
+	fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', JSON.stringify(tokens), 'utf8', () => {
+		console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens.json');
 	});
-	fs.writeFile('db/'+school+'/'+username+'/login.json', JSON.stringify(login), 'utf8', () => {
-		console.log('Login saved at: db/'+school+'/'+username+'/login.json');
+	fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', JSON.stringify(login), 'utf8', () => {
+		console.log('Login saved at: db/'+login.school+'/'+login.username+'/login.json');
 	});
 
 	var authcode = ''
@@ -46,12 +56,12 @@ const login = async function(code, login) {
 		});
 		resp.on('end', () => {
 			authcode = data.replace('"','').replace('"','').replace(/(\r\n\t|\n|\r\t)/gm, "");
-			getSchools(school)
+			getSchools(login.school)
 			.then((schools) => schools[0])
 			.then((school) => magister({
 				school,
-				username: username,
-				password: password,
+				username: login.username,
+				password: login.password,
 			}))
 			.then((m) => {
 				m.appointments(day(-1), day(4))
