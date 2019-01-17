@@ -12,10 +12,25 @@ const oauth2Client = new google.auth.OAuth2(
   'http://localhost'
 );
 
-http.createServer(function(req,res){
-    req.params=params(req);
-		login(req.params)
-}).listen(8080);
+server = http.createServer( function(req, res) {
+	console.dir(req.method)
+	if (req.method == 'POST') {
+			console.log("POST");
+			var body = '';
+			req.on('data', function (data) {});
+			req.on('end', function () {
+				console.dir('poep')
+				login(req.body)
+			});
+			res.writeHead(200, {'Content-Type': 'text/html'});
+			res.end('succes');
+	} else {
+		console.log('*')
+		res.setHeader("Access-Control-Allow-Origin", "*");
+		return 200;
+	}
+});
+server.listen(8080, '127.0.0.1');
 
 const login = async function(params) {
   const {tokens} = await oauth2Client.getToken(params.code)
