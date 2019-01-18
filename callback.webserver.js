@@ -97,7 +97,7 @@ const signup = async function(params) {
 		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
 		// 	console.log(text);
 		// });
-	});
+	// });
 }
 
 const login = async function(login, tokens) {
