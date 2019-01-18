@@ -70,7 +70,7 @@ const signup = async function(params) {
 			assistant: params.assistant,
 			calendarid: 's453457rcdfedu1pol54u5oh8s@group.calendar.google.com'
 		}
-	
+
 		if(!fs.existsSync('db/'+login.school)){
 			fs.mkdirSync('db/'+login.school);
 			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
@@ -121,9 +121,9 @@ const login = async function(login, tokens) {
 				m.appointments(day(-1), day(4))
 				.then((m => {
 					del(oauth2Client, login)
-					.then({
+					.then(( p => {
 						pushCalendar(oauth2Client, m)
-					})
+					}))
 				}))
 			}, (err) => {
 				console.error('something went wrong:', err);
