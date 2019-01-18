@@ -7386,9 +7386,9 @@ input[type=range] + .thumb.active {
 
 input[type=range] + .thumb.active .value {
   color: #fff;
-  margin-left: -1px;
-  margin-top: 8px;
-  font-size: 10px;
+  margin-left: -1px !important;
+  margin-top: 1px !important;
+  font-size: 20px;
 }
 
 input[type=range] {
