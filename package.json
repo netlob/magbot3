@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/mamorgen/magbot3#readme",
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
     "googleapis": "^36.0.0",
     "magister.js": "^2.0.0-alpha.8",
     "moment-business-days": "^1.1.3",
