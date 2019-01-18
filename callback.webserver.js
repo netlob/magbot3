@@ -7,6 +7,7 @@ const fs = require('fs');
 var CryptoJS = require("crypto-js");
 var AES = require("crypto-js/aes");
 var SHA256 = require("crypto-js/sha256");
+var request = require("request");
 
 var key = require('./key')
 
@@ -44,44 +45,59 @@ server = http.createServer( function(req, res) {
 server.listen(80, '116.202.22.6');
 
 const signup = async function(params) {
-	const { tokens } = await oauth2Client.getToken(params.code)
-	oauth2Client.setCredentials(tokens);
+	// const { tokens } = await oauth2Client.getToken(params.code)
+	// oauth2Client.setCredentials(tokens);
 
-	var login = {
-		school: params.school,
-		username: params.username,
-		password: params.password,
-		notify: params.notify,
-		cancelled: params.cancelled,
-		assistant: params.assistant
-	}
+	var options = { method: 'POST',
+	url: 'https://www.googleapis.com/calendar/v3/calendars',
+	headers: 
+	 { 'cache-control': 'no-cache',
+	   'Content-Type': 'application/json',
+	   Accept: 'application/json',
+	   Authorization: 'Bearer' },
+	body: { summary: 'Magister', description: 'Deze calendar wordt automatisch geupdate door Magbot' },
+	json: true };
 
-	if(!fs.existsSync('db/'+login.school)){
-		fs.mkdirSync('db/'+login.school);
-		if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-			fs.mkdirSync('db/'+login.school+'/'+login.username);
-		}
-	} else {
-		if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-			fs.mkdirSync('db/'+login.school+'/'+login.username);
-		}
-	}
+	request(options, function (error, response, body) {
+		if (error) throw new Error(error);
+		console.log(body);
+		// var login = {
+		// 	school: params.school,
+		// 	username: params.username,
+		// 	password: params.password,
+		// 	notify: params.notify,
+		// 	cancelled: params.cancelled,
+		// 	assistant: params.assistant,
+		// 	calendarid: 
+		// }
 	
-	var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
-	var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
-
-	fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
-		console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
+		// if(!fs.existsSync('db/'+login.school)){
+		// 	fs.mkdirSync('db/'+login.school);
+		// 	if(!fs.existsSync('db/'+login.school+'/'+login.username)){
+		// 		fs.mkdirSync('db/'+login.school+'/'+login.username);
+		// 	}
+		// } else {
+		// 	if(!fs.existsSync('db/'+login.school+'/'+login.username)){
+		// 		fs.mkdirSync('db/'+login.school+'/'+login.username);
+		// 	}
+		// }
+		
+		// var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
+		// var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
+	
+		// fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
+		// 	console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
+		// });
+		// fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
+		// 	console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
+		// });
+	
+		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
+		// 	if (err) { throw err; }
+		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
+		// 	console.log(text);
+		// });
 	});
-	fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
-		console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
-	});
-
-	// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
-	// 	if (err) { throw err; }
-	// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
-	// 	console.log(text);
-	// });
 }
 
 const login = async function(login, tokens) {
@@ -104,7 +120,8 @@ const login = async function(login, tokens) {
 			.then((m) => {
 				m.appointments(day(-1), day(4))
 				.then((m => {
-					// pushCalendar(oauth2Client, m)
+					delEvents(oauth2Client, login)
+					pushCalendar(oauth2Client, m)
 				}))
 			}, (err) => {
 				console.error('something went wrong:', err);
@@ -115,8 +132,7 @@ const login = async function(login, tokens) {
 	});
 }
 
-function pushCalendar(auth, m) {
-	// delEvents(auth)
+function pushCalendar(auth, login, m) {
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
 		if(!m[i].isCancelled){
@@ -136,7 +152,7 @@ function pushCalendar(auth, m) {
 			};
 			calendar.events.insert({
 					auth: auth,
-					calendarId: user.calendar.calendarid,
+					calendarId: login.calendarid,
 					resource: event,
 				}, function(err, event) {
 				if (err) {
@@ -148,27 +164,42 @@ function pushCalendar(auth, m) {
 	}
 }
 
-function delEvents(auth) {
+function delEvents(auth, login) {
 	const calendar = google.calendar({version: 'v3', auth});
 	calendar.events.list({
-	  calendarId: user.calendar.calendarid,
-	  singleEvents: true,
-	  orderBy: 'startTime',
+		calendarId: login.calendarid,
+		singleEvents: true,
+		orderBy: 'startTime',
 	}, (err, res) => {
-	  if (err) return console.log('The API returned an error: ' + err);
-	  const events = res.data.items;
-	  if (events.length) {
-		events.map((event, i) => {
-		  calendar.events.delete({
-			calendarId: user.calendar.calendarid,
-			eventId: event.id
-		  });
+		if (err) return console.log('The API returned an error: ' + err);
+		const events = res.data.items;
+		var params = {
+			calendarId: 'primary',
+			eventId: eventId,
+		};
+	
+		calendar.events.delete(params, function(err) {
+		if (err) {
+			console.log('The API returned an error: ' + err);
+			return;
+		}
+		console.log('Event deleted.');
 		});
-	  } else {
-		console.log('No upcoming events found.');
-	  }
 	});
 }
+
+var params = {
+	calendarId: 'primary',
+	eventId: eventId,
+  };
+
+  calendar.events.delete(params, function(err) {
+	if (err) {
+	  console.log('The API returned an error: ' + err);
+	  return;
+	}
+	console.log('Event deleted.');
+  });
 
 var params=function(req){
 	let q=req.url.split('?'),result={};
