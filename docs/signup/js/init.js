@@ -29,7 +29,7 @@ function signInCallback(authResult) {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var notify = document.getElementById('notify').value;
-    var cancelled = $("#assistant").is(":checked") ? true : false;
+    var cancelled = $("#cancelled").is(":checked") ? true : false;
     var assistant = $("#assistant").is(":checked") ? true : false;
     
     $('#signinButton').attr('style', 'display: none');
