@@ -31,7 +31,7 @@ server = http.createServer( function(req, res) {
 			res.end('succes');
 	} else {
 		console.log('*')
-		// res.setHeader("Access-Control-Allow-Origin", "*");
+		//res.setHeader("Access-Control-Allow-Origin", "*");
 		res.setHeader('Access-Control-Allow-Origin', req.header.origin);
 		res.setHeader('Access-Control-Request-Method', '*');
 		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
