@@ -45,52 +45,52 @@ server = http.createServer( function(req, res) {
 server.listen(80, '116.202.22.6');
 
 const signup = async function(params) {
-	// const { tokens } = await oauth2Client.getToken(params.code)
-	// oauth2Client.setCredentials(tokens);
+	const { tokens } = await oauth2Client.getToken(params.code)
+	oauth2Client.setCredentials(tokens);
 
-	var options = { method: 'POST',
-	url: 'https://www.googleapis.com/calendar/v3/calendars',
-	headers: 
-	 { 'cache-control': 'no-cache',
-	   'Content-Type': 'application/json',
-	   Accept: 'application/json',
-	   Authorization: 'Bearer' },
-	body: { summary: 'Magister', description: 'Deze calendar wordt automatisch geupdate door Magbot' },
-	json: true };
+	// var options = { method: 'POST',
+	// url: 'https://www.googleapis.com/calendar/v3/calendars',
+	// headers: 
+	//  { 'cache-control': 'no-cache',
+	//    'Content-Type': 'application/json',
+	//    Accept: 'application/json',
+	//    Authorization: 'Bearer' },
+	// body: { summary: 'Magister', description: 'Deze calendar wordt automatisch geupdate door Magbot' },
+	// json: true };
 
-	request(options, function (error, response, body) {
-		if (error) throw new Error(error);
-		console.log(body);
-		// var login = {
-		// 	school: params.school,
-		// 	username: params.username,
-		// 	password: params.password,
-		// 	notify: params.notify,
-		// 	cancelled: params.cancelled,
-		// 	assistant: params.assistant,
-		// 	calendarid: 
-		// }
+	// request(options, function (error, response, body) {
+	// 	if (error) throw new Error(error);
+	// 	console.log(body);
+		var login = {
+			school: params.school,
+			username: params.username,
+			password: params.password,
+			notify: params.notify,
+			cancelled: params.cancelled,
+			assistant: params.assistant,
+			calendarid: 's453457rcdfedu1pol54u5oh8s@group.calendar.google.com'
+		}
 	
-		// if(!fs.existsSync('db/'+login.school)){
-		// 	fs.mkdirSync('db/'+login.school);
-		// 	if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-		// 		fs.mkdirSync('db/'+login.school+'/'+login.username);
-		// 	}
-		// } else {
-		// 	if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-		// 		fs.mkdirSync('db/'+login.school+'/'+login.username);
-		// 	}
-		// }
+		if(!fs.existsSync('db/'+login.school)){
+			fs.mkdirSync('db/'+login.school);
+			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
+				fs.mkdirSync('db/'+login.school+'/'+login.username);
+			}
+		} else {
+			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
+				fs.mkdirSync('db/'+login.school+'/'+login.username);
+			}
+		}
 		
-		// var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
-		// var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
+		var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
+		var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
 	
-		// fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
-		// 	console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
-		// });
-		// fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
-		// 	console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
-		// });
+		fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
+			console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
+		});
+		fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
+			console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
+		});
 	
 		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
 		// 	if (err) { throw err; }
@@ -120,8 +120,10 @@ const login = async function(login, tokens) {
 			.then((m) => {
 				m.appointments(day(-1), day(4))
 				.then((m => {
-					delEvents(oauth2Client, login)
-					pushCalendar(oauth2Client, m)
+					del(oauth2Client, login)
+					.then({
+						pushCalendar(oauth2Client, m)
+					})
 				}))
 			}, (err) => {
 				console.error('something went wrong:', err);
@@ -164,7 +166,7 @@ function pushCalendar(auth, login, m) {
 	}
 }
 
-function delEvents(auth, login) {
+const del = async function(auth, login) {
 	const calendar = google.calendar({version: 'v3', auth});
 	calendar.events.list({
 		calendarId: login.calendarid,
@@ -173,44 +175,32 @@ function delEvents(auth, login) {
 	}, (err, res) => {
 		if (err) return console.log('The API returned an error: ' + err);
 		const events = res.data.items;
-		var params = {
-			calendarId: 'primary',
-			eventId: eventId,
-		};
-	
-		calendar.events.delete(params, function(err) {
-		if (err) {
-			console.log('The API returned an error: ' + err);
-			return;
+		for(var i = 0; i < events.length; i++) {
+			var params = {
+				calendarId: login.calendarid,
+				eventId: eventId,
+			};
+			calendar.events.delete(params, function(err) {
+			if (err) {
+				console.log('The API returned an error: ' + err);
+				return;
+			}
+			});
 		}
-		console.log('Event deleted.');
-		});
 	});
+	return 'done';
 }
-
-var params = {
-	calendarId: 'primary',
-	eventId: eventId,
-  };
-
-  calendar.events.delete(params, function(err) {
-	if (err) {
-	  console.log('The API returned an error: ' + err);
-	  return;
-	}
-	console.log('Event deleted.');
-  });
 
 var params=function(req){
 	let q=req.url.split('?'),result={};
 	if(q.length>=2){
-			q[1].split('&').forEach((item)=>{
-					 try {
-						 result[item.split('=')[0]]=item.split('=')[1];
-					 } catch (e) {
-						 result[item.split('=')[0]]='';
-					 }
-			})
+		q[1].split('&').forEach((item)=>{
+			try {
+				result[item.split('=')[0]]=item.split('=')[1];
+			} catch (e) {
+				result[item.split('=')[0]]='';
+			}
+		})
 	}
 	return result;
 }
@@ -223,9 +213,9 @@ function day(extra) {
 
 function toTitleCase(str) {
 	return str.replace(
-			/\w\S*/g,
-			function(txt) {
-					return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-			}
+		/\w\S*/g,
+		function(txt) {
+				return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+		}
 	);
 }
