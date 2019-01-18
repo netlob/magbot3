@@ -20,28 +20,28 @@ const oauth2Client = new google.auth.OAuth2(
 server = http.createServer( function(req, res) {
 	console.dir(req.method)
 	if (req.method == 'POST') {
-			console.log("POST");
-			var body = '';
-			req.on('data', function (data) {});
-			req.on('end', function () {
-				console.dir('poep')
-				signup(req.body)
-			});
-			res.writeHead(200, {'Content-Type': 'text/html'});
-			res.end('succes');
-	} else {
-		console.log('*')
-		//res.setHeader("Access-Control-Allow-Origin", "*");
-		res.setHeader('Access-Control-Allow-Origin', req.header.origin);
-		res.setHeader('Access-Control-Request-Method', '*');
+		console.log("SIGNUP");
+		console.dir(req.headers.code)
+		signup(req.headers)
+		res.setHeader('Access-Control-Allow-Credentials', 'true');
+		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
+		res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
 		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
-		res.setHeader('Access-Control-Allow-Headers', '*');
+		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		res.end('succes');
+	} else {
+		res.setHeader('Access-Control-Allow-Credentials', 'true');
+		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
+		res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
+		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
+		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
 		res.writeHead(200);
-		res.end();
+		res.end('fail');
 		return;
 	}
 });
-server.listen(8080, '116.202.22.6');
+server.listen(80, '116.202.22.6');
 
 const signup = async function(params) {
 	const { tokens } = await oauth2Client.getToken(params.code)
