@@ -62,7 +62,9 @@ function signInCallback(authResult) {
     xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4) {
         console.log(this.responseText);
-        M.toast({html: 'Succesvol geactiveerd!'})
+        if(this.responseText == 'success') {
+          M.toast({html: 'Succesvol geactiveerd!'})
+        }
       }
     });
     
