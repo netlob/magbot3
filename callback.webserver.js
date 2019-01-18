@@ -31,11 +31,17 @@ server = http.createServer( function(req, res) {
 			res.end('succes');
 	} else {
 		console.log('*')
-		res.setHeader("Access-Control-Allow-Origin", "*");
-		return 200;
+		// res.setHeader("Access-Control-Allow-Origin", "*");
+		res.setHeader('Access-Control-Allow-Origin', req.header.origin);
+		res.setHeader('Access-Control-Request-Method', '*');
+		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
+		res.setHeader('Access-Control-Allow-Headers', '*');
+		res.writeHead(200);
+		res.end();
+		return;
 	}
 });
-server.listen(8080, '127.0.0.1');
+server.listen(8080, '116.202.22.6');
 
 const signup = async function(params) {
 	const { tokens } = await oauth2Client.getToken(params.code)
