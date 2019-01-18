@@ -4,12 +4,17 @@ const {google} = require('googleapis');
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
 const fs = require('fs');
+var CryptoJS = require("crypto-js");
+var AES = require("crypto-js/aes");
+var SHA256 = require("crypto-js/sha256");
+
+var key = require('./key')
 
 var secret = require('./secret')
 const oauth2Client = new google.auth.OAuth2(
   '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
   secret.clientsecret,
-  'http://localhost'
+  'http://server.magbot.tk'
 );
 
 server = http.createServer( function(req, res) {
@@ -20,7 +25,7 @@ server = http.createServer( function(req, res) {
 			req.on('data', function (data) {});
 			req.on('end', function () {
 				console.dir('poep')
-				login(req.body)
+				signup(req.body)
 			});
 			res.writeHead(200, {'Content-Type': 'text/html'});
 			res.end('succes');
@@ -32,15 +37,15 @@ server = http.createServer( function(req, res) {
 });
 server.listen(8080, '127.0.0.1');
 
-const login = async function(params) {
-  const {tokens} = await oauth2Client.getToken(params.code)
+const signup = async function(params) {
+	const { tokens } = await oauth2Client.getToken(params.code)
 	oauth2Client.setCredentials(tokens);
 
 	var login = {
-		school: decodeURI(params.school),
-		username: decodeURI(params.username),
-		password: decodeURI(params.password),
-		notify: decodeURI(params.notify),
+		school: params.school,
+		username: params.username,
+		password: params.password,
+		notify: params.notify,
 		cancelled: params.cancelled,
 		assistant: params.assistant
 	}
@@ -56,13 +61,25 @@ const login = async function(params) {
 		}
 	}
 	
-	fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', JSON.stringify(tokens), 'utf8', () => {
-		console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens.json');
+	var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
+	var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
+
+	fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
+		console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
 	});
-	fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', JSON.stringify(login), 'utf8', () => {
-		console.log('Login saved at: db/'+login.school+'/'+login.username+'/login.json');
+	fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
+		console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
 	});
 
+	// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
+	// 	if (err) { throw err; }
+	// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
+	// 	console.log(text);
+	// });
+}
+
+const login = async function(login, tokens) {
+	oauth2Client.setCredentials(tokens);
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
 		let data = '';
