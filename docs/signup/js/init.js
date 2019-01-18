@@ -65,7 +65,7 @@ function signInCallback(authResult) {
       }
     });
     
-    xhr.open("POST", "https://116.202.22.6");
+    xhr.open("POST", "http://server.magbot.tk");
     xhr.setRequestHeader("code", authResult.code);
     xhr.setRequestHeader("school", school);
     xhr.setRequestHeader("username", username);
