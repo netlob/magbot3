@@ -23,6 +23,7 @@ function autocompleteDropdown() {
 }
 
 function signInCallback(authResult) {
+  console.dir(authResult)
   if (authResult['code']) {
     var school = document.getElementById('autocomplete-input').value;
     var username = document.getElementById('username').value;
@@ -32,28 +33,6 @@ function signInCallback(authResult) {
     var assistant = $("#assistant").is(":checked") ? true : false;
     
     $('#signinButton').attr('style', 'display: none');
-    // var settings = {
-    //   "async": true,
-    //   "crossDomain": false,
-    //   "url": "http://127.0.0.1:8080",
-    //   "method": "POST",
-    //   "contentType" : "text/plain",
-    //   "headers": {
-    //     "cache-control": "no-cache",
-    //     "contentType" : "text/plain",
-    //     "code": authResult.code,
-    //     "school": school,
-    //     "username": username,
-    //     "password": password,
-    //     "notify": notify,
-    //     "cancelled": cancelled,
-    //     "assistant": assistant
-    //   }
-    // }
-    // $.ajax(settings).done(function (response) {
-    //   console.log(response);
-    // });
-
     var data = null;
 
     var xhr = new XMLHttpRequest();
@@ -62,7 +41,7 @@ function signInCallback(authResult) {
     xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4) {
         console.log(this.responseText);
-        if(this.responseText == 'success') {
+        if(this.responseText == 'succes') {
           M.toast({html: 'Succesvol geactiveerd!'})
         }
       }
