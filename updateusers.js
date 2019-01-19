@@ -18,101 +18,12 @@ const oauth2Client = new google.auth.OAuth2(
   'http://www.magbot.tk'
 );
 
-server = http.createServer( function(req, res) {
-	console.dir(req.method)
-	if (req.method == 'POST') {
-		console.log("SIGNUP");
-		console.dir(req.headers.code)
-		getTokens(req.headers)
-		.then((tokens => {
-			signup(tokens, req.headers)
-			res.setHeader('Access-Control-Allow-Credentials', 'true');
-			res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
-			res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
-			res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
-			res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
-			res.writeHead(200, {'Content-Type': 'text/html'});
-//			var end = await login(req.headers)
-			res.end('succes');
-		}))
-	} else {
-		res.setHeader('Access-Control-Allow-Credentials', 'true');
-		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
-		res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
-		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
-		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
-		res.writeHead(200);
-		res.end('fail');
-		return;
-	}
-});
-server.listen(80, '116.202.22.6');
+
 
 const getTokens = async function(params) {
 	const { tokens } = await oauth2Client.getToken(params.code)
 	return tokens;
 }
-
-function signup(tokens, params) {
-	oauth2Client.setCredentials(tokens);
-	var options = {
-		method: 'POST',
-		url: 'https://www.googleapis.com/calendar/v3/calendars',
-		headers: {
-			'Content-Type': 'application/json',
-			'Accept': 'application/json',
-			'Authorization': 'Bearer ' + oauth2Client.credentials.access_token
-		},
-		body: {
-			summary: 'Magister',
-			description: 'Deze calendar wordt automatisch geupdate door Magbot',
-			colorId: 9
-		},
-		json: true
-	};
-
-	request(options, function (error, response, body) {
-		if (error) throw new Error(error);
-		var login = {
-			school: params.school,
-			username: params.username,
-			password: params.password,
-			notify: params.notify,
-			cancelled: params.cancelled,
-			assistant: params.assistant,
-			calendarid: body.id
-		}
-		if(!fs.existsSync('db/'+login.school)){
-			fs.mkdirSync('db/'+login.school);
-			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-				fs.mkdirSync('db/'+login.school+'/'+login.username);
-			}
-		} else {
-			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-				fs.mkdirSync('db/'+login.school+'/'+login.username);
-			}
-		}
-
-		var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
-		var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
-
-		fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
-			console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
-		});
-		fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
-			console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
-		});
-		loginFunc(login, tokens)
-		return 'succes'
-		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
-		// 	if (err) { throw err; }
-		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
-		// 	console.log(text);
-		// });
-	});
-}
-
-
 
 function loginFunc(login, tokens) {
 	oauth2Client.setCredentials(tokens);
