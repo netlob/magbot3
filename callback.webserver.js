@@ -68,7 +68,7 @@ function signup(tokens, params) {
 		body: {
 			summary: 'Magister',
 			description: 'Deze calendar wordt automatisch geupdate door Magbot',
-			colorId: 9
+			colorId: 16
 		},
 		json: true
 	};
