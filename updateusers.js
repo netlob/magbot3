@@ -1,4 +1,3 @@
-var http = require('http');
 var https = require('https');
 const {google} = require('googleapis');
 const { default: magister, getSchools } = require('magister.js');
@@ -6,8 +5,7 @@ var moment = require('moment-business-days');
 const fs = require('fs');
 var CryptoJS = require("crypto-js");
 var AES = require("crypto-js/aes");
-var SHA256 = require("crypto-js/sha256");
-var request = require("request");
+const database = './db/'
 
 var key = require('./key')
 
@@ -18,17 +16,16 @@ const oauth2Client = new google.auth.OAuth2(
   'http://www.magbot.tk'
 );
 
-function() {
-		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
-		// 	if (err) { throw err; }
-		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
-		// 	console.log(text);
-		// });
-}
+getUsers();
 
-const getTokens = async function(params) {
-	const { tokens } = await oauth2Client.getToken(params.code)
-	return tokens;
+function getUsers() {
+	fs.readdirSync(database).forEach(file => {
+		fs.readFile('db/'+file, function read(err, data) {
+			if (err) { throw err; }
+			var login  = AES.decrypt(data.toString(), key.login).toString(CryptoJS.enc.Utf8);
+			loginFunc(login, login.tokens)
+		});
+	})
 }
 
 function loginFunc(login, tokens) {
@@ -66,7 +63,7 @@ function pushCalendar(auth, login, m) {
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
 		if(!m[i].isCancelled){
-			console.log(m[i].isCancelled)
+			console.log([m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'])
 			var event = {
 				'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
 				'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
@@ -118,20 +115,6 @@ function del(auth, login, m) {
 		}
 	});
 	pushCalendar(auth, login, m)
-}
-
-var params=function(req){
-	let q=req.url.split('?'),result={};
-	if(q.length>=2){
-		q[1].split('&').forEach((item)=>{
-			try {
-				result[item.split('=')[0]]=item.split('=')[1];
-			} catch (e) {
-				result[item.split('=')[0]]='';
-			}
-		})
-	}
-	return result;
 }
 
 function day(extra) {
