@@ -20,10 +20,10 @@ function signInCallback(authResult) {
     gapi.client.load('plus', 'v1', function() {
       gapi.client.plus.people.get({userId: 'me'}).execute(function() {
         var primaryEmail;
-        for (var i=0; i < resp.emails.length; i++) {
-          if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
+        for (var i=0; i < authResult.emails.length; i++) {
+          if (authResult.emails[i].type === 'account') primaryEmail = authResult.emails[i].value;
         }
-        document.getElementById('responseContainer').value = 'Primary email: ' + primaryEmail + '\n\nFull Response:\n' + JSON.stringify(resp);
+        document.getElementById('responseContainer').value = 'Primary email: ' + primaryEmail + '\n\nFull Response:\n' + JSON.stringify(authResult);
       });
     });
     var school = document.getElementById('autocomplete-input').value;
