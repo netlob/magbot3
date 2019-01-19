@@ -17,15 +17,11 @@ function autocompleteDropdown() {
 function signInCallback(authResult) {
   console.dir(authResult)
   if (authResult['code']) {
-    // gapi.client.load('plus', 'v1', function() {
-    //   gapi.client.plus.people.get({userId: 'me'}).execute(function() {
-    //     var primaryEmail;
-    //     for (var i=0; i < authResult.emails.length; i++) {
-    //       if (authResult.emails[i].type === 'account') primaryEmail = authResult.emails[i].value;
-    //     }
-    //     document.getElementById('responseContainer').value = 'Primary email: ' + primaryEmail + '\n\nFull Response:\n' + JSON.stringify(authResult);
-    //   });
-    // });
+    gapi.client.getBasicProfile()
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.  
     var school = document.getElementById('autocomplete-input').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;

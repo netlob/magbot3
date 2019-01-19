@@ -90,11 +90,6 @@
         <a id="signinButton" class="waves-effect waves-light btn magister-blue" style="zoom: 120%; width: 100%">Continue with Google</a>
         <script>
           $('#signinButton').click(function() {
-            auth2.getBasicProfile()
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-            console.log('Name: ' + profile.getName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.  
             auth2.grantOfflineAccess().then(signInCallback);
           });
         </script>
