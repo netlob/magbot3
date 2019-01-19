@@ -15,7 +15,7 @@ var secret = require('./secret')
 const oauth2Client = new google.auth.OAuth2(
   '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
   secret.clientsecret,
-  'http://server.magbot.tk'
+  'http://wwwß.magbot.tk'
 );
 
 server = http.createServer( function(req, res) {
@@ -47,20 +47,26 @@ server.listen(80, '116.202.22.6');
 const signup = async function(params) {
 	const { tokens } = await oauth2Client.getToken(params.code)
 	oauth2Client.setCredentials(tokens);
+	console.dir(oauth2Client.credentials.access_token)
 
-	// var options = { method: 'POST',
-	// url: 'https://www.googleapis.com/calendar/v3/calendars',
-	// headers: 
-	//  { 'cache-control': 'no-cache',
-	//    'Content-Type': 'application/json',
-	//    Accept: 'application/json',
-	//    Authorization: 'Bearer' },
-	// body: { summary: 'Magister', description: 'Deze calendar wordt automatisch geupdate door Magbot' },
-	// json: true };
+	var options = {
+		method: 'POST',
+		url: 'https://www.googleapis.com/calendar/v3/calendars',
+		headers: {
+			'Content-Type': 'application/json',
+			'Accept': 'application/json',
+			'Authorization': 'Bearer ' + oauth2Client.credentials.access_token
+		},
+		body: {
+			summary: 'Magister',
+			description: 'Deze calendar wordt automatisch geupdate door Magbot'
+		},
+		json: true 
+	};
 
-	// request(options, function (error, response, body) {
-	// 	if (error) throw new Error(error);
-	// 	console.log(body);
+	request(options, function (error, response, body) {
+		if (error) throw new Error(error);
+		console.log(body);
 		var login = {
 			school: params.school,
 			username: params.username,
@@ -68,9 +74,9 @@ const signup = async function(params) {
 			notify: params.notify,
 			cancelled: params.cancelled,
 			assistant: params.assistant,
-			calendarid: 's453457rcdfedu1pol54u5oh8s@group.calendar.google.com'
+			calendarid: body.id
 		}
-
+console.dir(login)
 		if(!fs.existsSync('db/'+login.school)){
 			fs.mkdirSync('db/'+login.school);
 			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
@@ -97,7 +103,7 @@ const signup = async function(params) {
 		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
 		// 	console.log(text);
 		// });
-	// });
+	});
 }
 
 const login = async function(login, tokens) {
