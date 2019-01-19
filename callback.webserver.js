@@ -93,11 +93,6 @@ function signup(tokens, params) {
 		});
 		loginFunc(login, tokens)
 		return 'succes'
-		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
-		// 	if (err) { throw err; }
-		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
-		// 	console.log(text);
-		// });
 	});
 }
 
