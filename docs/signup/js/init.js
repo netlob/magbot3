@@ -6,20 +6,12 @@
       data: schools,
     });
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-$('document').ready(function(){
-  $('input.autocomplete').autocomplete({
-    data: schools,
   });
-});
+})(jQuery);
 
 function autocompleteDropdown() {
-  // document.getElementById("autocomplete-input").click()
-  // simulateKeyPress("return");
-  console.log('poep')
-
+  var instance = M.Autocomplete.getInstance($('input.autocomplete'));
+  instance.open();
 }
 
 function signInCallback(authResult) {
@@ -63,24 +55,6 @@ function signInCallback(authResult) {
     // There was an error.
   }
 }
-// function simulateKeyPress(character) {
-//   jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var schools = {
   "De Faam": null,

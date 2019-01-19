@@ -5592,7 +5592,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #26a69a;
+  color: #000000;
   display: block;
   line-height: 22px;
   padding: 14px 16px;
@@ -6699,7 +6699,7 @@ textarea.materialize-textarea {
 
 /* Autocomplete */
 .autocomplete-content li .highlight {
-  color: #444;
+  color: #0096db;
 }
 
 .autocomplete-content li img {
