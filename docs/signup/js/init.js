@@ -17,11 +17,6 @@ function autocompleteDropdown() {
 function signInCallback(authResult) {
   console.dir(authResult)
   if (authResult['code']) {
-    authResult.getBasicProfile()
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.  
     // gapi.client.load('plus', 'v1', function() {
     //   gapi.client.plus.people.get({userId: 'me'}).execute(function() {
     //     var primaryEmail;
