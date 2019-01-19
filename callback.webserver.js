@@ -57,6 +57,7 @@ const getTokens = async function(params) {
 
 function signup(tokens, params) {
 	oauth2Client.setCredentials(tokens);
+	console.log(oauth2Client.credentials.access_token)
 	var options = {
 		method: 'POST',
 		url: 'https://www.googleapis.com/calendar/v3/calendars',
