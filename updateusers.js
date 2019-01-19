@@ -23,13 +23,13 @@ function getUsers() {
 		fs.readFile('db/'+file, function read(err, data) {
 			if (err) { throw err; }
 			var login  = AES.decrypt(data.toString(), key.login).toString(CryptoJS.enc.Utf8);
-			loginFunc(login, login.tokens)
+			loginFunc(login)
 		});
 	})
 }
 
-function loginFunc(login, tokens) {
-	oauth2Client.setCredentials(tokens);
+function loginFunc(login) {
+	oauth2Client.setCredentials(tokens.tokens);
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
 		let data = '';
