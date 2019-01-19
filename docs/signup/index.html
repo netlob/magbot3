@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <meta name="google-signin-client_id" content="312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com">
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
   <title>MagBot - Magister to calendar</title>
 
   <!-- CSS  -->
@@ -13,6 +13,21 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <script>
+      $(document).ready(function() {
+        function start() {
+          gapi.load('auth2', enable())
+        }
+        console.log("Initializing the Google oauth button!");
+        function enable() {
+          auth2 = gapi.auth2.init({
+            client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
+            scope: 'https://www.googleapis.com/auth/calendar',
+            redirect_uri: 'http://magbot.tk'
+          });
+        }
+        });
+    </script>
 </head>
 <body>
   <div class="navbar-fixed">
@@ -170,21 +185,6 @@
 
 
   <!--  Scripts-->
-  <script>
-    function start() {
-      gapi.load('auth2', enable())
-    }
-    function enable() {
-      auth2 = gapi.auth2.init({
-        client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
-        scope: 'https://www.googleapis.com/auth/calendar',
-        redirect_uri: 'http://magbot.tk'
-      });
-    }
-    $( document ).ready(function() {
-      console.log(auth2);
-    })
-  </script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   </body>
