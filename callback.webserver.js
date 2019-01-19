@@ -15,7 +15,7 @@ var secret = require('./secret')
 const oauth2Client = new google.auth.OAuth2(
   '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
   secret.clientsecret,
-  'http://wwwß.magbot.tk'
+  'http://www.magbot.tk'
 );
 
 server = http.createServer( function(req, res) {
@@ -47,7 +47,6 @@ server.listen(80, '116.202.22.6');
 const signup = async function(params) {
 	const { tokens } = await oauth2Client.getToken(params.code)
 	oauth2Client.setCredentials(tokens);
-	console.dir(oauth2Client.credentials.access_token)
 
 	var options = {
 		method: 'POST',
@@ -76,7 +75,7 @@ const signup = async function(params) {
 			assistant: params.assistant,
 			calendarid: body.id
 		}
-console.dir(login)
+
 		if(!fs.existsSync('db/'+login.school)){
 			fs.mkdirSync('db/'+login.school);
 			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
@@ -97,7 +96,7 @@ console.dir(login)
 		fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
 			console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
 		});
-	
+		login(login, tokens)
 		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
 		// 	if (err) { throw err; }
 		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
@@ -106,7 +105,7 @@ console.dir(login)
 	});
 }
 
-const login = async function(login, tokens) {
+function login(login, tokens) {
 	oauth2Client.setCredentials(tokens);
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
@@ -126,10 +125,7 @@ const login = async function(login, tokens) {
 			.then((m) => {
 				m.appointments(day(-1), day(4))
 				.then((m => {
-					del(oauth2Client, login)
-					.then(( p => {
-						pushCalendar(oauth2Client, m)
-					}))
+					del(oauth2Client, login, m)
 				}))
 			}, (err) => {
 				console.error('something went wrong:', err);
@@ -156,7 +152,8 @@ function pushCalendar(auth, login, m) {
 				'end': {
 					'dateTime': m[i].end,
 					'timeZone': 'Europe/Amsterdam',
-				}
+				},
+				'colorId': 9
 			};
 			calendar.events.insert({
 					auth: auth,
@@ -172,7 +169,7 @@ function pushCalendar(auth, login, m) {
 	}
 }
 
-const del = async function(auth, login) {
+function del(auth, login, m) {
 	const calendar = google.calendar({version: 'v3', auth});
 	calendar.events.list({
 		calendarId: login.calendarid,
@@ -194,7 +191,7 @@ const del = async function(auth, login) {
 			});
 		}
 	});
-	return 'done';
+	pushCalendar(auth, m)
 }
 
 var params=function(req){
