@@ -15,18 +15,14 @@
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
   <script>
       $(document).ready(function() {
-        function start() {
-          gapi.load('auth2', enable())
-        }
-        function enable() {
-          console.log("Initializing the Google oauth button!");
+        console.log("Initializing the Google oauth button!");
+        gapi.load('auth2', function() {
           auth2 = gapi.auth2.init({
             client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
             scope: 'https://www.googleapis.com/auth/calendar',
             redirect_uri: 'http://magbot.tk'
           });
-        }
-        start()
+        })
       });
     </script>
 </head>
