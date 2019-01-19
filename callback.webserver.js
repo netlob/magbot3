@@ -29,7 +29,8 @@ server = http.createServer( function(req, res) {
 		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
 		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
 		res.writeHead(200, {'Content-Type': 'text/html'});
-		res.end(signup(req.headers));
+		var end = await signup(req.headers)
+		res.end(end);
 	} else {
 		res.setHeader('Access-Control-Allow-Credentials', 'true');
 		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
