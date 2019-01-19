@@ -130,6 +130,8 @@ function loginFunc(login) {
 }
 
 function pushCalendar(auth, login, m) {
+	console.log(login.notify + typeof login.notify)
+	console.log(login.cancelled + typeof login.cancelled)
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
 		if(!m[i].isCancelled){
