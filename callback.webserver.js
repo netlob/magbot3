@@ -57,7 +57,8 @@ const signup = async function(params) {
 		},
 		body: {
 			summary: 'Magister',
-			description: 'Deze calendar wordt automatisch geupdate door Magbot'
+			description: 'Deze calendar wordt automatisch geupdate door Magbot',
+			colorId: 9
 		},
 		json: true 
 	};
