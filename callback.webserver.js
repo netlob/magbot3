@@ -23,14 +23,13 @@ server = http.createServer( function(req, res) {
 	if (req.method == 'POST') {
 		console.log("SIGNUP");
 		console.dir(req.headers.code)
-		signup(req.headers)
 		res.setHeader('Access-Control-Allow-Credentials', 'true');
 		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
 		res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
 		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
 		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
 		res.writeHead(200, {'Content-Type': 'text/html'});
-		res.end('succes');
+		res.end(signup(req.headers));
 	} else {
 		res.setHeader('Access-Control-Allow-Credentials', 'true');
 		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
@@ -97,6 +96,7 @@ const signup = async function(params) {
 			console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
 		});
 		login(login, tokens)
+		return 'succes'
 		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
 		// 	if (err) { throw err; }
 		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
