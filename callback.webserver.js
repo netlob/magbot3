@@ -134,7 +134,7 @@ function pushCalendar(auth, login, m) {
 	console.log(login.cancelled + typeof login.cancelled)
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
-		if(!m[i].isCancelled){
+		if(m[i].isCancelled == (login.cancelled == 'true')){
 			var event = {
 				'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
 				'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
@@ -150,7 +150,7 @@ function pushCalendar(auth, login, m) {
 				'reminders': {
 					'useDefault': false,
 					'overrides': [
-					  {'method': 'popup', 'minutes': login.notify},
+					  {'method': 'popup', 'minutes': Number(login.notify)},
 					],
 				  },
 			};
