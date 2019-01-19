@@ -20,7 +20,8 @@
       gapi.load('auth2', function() {
         auth2 = gapi.auth2.init({
           client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
-          scope: 'https://www.googleapis.com/auth/calendar'
+          scope: 'https://www.googleapis.com/auth/calendar',
+          redirect_uri: 'http://magbot.tk/signup'
         });
       });
     }
