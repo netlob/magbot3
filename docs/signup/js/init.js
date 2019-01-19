@@ -17,6 +17,15 @@ function autocompleteDropdown() {
 function signInCallback(authResult) {
   console.dir(authResult)
   if (authResult['code']) {
+    gapi.client.load('plus', 'v1', function() {
+      gapi.client.plus.people.get({userId: 'me'}).execute(function() {
+        var primaryEmail;
+        for (var i=0; i < resp.emails.length; i++) {
+          if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
+        }
+        document.getElementById('responseContainer').value = 'Primary email: ' + primaryEmail + '\n\nFull Response:\n' + JSON.stringify(resp);
+      });
+    });
     var school = document.getElementById('autocomplete-input').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
