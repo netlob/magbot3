@@ -76,7 +76,7 @@ function pushCalendar(auth, login, m) {
 					'dateTime': m[i].end,
 					'timeZone': 'Europe/Amsterdam',
 				},
-				'colorId': 9
+				'colorId': 1
 			};
 			calendar.events.insert({
 					auth: auth,
