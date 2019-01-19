@@ -144,7 +144,13 @@ function pushCalendar(auth, login, m) {
 				'end': {
 					'dateTime': m[i].end,
 					'timeZone': 'Europe/Amsterdam',
-				}
+				},
+				'reminders': {
+					'useDefault': false,
+					'overrides': [
+					  {'method': 'popup', 'minutes': login.notify},
+					],
+				  },
 			};
 			calendar.events.insert({
 					auth: auth,
