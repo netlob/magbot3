@@ -18,7 +18,13 @@ const oauth2Client = new google.auth.OAuth2(
   'http://www.magbot.tk'
 );
 
-
+function() {
+		// fs.readFile('db/'+login.school+'/'+login.username+'/tokens.json', function read(err, data) {
+		// 	if (err) { throw err; }
+		// 	var text  = CryptoJS.AES.decrypt(data.toString(), key.token).toString(CryptoJS.enc.Utf8);
+		// 	console.log(text);
+		// });
+}
 
 const getTokens = async function(params) {
 	const { tokens } = await oauth2Client.getToken(params.code)
