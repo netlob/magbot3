@@ -13,19 +13,6 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-
-  <script>
-    function start() {
-      gapi.load('auth2', enable())
-    }
-    function enable() {
-      auth2 = gapi.auth2.init({
-        client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
-        scope: 'https://www.googleapis.com/auth/calendar',
-        redirect_uri: 'http://magbot.tk'
-      });
-    }
-  </script>
 </head>
 <body>
   <div class="navbar-fixed">
@@ -183,6 +170,21 @@
 
 
   <!--  Scripts-->
+  <script>
+    function start() {
+      gapi.load('auth2', enable())
+    }
+    function enable() {
+      auth2 = gapi.auth2.init({
+        client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
+        scope: 'https://www.googleapis.com/auth/calendar',
+        redirect_uri: 'http://magbot.tk'
+      });
+    }
+    $( document ).ready(function() {
+      console.log(auth2);
+    })
+  </script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   </body>
