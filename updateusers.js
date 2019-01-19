@@ -62,8 +62,7 @@ function loginFunc(login) {
 function pushCalendar(auth, login, m) {
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
-		if(!m[i].isCancelled){
-			console.log([m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'])
+		if(m[i].isCancelled == (login.cancelled == 'true')){
 			var event = {
 				'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
 				'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
@@ -76,7 +75,12 @@ function pushCalendar(auth, login, m) {
 					'dateTime': m[i].end,
 					'timeZone': 'Europe/Amsterdam',
 				},
-				'colorId': 1
+				'reminders': {
+					'useDefault': false,
+					'overrides': [
+					  {'method': 'popup', 'minutes': Number(login.notify)},
+					],
+				  },
 			};
 			calendar.events.insert({
 					auth: auth,
