@@ -32,9 +32,11 @@ server = http.createServer( function(req, res) {
 			res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
 			res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
 			res.writeHead(200, {'Content-Type': 'text/html'});
-//			var end = await login(req.headers)
 			res.end('succes');
-		}))
+		}), (err) => {
+				console.error('something went wrong:', err);
+				res.end(err)
+			});
 	} else {
 		res.setHeader('Access-Control-Allow-Credentials', 'true');
 		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
@@ -80,27 +82,14 @@ function signup(tokens, params) {
 			notify: params.notify,
 			cancelled: params.cancelled,
 			assistant: params.assistant,
-			calendarid: body.id
-		}
-		if(!fs.existsSync('db/'+login.school)){
-			fs.mkdirSync('db/'+login.school);
-			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-				fs.mkdirSync('db/'+login.school+'/'+login.username);
-			}
-		} else {
-			if(!fs.existsSync('db/'+login.school+'/'+login.username)){
-				fs.mkdirSync('db/'+login.school+'/'+login.username);
-			}
+			calendarid: body.id,
+			tokens: tokens
 		}
 
-		var encTokens = CryptoJS.AES.encrypt(JSON.stringify(tokens), key.token);
 		var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
 
-		fs.writeFile('db/'+login.school+'/'+login.username+'/tokens.json', encTokens, 'utf8', () => {
-			console.log('Code saved at: db/'+login.school+'/'+login.username+'/tokens');
-		});
-		fs.writeFile('db/'+login.school+'/'+login.username+'/login.json', encLogin, 'utf8', () => {
-			console.log('Login saved at: db/'+login.school+'/'+login.username+'/login');
+		fs.writeFile('db/'+login.school+'-'+login.username+'-login.json', encLogin, 'utf8', () => {
+			console.log('Login saved at: db/'+login.school+'-'+login.username+'-login.json');
 		});
 		loginFunc(login, tokens)
 		return 'succes'
