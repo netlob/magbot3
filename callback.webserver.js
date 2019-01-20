@@ -84,7 +84,6 @@ function signup(tokens, params) {
 			cancelled: params.cancelled,
 			assistant: params.assistant,
 			mail: params.mail,
-			email: params.email,
 			calendarid: body.id,
 			tokens: tokens
 		}

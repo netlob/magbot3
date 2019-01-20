@@ -14,14 +14,6 @@ function autocompleteDropdown() {
   instance.open();
 }
 
-$("#emailcheck").change(function() {
-  if($("#emailcheck").is(":checked")){
-    document.getElementById('emailinput').style.display = 'block';
-  } else {
-    document.getElementById('emailinput').style.display = 'none';
-  }
-});
-
 function signInCallback(authResult) {
   console.dir(authResult)
   if (authResult['code']) { 
@@ -31,8 +23,7 @@ function signInCallback(authResult) {
     var notify = document.getElementById('notify').value;
     var cancelled = $("#cancelled").is(":checked") ? true : false;
     var assistant = $("#assistant").is(":checked") ? true : false;
-    var mail = $("#emailcheck").is(":checked") ? true : false;
-    var email = document.getElementById('email').value;
+    var mail = $("#mail").is(":checked") ? true : false;
     
     $('#signinButton').attr('style', 'display: none');
     var data = null;
@@ -58,7 +49,6 @@ function signInCallback(authResult) {
     xhr.setRequestHeader("cancelled", cancelled);
     xhr.setRequestHeader("assistant", assistant);
     xhr.setRequestHeader("mail", mail);
-    xhr.setRequestHeader("email", email);
     
     xhr.send(data);
 
