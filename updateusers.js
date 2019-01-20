@@ -23,6 +23,7 @@ function getUsers() {
 		fs.readFile('db/'+file, function read(err, data) {
 			if (err) { throw err; }
 			var login  = AES.decrypt(data.toString(), key.login).toString(CryptoJS.enc.Utf8);
+			login = JSON.parse(login)
 			loginFunc(login)
 		});
 	})
