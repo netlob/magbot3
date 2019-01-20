@@ -78,10 +78,28 @@ function pushCalendar(auth, login, m) {
 				'reminders': {
 					'useDefault': false,
 					'overrides': [
-					  {'method': 'popup', 'minutes': Number(login.notify)},
+					  	{
+							'method': 'popup',
+							'minutes': Number(login.notify)
+						},
 					],
-				  },
+				},
+				'colorId': 1
 			};
+
+			if(m[i].infoType > 1 && login.mail) {
+				event.reminders.overrides = [
+					{
+						'method': 'popup',
+						'minutes': Number(login.notify)
+					},
+					{
+						'method': 'email',
+						'minutes': 24 * 60 * 7
+					}
+				]
+			}
+
 			calendar.events.insert({
 					auth: auth,
 					calendarId: login.calendarid,
