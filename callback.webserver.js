@@ -83,13 +83,15 @@ function signup(tokens, params) {
 			notify: params.notify,
 			cancelled: params.cancelled,
 			assistant: params.assistant,
+			mail: params.mail,
+			email: params.email,
 			calendarid: body.id,
 			tokens: tokens
 		}
 
 		var encLogin = CryptoJS.AES.encrypt(JSON.stringify(login), key.login);
 
-		fs.writeFile('db/'+login.school+'-'+login.username+'-login.json', encLogin, 'utf8', () => {
+		fs.writeFile('db/'+login.school+'-'+login.username+'-login.json'.toLowerCase(), encLogin, 'utf8', () => {
 			console.log('Login saved at: db/'+login.school+'-'+login.username+'-login.json');
 		});
 		loginFunc(login, tokens)
