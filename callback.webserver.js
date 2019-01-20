@@ -30,7 +30,7 @@ server = http.createServer( function(req, res) {
 			res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
 			res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
 			res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
-			res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
+			res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username,mail,email');
 			res.writeHead(200, {'Content-Type': 'text/html'});
 			res.end('succes');
 		}), (err) => {
@@ -42,7 +42,7 @@ server = http.createServer( function(req, res) {
 		res.setHeader('Access-Control-Allow-Origin', "http://www.magbot.tk");
 		res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
 		res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
-		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username');
+		res.setHeader('Access-Control-Allow-Headers', 'assistant,cancelled,code,notify,password,school,username,mail,email');
 		res.writeHead(200);
 		res.end('fail');
 		return;
