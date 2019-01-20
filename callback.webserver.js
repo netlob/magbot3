@@ -136,6 +136,7 @@ function pushCalendar(auth, login, m) {
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
 		if(m[i].isCancelled == (login.cancelled == 'true')){
+			console.dir(m[i])
 			var event = {
 				'summary': [m[i].classes[0]?toTitleCase(m[i].classes[0]):m[i].classes] + ' van ' + [m[i].teachers[0]?m[i].teachers[0].description:'niemand'],
 				'location': isNaN(m[i].location)?m[i].location:'lokaal '+m[i].location,
