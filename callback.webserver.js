@@ -156,7 +156,8 @@ function pushCalendar(auth, login, m) {
 							'minutes': Number(login.notify)
 						},
 					],
-				  },
+				},
+				'colorId': 9
 			};
 
 			if(m[i].infoType > 1 && login.mail) {
