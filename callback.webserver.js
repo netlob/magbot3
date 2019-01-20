@@ -167,7 +167,7 @@ function pushCalendar(auth, login, m) {
 					},
 					{
 						'method': 'email',
-						'minutes': 24 * 60
+						'minutes': 24 * 60 * 7
 					}
 				]
 			}
