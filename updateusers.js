@@ -29,7 +29,7 @@ function getUsers() {
 }
 
 function loginFunc(login) {
-	oauth2Client.setCredentials(tokens.tokens);
+	oauth2Client.setCredentials(login.tokens);
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
 		let data = '';
