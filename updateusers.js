@@ -39,7 +39,6 @@ function loginFunc(login) {
 		});
 		resp.on('end', () => {
 			authcode = data.replace('"','').replace('"','').replace(/(\r\n\t|\n|\r\t)/gm, "");
-			console.log(login)
 			getSchools(login.school)
 			.then((schools) => schools[0])
 			.then((school) => magister({
