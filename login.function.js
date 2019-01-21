@@ -39,11 +39,11 @@ module.exports = async function (login) {
 				.then((m) => {
 					m.appointments(day(-1), day(4))
 					.then((m => {
-						var all = [
-							oauth2Client,
-							login,
-							m
-						];
+						var all = {
+							'oauth2Client': oauth2Client,
+							'login': login,
+							'm': m
+						};
 						resolve(all);
 					}))
 				}, (err) => {
