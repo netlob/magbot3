@@ -44,7 +44,7 @@ module.exports = async function (login) {
 							login,
 							m
 						];
-						resolve(JSON.stringify(all));
+						resolve(all);
 					}))
 				}, (err) => {
 					console.error('something went wrong:', err);
