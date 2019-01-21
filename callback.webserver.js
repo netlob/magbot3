@@ -98,7 +98,7 @@ function signup(tokens, params) {
 
 		loginFunc(login)
 		.then((all => {
-			console.dir(all)
+			// console.dir(all)
 			delCalendar(all)
 		}))
 	});
