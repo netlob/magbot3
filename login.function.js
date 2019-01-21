@@ -45,9 +45,9 @@ module.exports = async function (login) {
 					// ];
 					// del(oauth2Client, login, m)
 					// console.dir(all)
-					while(m != undefined) {
+					// while(m != undefined) {
 						return Promise.resolve(m);
-					}
+					// }
 					
 				}))
 			}, (err) => {

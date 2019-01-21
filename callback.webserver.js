@@ -95,11 +95,6 @@ function signup(tokens, params) {
 		fs.writeFile(path.toLowerCase(), encLogin, 'utf8', () => {
 			console.log('Login saved at: db/'+login.school+'-'+login.username+'-login.json');
 		});
-		var m = await loginFunc(login)
-		console.dir(m)
-		// console.dir(loginFunc(login))
-		// .then((all => {
-		// 	console.dir('Dit is m:' + all)
-		// }))
+		console.dir(loginFunc(login))
 	});
 }
