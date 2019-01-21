@@ -43,7 +43,7 @@ module.exports = async function (login) {
 						m
 					];
 					// del(oauth2Client, login, m)
-					console.dir(all)
+					// console.dir(all)
 					while(all != undefined) {
 						return all;
 					}
