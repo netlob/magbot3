@@ -98,11 +98,7 @@ function signup(tokens, params) {
 
 		loginFunc(login)
 		.then((all => {
-			var del = delCalendar(all)
-			while(del != 'succes') {
-				console.dir('yea daar gaan we')
-				pushCalendar(all)
-			}
+			delCalendar(all, pushCalendar(all))
 		}))
 	});
 }
