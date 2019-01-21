@@ -44,7 +44,9 @@ module.exports = async function (login) {
 					];
 					// del(oauth2Client, login, m)
 					console.dir(all)
-					return all;
+					while(all != undefined) {
+						return all;
+					}
 				}))
 			}, (err) => {
                 console.error('something went wrong:', err);
