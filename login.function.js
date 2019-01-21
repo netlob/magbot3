@@ -33,6 +33,7 @@ module.exports = async function (login) {
 				school,
 				username: login.username,
 				password: login.password,
+				authCode: authcode
 			}))
 			.then((m) => {
 				m.appointments(day(-1), day(4))
