@@ -42,8 +42,8 @@ module.exports = async function (login) {
 				authCode: authcode
 			}))
 			.then((m) => {
-				m.appointments(day(-1), day(4))
-				.then((m => {
+				// m.appointments(day(-1), day(4))
+				// .then((m => {
 					// var all = [
 					// 	oauth2Client,
 					// 	login,
@@ -55,7 +55,7 @@ module.exports = async function (login) {
 						return Promise.resolve(m);
 					// }
 					
-				}))
+				// }))
 			}, (err) => {
                 console.error('something went wrong:', err);
                 return 'error'
