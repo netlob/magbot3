@@ -5,6 +5,8 @@ module.exports = function (all) {
     var login = all.login;
 	var m = all.m;
 
+	console.log('her we go')
+
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
 		if(m[i].isCancelled == (login.cancelled == 'true')){

@@ -1,6 +1,6 @@
 const {google} = require('googleapis');
 
-module.exports = function (all) {
+module.exports = function (all, callback) {
     var auth = all.oauth2Client;
     var login = all.login;
 	var m = all.m;
@@ -26,5 +26,5 @@ module.exports = function (all) {
 			});
 		}
 	});
-    return 'succes'
+    callback(response);
 }
