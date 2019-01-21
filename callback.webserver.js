@@ -98,7 +98,7 @@ function signup(tokens, params) {
 
 		loginFunc(login)
 		.then((all => {
-			delCalendar(all, pushCalendar(all))
+			delCalendar(all, pushCalendar)
 		}))
 	});
 }

@@ -26,5 +26,5 @@ module.exports = function (all, callback) {
 			});
 		}
 	});
-    callback();
+    callback(all);
 }
