@@ -28,10 +28,12 @@ function getUsers() {
 			if (err) { throw err; }
 			var login  = AES.decrypt(data.toString(), key.login).toString(CryptoJS.enc.Utf8);
 			login = JSON.parse(login)
-			loginFunc(login)
-			.then((all => {
-				delCalendar(all, pushCalendar)
-			}))
+			login.password = 'hidden'
+			console.dir(login)
+			// loginFunc(login)
+			// .then((all => {
+			// 	delCalendar(all, pushCalendar)
+			// }))
 		});
 	})
 }
