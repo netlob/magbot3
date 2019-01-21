@@ -55,8 +55,8 @@ module.exports = async function (login) {
 			console.log("Error: " + err.message);
 			reject(err);
 		});
-	}.catch(function(error) {
+	}).catch(function(error) {
 		console.log(error);
 		reject(err);
-	}))
+	})
 }
