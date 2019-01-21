@@ -43,30 +43,22 @@ module.exports = async function (login) {
 					authCode: authcode
 				}))
 				.then((m) => {
-					// m.appointments(day(-1), day(4))
-					// .then((m => {
-						// var all = [
-						// 	oauth2Client,
-						// 	login,
-						// 	m
-						// ];
-						// del(oauth2Client, login, m)
-						// console.dir(all)
-						// while(m != undefined) {
-							// return Promise.resolve(m);
-							resolve(JSON.stringify(m));
-						// }
-						
-					// }))
+					m.appointments(day(-1), day(4))
+					.then((m => {
+						var all = [
+							oauth2Client,
+							login,
+							m
+						];
+						resolve(JSON.stringify(all));
+					}))
 				}, (err) => {
 					console.error('something went wrong:', err);
-					// return 'error'
 					reject(err);
 					});
 			});
 		}).on("error", (err) => {
 			console.log("Error: " + err.message);
-			// return 'error'
 			reject(err);
 		});
 	})
