@@ -2,8 +2,6 @@ var http = require('http');
 const {google} = require('googleapis');
 const fs = require('fs');
 var CryptoJS = require("crypto-js");
-var AES = require("crypto-js/aes");
-var SHA256 = require("crypto-js/sha256");
 var request = require("request");
 
 var loginFunc = require('./login.function');

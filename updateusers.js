@@ -1,7 +1,4 @@
-var https = require('https');
 const {google} = require('googleapis');
-const { default: magister, getSchools } = require('magister.js');
-var moment = require('moment-business-days');
 const fs = require('fs');
 var CryptoJS = require("crypto-js");
 var AES = require("crypto-js/aes");
@@ -28,12 +25,10 @@ function getUsers() {
 			if (err) { throw err; }
 			var login  = AES.decrypt(data.toString(), key.login).toString(CryptoJS.enc.Utf8);
 			login = JSON.parse(login)
-			login.password = 'hidden'
-			console.dir(login)
-			// loginFunc(login)
-			// .then((all => {
-			// 	delCalendar(all, pushCalendar)
-			// }))
+			loginFunc(login)
+			.then((all => {
+				delCalendar(all, pushCalendar)
+			}))
 		});
 	})
 }
