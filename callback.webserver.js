@@ -98,8 +98,10 @@ function signup(tokens, params) {
 
 		loginFunc(login)
 		.then((all => {
-			// console.dir(all)
-			delCalendar(all)
+			var del = delCalendar(all)
+			while(del == 'succes') {
+				pushCalendar(all)
+			}
 		}))
 	});
 }

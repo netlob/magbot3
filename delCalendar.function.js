@@ -1,11 +1,9 @@
 const {google} = require('googleapis');
 
 module.exports = function (all) {
-	// all = JSON.parse(all)
     var auth = all.oauth2Client;
     var login = all.login;
 	var m = all.m;
-	console.dir(all)
 
 	const calendar = google.calendar({version: 'v3', auth});
 	calendar.events.list({
@@ -28,6 +26,5 @@ module.exports = function (all) {
 			});
 		}
 	});
-	console.dir('succes')
     return 'succes'
 }
