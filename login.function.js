@@ -37,7 +37,10 @@ module.exports = async function (login) {
 			}))
 			.then((m) => {
 				m.appointments(day(-1), day(4))
-				.then((m => {
+				return new Promise( m => {
+					m
+				});
+				// .then((m => {
 					// var all = [
 					// 	oauth2Client,
 					// 	login,
@@ -45,8 +48,8 @@ module.exports = async function (login) {
 					// ];
 					// del(oauth2Client, login, m)
 					// console.dir(all)
-					return m;
-				}))
+					
+				// }))
 			}, (err) => {
                 console.error('something went wrong:', err);
                 return 'error'
