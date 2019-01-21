@@ -7,6 +7,10 @@ var CryptoJS = require("crypto-js");
 var AES = require("crypto-js/aes");
 const database = './db/'
 
+var loginFunc = require('./login.function');
+var delCalendar = require('./delCalendar.function')
+var pushCalendar = require('./pushCalendar.function');
+
 var key = require('./key')
 
 var secret = require('./secret')
