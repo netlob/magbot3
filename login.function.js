@@ -26,43 +26,48 @@ module.exports = async function (login) {
 	oauth2Client.setCredentials(login.tokens);
 	// console.dir(oauth2Client)
 	var authcode = ''
-	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
-		let data = '';
-		resp.on('data', (chunk) => {
-			data += chunk;
+	return new Promise(function(resolve, reject) {
+		https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
+			let data = '';
+			resp.on('data', (chunk) => {
+				data += chunk;
+			});
+			resp.on('end', () => {
+				authcode = data.replace('"','').replace('"','').replace(/(\r\n\t|\n|\r\t)/gm, "");
+				getSchools(login.school)
+				.then((schools) => schools[0])
+				.then((school) => magister({
+					school,
+					username: login.username,
+					password: login.password,
+					authCode: authcode
+				}))
+				.then((m) => {
+					// m.appointments(day(-1), day(4))
+					// .then((m => {
+						// var all = [
+						// 	oauth2Client,
+						// 	login,
+						// 	m
+						// ];
+						// del(oauth2Client, login, m)
+						// console.dir(all)
+						// while(m != undefined) {
+							// return Promise.resolve(m);
+							resolve(JSON.parse(m));
+						// }
+						
+					// }))
+				}, (err) => {
+					console.error('something went wrong:', err);
+					// return 'error'
+					reject(err);
+					});
+			});
+		}).on("error", (err) => {
+			console.log("Error: " + err.message);
+			// return 'error'
+			reject(err);
 		});
-		resp.on('end', () => {
-			authcode = data.replace('"','').replace('"','').replace(/(\r\n\t|\n|\r\t)/gm, "");
-			getSchools(login.school)
-			.then((schools) => schools[0])
-			.then((school) => magister({
-				school,
-				username: login.username,
-				password: login.password,
-				authCode: authcode
-			}))
-			.then((m) => {
-				// m.appointments(day(-1), day(4))
-				// .then((m => {
-					// var all = [
-					// 	oauth2Client,
-					// 	login,
-					// 	m
-					// ];
-					// del(oauth2Client, login, m)
-					// console.dir(all)
-					// while(m != undefined) {
-						return Promise.resolve(m);
-					// }
-					
-				// }))
-			}, (err) => {
-                console.error('something went wrong:', err);
-                return 'error'
-				});
-		});
-	}).on("error", (err) => {
-        console.log("Error: " + err.message);
-        return 'error'
-    });
+	})
 }
