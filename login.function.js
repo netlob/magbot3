@@ -1,11 +1,20 @@
 var secret = require('./secret')
 const {google} = require('googleapis');
+var https = require('https');
+const { default: magister, getSchools } = require('magister.js');
+var moment = require('moment-business-days');
 
 const oauth2Client = new google.auth.OAuth2(
     '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
     secret.clientsecret,
     'http://www.magbot.tk'
 );  
+
+function day(extra) {
+	if(!extra){extra = 0}
+	extra = extra + 1
+	return moment().businessAdd(extra)._d
+}
 
 module.exports = function (login) {
 	oauth2Client.setCredentials(login.tokens);
