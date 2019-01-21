@@ -1,8 +1,5 @@
 var http = require('http');
-var https = require('https');
 const {google} = require('googleapis');
-const { default: magister, getSchools } = require('magister.js');
-var moment = require('moment-business-days');
 const fs = require('fs');
 var CryptoJS = require("crypto-js");
 var AES = require("crypto-js/aes");
