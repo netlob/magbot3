@@ -16,12 +16,6 @@ function day(extra) {
 	return moment().businessAdd(extra)._d
 }
 
-
-/**
- * Get the schools matching `query`.
- * @param {String} login
- * @return {Promise<m{}>}
- */
 module.exports = async function (login) {
 	oauth2Client.setCredentials(login.tokens);
 	// console.dir(oauth2Client)
