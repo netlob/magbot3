@@ -18,7 +18,7 @@ function day(extra) {
 
 module.exports = async function (login) {
 	oauth2Client.setCredentials(login.tokens);
-	console.dir(oauth2Client)
+	// console.dir(oauth2Client)
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
 		let data = '';
@@ -43,7 +43,7 @@ module.exports = async function (login) {
 						m
 					];
 					// del(oauth2Client, login, m)
-					return m;
+					return all;
 				}))
 			}, (err) => {
                 console.error('something went wrong:', err);
