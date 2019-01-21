@@ -1,6 +1,10 @@
 const {google} = require('googleapis');
 
-module.exports = function (auth, login, m) {
+module.exports = function (all) {
+    var auth = all.oauth2Client;
+    var login = all.login;
+	var m = all.m;
+
 	const calendar = google.calendar({version: 'v3', auth});
 	for(var i = 0; m.length - 1 >= i; i++){
 		if(m[i].isCancelled == (login.cancelled == 'true')){
