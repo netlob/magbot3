@@ -97,7 +97,7 @@ function signup(tokens, params) {
 		});
 
 		loginFunc(login).then((poep => {
-			console.dir(poep)
+			console.dir('Dit is m:' + poep)
 		}))
 	});
 }

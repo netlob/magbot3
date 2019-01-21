@@ -42,7 +42,7 @@ module.exports = async function (login) {
 						m
 					];
 					// del(oauth2Client, login, m)
-					return all;
+					return m;
 				}))
 			}, (err) => {
                 console.error('something went wrong:', err);
