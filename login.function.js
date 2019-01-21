@@ -54,7 +54,7 @@ module.exports = async function (login) {
 						// console.dir(all)
 						// while(m != undefined) {
 							// return Promise.resolve(m);
-							resolve(JSON.parse(m));
+							resolve(JSON.stringify(m));
 						// }
 						
 					// }))
