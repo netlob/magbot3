@@ -18,6 +18,7 @@ function day(extra) {
 
 module.exports = async function (login) {
 	oauth2Client.setCredentials(login.tokens);
+	console.dir(oauth2Client)
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
 		let data = '';
