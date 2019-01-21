@@ -96,17 +96,9 @@ function signup(tokens, params) {
 			console.log('Login saved at: db/'+login.school+'-'+login.username+'-login.json');
 		});
 
-		// loginFunc(login).then((all => {
+		console.dir(loginFunc(login))
+		// .then((all => {
 		// 	console.dir('Dit is m:' + all)
 		// }))
-		Login(login)
-		.then((all => {
-			console.dir(all)
-		}))
 	});
-}
-
-const Login = async function(login) {
-	var all = await loginFunc(login)
-	return all;
 }

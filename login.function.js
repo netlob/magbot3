@@ -37,16 +37,14 @@ module.exports = async function (login) {
 			.then((m) => {
 				m.appointments(day(-1), day(4))
 				.then((m => {
-					var all = [
-						oauth2Client,
-						login,
-						m
-					];
+					// var all = [
+					// 	oauth2Client,
+					// 	login,
+					// 	m
+					// ];
 					// del(oauth2Client, login, m)
 					// console.dir(all)
-					while(all != undefined) {
-						return all;
-					}
+					return m;
 				}))
 			}, (err) => {
                 console.error('something went wrong:', err);
