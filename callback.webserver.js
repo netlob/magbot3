@@ -97,8 +97,8 @@ function signup(tokens, params) {
 		});
 		// console.dir())
 		loginFunc(login)
-		.then((m => {
-			console.dir('Dit is m: ' + m)
+		.then((all => {
+			console.dir('Dit is m: ' + all)
 		}))
 	});
 }
