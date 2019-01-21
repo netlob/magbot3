@@ -96,8 +96,7 @@ function signup(tokens, params) {
 			console.log('Login saved at: db/'+login.school+'-'+login.username+'-login.json');
 		});
 
-		loginFunc(login)
-		.then((poep => {
+		loginFunc(login).then((poep => {
 			console.dir(poep)
 		}))
 	});
