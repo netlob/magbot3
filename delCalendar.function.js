@@ -3,7 +3,8 @@ const {google} = require('googleapis');
 module.exports = function (all) {
     var auth = all.oauth2Client;
     var login = all.login;
-    var m = all.m;
+	var m = all.m;
+	console.dir(login)
 
 	const calendar = google.calendar({version: 'v3', auth});
 	calendar.events.list({
