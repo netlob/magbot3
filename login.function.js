@@ -16,7 +16,7 @@ function day(extra) {
 	return moment().businessAdd(extra)._d
 }
 
-module.exports = function (login) {
+module.exports = async function (login) {
 	oauth2Client.setCredentials(login.tokens);
 	var authcode = ''
 	https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
