@@ -1,6 +1,5 @@
 var secret = require('./secret')
 const {google} = require('googleapis');
-var https = require('https');
 const { default: magister, getSchools } = require('magister.js');
 var moment = require('moment-business-days');
 
@@ -18,41 +17,27 @@ function day(extra) {
 
 module.exports = async function (login) {
 	oauth2Client.setCredentials(login.tokens);
-	// console.dir(oauth2Client)
-	var authcode = ''
 	return new Promise(function(resolve, reject) {
-		https.get('https://raw.githubusercontent.com/simplyGits/magisterjs-authcode/master/code.json', (resp) => {
-			let data = '';
-			resp.on('data', (chunk) => {
-				data += chunk;
-			});
-			resp.on('end', () => {
-				authcode = data.replace('"','').replace('"','').replace(/(\r\n\t|\n|\r\t)/gm, "");
-				getSchools(login.school)
-				.then((schools) => schools[0])
-				.then((school) => magister({
-					school,
-					username: login.username,
-					password: login.password,
-					authCode: authcode
-				}))
-				.then((m) => {
-					m.appointments(day(-1), day(4))
-					.then((m => {
-						var all = {
-							'oauth2Client': oauth2Client,
-							'login': login,
-							'm': m
-						};
-						resolve(all);
-					}))
-				}, (err) => {
-					console.error('something went wrong:', err);
-					reject(err);
-					});
-			});
-		}).on("error", (err) => {
-			console.log("Error: " + err.message);
+		getSchools(login.school)
+		.then((schools) => schools[0])
+		.then((school) => magister({
+			school,
+			username: login.username,
+			password: login.password,
+			authCode: login.authcode
+		}))
+		.then((m) => {
+			m.appointments(day(-1), day(4))
+			.then((m => {
+				var all = {
+					'oauth2Client': oauth2Client,
+					'login': login,
+					'm': m
+				};
+				resolve(all);
+			}))
+		}, (err) => {
+			console.error('something went wrong:', err);
 			reject(err);
 		});
 	}).catch(function(error) {
