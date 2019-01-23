@@ -23,6 +23,7 @@ getUsers();
 function getUsers() {
 	getAuthCode()
 	.then((code => {
+		console.log(code)
 		fs.readdirSync(database).forEach(file => {
 			fs.readFile('db/'+file, function read(err, data) {
 				if (err) { throw err; }
