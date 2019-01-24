@@ -5,7 +5,7 @@
   "main": "magbot.js",
   "scripts": {
     "test": "mocha",
-    "start": "node magbot.js"
+    "start": "node magbot3.js"
   },
   "repository": {
     "type": "git",
