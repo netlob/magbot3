@@ -2,6 +2,7 @@
   $(function(){
 
     $('.sidenav').sidenav();
+    $('.modal').modal();
     $('input.autocomplete').autocomplete({
       data: schools,
     });
