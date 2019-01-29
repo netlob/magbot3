@@ -16,7 +16,7 @@ function autocompleteDropdown() {
 
 function signInCallback(authResult) {
   console.dir(authResult)
-  if (authResult['code']) { 
+  if (authResult['code']) {
     var school = document.getElementById('autocomplete-input').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
@@ -25,37 +25,67 @@ function signInCallback(authResult) {
     var assistant = $("#assistant").is(":checked") ? true : false;
     var mail = $("#mail").is(":checked") ? true : false;
     
-    $('#signinButton').attr('style', 'display: none');
-    var data = null;
-
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-    
-    xhr.addEventListener("readystatechange", function () {
-      if (this.readyState === 4) {
-        console.log(this.responseText);
-        if(this.responseText == 'succes') {
-          M.toast({html: 'Succesvol geactiveerd!'})
+    if(school && username && password) {
+      $('#signinButton').attr('style', 'display: none');
+      var data = null;
+  
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+          if(this.responseText == 'succes') {
+            M.toast({html: 'Succesvol geactiveerd!'})
+          } else {
+            var errorModal = document.getElementById('error-modal');
+            var errorModalTitle = document.getElementById('error-modal-title');
+            var errorModalText = document.getElementById('error-modal-text');
+            var errorModalButton = document.getElementById('error-modal-button');
+  
+            errorModalTitle.innerText = 'Oopsie'
+            errorModalText.innerText = getError(this.responseText)
+            errorModalButton.href = 'https://beta.magbot.nl/signup/'
+  
+            var instance = M.Modal.getInstance(errorModal);
+            instance.open();
+          }
         }
-      }
-    });
-    
-    xhr.open("POST", "https://bot.beta.magbot.nl");
-    xhr.setRequestHeader("code", authResult.code);
-    xhr.setRequestHeader("school", school);
-    xhr.setRequestHeader("username", username);
-    xhr.setRequestHeader("password", password);
-    xhr.setRequestHeader("notify", notify);
-    xhr.setRequestHeader("cancelled", cancelled);
-    xhr.setRequestHeader("assistant", assistant);
-    xhr.setRequestHeader("mail", mail);
-    
-    xhr.send(data);
+      });
+      
+      xhr.open("POST", "https://bot.beta.magbot.nl");
+      xhr.setRequestHeader("code", authResult.code);
+      xhr.setRequestHeader("school", school);
+      xhr.setRequestHeader("username", username);
+      xhr.setRequestHeader("password", password);
+      xhr.setRequestHeader("notify", notify);
+      xhr.setRequestHeader("cancelled", cancelled);
+      xhr.setRequestHeader("assistant", assistant);
+      xhr.setRequestHeader("mail", mail);
+      
+      xhr.send(data);  
+    } else {
+      var errorModal = document.getElementById('error-modal');
+      var errorModalTitle = document.getElementById('error-modal-title');
+      var errorModalText = document.getElementById('error-modal-text');
+      var errorModalButton = document.getElementById('error-modal-button');
 
+      errorModalTitle.innerText = 'Oopsie'
+      errorModalText.innerText = 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw'
+      errorModalButton.href = 'https://beta.magbot.nl/signup/'
 
+      var instance = M.Modal.getInstance(errorModal);
+      instance.open();
+    }
   } else {
     // There was an error.
   }
+}
+
+function getError(error) {
+  if(error == 'AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
+  if(error == 'AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
+  if(error == 'Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
 }
 
 var schools = {
