@@ -40,7 +40,7 @@ function signInCallback(authResult) {
       }
     });
     
-    xhr.open("POST", "http://server.magbot.tk");
+    xhr.open("POST", "https://bot.beta.magbot.nl");
     xhr.setRequestHeader("code", authResult.code);
     xhr.setRequestHeader("school", school);
     xhr.setRequestHeader("username", username);
