@@ -47,8 +47,7 @@ function signInCallback(authResult) {
             errorModalText.innerText = getError(this.responseText)
             errorModalButton.href = 'https://beta.magbot.nl/signup/'
   
-            var instance = M.Modal.getInstance(errorModal);
-            instance.open();
+            errorModal.click()
           }
         }
       });
@@ -74,8 +73,7 @@ function signInCallback(authResult) {
       errorModalText.innerText = 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw'
       errorModalButton.href = 'https://beta.magbot.nl/signup/'
 
-      var instance = M.Modal.getInstance(errorModal);
-      instance.open();
+      errorModal.click()
     }
   } else {
     // There was an error.
