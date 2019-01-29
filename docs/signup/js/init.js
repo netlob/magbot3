@@ -38,7 +38,7 @@ function signInCallback(authResult) {
           if(this.responseText == 'succes') {
             M.toast({html: 'Succesvol geactiveerd!'})
           } else {
-            var errorModal = document.getElementById('error-modal');
+            var errorModal = document.getElementById('error-modal-open');
             var errorModalTitle = document.getElementById('error-modal-title');
             var errorModalText = document.getElementById('error-modal-text');
             var errorModalButton = document.getElementById('error-modal-button');
@@ -65,7 +65,7 @@ function signInCallback(authResult) {
       
       xhr.send(data);  
     } else {
-      var errorModal = document.getElementById('error-modal');
+      var errorModal = document.getElementById('error-modal-open');
       var errorModalTitle = document.getElementById('error-modal-title');
       var errorModalText = document.getElementById('error-modal-text');
       var errorModalButton = document.getElementById('error-modal-button');
