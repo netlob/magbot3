@@ -16,7 +16,6 @@ function autocompleteDropdown() {
 }
 
 function signInCallback(authResult) {
-  console.dir(authResult)
   if (authResult['code']) {
     M.toast({html: 'Bezig met authorizeren...'})
     var school = document.getElementById('autocomplete-input').value;
