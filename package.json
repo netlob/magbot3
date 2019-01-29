@@ -26,14 +26,17 @@
   },
   "homepage": "https://github.com/mamorgen/magbot3#readme",
   "dependencies": {
+    "bookshelf": "^0.14.2",
     "crypto-js": "^3.1.9-1",
     "googleapis": "^36.0.0",
+    "knex": "^0.16.3",
     "magister.js": "^2.0.0-alpha.8",
     "moment-business-days": "^1.1.3",
     "mysql": "^2.16.0",
     "puppeteer": "^1.11.0",
     "restnio": "^2.1.0",
     "sleep": "^6.0.0",
+    "sqlite": "^3.0.1",
     "sqlite3": "^4.0.6"
   }
 }
