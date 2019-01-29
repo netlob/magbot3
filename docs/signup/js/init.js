@@ -46,7 +46,7 @@ function signInCallback(authResult) {
             var errorModalButton = document.getElementById('error-modal-button');
   
             errorModalTitle.innerText = 'Oopsie'
-            errorModalText.innerText = getError(this.responseText)
+            errorModalText.innerHTML = getError(this.responseText)
             errorModalButton.href = 'https://beta.magbot.nl/signup/'
   
             errorModal.click()
@@ -86,7 +86,7 @@ function getError(error) {
   if(error == 'AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
   if(error == 'AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
   if(error == 'Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
-  if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
+  if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
   return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
