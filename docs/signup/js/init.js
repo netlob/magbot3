@@ -18,6 +18,7 @@ function autocompleteDropdown() {
 function signInCallback(authResult) {
   console.dir(authResult)
   if (authResult['code']) {
+    M.toast({html: 'Bezig met authorizeren...'})
     var school = document.getElementById('autocomplete-input').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
@@ -62,7 +63,7 @@ function signInCallback(authResult) {
       xhr.setRequestHeader("cancelled", cancelled);
       xhr.setRequestHeader("assistant", assistant);
       xhr.setRequestHeader("mail", mail);
-      
+      M.toast({html: 'Even geduld a.u.b.'})
       xhr.send(data);  
     } else {
       var errorModal = document.getElementById('error-modal-open');
