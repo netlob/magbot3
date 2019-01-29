@@ -86,6 +86,7 @@ function getError(error) {
   if(error == 'AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
   if(error == 'AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
   if(error == 'Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
+  return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
 var schools = {
