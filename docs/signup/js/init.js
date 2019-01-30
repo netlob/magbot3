@@ -39,16 +39,10 @@ function signInCallback(authResult) {
           if(this.responseText == 'succes') {
             M.toast({html: 'Succesvol geactiveerd!'})
           } else {
-            var errorModal = document.getElementById('error-modal-open');
-            var errorModalTitle = document.getElementById('error-modal-title');
-            var errorModalText = document.getElementById('error-modal-text');
-            var errorModalButton = document.getElementById('error-modal-button');
-  
-            errorModalTitle.innerText = 'Oopsie'
-            errorModalText.innerHTML = getError(this.responseText)
-            errorModalButton.href = 'https://beta.magbot.nl/signup/'
-  
-            errorModal.click()
+            if(this.responseText == 'user updated') {
+              setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
+            }
+            setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
           }
         }
       });
@@ -65,16 +59,7 @@ function signInCallback(authResult) {
       M.toast({html: 'Even geduld a.u.b.'})
       xhr.send(data);  
     } else {
-      var errorModal = document.getElementById('error-modal-open');
-      var errorModalTitle = document.getElementById('error-modal-title');
-      var errorModalText = document.getElementById('error-modal-text');
-      var errorModalButton = document.getElementById('error-modal-button');
-
-      errorModalTitle.innerText = 'Oopsie'
-      errorModalText.innerText = 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw'
-      errorModalButton.href = 'https://beta.magbot.nl/signup/'
-
-      errorModal.click()
+      setError('Oopsie', 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw', 'https://beta.magbot.nl/signup/')
     }
   } else {
     // There was an error.
@@ -88,8 +73,20 @@ function getError(error) {
   if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
   if(error == 'user updated') { return 'Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.' }
   if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
-
   return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
+}
+
+function setError(title, message, href) {
+  var errorModal = document.getElementById('error-modal-open');
+  var errorModalTitle = document.getElementById('error-modal-title');
+  var errorModalText = document.getElementById('error-modal-text');
+  var errorModalButton = document.getElementById('error-modal-button');
+
+  errorModalTitle.innerText = title
+  errorModalText.innerText =  message
+  errorModalButton.href = href
+
+  errorModal.click()
 }
 
 var schools = {
