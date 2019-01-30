@@ -27,37 +27,41 @@ function signInCallback(authResult) {
     var mail = $("#mail").is(":checked") ? true : false;
     
     if(school && username && password) {
-      $('#signinButton').attr('style', 'display: none');
-      var data = null;
-  
-      var xhr = new XMLHttpRequest();
-      xhr.withCredentials = true;
-      
-      xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-          console.log(this.responseText);
-          if(this.responseText == 'succes') {
-            M.toast({html: 'Succesvol geactiveerd!'})
-          } else {
-            if(this.responseText == 'user updated') {
-              setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
+      if(school in schools) {
+        $('#signinButton').attr('style', 'display: none');
+        var data = null;
+    
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+        
+        xhr.addEventListener("readystatechange", function () {
+          if (this.readyState === 4) {
+            console.log(this.responseText);
+            if(this.responseText == 'succes') {
+              M.toast({html: 'Succesvol geactiveerd!'})
+            } else {
+              if(this.responseText == 'user updated') {
+                setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
+              }
+              setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
             }
-            setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
           }
-        }
-      });
-      
-      xhr.open("POST", "https://bot.beta.magbot.nl");
-      xhr.setRequestHeader("code", authResult.code);
-      xhr.setRequestHeader("school", school);
-      xhr.setRequestHeader("username", username);
-      xhr.setRequestHeader("password", password);
-      xhr.setRequestHeader("notify", notify);
-      xhr.setRequestHeader("cancelled", cancelled);
-      xhr.setRequestHeader("assistant", assistant);
-      xhr.setRequestHeader("mail", mail);
-      M.toast({html: 'Even geduld a.u.b.'})
-      xhr.send(data);  
+        });
+        
+        xhr.open("POST", "https://bot.beta.magbot.nl");
+        xhr.setRequestHeader("code", authResult.code);
+        xhr.setRequestHeader("school", school);
+        xhr.setRequestHeader("username", username);
+        xhr.setRequestHeader("password", password);
+        xhr.setRequestHeader("notify", notify);
+        xhr.setRequestHeader("cancelled", cancelled);
+        xhr.setRequestHeader("assistant", assistant);
+        xhr.setRequestHeader("mail", mail);
+        M.toast({html: 'Even geduld a.u.b.'})
+        xhr.send(data);
+      } else {
+        setError('Oopsie', 'Geen geldige school. Kies een school uit de lijst', 'https://beta.magbot.nl/signup/')
+      }
     } else {
       setError('Oopsie', 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw', 'https://beta.magbot.nl/signup/')
     }
