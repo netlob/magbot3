@@ -87,7 +87,7 @@ function setError(title, message, href) {
   var errorModalButton = document.getElementById('error-modal-button');
 
   errorModalTitle.innerText = title
-  errorModalText.innerText =  message
+  errorModalText.innerHTML =  message
   errorModalButton.href = href
 
   errorModal.click()
