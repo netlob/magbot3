@@ -14,17 +14,24 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
   <script>
-      $(document).ready(function() {
-        console.log("Initializing the Google oauth button!");
-        gapi.load('auth2', function() {
-          auth2 = gapi.auth2.init({
-            client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
-            scope: 'https://www.googleapis.com/auth/calendar',
-            redirect_uri: 'https://beta.magbot.nl'
-          });
-        })
-      });
-    </script>
+    $(document).ready(function() {
+      console.log("Initializing the Google oauth button!");
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com',
+          scope: 'https://www.googleapis.com/auth/calendar',
+          redirect_uri: 'https://beta.magbot.nl'
+        });
+      })
+    });
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7087395823701039",
+        enable_page_level_ads: true
+    });
+  </script>
 </head>
 <body>
   <div class="navbar-fixed">
