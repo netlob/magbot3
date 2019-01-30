@@ -40,7 +40,7 @@ function signInCallback(authResult) {
             if(this.responseText == 'succes') {
               M.toast({html: 'Succesvol geactiveerd!'})
             } else {
-              if(this.responseText == 'user updated') {
+              if(this.responseText == 'user updated' || this.responseText == 'user already exists') {
                 setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
               }
               setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
