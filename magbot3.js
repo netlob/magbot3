@@ -32,7 +32,7 @@ let sync = async function() {
     // Get the current magister authcode before syncing users.
     let mAuth = await MagisterAuth();
 
-    // Get all users from DB & run ofer them.
+    // Get all users from DB & run over them.
     let users = await User.fetchAll();
     for(let user of users) {
         try {
