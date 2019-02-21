@@ -6,13 +6,12 @@ function day(extra) {
     return moment().businessAdd(extra)._d
 }
 
-magister({
-	school: {
-        url: 'https://' + process.argv[2] + '.magister.net'
-    },
-	username: process.argv[3],
-	password: process.argv[4],
-})
+getSchools(process.argv[2])
+.then((schools) => magister({
+    school: schools[0],
+    username: process.argv[3],
+    password: process.argv[4],
+}))
 .then((m) => m.appointments(day(-1), day(13)))
 .then(appointments => {
     let output = [];
