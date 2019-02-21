@@ -29,15 +29,17 @@ const oAuth = new google.auth.OAuth2(
 let sync = async function() {
     // Get the current magister authcode before syncing users.
     let mAuth = await MagisterAuth();
+    console.dir(mAuth)
 
     // Get all users from DB & run over them.
     let users = await User.fetchAll();
     for(let user of users) {
         try {
+            // Is dat met hamuller als test?
             if(user.get('username') == 'hammuller') {
-            // Login
-            await user.login(oAuth, mAuth);
-            console.dir(await user.appointments());
+                // Login
+                await user.login(oAuth, mAuth);
+                console.dir(await user.appointments());
             }
         } catch(err) {
             console.dir(err);
