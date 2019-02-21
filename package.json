@@ -42,5 +42,8 @@
     "pg": "^7.8.0",
     "puppeteer": "^1.12.2",
     "restnio": "^2.2.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5"
   }
 }
