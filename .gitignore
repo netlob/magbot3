@@ -67,3 +67,5 @@ secret.js
 # Sometimes I test with my account,
 # let's not spill that on github >.<
 test.js
+login.js
+key.js

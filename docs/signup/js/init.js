@@ -71,13 +71,34 @@ function signInCallback(authResult) {
 }
 
 function getError(error) {
-  if(error == 'AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
-  if(error == 'AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
-  if(error == 'Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
-  if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
-  if(error == 'user updated') { return 'Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.' }
-  if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
-  return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
+  // if(error == 'AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
+  // if(error == 'AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
+  // if(error == 'Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
+  // if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
+  // if(error == 'user updated') { return 'Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.' }
+  // if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
+  // return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
+  switch (error) {
+    case 'AuthError: Invalid username':
+      return "Sunday";
+      break;
+    case 'AuthError: Invalid password':
+      return "Monday";
+      break;
+    case 'Error: school and username&password or token are required.':
+      return "Tuesday";
+      break;
+    case 'user already exists':
+      return "Wednesday";
+      break;
+    case 'user updated':
+      return "Thursday";
+      break;
+    case 'error: geen geldig Google calendarId':
+      return "Friday";
+      break;
+    return 'error: geen geldig Google calendarId'
+  }
 }
 
 function setError(title, message, href) {
