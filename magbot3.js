@@ -21,7 +21,9 @@ winston.loggers.add('main', {
     level: 'info',
     format: winston.format.simple(),
     transports: [
-        new winston.transports.Console({level: 'silly'}),
+        new winston.transports.Console({
+            level: 'silly'
+        }),
         new winston.transports.DailyRotateFile({
             dirname: 'logs',
             filename: 'magbot-%DATE%.log',
@@ -43,31 +45,38 @@ run();
 
 /**
  * Main function of magbot.
- * 
+ * This function calls itself to stay alive.
  */
 async function run() {
     log.debug(`Syncing all users...`);
-    // Get the current magister authcode before syncing users.
-    let mAuth = await MagisterAuth();
-    // Get all users from DB & run over them.
-    let users = await User.fetchAll();
-    for (let user of users) {
-        try {
-            // Login
-            await user.login(oAuth, mAuth);
-            // Fixy calendars (non - force)
-            await user.setupCalendars();
-            // Sync
-            await user.syncCalendars();
-            // Wait some time (~0-10 seconds)
-            await sleep(Math.floor(Math.random() * 10000));
-        } catch(err) {
-            // On user error, log
-            console.dir(err);
+    try {
+        // Get the current magister authcode before syncing users.
+        let mAuth = await MagisterAuth();
+        // Get all users from DB & run over them.
+        let users = await User.fetchAll();
+        for (let user of users) {
+            try {
+                // Log the user in.
+                await user.login(oAuth, mAuth);
+                // Fixy calendars (non - force).
+                await user.setupCalendars();
+                // Sync the actual appointments.
+                await user.syncCalendars();
+                // Wait some time (~0-10 seconds).
+                await sleep(Math.floor(Math.random() * 10000));
+            } catch(err) {
+                try {
+                    user.log.warn(`Error syncing user! `, err);
+                } catch(errr) {
+                    log.error(`LOGGING ERROR! `, errr, err);
+                }
+            }
         }
+    } catch (err) {
+        log.error(`MAJOR SYNC ERROR!`, err);
     }
     const next = scheduleTime();
-    log.debug(`Going for next sync in ${next}.`);
+    log.debug(`Going for next sync in ${next} seconds...`);
     setTimeout(run, next);
 }
 
