@@ -120,18 +120,18 @@ async function purge() {
                         summary: 'MAGBOT: Actie vereist! Lees mij!',
                         description: '<i>Volgens mij klopt er iets niet meer :(</i><br/>' + 
                                      '<br/>'+
-                                     'Je magister informatie is veranderd of u heeft ' +
+                                     'Uw magister informatie is veranderd of u heeft ' +
                                      'bewust alle magbot agendas verwijderd.<br/>' +
                                      '<b>Bij deze wordt uw account op non-actief gezet '+
                                      'en zal niet automatisch meer werken!</b><br/>' +
-                                     'Heractiveer uw account op ' +
-                                     '<a href="https://magbot.nl/">magbot.nl</a><br/>' +
+                                     '<i>Heractiveer uw account op ' +
+                                     '<a href="https://magbot.nl/">magbot.nl</a></i><br/>' +
                                      '<br/>' +
-                                     'Als u uw account niet meer wilt, onderneem geen ' + 
-                                     'actie en wij zullen u niet meer storen.<br/>' +
+                                     'Als u uw account niet meer wil hebben, onderneem dan ' + 
+                                     'geen actie.<br/>' +
                                      '<br/>' +
                                      'Stuur bij vragen gerust een mailtje naar ' +
-                                     '<a href="mailto:info@magbot.nl">info@magbot.nl</a>.<br/>',
+                                     '<a href="mailto:info@magbot.nl">info@magbot.nl</a><br/>',
                         // Set start and end two days from now at 0900-0930.
                         start: {
                             dateTime: new Date(new Date(Date.now() + 1728e5)
