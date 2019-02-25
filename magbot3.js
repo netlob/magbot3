@@ -15,21 +15,38 @@
 'use strict';
 
 // Imports
+const winston = require('winston');
+require('winston-daily-rotate-file');
+winston.loggers.add('main', {
+    level: 'info',
+    format: winston.format.simple(),
+    transports: [
+        new winston.transports.Console({level: 'silly'}),
+        new winston.transports.DailyRotateFile({
+            dirname: 'logs',
+            filename: 'magbot-%DATE%.log',
+            zippedArchive: true
+        })
+    ]
+});
 const MagisterAuth = require('./lib/magister/authcode.function');
 const User = require('./lib/magbot/User');
-const {google} = require('googleapis');
 const secret = require('./secret');
 const oAuth = [
   '404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com',
   secret.clientsecret,
   'http://magbot.nl/action/googleCallback.php'
 ];
+const log = winston.loggers.get('main');
+
+run();
 
 /**
  * Main function of magbot.
  * 
  */
 async function run() {
+    log.debug(`Syncing all users...`);
     // Get the current magister authcode before syncing users.
     let mAuth = await MagisterAuth();
     // Get all users from DB & run over them.
@@ -49,7 +66,9 @@ async function run() {
             console.dir(err);
         }
     }
-    setTimeout(run, scheduleTime());
+    const next = scheduleTime();
+    log.debug(`Going for next sync in ${next}.`);
+    setTimeout(run, next);
 }
 
 /**
