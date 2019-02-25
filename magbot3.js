@@ -38,6 +38,8 @@ async function run() {
         try {
             // Login
             await user.login(oAuth, mAuth);
+            // Fixy calendars (non - force)
+            await user.setupCalendars();
             // Sync
             await user.syncCalendars();
             // Wait some time (~0-10 seconds)
