@@ -1,10 +1,3 @@
-// Dit is de root / index van het gebeuren.
-// Hier wordt de server gestart.
-
-// yo maat nu draait de signup server niet toch?
-// require('./lib/signup.webserver');
-
-
 /*
  *   -= Magbot3 =-
  *  Sj3rd & 7kasper
@@ -40,6 +33,15 @@ const oAuth = [
   'http://magbot.nl/action/googleCallback.php'
 ];
 const log = winston.loggers.get('main');
+
+/**
+ * @class magbot3
+ * @classdesc
+ * This file is an executable and runs the magbot program.
+ * First the webserver is started, afterwards both
+ * sync and purge functions are scheduled for the first time.
+ * This program is started with pm2 to keep it alive forever.
+ */
 
 const next = Math.floor(Math.random() * 10000);
 log.info(`Starting first sync in ${next} and first purge in ${next * 2} millis...`);
@@ -84,15 +86,20 @@ async function sync() {
     setTimeout(sync, next);
 }
 
+/**
+ * Purge function. Soft-deletes all users that have
+ * no calendars left or can't log in anymore.
+ * Note that soft-deleted users are still alowed
+ * to update and reclaim their accounts.
+ */
 async function purge() {
     try {
-        // First check sites to make sure we don't accidentally remove users
-        // when magister for instance is down.
-        if (await checkSites()) {
-            throw 'Sites not reachable';
-        }
         // Get the current magister authcode before purging users.
         let mAuth = await MagisterAuth();
+        // First check with a user we know to work to see we don't
+        // purge users for google and magister being unreachable or so.
+        let checkUser = await User.spot({email: 'kasper.77077@gmail.com'}).fetch();
+        await checkUser.login(oAuth, mAuth); // check if checkuser can login.
         // Get all users from DB & run over them.
         let users = await User.spot({isdisabled: false}).fetchAll();
         log.info(`Purging ${users.length} users...`);
@@ -169,15 +176,6 @@ async function purge() {
     const next = scheduleTime() * 20;
     log.info(`Going for next purge in ${next} millis...`);
     setTimeout(purge, next);
-}
-
-/**
- * Checks if all involved sites are still
- * reachable. If not we might get other
- * errors and don't want to purge users.
- */
-async function checkSites() {
-    return false;
 }
 
 /**
