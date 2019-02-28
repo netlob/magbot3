@@ -60,11 +60,12 @@ typings/
 # next.js build output
 .next
 
-login.js
-
+# secret magbot thingies for server
+# we shouldn't share those on git ;D
 secret.js
 
-db
-
+# Sometimes I test with my account,
+# let's not spill that on github >.<
+test.js
+login.js
 key.js
-.DS_Store

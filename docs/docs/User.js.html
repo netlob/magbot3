@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: User.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: User.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*
+ *   -= Magbot3 =-
+ *  Sj3rd &amp; 7kasper
+ * Licensed under MIT
+ *   -= Magbot3 =-
+ */
+
+'use strict';
+
+// Imports
+const Sync = require('./Sync');
+const _ = require('lodash');
+const {google} = require('googleapis');
+const { default: magister } = require('magister.js');
+const shelf = require('../db').shelf;
+const Crypto = require('./Crypto');
+const Defaults = require('./Options');
+
+/**
+ * @class User
+ * @classdesc
+ * This class describes the MagbotUser
+ * database model as well as many functions
+ * operating on it.
+ */
+module.exports = shelf.model('users', {
+
+    //=====================================================\\
+    //                       Object                        \\
+    //=====================================================\\
+
+    // Defines database table name.
+    tableName: 'users',
+
+    // Defines the defaults for a user:
+    defaults: {
+        options: Defaults
+    },
+
+    /**
+     * Logs the user in to grant access to all api functions.
+     * @param {*} oAuth - Google oAuth access properties.
+     * @param {string} mAuth - Magister accesstoken.
+     */
+    login: async function(oAuth, mAuth) {
+        // Login to magister.
+        this.magister = await magister({
+            school: {
+                url: `https://${this.get('school')}.magister.net`
+            },
+            username: this.get('username'),
+            password: this.get('password'),
+            authCode: mAuth
+        });
+        // If parent, load in children at login so we can switch later on.
+        if (this.magister.profileInfo.isParent) {
+            this.parent = this.magister;
+            this.children = await this.magister.children();
+            this.childindex = 0;
+            this.magister = this.children[this.childindex];
+            // If no calendar definition is set, load it in with the children's id.
+            // This empty definition is later used by the setupCalendar function.
+            if (!this.has('calendars')) {
+                this.set('calendars', this.children.reduce((prev, cur) => { 
+                    prev[cur.profileInfo.id] = this.get('options').setupCalendars; 
+                    return prev; 
+                }, {}));
+            }
+        }
+        // If not a parent, still load in null calendars if not present.
+        if (!this.has('calendars')) this.set('calendars', this.get('options').setupCalendars);
+        // Login to google.
+        this.google = new google.auth.OAuth2(...oAuth);
+        this.google.setCredentials({
+            access_token: this.get('accesstoken'),
+            refresh_token: this.get('refreshtoken')
+        });
+        // On token refresh, always keep the user up to date.
+        this.google.on('tokens', (tokens) => {
+            this.set('accesstoken', tokens.access_token);
+            this.update();
+        });
+        // Login and store the calendar object.
+        this.calendar = google.calendar({version: 'v3', auth: this.google});
+        // Get real names from google (checks a login too).
+        let userinfo = await google.oauth2({version: 'v2', auth: this.google}).userinfo.get();
+        if (userinfo &amp;&amp; userinfo.data) {
+            this.set('firstname', userinfo.data.given_name);
+            this.set('lastname', userinfo.data.family_name);
+        }
+        // Update user in case fields changed.
+        await this.update();
+        return this;
+    },
+
+    /**
+     * Gets wether this magbot user belongs to a child or parent.
+     * @returns true, when the user is not a parent.
+     */
+    isParent: function() {
+        return this.parent !== undefined;
+    },
+
+    /**
+     * Function for parent accounts to 'switch' magister
+     * accounts. This is so parents can also load in
+     * their children's magister appointments.
+     * @returns true, if there's a next child to iterate to.
+     */
+    nextChild: function () {
+        if (!this.isParent()) return false;
+        if (this.childindex &lt; this.children.length) {
+            this.magister = this.children[this.childindex++];
+            return true;
+        } else {
+            this.magister = this.children[this.childindex = 0];
+            return false;
+        }
+    },
+
+    /**
+     * Get the latest magister (up to two weeks) appointments for this user.
+     * (12096e5) is magic number of seconds in 14 days.
+     * _NOTE: On parent accounts this function gets appointments for the active child!_
+     */
+    magisterAppointments: async function() {
+        return await this.magister.appointments(
+            new Date(), new Date(Date.now() + 12096e5)
+        );
+    },
+
+    /**
+     * Get the latest google (up to two weeks) appointments for this user.
+     * _NOTE: On parent accounts this function gets appointments for the active child!_
+     */
+    googleAppointments: async function() {
+        let aps = {};
+        let magisterId = this.magister.profileInfo.id;
+        let calendars = this.isParent() ? this.get('calendars')[magisterId] : this.get('calendars');
+        for (let calendarType in calendars) {
+            let calendarId = calendars[calendarType];
+            aps[calendarType] = await this.calendarAppointments(calendarId);
+        }
+        return aps;
+    },
+
+    /**
+     * Gets the latest (up to two weeks) appointments in a calendar.
+     * (12096e5) is magic number of milliseconds in 14 days.
+     * We need to get beginning and end of the days, because magister
+     * always gives appointments for full days too.
+     * Appointments are aggregrated upon their id.
+     */
+    calendarAppointments: async function(calendarId) {
+        return (await this.calendar.events.list({
+            calendarId: calendarId,
+            timeMin: new Date(new Date().setHours(0,0,0,0)),
+            timeMax: new Date(new Date(Date.now() + 12096e5)
+                        .setHours(23,59,59,999)),
+            showDeleted: true,
+            singleEvents: true,
+            orderBy: 'startTime'
+        })).data.items.reduce((prev, cur) => {
+            prev[cur.id] = cur; return prev
+        }, {});
+    },
+
+    //=====================================================\\
+    //                       Google                        \\
+    //=====================================================\\
+
+    /**
+     * This function fixes all magbot calendars.
+     * _NOTE:_ this function only has to be ran once per parent
+     * or normal account to setup with google.
+     * Running multiple times will only serve to update
+     * reminders and should only be needed when the user
+     * wants his / her account updated / reinstated.
+     */
+    setupCalendars: async function() {
+        // Get and aggrate all current calendar ids in google.
+        let calsFromGoogle = (await this.calendar.calendarList.list())
+            .data.items.reduce((prev, cur) => prev.concat(cur.id), []);
+        // Get calendars the user wants &amp; check if they are present.
+        let calendars = this.get('calendars');
+        do { // Setup the calendars. For children this is run once.
+            let childId = this.magister.profileInfo.id;
+            let localCalendars = this.isParent() ? calendars[childId] : calendars;
+            for (let calendarType in localCalendars) {
+                let calendarId = localCalendars[calendarType];
+                let calendarOptions = this.get('options').calendarTypes[calendarType];
+                // If the calendar is not inside google, create it.
+                if (!calsFromGoogle.includes(calendarId)) {
+                    calendarId = (await this.calendar.calendars.insert({
+                        resource: {
+                            summary: this.isParent() ? 
+                                // For parents append the child's firstname to all calendars created.
+                                `${calendarOptions.summary} ${this.magister.profileInfo.firstName}` : 
+                                // Otherwise just state the calendar.
+                                calendarOptions.summary,
+                            description: calendarOptions.description,
+                            location: this.get('school'),
+                            timeZone: this.get('options').timeZone
+                        }
+                    })).data.id;
+                    if (this.isParent()) calendars[magisterId][calendarType] = calendarId;
+                    else calendars[calendarType] = calendarId;
+                    // Update calendar colors for the first time only.
+                    await this.calendar.calendarList.patch({
+                        calendarId: calendarId,
+                        colorRgbFormat: calendarOptions.colorRgbFormat,
+                        resource: {
+                            foregroundColor: calendarOptions.foregroundColor,
+                            backgroundColor: calendarOptions.backgroundColor
+                        }
+                    });
+                }
+                // Update the calendar notifications (always).
+                await this.calendar.calendarList.patch({
+                    calendarId: calendarId,
+                    resource: {
+                        defaultReminders: calendarOptions.defaultReminders
+                    }
+                });
+            }
+        } while(this.nextChild());
+        // Update calendar (ids) in used.
+        this.set('calendars', calendars);
+        this.update();
+        return this;
+    },
+
+    syncCalendars: async function() {
+        let calendars = this.get('calendars');
+        do {
+            let childId = this.magister.profileInfo.id;
+            let localCalendars = this.isParent() ? calendars[childId] : calendars;
+            // Get all appointments to compare.
+            let mApps = await this.magisterAppointments();
+            let gApps = await this.googleAppointments();
+            // Update or insert based on magister appointments.
+            for (let mApp of mApps) {
+                let dCalType = Sync.mag2caltype(mApp); // Determined calendartype.
+                gApps = await this.updateMagisterAppointment(dCalType, localCalendars, gApps, mApp);
+                gApps = await this.updateMagisterAppointment('full', localCalendars, gApps, mApp);
+            }
+            // Purge all remaining magbot appointments.
+            for (let gCals in gApps) {
+                let gCal = gApps[gCals];
+                let calendarId = localCalendars[gCals];
+                for (let gAppId in gCal) {
+                    let gApp = gCal[gAppId];
+                    if (gAppId.includes('magbot') &amp;&amp; gApp.status !== 'cancelled') { //TODO CHECK
+                        // DELETE
+                        await this.calendar.events.delete({
+                            calendarId: calendarId,
+                            eventId: gAppId
+                        });
+                        console.log(`DELETED ${gAppId}`);
+                    }
+                }
+            }
+        } while (this.nextChild());
+        return this;
+    },
+
+    updateMagisterAppointment: async function(caltype, localCalendars, gApps, mApp) {
+        if (caltype in localCalendars) {
+            let calendarId = localCalendars[caltype];
+            let app = Sync.mag2google(this.get('options'), caltype, mApp);
+            let currentApp = gApps[caltype][app.id];
+            if (currentApp) {
+                if (Sync.shouldChange(currentApp, app)) {
+                    // patch
+                    await this.calendar.events.patch({
+                        calendarId: calendarId,
+                        eventId: app.id,
+                        resource: app
+                    });
+                    console.log(`PATCHED ${app.id}`);
+                } else {
+                    console.log(`SKIPPED ${app.id}`);
+                }
+                delete gApps[caltype][app.id];
+            } else {
+                // insert
+                await this.calendar.events.insert({
+                    calendarId: calendarId,
+                    resource: app
+                });
+                console.log(`INSERTED ${app.id}`);
+            }
+        }
+        return gApps;
+    }
+
+}, {
+
+    //=====================================================\\
+    //                       Static                        \\
+    //=====================================================\\
+
+    // Defines the flexible json fields used in the postgreSQL table.
+    jsonColumns: ['calendars', 'options'],
+
+    // Defines the formatting for other special database fields.
+    arrangement: {
+        password: {
+            format: Crypto.encrypt,
+            parse: Crypto.decrypt
+        },
+        refreshtoken: {
+            format: Crypto.encrypt,
+            parse: Crypto.decrypt
+        },
+        accesstoken: {
+            format: Crypto.encrypt,
+            parse: Crypto.decrypt
+        }
+    },
+
+    /**
+     * Gets a user by its Email
+     * @param {string} email
+     * @returns Promise giving the user or error. 
+     */
+    byEmail: function(email) {
+        return this.where({email: email}).fetch();
+    },
+
+    /**
+     * Execute callback on each user in the database.
+     * @param {function} callback - the function to execute.
+     * @param {any} [where] - optional where specifiers.
+     */
+    onEach: function(callback, where = {}) {
+        this.spot(where).fetchAll().then(users => {
+            users.forEach(user => {
+                callback(user);
+            });
+        });
+    }
+
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="User.html">User</a></li></ul><h3>Global</h3><ul><li><a href="global.html#byEmail">byEmail</a></li><li><a href="global.html#calendarAppointments">calendarAppointments</a></li><li><a href="global.html#googleAppointments">googleAppointments</a></li><li><a href="global.html#isParent">isParent</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#magisterAppointments">magisterAppointments</a></li><li><a href="global.html#nextChild">nextChild</a></li><li><a href="global.html#onEach">onEach</a></li><li><a href="global.html#setupCalendars">setupCalendars</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Feb 21 2019 18:37:16 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
