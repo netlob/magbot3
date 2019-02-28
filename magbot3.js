@@ -48,6 +48,28 @@ log.info(`Starting first sync in ${next} and first purge in ${next * 2} millis..
 setTimeout(sync, next);
 setTimeout(purge, next * 20);
 
+http.createServer((req, res) => {
+    // Set CORS headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Origin', "https://beta.magbot.nl");
+    res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
+        'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
+        'remindermin, specialemailreminder, specialdayreminder');
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    // Handle normal request
+    if (req.method == 'post') {
+        MagisterAuth()
+            .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
+            .then(user => res.end(`Gelukt! ${user.get('id')}`))
+            .catch(err => res.writeHead(500).end(err));
+    // If not requesting properly show 'nice' welcome :)
+    } else {
+        res.end('MAGBOT API');
+    }
+}).listen(7070);
+
 /**
  * Main function of magbot.
  * This function calls itself to stay alive.
