@@ -56,7 +56,7 @@ http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
     res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
         'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
-        'remindermin, specialemailreminder, specialdayreminder');
+        'remindermin, specialemailreminder, specialdayreminder, showschoolhour');
     res.writeHead(200, {'Content-Type': 'text/html'});
     // Handle normal request
     if (req.method == 'post') {
