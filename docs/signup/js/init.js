@@ -4,7 +4,7 @@
     $('.sidenav').sidenav();
     $('.modal').modal();
     $('input.autocomplete').autocomplete({
-      data: schools,
+      data: completeSchools,
     });
 
   });
@@ -988,3 +988,8 @@ var schools = {
   "ISW": "isw",
   "KSE": "kse"
 }
+
+// For autocomplete
+var completeSchools = Object.keys(schools).reduce(function(prev, cur) {
+  prev[cur] = null; return prev;
+}, {})
