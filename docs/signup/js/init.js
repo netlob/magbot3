@@ -25,6 +25,7 @@ function signInCallback(authResult) {
     var splitcalendars = $("#splitcalendars").is(":checked") ? true : false
     var simplesummary = $("#simplesummary").is(":checked") ? true : false
     var simpleshowteachers = $("#simpleshowteachers").is(":checked") ? true : false
+    var showschoolhour = $("#showschoolhour").is(":checked") ? true : false
     var showoutages = $("#showoutages").is(":checked") ? true : false
     var remindermin = document.getElementById('remindermin').value;
     var specialemailreminder = $("#specialemailreminder").is(":checked") ? true : false
@@ -61,6 +62,7 @@ function signInCallback(authResult) {
         xhr.setRequestHeader("splitcalendars", splitcalendars);
         xhr.setRequestHeader("simplesummary", simplesummary);
         xhr.setRequestHeader("simpleshowteachers", simpleshowteachers);
+        xhr.setRequestHeader("showschoolhour", showschoolhour);
         xhr.setRequestHeader("showoutages", showoutages);
         xhr.setRequestHeader("remindermin", remindermin);
         xhr.setRequestHeader("specialemailreminder", specialemailreminder);
