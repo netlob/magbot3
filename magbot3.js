@@ -61,8 +61,9 @@ http.createServer((req, res) => {
     // Handle normal request
     if (req.method == 'post') {
         MagisterAuth()
-            .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
-            .then(user => res.end(`Gelukt! ${user.get('id')}`))
+            .then(mAuth => console.dir(req.headers))
+            // .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
+            // .then(user => res.end(`Gelukt! ${user.get('id')}`))
             .catch(err => res.writeHead(500).end(err));
     // If not requesting properly show 'nice' welcome :)
     } else {

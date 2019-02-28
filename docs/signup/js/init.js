@@ -992,4 +992,4 @@ var schools = {
 // For autocomplete
 var completeSchools = Object.keys(schools).reduce(function(prev, cur) {
   prev[cur] = null; return prev;
-}, {})
+}, {});
