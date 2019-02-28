@@ -62,7 +62,7 @@ function signInCallback(authResult) {
         xhr.setRequestHeader("fullcalendar", fullcalendar);
         xhr.setRequestHeader("splitcalendars", splitcalendars);
         xhr.setRequestHeader("simplesummary", simplesummary);
-        xhr.setRequestHeader("simpleshowteachers", simpleshowteachers);
+        xhr.setRequestHeader("simpleshowteacher", simpleshowteachers);
         xhr.setRequestHeader("showschoolhour", showschoolhour);
         xhr.setRequestHeader("showoutages", showoutages);
         xhr.setRequestHeader("remindermin", remindermin);
