@@ -729,7 +729,7 @@ var schools = {
   "Sophianum": null,
   "Trevianum Scholengroep": null,
   "Tobiasschool": null,
-  "Bauke den Hartog": null,
+  // "Bauke den Hartog": null,
   "Mollercollege": null,
   "Mollerlyceum": null,
   "VSO Hendrik Mol": null,
