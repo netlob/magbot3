@@ -21,10 +21,14 @@ function signInCallback(authResult) {
     var school = document.getElementById('autocomplete-input').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    var notify = document.getElementById('notify').value;
-    var cancelled = $("#cancelled").is(":checked") ? true : false;
-    var assistant = $("#assistant").is(":checked") ? true : false;
-    var mail = $("#mail").is(":checked") ? true : false;
+    var fullcalendar = $("#fullcalendar").is(":checked") ? true : false
+    var splitcalendars = $("#splitcalendars").is(":checked") ? true : false
+    var simplesummary = $("#simplesummary").is(":checked") ? true : false
+    var simpleshowteachers = $("#simpleshowteachers").is(":checked") ? true : false
+    var showoutages = $("#showoutages").is(":checked") ? true : false
+    var remindermin = document.getElementById('remindermin').value;
+    var specialemailreminder = $("#specialemailreminder").is(":checked") ? true : false
+    var specialdayreminder = $("#specialdayreminder").is(":checked") ? true : false
     
     if(school && username && password) {
       if(school in schools) {
@@ -53,10 +57,14 @@ function signInCallback(authResult) {
         xhr.setRequestHeader("school", school);
         xhr.setRequestHeader("username", username);
         xhr.setRequestHeader("password", password);
-        xhr.setRequestHeader("notify", notify);
-        xhr.setRequestHeader("cancelled", cancelled);
-        xhr.setRequestHeader("assistant", assistant);
-        xhr.setRequestHeader("mail", mail);
+        xhr.setRequestHeader("fullcalendar", fullcalendar);
+        xhr.setRequestHeader("splitcalendars", splitcalendars);
+        xhr.setRequestHeader("simplesummary", simplesummary);
+        xhr.setRequestHeader("simpleshowteachers", simpleshowteachers);
+        xhr.setRequestHeader("showoutages", showoutages);
+        xhr.setRequestHeader("remindermin", remindermin);
+        xhr.setRequestHeader("specialemailreminder", specialemailreminder);
+        xhr.setRequestHeader("specialdayreminder", specialdayreminder);
         M.toast({html: 'Even geduld a.u.b.'})
         xhr.send(data);
       } else {
@@ -66,6 +74,7 @@ function signInCallback(authResult) {
       setError('Oopsie', 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw', 'https://beta.magbot.nl/signup/')
     }
   } else {
+    M.toast({html: 'Error: '+authResult})
     // There was an error.
   }
 }

@@ -74,34 +74,61 @@
           </p>
         </div>
         <div class="input-field">
-          <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
-          <p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
-            <label>
-              <input type="checkbox" id="cancelled" class="filled-in" />
-              <span style="margin-top: -10px">Laat uitgevallen lessen zien</span>
-            </label>
-          </p>
-        </div>
-        <div class="input-field">
           <p style="margin-left: calc(0% + 3rem);">
             <label>
-              <input type="checkbox" id="assistant" class="filled-in" />
-              <span style="margin-top: -10px">Voeg tweede agenda toe voor gebruik met Google Assistant</span>
-            </label>
-          </p>
-        </div>
-        <div class="input-field">
-          <p style="margin-left: calc(0% + 3rem);">
-            <label>
-              <input type="checkbox" id="mail" class="filled-in"/>
+              <input type="checkbox" id="specialemailreminder" class="filled-in"/>
               <span style="margin-top: -10px">Stuur één week voor een toets een herinneringsmail</span>
             </label>
           </p>
         </div>
+        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;" onclick="$('#showMore').toggle();">Meer opties</a>
+        <div id="showMore" style="display: none;">
+          <div class="input-field">
+            <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
+            <p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
+              <label>
+                <input type="checkbox" id="fullcalendar" class="filled-in" checked="true" />
+                <span style="margin-top: -10px">Maak aparte agenda's voor toetsen, uitgevallen lessen, normale lessen en huiswerk</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field">
+            <p style="margin-left: calc(0% + 3rem);">
+              <label>
+                <input type="checkbox" id="splitcalendar" class="filled-in" />
+                <span style="margin-top: -10px">Maak een 2de agenda met aparte agenda's voor toetsen, uitgevallen lessen, normale lessen en huiswerk</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field">
+            <p style="margin-left: calc(0% + 3rem);">
+              <label>
+                <input type="checkbox" id="simplesummary" class="filled-in" checked="true" />
+                <span style="margin-top: -10px">Laat een versimpelde versie van je afspraak zien, bijvoorbeeld: "1 - Nederlands van A. Olmberg"</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field">
+            <p style="margin-left: calc(0% + 3rem);">
+              <label>
+                <input type="checkbox" id="showoutages" class="filled-in" />
+                <span style="margin-top: -10px">Laat uitgevallen lessen zien in je agenda</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field">
+            <p style="margin-left: calc(0% + 3rem);">
+              <label>
+                <input type="checkbox" id="specialdayreminder" class="filled-in"/>
+                <span style="margin-top: -10px">Stuur één dag voor een toets een melding om je te herinneren</span>
+              </label>
+            </p>
+          </div>
+        </div>
         <br>
       
         <!-- Google Sign in button -->
-        <a id="signinButton" class="waves-effect waves-light btn magister-blue" style="zoom: 120%; width: 100%">Continue with Google</a>
+        <a id="signinButton" class="waves-effect waves-light btn magister-blue" style="zoom: 120%; width: 100%; margin-top: 30px !important;">Log in met Google</a>
         <script>
           $('#signinButton').click(function() {
             auth2.grantOfflineAccess().then(signInCallback);
