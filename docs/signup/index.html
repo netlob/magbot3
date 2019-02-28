@@ -81,14 +81,15 @@
             </label>
           </p>
         </div>
-        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;" onclick="$('#showMore').toggle();">Meer opties</a>
-        <div id="showMore" style="display: none;">
+        <hr style="margin-left: calc(0% + 3rem); margin-right: -calc(0% + 6rem);">
+        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" onclick="$('#showMore').toggle()">Meer opties</a>
+        <div id="showMore" style="display: none; margin-top: 20px !important" class="animateFade">
           <div class="input-field">
             <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
             <p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
               <label>
                 <input type="checkbox" id="fullcalendar" class="filled-in" checked="true" />
-                <span style="margin-top: -10px">Maak aparte agenda's voor toetsen, uitgevallen lessen, normale lessen en huiswerk</span>
+                <span style="margin-top: -10px">Maak één agenda met al je magister afspraken.</span>
               </label>
             </p>
           </div>
@@ -96,15 +97,31 @@
             <p style="margin-left: calc(0% + 3rem);">
               <label>
                 <input type="checkbox" id="splitcalendar" class="filled-in" />
-                <span style="margin-top: -10px">Maak een 2de agenda met aparte agenda's voor toetsen, uitgevallen lessen, normale lessen en huiswerk</span>
+                <span style="margin-top: -10px">Maak aparte agenda's voor toetsen, uitgevallen lessen, normale lessen en huiswerk.</span>
               </label>
             </p>
           </div>
           <div class="input-field">
             <p style="margin-left: calc(0% + 3rem);">
               <label>
+                <input type="checkbox" id="simplesummary" class="filled-in" checked="true" onchange="$('#simplesummarydiv').toggle()" />
+                <span style="margin-top: -10px">Laat een versimpelde versie van je afspraak zien, bijvoorbeeld: "Nederlands"</span>
+              </label>
+            </p>
+          </div>
+          <div id="simplesummarydiv" class="input-field">
+            <p style="margin-left: calc(0% + 3rem);">
+              <label>
                 <input type="checkbox" id="simplesummary" class="filled-in" checked="true" />
-                <span style="margin-top: -10px">Laat een versimpelde versie van je afspraak zien, bijvoorbeeld: "1 - Nederlands van A. Olmberg"</span>
+                <span style="margin-top: -10px">Laat docenten achter je afspraak zien, bijvoorbeeld: "Nederlands van A. Olmberg"</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field">
+            <p style="margin-left: calc(0% + 3rem);">
+              <label>
+                <input type="checkbox" id="showschoolhour" class="filled-in" />
+                <span style="margin-top: -10px">Laat het lesuur voor de afspraak zien, bijvoorbeeld: "1 - Nederlands"</span>
               </label>
             </p>
           </div>
@@ -216,7 +233,7 @@
           <a class="grey-text text-lighten-4">Magbot3 => <a class="grey-text text-lighten-2">@sj3rd en @7kasper</a></a><br>
           <a class="grey-text text-lighten-4">MagisterJS => <a class="grey-text text-lighten-2">@lieuwex, @idiidk, @7kasper en @sj3rd</a></a><br>
           <a class="grey-text text-lighten-4">MaterializeCSS => <a class="grey-text text-lighten-2">@materialize</a></a><br>
-          <a class="grey-text text-lighten-4">Google API's => <a class="grey-text text-lighten-2">@materialize</a></a>
+          <a class="grey-text text-lighten-4">Google API's => <a class="grey-text text-lighten-2">@google</a></a>
 
         </div>
         <div style="opacity: 0 !important" class="col l3 s12 show-on-large">
