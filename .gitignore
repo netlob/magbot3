@@ -67,3 +67,4 @@ secret.js
 db
 
 key.js
+.DS_Store
