@@ -10,3 +10,9 @@
   max-width: 500px;
   margin: 0 auto;
 }
+
+.animateFade {
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
