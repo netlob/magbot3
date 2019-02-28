@@ -65,11 +65,6 @@
        "url":"https://smc.magister.net"
     },
     {
-       "id":"4712635b-db84-4ce2-a81f-01646a50525c",
-       "name":"VMBO Maastricht",
-       "url":"https://vmbomaastricht.swp.nl"
-    },
-    {
        "id":"ad446780-557d-4547-a335-96af0b6b1141",
        "name":"OSG Hengelo Bataafs Lyceum",
        "url":"https://osghengelo.magister.net"
@@ -793,11 +788,6 @@
        "id":"3b2e1e85-290f-478f-848a-41857c786cd8",
        "name":"Arentheem College locatie Thomas a Kempis",
        "url":"https://arentheem.magister.net"
-    },
-    {
-       "id":"f4a441a2-3375-4853-9a5b-a6f3cbb1c3eb",
-       "name":"SchoolMaster BVE Demolicentie",
-       "url":"https://bvehelpdesk.magister.net"
     },
     {
        "id":"ce045ffb-1df9-475b-b5b1-2db12f4c7523",
@@ -1688,11 +1678,6 @@
        "id":"555e7788-fee1-47fe-8051-7425b416fcfd",
        "name":"CVO 't Gooi Comenius College",
        "url":"https://cvotgooi.magister.net"
-    },
-    {
-       "id":"cddaae3d-e70a-40f3-8a6e-0edbbd02a481",
-       "name":"Development",
-       "url":"https://dev.zentest.nl"
     },
     {
        "id":"6cc1332f-cac4-4e11-928f-72a96af0993f",
