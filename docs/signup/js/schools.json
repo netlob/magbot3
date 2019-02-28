@@ -280,11 +280,6 @@
        "url":"https://gomarus.magister.net"
     },
     {
-       "id":"65c4da75-3fdf-4aa1-b74e-0e676edbc170",
-       "name":"Magister Demo licentie",
-       "url":"https://vodemo.zenacc.nl"
-    },
-    {
        "id":"bf8cb49f-d30f-423e-a16e-7494d424dc99",
        "name":"pro-roermond.magister.net",
        "url":"https://petrusdonders.magister.net"
@@ -803,11 +798,6 @@
        "id":"f4a441a2-3375-4853-9a5b-a6f3cbb1c3eb",
        "name":"SchoolMaster BVE Demolicentie",
        "url":"https://bvehelpdesk.magister.net"
-    },
-    {
-       "id":"cc7b5e63-0170-4da9-aba3-28a7cd9da9ea",
-       "name":"SchoolMaster Training",
-       "url":"https://training.zenacc.nl"
     },
     {
        "id":"ce045ffb-1df9-475b-b5b1-2db12f4c7523",
@@ -3115,11 +3105,6 @@
        "url":"https://vova.magister.net"
     },
     {
-       "id":"f2727cc3-42ed-424f-a407-cf5e78bb4940",
-       "name":"Bauke den Hartog",
-       "url":"https://bauke.zenacc.nl"
-    },
-    {
        "id":"a86d3006-5e8b-4831-abff-159608898f27",
        "name":"Mollercollege",
        "url":"https://mollerlyceum.magister.net"
@@ -4458,11 +4443,6 @@
        "id":"7823a371-72a2-4b83-823c-dc32e9da5276",
        "name":"SWV de Delta",
        "url":"https://dedelta.magister.net"
-    },
-    {
-       "id":"58075025-ae03-4108-b80a-87201429de88",
-       "name":"Wilco",
-       "url":"https://wilco.zenacc.nl"
     },
     {
        "id":"b9b8434e-d6e0-4e78-b2a4-63a56044a803",
