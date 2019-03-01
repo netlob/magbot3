@@ -62,7 +62,7 @@ http.createServer((req, res) => {
         'remindermin, specialemailreminder, specialdayreminder, showschoolhour');
     res.writeHead(200, {'Content-Type': 'text/html'});
     // Handle normal request
-    if (req.method == 'post') {
+    if (req.method == 'POST') {
         MagisterAuth()
             .then(mAuth => console.dir(req.headers))
             // .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
