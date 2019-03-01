@@ -66,7 +66,7 @@ http.createServer((req, res) => {
             // .then(mAuth => console.dir(req.headers))
             .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
             .then(user => res.end(`Gelukt! ${user.get('id')}`))
-            .catch(err => { log.error(err); res.writeHead(500); res.end(err); });
+            .catch(err => { log.error(err); res.writeHead(500); res.end(err.toString()); });
     // If not requesting properly show 'nice' welcome :)
     } else {
         res.end('MAGBOT API');
