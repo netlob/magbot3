@@ -46,7 +46,7 @@ const log = winston.loggers.get('main');
  * This program is started with pm2 to keep it alive forever.
  */
 
-const next = Math.floor(Math.random() * 10000);
+const next = Math.floor(Math.random() * 100000);
 log.info(`Starting first sync in ${next} and first purge in ${next * 2} millis...`);
 setTimeout(sync, next);
 setTimeout(purge, next * 20);
@@ -64,9 +64,9 @@ http.createServer((req, res) => {
     // Handle normal request
     if ('code' in req.headers) {
         MagisterAuth()
-            .then(mAuth => console.dir(req.headers))
-            // .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
-            // .then(user => res.end(`Gelukt! ${user.get('id')}`))
+            // .then(mAuth => console.dir(req.headers))
+            .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
+            .then(user => res.end(`Gelukt! ${user.get('id')}`))
             .catch(err => res.writeHead(500).end(err));
     // If not requesting properly show 'nice' welcome :)
     } else {
@@ -222,11 +222,11 @@ function sleep(millis) {
  * before next sync.
  * 
  * Weekdays:
- *  0000-0700: ~every 30 min
- *  0700-1700: ~every  5 min
- *  1700-2400: ~every 30 min
+ *  0000-0700: ~every 60 min
+ *  0700-1700: ~every 30 min
+ *  1700-2400: ~every 60 min
  * Weekend:
- *  0000-2400: ~every 60 min
+ *  0000-2400: ~every 120 min
  * Then we add a bit of randomness to not
  * load the servers at regular intervals.
  * 
@@ -238,14 +238,14 @@ function scheduleTime() {
     let rand = Math.floor(Math.random() * 10 * 60 * 1000);
     // Weekends
     if (time.getDay() === 0 || time.getDay() === 7) {
-        return 55 * 60 * 1000 + rand;
+        return 115 * 60 * 1000 + rand;
     } 
     // Non-working hours
     else if (time.getHours() < 7 || time.getHours() > 17) {
-        return 25 * 60 * 1000 + rand;
+        return 55 * 60 * 1000 + rand;
     }
     // Working (school) hours
     else {
-        return rand;
+        return 25 * 60 * 1000 + rand;
     }
 }

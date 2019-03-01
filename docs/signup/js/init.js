@@ -27,7 +27,7 @@ function signInCallback(authResult) {
     var simpleshowteachers = $("#simpleshowteachers").is(":checked") ? true : false
     var showschoolhour = $("#showschoolhour").is(":checked") ? true : false
     var showoutages = $("#showoutages").is(":checked") ? true : false
-    var remindermin = document.getElementById('remindermin').value;
+    var remindermin = document.getElementById('notify').value;
     var specialemailreminder = $("#specialemailreminder").is(":checked") ? true : false
     var specialdayreminder = $("#specialdayreminder").is(":checked") ? true : false
     
