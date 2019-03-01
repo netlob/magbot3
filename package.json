@@ -35,7 +35,7 @@
     "googleapis": "^36.0.0",
     "knex": "^0.16.3",
     "lodash": "^4.17.11",
-    "magister.js": "^2.0.0-alpha.9",
+    "magister.js": "github:simplyGits/MagisterJS",
     "moment-business-days": "^1.1.3",
     "moment-timezone": "^0.5.23",
     "mysql": "^2.16.0",
