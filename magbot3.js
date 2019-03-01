@@ -60,7 +60,6 @@ http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
         'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
         'remindermin, specialemailreminder, specialdayreminder, showschoolhour');
-    res.writeHead(200, {'Content-Type': 'text/html'});
     // Handle normal request
     if ('code' in req.headers) {
         MagisterAuth()
