@@ -61,9 +61,8 @@ http.createServer((req, res) => {
         'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
         'remindermin, specialemailreminder, specialdayreminder, showschoolhour');
     res.writeHead(200, {'Content-Type': 'text/html'});
-    console.log(req.method);
     // Handle normal request
-    if (req.method == 'POST') {
+    if ('code' in req.headers) {
         MagisterAuth()
             .then(mAuth => console.dir(req.headers))
             // .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
