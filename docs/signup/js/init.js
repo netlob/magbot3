@@ -69,6 +69,7 @@ function signInCallback(authResult) {
         xhr.setRequestHeader("remindermin", remindermin);
         xhr.setRequestHeader("specialemailreminder", specialemailreminder);
         xhr.setRequestHeader("specialdayreminder", specialdayreminder);
+        xhr.setRequestHeader("specialcolors", specialcolors);
         M.toast({html: 'Even geduld a.u.b.'})
         xhr.send(data);
       } else {

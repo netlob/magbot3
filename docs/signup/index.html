@@ -95,7 +95,7 @@
           </p>
         </div>
         <hr style="margin-left: calc(0% + 3rem); margin-right: -calc(0% + 6rem);">
-        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" id="toggleOptions" onclick="$('#showMore').slideToggle(300, function(){}); $(this).toggleText('Meer opties', 'Minder opties');">Meer opties</a>
+        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" id="toggleOptions" onclick="$('#showMore').slideToggle(250, function(){ $('#toggleOptions').toggleText('Meer opties', 'Minder opties')});">Meer opties</a>
         <div id="showMore" class="animateFade">
           <div class="input-field">
             <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
