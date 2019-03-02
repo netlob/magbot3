@@ -11,11 +11,12 @@
 const winston = require('winston');
 require('winston-daily-rotate-file');
 winston.loggers.add('main', {
-    level: 'info',
+    level: 'alert',
+    // level: 'info',
     format: winston.format.simple(),
     transports: [
         new winston.transports.Console({
-            level: 'silly'
+            // level: 'silly'
         }),
         new winston.transports.DailyRotateFile({
             dirname: 'logs',
@@ -59,7 +60,7 @@ http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
     res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
         'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
-        'remindermin, specialemailreminder, specialdayreminder, showschoolhour');
+        'remindermin, specialemailreminder, specialdayreminder, showschoolhour, specialcolors');
     // Handle normal request
     if ('code' in req.headers) {
         MagisterAuth()

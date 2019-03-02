@@ -148,6 +148,8 @@
         <a id="signinButton" class="waves-effect waves-light btn magister-blue" style="zoom: 120%; width: 100%; margin-top: 30px !important;">Log in met Google</a>
         <script>
           $('#signinButton').click(function() {
+            // TODO: when everything works replace with this to make user have to login less or so.
+            // auth2.grantOfflineAccess({prompt: 'select_account'}).then(signInCallback);
             auth2.grantOfflineAccess().then(signInCallback);
           });
         </script>
