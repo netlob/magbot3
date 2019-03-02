@@ -51,21 +51,21 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <h1 class="header center magister-blue-text">Activatie</h1>
-      <div class="signup-form">
+      <form class="signup-form" autocomplete="on">
         <div class="input-field">
           <i class="material-icons prefix magister-blue-text">school</i>
           <input type="text" id="autocomplete-input" class="autocomplete magister-blue-text" onkeypress="autocompleteDropdown()">
-          <label for="autocomplete-input" style="user-select: none !important">School</label>
+          <label for="autocomplete-input" style="user-select: none !important" autocomplete="school">School</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix magister-blue-text">person</i>
           <input id="username" type="text" class="validate">
-          <label for="username" style="user-select: none !important">Magister gebruikersnaam</label>
+          <label for="username" style="user-select: none !important" autocomplete="username">Magister gebruikersnaam</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix magister-blue-text">lock</i>
           <input id="password" type="password" class="validate">
-          <label for="password" style="user-select: none !important">Magister wachtwoord</label>
+          <label for="password" style="user-select: none !important" autocomplete="password">Magister wachtwoord</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">notifications_active</i>
@@ -141,7 +141,7 @@
               </label>
             </p>
           </div>
-        </div>
+        </form>
         <br>
       
         <!-- Google Sign in button -->
