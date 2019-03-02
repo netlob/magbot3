@@ -12,7 +12,8 @@ const winston = require('winston');
 require('winston-daily-rotate-file');
 winston.loggers.add('main', {
     // level: 'alert',
-    level: 'info',
+    // level: 'info',
+    level: 'silly',
     format: winston.format.simple(),
     transports: [
         new winston.transports.Console({
