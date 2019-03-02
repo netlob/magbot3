@@ -106,7 +106,7 @@ function setError(title, message, href) {
   errorModalButton.href = href
 
   errorModal.click()
-}
+} 
 
 var schools = {
   "De Faam": "zaam",

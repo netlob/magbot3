@@ -24,6 +24,11 @@
         });
       })
     });
+    $.fn.extend({
+      toggleText: function(a, b){
+          return this.text(this.text() == b ? a : b);
+      }
+    });
   </script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -90,8 +95,8 @@
           </p>
         </div>
         <hr style="margin-left: calc(0% + 3rem); margin-right: -calc(0% + 6rem);">
-        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" onclick="$('#showMore').toggle()">Meer opties</a>
-        <div id="showMore" style="display: none; margin-top: 20px !important" class="animateFade">
+        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" id="toggleOptions" onclick="$('#showMore').slideToggle(300, function(){}); $(this).toggleText('Meer opties', 'Minder opties');">Meer opties</a>
+        <div id="showMore" class="animateFade">
           <div class="input-field">
             <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
             <p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
