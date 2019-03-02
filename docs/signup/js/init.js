@@ -43,7 +43,7 @@ function signInCallback(authResult) {
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === 4) {
             console.log(this.responseText);
-            if(error.indexOf('Gelukt!') > -1) {
+            if(this.responseText.indexOf('Gelukt!') > -1) {
               M.toast({html: 'Succesvol geactiveerd!'})
             } else {
               if(this.responseText == 'user updated' || this.responseText == 'user already exists') {
