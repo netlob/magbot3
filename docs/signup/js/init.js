@@ -49,6 +49,7 @@ function signInCallback(authResult) {
               if(this.responseText == 'user updated' || this.responseText == 'user already exists') {
                 setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
               }
+              M.toast({html: getError(this.responseText)}),
               setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
             }
           }
