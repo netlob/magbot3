@@ -66,7 +66,8 @@ http.createServer((req, res) => {
         MagisterAuth()
             // .then(mAuth => console.dir(req.headers))
             .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
-            .then(user => res.end(`Gelukt! ${user.get('id')}`))
+            .then(user => !user.isNew())
+            .then(updated => res.end('success: user' + updated ? 'updated' : 'created'))
             .catch(err => { log.error(err); console.error(err), res.writeHead(500); res.end('error: ' + err.toString()); });
     // If not requesting properly show 'nice' welcome :)
     } else {
