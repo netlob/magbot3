@@ -12,7 +12,8 @@ const winston = require('winston');
 require('winston-daily-rotate-file');
 winston.loggers.add('main', {
     // level: 'alert',
-    level: 'info',
+    // level: 'info',
+    level: 'silly',
     format: winston.format.simple(),
     transports: [
         new winston.transports.Console({
@@ -99,9 +100,9 @@ async function sync() {
                 await sleep(Math.floor(Math.random() * 10000));
             } catch(err) {
                 try {
-                    user.log.warn(`Error syncing user! `, err);
+                    user.log.warn(`Error syncing user! `, err.toString());
                 } catch(errr) {
-                    log.error(`LOGGING ERROR! `, errr, err);
+                    log.error(`LOGGING ERROR! `, errr, err.toString());
                 }
             }
         }
@@ -189,7 +190,7 @@ async function purge() {
                 });
                 user.log.info(`Notified user of purge!`);
             } catch (err) {
-                user.log.error(`Error warning to-be purged user! `, err)
+                user.log.error(`Error warning to-be purged user! `, err.toString())
             }
             try {
                 user.log.info(`Disabling!`)
