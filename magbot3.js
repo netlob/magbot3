@@ -15,7 +15,7 @@ winston.loggers.add('main', {
     format: winston.format.simple(),
     transports: [
         new winston.transports.Console({
-            level: 'info'
+            // level: 'info'
         }),
         new winston.transports.DailyRotateFile({
             dirname: 'logs',
