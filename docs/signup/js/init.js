@@ -30,6 +30,7 @@ function signInCallback(authResult) {
     var remindermin = document.getElementById('notify').value;
     var specialemailreminder = $("#specialemailreminder").is(":checked") ? true : false
     var specialdayreminder = $("#specialdayreminder").is(":checked") ? true : false
+    var specialcolors = $("#specialcolors").is(":checked") ? true : false
     
     if(school && username && password) {
       if(school in schools) {
