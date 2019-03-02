@@ -43,12 +43,13 @@ function signInCallback(authResult) {
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === 4) {
             console.log(this.responseText);
-            if(this.responseText == 'succes') {
+            if(this.responseText.indexOf('Gelukt!') > -1) {
               M.toast({html: 'Succesvol geactiveerd!'})
             } else {
               if(this.responseText == 'user updated' || this.responseText == 'user already exists') {
                 setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
               }
+              M.toast({html: getError(this.responseText)}),
               setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
             }
           }
@@ -83,13 +84,14 @@ function signInCallback(authResult) {
 }
 
 function getError(error) {
-  if(error == 'AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
-  if(error == 'AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
-  if(error == 'Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
-  if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
-  if(error == 'user updated') { return 'Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.' }
-  if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
-  if(error == 'TimeoutError: Timeout exceeded while waiting for event') { return 'Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl'}
+  if(error == 'error: AuthError: Invalid username') { return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.' }
+  if(error == 'error: AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
+  if(error == 'error: Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
+  // if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
+  // if(error == 'user updated') { return 'Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.' }
+  // if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
+  if(error == 'error: TimeoutError: Timeout exceeded while waiting for event') { return 'Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl'}
+  // if(error ) { return '' }
   return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
