@@ -3392,6 +3392,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _handleMaterialboxClick(e) {
         // If already modal, return to original
         if (this.doneAnimating === false || this.overlayActive && this.doneAnimating) {
+          location.reload();
           this.close();
         } else {
           this.open();
@@ -3406,6 +3407,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_handleWindowScroll",
       value: function _handleWindowScroll() {
         if (this.overlayActive) {
+          location.reload();
           this.close();
         }
       }
@@ -3418,6 +3420,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_handleWindowResize",
       value: function _handleWindowResize() {
         if (this.overlayActive) {
+          location.reload();
           this.close();
         }
       }
@@ -3432,6 +3435,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _handleWindowEscape(e) {
         // ESC key
         if (e.keyCode === 27 && this.doneAnimating && this.overlayActive) {
+          location.reload();
           this.close();
         }
       }
