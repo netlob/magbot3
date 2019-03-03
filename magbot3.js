@@ -68,7 +68,7 @@ http.createServer((req, res) => {
             // .then(mAuth => console.dir(req.headers))
             .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
             .then(user => !user.isNew())
-            .then(updated => res.end('success: user' + updated ? 'updated' : 'created'))
+            .then(updated => res.end(updated ? 'success: user updated' : 'success: user created'))
             .catch(err => { log.error(err.toString()); res.writeHead(500); res.end('error: ' + err.toString()); });
     // If not requesting properly show 'nice' welcome :)
     } else {
