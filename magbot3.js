@@ -160,7 +160,7 @@ async function purge() {
                                      '<b>Bij deze wordt uw account op non-actief gezet '+
                                      'en zal niet automatisch meer werken!</b><br/>' +
                                      '<i>Heractiveer uw account op ' +
-                                     '<a href="https://magbot.nl/">magbot.nl</a></i><br/>' +
+                                     '<a href="https://magbot.nl/signup/ ">magbot.nl</a></i><br/>' +
                                      '<br/>' +
                                      'Als u uw account niet meer wil hebben, onderneem dan ' + 
                                      'geen actie.<br/>' +
