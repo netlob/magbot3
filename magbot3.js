@@ -100,9 +100,9 @@ async function sync() {
                 await sleep(Math.floor(Math.random() * 10000));
             } catch(err) {
                 try {
-                    user.log.warn(`Error syncing user! `, err.toString());
+                    user.log.warn(`Error syncing user! `, {err: err.toString()});
                 } catch(errr) {
-                    log.error(`LOGGING ERROR! `, errr, err.toString());
+                    log.error(`LOGGING ERROR! `, errr, {err: err.toString()});
                 }
             }
         }
