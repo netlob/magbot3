@@ -86,7 +86,7 @@ async function sync() {
         // Get the current magister authcode before syncing users.
         let mAuth = await MagisterAuth();
         // Get all users from DB & run over them.
-        let users = await User.spot({isdisabled: false}).fetchAll();
+        let users = shuffleArray(await User.spot({isdisabled: false}).fetchAll());
         log.info(`Syncing ${users.length} users...`);
         for (let user of users) {
             try {
@@ -129,7 +129,7 @@ async function purge() {
         let checkUser = await User.spot({email: 'kasper.77077@gmail.com'}).fetch();
         await checkUser.login(oAuth, mAuth); // check if checkuser can login.
         // Get all users from DB & run over them.
-        let users = await User.spot({isdisabled: false}).fetchAll();
+        let users = shuffleArray(await User.spot({isdisabled: false}).fetchAll());
         log.info(`Purging ${users.length} users...`);
         // Go through all users and purge if necessary.
         for (let user of users) {
@@ -251,3 +251,17 @@ function scheduleTime() {
         return 25 * 60 * 1000 + rand;
     }
 }
+
+/**
+ * Shuffles array.
+ * @param {array} arr 
+ * @returns - the array in random order.
+ */
+function shuffleArray(arr) {
+    const newArr = arr.slice()
+    for (let i = newArr.length - 1; i > 0; i--) {
+        const rand = Math.floor(Math.random() * (i + 1));
+        [newArr[i], newArr[rand]] = [newArr[rand], newArr[i]];
+    }
+    return newArr
+};
