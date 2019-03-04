@@ -1,0 +1,25 @@
+[{
+    "email": "kasper.77077@gmail.com",
+    "realname": "Kasper",
+    "lastname": "M\u00fcller",
+    "googleaccesstoken": {
+        "access_token": "ya29.Gl3CBrp6cbQw2fqsYy4muQzvjyUHeqO77Rcj64ZPvMzVE-IVJHTKO33i5-uaFOp2OBHYYHbi7Qr0BWm9axrxcxWy-RQp5MervbmejECHEq17RIGd0F3H4mp0iqbI45k",
+        "expires_in": 3600,
+        "scope": "https:\/\/www.googleapis.com\/auth\/calendar https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImNmMDIyYTQ5ZTk3ODYxNDhhZDBlMzc5Y2M4NTQ4NDRlMzZjM2VkYzEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI0MDQ4MjAzMjU0NDItaXZyOGtsZ29oZDczcG0ybG1lOGJtcGMyNDFwcm4wM2MuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0MDQ4MjAzMjU0NDItaXZyOGtsZ29oZDczcG0ybG1lOGJtcGMyNDFwcm4wM2MuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDgyNjk5OTQ1NzkyNDIzOTYxOTEiLCJlbWFpbCI6Imthc3Blci43NzA3N0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Im5rTy00aFZPeFZHS2tMc3AwbV9IYkEiLCJuYW1lIjoiS2FzcGVyIE3DvGxsZXIiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1Pb2hTd2JCVTI2OC9BQUFBQUFBQUFBSS9BQUFBQUFBQUQzSS9UcXZ6d19CS2tYby9zOTYtYy9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiS2FzcGVyIiwiZmFtaWx5X25hbWUiOiJNw7xsbGVyIiwibG9jYWxlIjoiZW4tR0IiLCJpYXQiOjE1NTE2NzgwMzIsImV4cCI6MTU1MTY4MTYzMn0.IEVn0N4LU0iE6ZZTTmg3lZ-dg-SIZt4Onj9triCr0SbZgCXpz19m6NDZ8p9ITMzEsUSilItJtw47JG5kyIARAHRUcI483s7SK2uENAiCjIbLAV-u_8m05Tz2Kyb8s0wPjJHlSlwON4vLF31Jp2IM2KPoKxaK4Mudv15TH68cJNVDiDfP54E2Lbm0ZVdwW7NhnD_8ljFJgQEgt_sgCCknoHjN-azujp9odSLnLMfMoSujVZVFfZMgmfVa6FA2sOiuME78Gu-nMRjNK9yUA3vdMjhkNH5Dh9rwjn4xj4lEHJ375D9HS7WBhX6ycEX5QVvCqmdcAvEd3LVBUcC9PRl0hQ",
+        "created": 1551678032,
+        "refresh_token": "1\/-TJaQyq50lnGAtQM7ksKQhVm46iRhdTs-7kPjW3NVZbqWov9BrkTGPZHe1SHugVb"
+    },
+    "googlerefreshtoken": "1\/-TJaQyq50lnGAtQM7ksKQhVm46iRhdTs-7kPjW3NVZbqWov9BrkTGPZHe1SHugVb",
+    "school": "cl-apeldoorn",
+    "username": "khmuller",
+    "password": "BLANK",
+    "calendarids": [
+        "j777pfblb0vfkpmbaa84t1l6gs@group.calendar.google.com",
+        "fvrbjhs2q093a6f4bk3g7oi1hg@group.calendar.google.com",
+        "8iror4bjjolkgb7tueh6geghlg@group.calendar.google.com",
+        "lb6376vblnpghncbm7mjr78sho@group.calendar.google.com"
+    ],
+    "options": []
+}]
