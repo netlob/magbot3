@@ -51,13 +51,13 @@ function signInCallback(authResult) {
                 setError('Succes', getError(this.responseText), '#')
                 M.toast({html: getError(this.responseText)})
               } else {
-                setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
+                setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
               }
             }
           }
         });
         
-        xhr.open("POST", "https://bot.beta.magbot.nl");
+        xhr.open("POST", "https://server.magbot.nl");
         xhr.setRequestHeader("code", authResult.code);
         xhr.setRequestHeader("school", school);
         xhr.setRequestHeader("username", username);
@@ -75,10 +75,10 @@ function signInCallback(authResult) {
         M.toast({html: 'Even geduld a.u.b.'})
         xhr.send(data);
       } else {
-        setError('Oopsie', 'Geen geldige school. Kies een school uit de lijst', 'https://beta.magbot.nl/signup/')
+        setError('Oopsie', 'Geen geldige school. Kies een school uit de lijst', 'https://magbot.nl/signup/')
       }
     } else {
-      setError('Oopsie', 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw', 'https://beta.magbot.nl/signup/')
+      setError('Oopsie', 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw', 'https://magbot.nl/signup/')
     }
   } else {
     M.toast({html: 'Error: '+authResult})

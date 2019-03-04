@@ -35,7 +35,7 @@ const oAuth = [
     '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com', // (test)
     secret.clientsecret,
 // 'http://magbot.nl/action/googleCallback.php' (main)
-    'https://beta.magbot.nl' // (test)
+    'https://magbot.nl' // (test)
 ];
 const log = winston.loggers.get('main');
 
@@ -56,7 +56,7 @@ setTimeout(purge, next * 20);
 http.createServer((req, res) => {
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Credentials', 'true');
-    res.setHeader('Access-Control-Allow-Origin', "https://beta.magbot.nl");
+    res.setHeader('Access-Control-Allow-Origin', "https://magbot.nl");
     res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
     res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
