@@ -48,10 +48,11 @@ function signInCallback(authResult) {
               M.toast({html: 'Succesvol geactiveerd!'})
             } else {
               if(this.responseText == 'success: user updated' || this.responseText == 'user already exists') {
-                setError('Succes', getError(this.responseText), 'https://beta.magbot.nl/')
+                setError('Succes', getError(this.responseText), '#')
+                M.toast({html: getError(this.responseText)})
+              } else {
+                setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
               }
-              M.toast({html: getError(this.responseText)}),
-              setError('Oopsie', getError(this.responseText), 'https://beta.magbot.nl/signup/')
             }
           }
         });
@@ -97,7 +98,7 @@ function getError(error) {
   return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
-$('.modal-overlay').on( "click", function(){location.reload()} );
+$('.modal-overlay').on( "click", function(){ location.reload()} );
 
 function setError(title, message, href) {
   var errorModal = document.getElementById('error-modal-open');
