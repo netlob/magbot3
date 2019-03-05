@@ -46,10 +46,13 @@ const log = winston.loggers.get('main');
  * This program is started with pm2 to keep it alive forever.
  */
 
-const next = Math.floor(Math.random() * 100000);
+const next = 0;
+// const next = Math.floor(Math.random() * 100000);
 log.info(`Starting first sync in ${next} and first purge in ${next * 2} millis...`);
-setTimeout(sync, next);
+// setTimeout(sync, next);
 setTimeout(purge, next * 20);
+
+purged = 0;
 
 http.createServer((req, res) => {
     // Set CORS headers
@@ -145,59 +148,60 @@ async function purge() {
                 user.log.warn(`Purging user for `, err);
             }
             try {
-                // If possible, warn user they are being placed on non-active.
-                await user.calendar.events.insert({
-                    calendarId: 'primary',
-                    sendUpdates: 'all',
-                    resource: {
-                        summary: 'MAGBOT: Actie vereist! Lees mij!',
-                        description: '<i>Volgens mij klopt er iets niet meer :(</i><br/>' + 
-                                     '<br/>'+
-                                     'Uw magister informatie is veranderd of u heeft ' +
-                                     'bewust alle magbot agendas verwijderd.<br/>' +
-                                     '<b>Bij deze wordt uw account op non-actief gezet '+
-                                     'en zal niet automatisch meer werken!</b><br/>' +
-                                     '<i>Heractiveer uw account op ' +
-                                     '<a href="https://magbot.nl/signup/ ">magbot.nl</a></i><br/>' +
-                                     '<br/>' +
-                                     'Als u uw account niet meer wil hebben, onderneem dan ' + 
-                                     'geen actie.<br/>' +
-                                     '<br/>' +
-                                     'Stuur bij vragen gerust een mailtje naar ' +
-                                     '<a href="mailto:info@magbot.nl">info@magbot.nl</a><br/>',
-                        // Set start and end two days from now at 0900-0930.
-                        start: {
-                            dateTime: new Date(new Date(Date.now() + 1728e5)
-                            .setHours( 9,0,0,0))
-                        },
-                        end: {
-                            dateTime: new Date(new Date(Date.now() + 1728e5)
-                            .setHours(17,0,0,0))
-                        },
-                        location: 'internet',
-                        colorId: 11, // Nice red color
-                        reminders: {
-                            useDefault: false,
-                            overrides: [
-                                { method: 'email', minutes: 1440 },
-                                { method: 'popup', minutes: 1440 },
-                                { method: 'popup', minutes: 5 }
-                            ]
-                        }
-                    }
-                });
-                user.log.info(`Notified user of purge!`);
-            } catch (err) {
-                user.log.error(`Error warning to-be purged user! `, err.toString())
-            }
-            try {
-                user.log.info(`Disabling!`)
-                user.set('isdisabled', true);
-                await user.update();
-            } catch (err) {
-                log.error(`MAJOR PURGE ERROR `, err);
-            }
-        }
+        //         // If possible, warn user they are being placed on non-active.
+        //         await user.calendar.events.insert({
+        //             calendarId: 'primary',
+        //             sendUpdates: 'all',
+        //             resource: {
+        //                 summary: 'MAGBOT: Actie vereist! Lees mij!',
+        //                 description: '<i>Volgens mij klopt er iets niet meer :(</i><br/>' + 
+        //                              '<br/>'+
+        //                              'Uw magister informatie is veranderd of u heeft ' +
+        //                              'bewust alle magbot agendas verwijderd.<br/>' +
+        //                              '<b>Bij deze wordt uw account op non-actief gezet '+
+        //                              'en zal niet automatisch meer werken!</b><br/>' +
+        //                              '<i>Heractiveer uw account op ' +
+        //                              '<a href="https://magbot.nl/signup/ ">magbot.nl</a></i><br/>' +
+        //                              '<br/>' +
+        //                              'Als u uw account niet meer wil hebben, onderneem dan ' + 
+        //                              'geen actie.<br/>' +
+        //                              '<br/>' +
+        //                              'Stuur bij vragen gerust een mailtje naar ' +
+        //                              '<a href="mailto:info@magbot.nl">info@magbot.nl</a><br/>',
+        //                 // Set start and end two days from now at 0900-0930.
+        //                 start: {
+        //                     dateTime: new Date(new Date(Date.now() + 1728e5)
+        //                     .setHours( 9,0,0,0))
+        //                 },
+        //                 end: {
+        //                     dateTime: new Date(new Date(Date.now() + 1728e5)
+        //                     .setHours(17,0,0,0))
+        //                 },
+        //                 location: 'internet',
+        //                 colorId: 11, // Nice red color
+        //                 reminders: {
+        //                     useDefault: false,
+        //                     overrides: [
+        //                         { method: 'email', minutes: 1440 },
+        //                         { method: 'popup', minutes: 1440 },
+        //                         { method: 'popup', minutes: 5 }
+        //                     ]
+        //                 }
+        //             }
+        //         });
+        //         user.log.info(`Notified user of purge!`);
+        //     } catch (err) {
+        //         user.log.error(`Error warning to-be purged user! `, err.toString())
+        //     }
+        //     try {
+        //         user.log.info(`Disabling!`)
+        //         user.set('isdisabled', true);
+        //         await user.update();
+        //     } catch (err) {
+        //         log.error(`MAJOR PURGE ERROR `, err);
+        //     }
+        // }
+        log.info(`PURGED ${purged++} USERS!`);
     } catch (err) { log.error('Purging error! ', err); }
     const next = scheduleTime() * 20;
     log.info(`Going for next purge in ${next} millis...`);
