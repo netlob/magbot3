@@ -105,6 +105,38 @@
     <div class="parallax"><img src="1.jpg" style="max-width: 100%; height: auto; width: auto; filter: blur(10px); -webkit-filter: blur(10px);"></div>
   </div>
 
+  <a class="waves-effect waves-light btn modal-trigger" style="display: none" href="#successmodal" id="successmodal-open">success</a>
+  <div id="successmodal" class="modal" style="outline: none">
+    <div class="modal-content">
+      <h4>Doneren</h4>
+      <div>
+          <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Een minimum van 7,49 is vereist om deze exclusieve bevoegdheden te ontgrendelen. style="display: block !important;">Voordelen van een donatie:</b>
+            <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
+            <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, de komende maand.</span>
+            <span style="display: block !important;">• Speciale afspraken zoals toetsen en toetsweken in de komende 15 weken, komen alvast in je agenda te staan.</span>
+          </p>
+      
+          <p><b>Belangrijk is dat je bij de betaling je je Magister gebruikersnaam vermeld, zodat dit doorgevoerd kan worden in het systeem!</b></p>
+      
+          <div style="float: left;">
+            <p><b>PayPal</b></p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick" />
+              <input type="hidden" name="hosted_button_id" value="LPL35PQS749PG" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+              <img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+          </div>
+      
+          <div style="float: right;">
+            <p><b>Bankoverschrijving</b></p>
+            <span>NL11 INGB 0001 3521 96</span>
+          </div>
+          <p></p>
+      </div>
+    </div>
+  </div>
+
   <footer class="page-footer magister-blue">
     <div class="container">
       <div class="row">
@@ -137,12 +169,7 @@
       <div class="container">
         Site made by <a class="orange-text text-lighten-3" href="https://netlob.app">Netlob</a>
         <div style="float: right">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input type="hidden" name="hosted_button_id" value="LPL35PQS749PG" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" />
-          </form>
+            <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" onclick="$('#successmodal-open')[0].click()"/>
         </div>
       </div>
     </div>
