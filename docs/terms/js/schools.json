@@ -1,0 +1,4447 @@
+[
+    {
+       "id":"6feff75f-3d78-4216-a18d-e02c137919ed",
+       "name":"De Faam",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"e6ba7af0-0bd8-424c-9e6d-bdb8b5fbffc1",
+       "name":"CVO 't Gooi College de OpMaat",
+       "url":"https://cvotgooi.magister.net"
+    },
+    {
+       "id":"e277679c-1543-4bae-9adc-a79a2110b2e8",
+       "name":"De Maat",
+       "url":"https://demaat.magister.net"
+    },
+    {
+       "id":"0d15b680-36c9-4367-94b0-d8339e34f4c3",
+       "name":"Maarten van Rossem",
+       "url":"https://20tz.magister.net"
+    },
+    {
+       "id":"c0fd0ba5-6008-4b96-9bb2-ae79566fd13b",
+       "name":"Maaslandcollege",
+       "url":"https://maaslandcollege.magister.net"
+    },
+    {
+       "id":"ddee4a7a-384d-4f56-8111-7b9b3d008010",
+       "name":"SG Maarsbergen",
+       "url":"https://vakcollege-osgs.magister.net"
+    },
+    {
+       "id":"b741aa3f-863a-405e-8da6-bb2fcaf455d7",
+       "name":"Sint-Maartenscollege",
+       "url":"https://sintmaartens.magister.net"
+    },
+    {
+       "id":"5f664cb9-0266-4c58-939f-0caf85d8468e",
+       "name":"Sint-Maartenscollege Maastricht",
+       "url":"https://smc.magister.net"
+    },
+    {
+       "id":"d2fb1f4e-dcf0-4163-a104-a7c5d1ca24f6",
+       "name":"Sint-Maartenscollege Voorburg",
+       "url":"https://sintmaartens.magister.net"
+    },
+    {
+       "id":"5b39e041-45bf-4806-977e-0e19ba7f29ae",
+       "name":"SMC Maastricht",
+       "url":"https://smc.magister.net"
+    },
+    {
+       "id":"d4194083-5cd7-479f-a46c-1e8562bbdbc2",
+       "name":"Stedelijk Dalton College Alkmaar",
+       "url":"https://sovon.magister.net"
+    },
+    {
+       "id":"8228440e-fc49-4e5d-857e-96d7d600f770",
+       "name":"Vakcollege Maarsbergen",
+       "url":"https://vakcollege-osgs.magister.net"
+    },
+    {
+       "id":"e73ee0f1-a304-41cd-9722-a41de252ee8f",
+       "name":"VMBO Maastricht",
+       "url":"https://smc.magister.net"
+    },
+    {
+       "id":"ad446780-557d-4547-a335-96af0b6b1141",
+       "name":"OSG Hengelo Bataafs Lyceum",
+       "url":"https://osghengelo.magister.net"
+    },
+    {
+       "id":"7dbf4ddc-0b06-430c-b870-95f216e23ee1",
+       "name":"VierTaal College Schagen",
+       "url":"https://hendrikmol.magister.net"
+    },
+    {
+       "id":"3f6c0a95-ef30-42ef-81ed-008d885b0b69",
+       "name":"Tabor College",
+       "url":"https://tabor.magister.net"
+    },
+    {
+       "id":"be38ade9-a73a-4546-b0b3-ad4142aae174",
+       "name":"Eemsdeltacollege",
+       "url":"https://eemsdelta.magister.net"
+    },
+    {
+       "id":"cc3bc1a7-79f2-45fd-a4ce-7531efd89cdf",
+       "name":"Maria Immaculata Lyceum",
+       "url":"https://mil.magister.net"
+    },
+    {
+       "id":"2a0c3e82-0a59-42f9-92d4-80beb1753507",
+       "name":"Maria Immaculata Lyceum (MIL)",
+       "url":"https://mil.magister.net"
+    },
+    {
+       "id":"54e52de6-7c39-4ede-bfa1-506490c96526",
+       "name":"Chr. Mavo \"De Saad\"",
+       "url":"https://desaad.magister.net"
+    },
+    {
+       "id":"8da13b4c-2682-44a0-8583-13864af63495",
+       "name":"Citadel College",
+       "url":"https://citadel.magister.net"
+    },
+    {
+       "id":"af748dbc-845e-4e08-a211-c958ee52d7f0",
+       "name":"Interconf. Hofstadcollege Heldring VMBO",
+       "url":"https://hofstadcollege.magister.net"
+    },
+    {
+       "id":"fb20a7c1-b2e8-4b87-a551-7cf730e5a36a",
+       "name":"Interconf. Hofstadcollege Hofstad Lyceum",
+       "url":"https://hofstadcollege.magister.net"
+    },
+    {
+       "id":"139a3b47-2ac8-4128-87d1-29598e86b726",
+       "name":"Interconf. Hofstadcollege Hofstad Mavo",
+       "url":"https://hofstadcollege.magister.net"
+    },
+    {
+       "id":"5caeec42-f744-4e3d-bd1c-68715eb79ac1",
+       "name":"LVO Parkstad",
+       "url":"https://parkstad.magister.net"
+    },
+    {
+       "id":"d5e7087c-751f-4b64-8817-d9bd8ac326c9",
+       "name":"OVO Zaanstad",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"bbbf67c4-ad99-4eb7-aa54-9ece7d8016f4",
+       "name":"SG Lelystad",
+       "url":"https://sgl.magister.net"
+    },
+    {
+       "id":"e64fb6a3-7abc-4e3c-a7cb-fe9de759c2c8",
+       "name":"SG Lelystad",
+       "url":"https://svol.magister.net"
+    },
+    {
+       "id":"8059542e-ccde-40b3-99e4-f1c4aaf788e4",
+       "name":"Stad en Esch",
+       "url":"https://stadenesch.magister.net"
+    },
+    {
+       "id":"977856fa-6d12-480e-8981-1f83bb96ca57",
+       "name":"Stadslyceum",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"1b230374-90ea-4973-9843-ff49c1b4943a",
+       "name":"Stichting voor VO Lelystad",
+       "url":"https://svol.magister.net"
+    },
+    {
+       "id":"3e82538f-0d51-4b6d-b51c-40c947384da6",
+       "name":"Stichting voor Voortgezet Onderwijs Lelystad",
+       "url":"https://svol.magister.net"
+    },
+    {
+       "id":"3c3b21e0-6794-43e9-b858-ff5bb76357b1",
+       "name":"Talentstad",
+       "url":"https://landstedevo.magister.net"
+    },
+    {
+       "id":"5cbbf1d0-d3ff-4bd4-a6ba-0b21fc9a2ee6",
+       "name":"Amadeus Lyceum",
+       "url":"https://amadeus.magister.net"
+    },
+    {
+       "id":"035956fa-76ac-44db-93a0-387a8d496896",
+       "name":"Dongemond college Made",
+       "url":"https://dongemond.magister.net"
+    },
+    {
+       "id":"f54e717d-d260-47d4-88cd-f38ed1fc5458",
+       "name":"Fons Vitae Lyceum",
+       "url":"https://fonsvitae.magister.net"
+    },
+    {
+       "id":"23e4f080-8425-411e-a4a6-1922a9aad74c",
+       "name":"Maerlant College Brielle",
+       "url":"https://maerlant.magister.net"
+    },
+    {
+       "id":"8a851e86-eb1b-4309-aa57-386ffe9c387b",
+       "name":"Maerlant Lyceum Den Haag",
+       "url":"https://maerlantlyceum.magister.net"
+    },
+    {
+       "id":"e64389e7-f2f2-4ca9-9918-5df9867beddc",
+       "name":"Van Maerlantlyceum",
+       "url":"https://vanmaerlantlyceum.magister.net"
+    },
+    {
+       "id":"f2d99122-eda0-49d7-87a3-3cdbad8632c1",
+       "name":"Van Maerlantlyceum Eindhoven",
+       "url":"https://vanmaerlantlyceum.magister.net"
+    },
+    {
+       "id":"c15139db-8665-474d-b8b9-41602ed85eda",
+       "name":"Arentheem College locatie Leerpark Presikhaaf",
+       "url":"https://arentheem.magister.net"
+    },
+    {
+       "id":"62cdb95b-1952-4e61-8b15-98c9379923da",
+       "name":"Daaf Gelukschool",
+       "url":"https://daafgeluk.magister.net"
+    },
+    {
+       "id":"6b092a14-ed08-4edf-b6af-30aebc320c04",
+       "name":"Graaf Engelbrecht",
+       "url":"https://engelbrecht.magister.net"
+    },
+    {
+       "id":"1a94fcb5-2aa9-46b0-8ac9-b16af3ac32f9",
+       "name":"Graaf Huyn College",
+       "url":"https://ghc.magister.net"
+    },
+    {
+       "id":"3be6e9a6-e5df-4111-84cf-eb1bb68aec47",
+       "name":"Graafschap College",
+       "url":"https://gc.magister.net"
+    },
+    {
+       "id":"ef6dc728-34ea-4795-afaf-85321700610d",
+       "name":"Dalton Den Haag",
+       "url":"https://daltondenhaag.magister.net"
+    },
+    {
+       "id":"aaf5fb4b-6a58-4301-8f01-b769aa83af14",
+       "name":"De Haagse",
+       "url":"https://sgdenhaag.magister.net"
+    },
+    {
+       "id":"be12ac3b-fd16-47d8-8504-eb085f10ca2a",
+       "name":"De Vrije School Den Haag",
+       "url":"https://vszh.magister.net"
+    },
+    {
+       "id":"d8b5d5d1-17e4-4d45-8403-4c6ce913679d",
+       "name":"Deutsche internationale Schule Den Haag",
+       "url":"https://disdh.magister.net"
+    },
+    {
+       "id":"1869392c-e3c8-4e5a-b1c2-c4082546e34a",
+       "name":"Haags Montessori Lyceum",
+       "url":"https://hml.magister.net"
+    },
+    {
+       "id":"8d44eac5-7592-4758-8e52-c73b97283a91",
+       "name":"Het Haagsch Vakcollege",
+       "url":"https://sgdenhaag.magister.net"
+    },
+    {
+       "id":"ef3ab73b-ed8a-465c-928f-ad468be10307",
+       "name":"Scholengroep Den Haag Zuid-West",
+       "url":"https://sgdenhaag.magister.net"
+    },
+    {
+       "id":"e770744a-d11c-45d9-b853-5b7171d5cbf5",
+       "name":"Tobiasschool Den Haag",
+       "url":"https://vszh.magister.net"
+    },
+    {
+       "id":"7165b946-692e-4b0c-a221-74f109c2ca81",
+       "name":"debrug.magister.net",
+       "url":"https://debrug.magister.net"
+    },
+    {
+       "id":"ee60fd3c-2590-4f57-bf55-06b559e870d2",
+       "name":"Gomarus College Groningen Magnolia",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"bf8cb49f-d30f-423e-a16e-7494d424dc99",
+       "name":"pro-roermond.magister.net",
+       "url":"https://petrusdonders.magister.net"
+    },
+    {
+       "id":"c6a9303a-5727-4d22-8f73-abdce0e392d8",
+       "name":"RSG Magister Alvinus",
+       "url":"https://alvinus.magister.net"
+    },
+    {
+       "id":"153964fe-12b2-476c-982c-48a24d797408",
+       "name":"Maimonides SG",
+       "url":"https://maimonides.magister.net"
+    },
+    {
+       "id":"71ed017c-fe0c-423b-a89c-3f52ecae2d55",
+       "name":"Esloo Onderwijsgroep Montaigne Lyceum",
+       "url":"https://esloo.magister.net"
+    },
+    {
+       "id":"fb574b21-5314-420c-8082-6e17fd7c72e8",
+       "name":"De Zwaaikom",
+       "url":"https://dezwaaikom.magister.net"
+    },
+    {
+       "id":"b6b2dac6-7231-405f-8d77-bd8576ce3b16",
+       "name":"Topsport Talentschool",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"e3b674de-e451-4d22-be09-3f31e37290b1",
+       "name":"Wolfert van Borselen scholengroep Wolfert Tweetalig",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"36fde6db-07e3-477f-9f82-958fb93f17ed",
+       "name":"Chr. Lyceum Veenendaal",
+       "url":"https://clv.magister.net"
+    },
+    {
+       "id":"efa0f623-e1de-447b-9cfd-029d7fbbe338",
+       "name":"CSV Veenendaal",
+       "url":"https://decsv.magister.net"
+    },
+    {
+       "id":"f0a6a8b3-fe55-4d0d-8488-df5d4735edd0",
+       "name":"Elzendaalcollege Boxmeer",
+       "url":"https://elzendaalboxmeer.magister.net"
+    },
+    {
+       "id":"64552ad2-9a34-430e-a2d9-f6a6218692e1",
+       "name":"Elzendaalcollege Gennep",
+       "url":"https://elzendaalgennep.magister.net"
+    },
+    {
+       "id":"45564bea-0d6b-47ed-8359-20bd5871155f",
+       "name":"J.C. Pleysierschool Transvaal College",
+       "url":"https://pleysier.magister.net"
+    },
+    {
+       "id":"0033a808-c7eb-4e65-92b6-0df00fe6d149",
+       "name":"OMO SG De Langstraat Dr. Mollercollege Waalwijk",
+       "url":"https://delangstraat.magister.net"
+    },
+    {
+       "id":"430846b0-9910-423e-aa94-873ce2bab288",
+       "name":"RSG Het Rhedens Rozendaal",
+       "url":"https://rhedens.magister.net"
+    },
+    {
+       "id":"a5f44d31-d537-4094-b277-d4605829cc1c",
+       "name":"Metameer",
+       "url":"https://metameer.magister.net"
+    },
+    {
+       "id":"a45efd49-4743-4009-88c5-55ac838eeda4",
+       "name":"Dongemond college Raamsdonksveer",
+       "url":"https://dongemond.magister.net"
+    },
+    {
+       "id":"9fb6ae6a-efd7-4a11-bfda-401be7b1c585",
+       "name":"Het Westeraam",
+       "url":"https://20tz.magister.net"
+    },
+    {
+       "id":"3f294a13-51b0-400a-a271-d7ad51b35c8b",
+       "name":"ZAAM",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"8826cb86-3b4b-431b-81fa-1de578929c53",
+       "name":"Bonnefanten College",
+       "url":"https://bonnefanten.magister.net"
+    },
+    {
+       "id":"87db3f3b-1857-403f-8fe9-5c6c58971202",
+       "name":"Johannes Fontanus College",
+       "url":"https://jfc.magister.net"
+    },
+    {
+       "id":"8d8b978d-5199-484d-af57-6e7d1cc98540",
+       "name":"Sint-Stanislascollege",
+       "url":"https://stanislas.magister.net"
+    },
+    {
+       "id":"93509fe2-a73a-45a5-84de-8d7d43b542b8",
+       "name":"Stanislascollege",
+       "url":"https://stanislas.magister.net"
+    },
+    {
+       "id":"cae38ede-f3b5-4ec8-b569-bc3ecbb3a4fb",
+       "name":"ARH - Adriaan Roland Holstschool",
+       "url":"https://vsvonh.magister.net"
+    },
+    {
+       "id":"2877b4ed-a3b0-43ee-9937-c69180e894dd",
+       "name":"Baanderherencollege",
+       "url":"https://bhc.magister.net"
+    },
+    {
+       "id":"6ce9e232-595c-49bd-90e0-cabcef6b78a9",
+       "name":"Christiaan Huygens College",
+       "url":"https://huygenscollege.magister.net"
+    },
+    {
+       "id":"e967d2cc-6663-4472-9d2a-6bf0d2f8ea79",
+       "name":"De Baander",
+       "url":"https://baander.magister.net"
+    },
+    {
+       "id":"1d3e3c39-5a63-4026-821d-708e1cc38fc8",
+       "name":"De Viaan",
+       "url":"https://viaan.magister.net"
+    },
+    {
+       "id":"57ce94a8-3c07-432e-aa00-ee0d0dd9cb44",
+       "name":"Erasmiaans Gymnasium",
+       "url":"https://erasmiaans.magister.net"
+    },
+    {
+       "id":"1bff7cfb-796e-49b4-a8ea-e0d25d468753",
+       "name":"Esprit Scholen Mondriaan",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"594c92bb-8b13-44d0-9c6b-21c5e92a8e2b",
+       "name":"Lodewijk College - locatie Zeldenrustlaan",
+       "url":"https://zsc.magister.net"
+    },
+    {
+       "id":"9c2590ca-56a5-4877-8651-d8f628e45d8f",
+       "name":"Meridiaan College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"6ea19dd7-3103-4029-b7a7-331c5b6e7b80",
+       "name":"Meridiaan College `t Hooghe Landt",
+       "url":"https://meridiaan-college.magister.net"
+    },
+    {
+       "id":"9ab261a2-2fe9-47f5-a5d5-3e74224b4cba",
+       "name":"Meridiaan College Amersfoort",
+       "url":"https://meridiaan-college.magister.net"
+    },
+    {
+       "id":"7c9eb0f1-243d-4c6b-8c83-c6f8dae47a07",
+       "name":"Meridiaan College Het Nieuwe Eemland",
+       "url":"https://meridiaan-college.magister.net"
+    },
+    {
+       "id":"643b6ff9-2a52-4217-a50c-dcc236d382e3",
+       "name":"Meridiaan College Mavo Muurhuizen",
+       "url":"https://meridiaan-college.magister.net"
+    },
+    {
+       "id":"8a281919-693c-4748-b020-1922a4870e47",
+       "name":"Meridiaan College Vakcollege Amersfoort",
+       "url":"https://meridiaan-college.magister.net"
+    },
+    {
+       "id":"230bba87-8018-41ea-9ce3-60cb4b8304a0",
+       "name":"ROC Mondriaan MBO",
+       "url":"https://rocmondriaanmbo.magister.net"
+    },
+    {
+       "id":"0c24dff5-fbda-4723-ba96-5ffaa7f2b1ee",
+       "name":"Scholen aan Zee",
+       "url":"https://scholenaanzee.magister.net"
+    },
+    {
+       "id":"06364e7a-3623-487b-b39b-19d7c2f503e4",
+       "name":"School voor Praktijkonderwijs De Baanbreker",
+       "url":"https://baanbreker.magister.net"
+    },
+    {
+       "id":"2449a000-56c8-4c1a-991d-a145a875dec2",
+       "name":"Zaanlands Lyceum",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"a28fbf6e-8b5f-470c-98a0-de1ec7cb9569",
+       "name":"Bogerman Balk",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"16fa0ec8-676d-4b39-9a9f-d9df555b7743",
+       "name":"Bogerman Koudum",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"28be9793-4e28-45d3-ae71-ffdf0afd6c95",
+       "name":"Bogerman Koudum",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"731e4677-9a1e-44de-a007-eaec1a90b4b9",
+       "name":"Bogerman Sneek",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"f8b0cc90-7f15-4a98-8b2d-8b09d929f6b2",
+       "name":"Bogerman Sneek",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"dcf5be7a-4093-4873-9b30-41a2f4c7ecc5",
+       "name":"Bogerman Wommels",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"6eeb8f21-49af-4fd9-9d75-c13c820782fa",
+       "name":"Bogerman Wommels",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"558eab64-7be4-4cd3-96a4-e2894de62995",
+       "name":"Commanderij College",
+       "url":"https://commanderij.magister.net"
+    },
+    {
+       "id":"34559a98-feeb-4204-a075-0b2fcf3dc7df",
+       "name":"CSG Anna Maria van Schurman",
+       "url":"https://ams.magister.net"
+    },
+    {
+       "id":"e8c45c8b-e046-47aa-81f9-bc984f20d2cf",
+       "name":"CVO 't Gooi Savornin Lohman",
+       "url":"https://cvotgooi.magister.net"
+    },
+    {
+       "id":"61ca82c3-61e1-4e7c-8326-c02d07c92203",
+       "name":"De Goudse SG Leo Vroman",
+       "url":"https://gsgleovroman.magister.net"
+    },
+    {
+       "id":"cf187fe6-d82e-48a1-a38f-faca6be75764",
+       "name":"de GSG Leo Vroman",
+       "url":"https://gsgleovroman.magister.net"
+    },
+    {
+       "id":"1ce714a5-29b4-4e7d-a9a4-4cee1411cc5f",
+       "name":"Esloo Onderwijsgroep Diamant College",
+       "url":"https://esloo.magister.net"
+    },
+    {
+       "id":"4008233d-7f0c-4595-b990-8fd914e470d1",
+       "name":"GSG Leo Vroman",
+       "url":"https://gsgleovroman.magister.net"
+    },
+    {
+       "id":"f4e1a7a4-9ee4-4734-b642-2e6ca015b652",
+       "name":"Hermann Wesselink College",
+       "url":"https://hermannwesselink.magister.net"
+    },
+    {
+       "id":"4b311ba9-7c88-4978-afcc-b3871b501d67",
+       "name":"Newmancollege",
+       "url":"https://newman.magister.net"
+    },
+    {
+       "id":"5ac68374-485f-495a-b34e-4141fe76bb16",
+       "name":"Pontes Pieter Zeeman",
+       "url":"https://pontessg.magister.net"
+    },
+    {
+       "id":"d7d28411-42e9-40af-858b-a4e1fd4b197f",
+       "name":"Purmerendse SG Nelson Mandela",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"66fd231d-677a-4fda-b78b-5686a44457b5",
+       "name":"Werkman VMBO",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"fe202418-7ccb-405b-a11d-7bae2d883dfb",
+       "name":"Niftarlake College",
+       "url":"https://niftarlake.magister.net"
+    },
+    {
+       "id":"58f78d4e-85a5-4db8-badb-88f4bd163d0a",
+       "name":"RSG Pantarijn",
+       "url":"https://pantarijn.magister.net"
+    },
+    {
+       "id":"6945de32-e5db-4383-b2e1-127271518692",
+       "name":"Staring College",
+       "url":"https://staring.magister.net"
+    },
+    {
+       "id":"94285b0c-c387-4ca2-a14a-ad93f77d3f62",
+       "name":"Esprit Scholen Marcanti College",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"bad7a3db-cd89-4a49-8c31-5cb18bcb4b89",
+       "name":"Gomarus College Assen",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"bd051f01-a3b6-442e-908d-a1e9d7711faa",
+       "name":"Gomarus College Drachten",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"e357566e-acb9-450c-aa68-d73f4b16aaa9",
+       "name":"Gomarus College Groningen Praktijkonderwijs",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"d8f4336f-9756-4b7b-bc9f-fb4207f80336",
+       "name":"Gomarus College Groningen Vondelpad 1",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"a2558662-ea6c-4187-8a60-04cce3e4e91b",
+       "name":"Gomarus College Groningen Vondelpad 2",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"3e9d7918-6b42-412d-ba1c-653e01a83ec0",
+       "name":"Gomarus College Groningen Vondelpad 3",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"2effb3a3-5aa2-4577-b69a-59073d256ea5",
+       "name":"Gomarus College Leeuwarden",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"445a861d-3047-4b8b-bfb4-73a675715e97",
+       "name":"Gomarus College Zuidhorn",
+       "url":"https://gomarus.magister.net"
+    },
+    {
+       "id":"12d56c62-d141-4deb-9585-7938ce799a1d",
+       "name":"Lyceum Sancta Maria",
+       "url":"https://sanctamaria.magister.net"
+    },
+    {
+       "id":"52b5a3db-44a8-45ed-a0ce-bee675182a8e",
+       "name":"Marecollege Leiden",
+       "url":"https://vszh.magister.net"
+    },
+    {
+       "id":"f857f01c-cb03-42a2-b898-74ce2affd6c4",
+       "name":"Maris College",
+       "url":"https://maris.magister.net"
+    },
+    {
+       "id":"04f9b791-8544-472b-b87b-44853671f4f9",
+       "name":"Maritieme Academie Harlingen",
+       "url":"https://mch.magister.net"
+    },
+    {
+       "id":"242b56b9-5ab3-46c5-9ec1-275f6a081a6e",
+       "name":"Marne College",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"dd5469ab-2387-41ee-8129-6025aca18b3d",
+       "name":"Marnix College",
+       "url":"https://marnix.magister.net"
+    },
+    {
+       "id":"ed601f1e-d74c-48cd-8c72-e294482f2bde",
+       "name":"Martinuscollege",
+       "url":"https://martinus.magister.net"
+    },
+    {
+       "id":"a9c2b4c2-a476-44a3-9d6e-86858fd9c3b8",
+       "name":"Sancta Maria MAVO",
+       "url":"https://desancta.magister.net"
+    },
+    {
+       "id":"cb8704fc-de72-41f6-a006-e391ba4769e9",
+       "name":"Stella Maris College",
+       "url":"https://stellamaris.magister.net"
+    },
+    {
+       "id":"107a879d-85ad-4569-9e88-5f6809201de8",
+       "name":"Technisch en Maritiem College Velsen",
+       "url":"https://tmcv.magister.net"
+    },
+    {
+       "id":"ec3bf4d4-56a0-4922-9ae6-b195e6e93d87",
+       "name":"CSG De Lage Waard",
+       "url":"https://delagewaard.magister.net"
+    },
+    {
+       "id":"75c6dadd-d50f-4156-b450-595a3683d1e0",
+       "name":"De Goudse Waarden",
+       "url":"https://ozhw.magister.net"
+    },
+    {
+       "id":"bab95c82-2427-45ce-9739-8d998a8abd75",
+       "name":"De Heemgaard",
+       "url":"https://heemgaard.magister.net"
+    },
+    {
+       "id":"ea31674c-9e8b-4508-bb2f-5c1f5ad6e82b",
+       "name":"De Zeven Linden Dedemsvaart",
+       "url":"https://capellen.magister.net"
+    },
+    {
+       "id":"3ab7a50a-2c0c-4ac9-be11-dae17a2d2616",
+       "name":"Haarlem College",
+       "url":"https://haarlemcollege.magister.net"
+    },
+    {
+       "id":"74522fc5-2b41-4745-af4b-a0039a55a2e9",
+       "name":"Haarlemmermeer Lyceum",
+       "url":"https://hlml.magister.net"
+    },
+    {
+       "id":"b94cc6fd-cfa3-4597-9362-33ad565359c4",
+       "name":"Hoofdvaart College",
+       "url":"https://hoofdvaart.magister.net"
+    },
+    {
+       "id":"c646841b-53e7-41a2-9a30-8b02b10e03d5",
+       "name":"Huygens College Heerhugowaard",
+       "url":"https://huygens.magister.net"
+    },
+    {
+       "id":"161b2396-f313-40df-8fe4-1afe2c574a43",
+       "name":"Krimpenerwaard College",
+       "url":"https://kwcollege.magister.net"
+    },
+    {
+       "id":"970cc4d6-4e9b-4fa9-8cde-3d8ac2d228d3",
+       "name":"Laar en Berg",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"4b8b78de-295b-45b8-8f9b-f8be94e56642",
+       "name":"Lodewijk College - locatie Oude Vaart",
+       "url":"https://derede.magister.net"
+    },
+    {
+       "id":"1ad5d380-d11c-4e71-ba38-8e67abd968bb",
+       "name":"Onderwijsgroep Zuid-Hollandse Waarden Barendrecht",
+       "url":"https://ozhw.magister.net"
+    },
+    {
+       "id":"e995c01b-3213-45bb-835f-b3fe1cf0f743",
+       "name":"Openbaar Onderwijs Groningen",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"2066e230-e990-4fc1-8674-353ce9af1e69",
+       "name":"RSC - Rudolf Steiner College Haarlem",
+       "url":"https://vsvonh.magister.net"
+    },
+    {
+       "id":"7ea9fc20-c3e8-48a4-b455-23b5637fa19e",
+       "name":"Scheepvaart en Transport College",
+       "url":"https://stc.magister.net"
+    },
+    {
+       "id":"90a9d68f-f52b-43ad-a1d0-d0dab611c27d",
+       "name":"St.-Jozefmavo Vlaardingen",
+       "url":"https://sjm.magister.net"
+    },
+    {
+       "id":"40dc3b67-00f0-4e17-b9ab-b9f1d4926fed",
+       "name":"St.-Jozefschool voor MAVO Vlaardingen",
+       "url":"https://sjm.magister.net"
+    },
+    {
+       "id":"7440ba49-1bfb-4a67-ad3c-89e5aa64fd64",
+       "name":"Stedelijk Gymnasium Haarlem",
+       "url":"https://sghaarlem.magister.net"
+    },
+    {
+       "id":"bae4ff31-ba71-401c-a577-6a311c66f54b",
+       "name":"Farel en Oostwende College",
+       "url":"https://farel.magister.net"
+    },
+    {
+       "id":"3e476e4b-7ebd-407a-aee8-36a1231440e3",
+       "name":"CSG Gaasterland",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"38b6e07d-527b-4bf1-b9af-365fe6dfe87e",
+       "name":"Sint-Nicolaaslyceum",
+       "url":"https://nicolaas.magister.net"
+    },
+    {
+       "id":"3b2e1e85-290f-478f-848a-41857c786cd8",
+       "name":"Arentheem College locatie Thomas a Kempis",
+       "url":"https://arentheem.magister.net"
+    },
+    {
+       "id":"ce045ffb-1df9-475b-b5b1-2db12f4c7523",
+       "name":"Bonifatius mavo",
+       "url":"https://bonifatiusmavo.magister.net"
+    },
+    {
+       "id":"3a72a075-0b25-4565-8471-cff71c5649b0",
+       "name":"St. Bonifatiuscollege",
+       "url":"https://bonifatius.magister.net"
+    },
+    {
+       "id":"90adead6-730a-459e-9967-5d7cee3b21b1",
+       "name":"Gymnasium Juvenaat",
+       "url":"https://juvenaat.magister.net"
+    },
+    {
+       "id":"c64d9bca-cfc7-44cb-b22d-7fa1cb8f7996",
+       "name":"OMO Scholengroep De Langstraat",
+       "url":"https://delangstraat.magister.net"
+    },
+    {
+       "id":"64bfe86e-121f-477c-a8a4-69b7fc462e22",
+       "name":"OMO SG De Langstraat d'Oultremontcollege",
+       "url":"https://delangstraat.magister.net"
+    },
+    {
+       "id":"e1fd32c9-7593-4509-9927-8148e0959814",
+       "name":"OMO SG De Langstraat Walewyc",
+       "url":"https://delangstraat.magister.net"
+    },
+    {
+       "id":"30d0f964-407c-4828-8a12-35065ca94f21",
+       "name":"SG De Overlaat",
+       "url":"https://overlaat.magister.net"
+    },
+    {
+       "id":"b0fb3c87-336e-4898-85af-f26fa3c9de89",
+       "name":"Almata",
+       "url":"https://almata.magister.net"
+    },
+    {
+       "id":"fd70f52b-4f9c-4c84-8b92-afe0de2501bd",
+       "name":"CSG Prins Maurits",
+       "url":"https://csgpm.magister.net"
+    },
+    {
+       "id":"3a66eaba-a340-4934-971b-04cb2ad949d8",
+       "name":"Emmauscollege",
+       "url":"https://emmaus.magister.net"
+    },
+    {
+       "id":"55dc294b-659d-461f-af31-b5a8d44455da",
+       "name":"Maurick College",
+       "url":"https://maurick.magister.net"
+    },
+    {
+       "id":"058c56af-ad1c-4e09-9a86-6a519d715b6e",
+       "name":"2College Jozefmavo",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"6da975c9-d768-4ccc-83f4-c93c843d5dfe",
+       "name":"Alberdingk Thijm Mavo",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"c562e787-6cae-4bca-8828-a189d27946ba",
+       "name":"Bredero Mavo",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"82df1802-3ce7-44bb-822b-7f813865874d",
+       "name":"Charles de Foucauld Mavo",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"d239db3d-653d-4644-b028-81ed17a1ec87",
+       "name":"CSG Groene Hart Topmavo",
+       "url":"https://groenehart.magister.net"
+    },
+    {
+       "id":"298dd933-75d2-4434-80b1-eb2b17bf8456",
+       "name":"De Amsterdamse Mavo",
+       "url":"https://deamsterdamsemavo.magister.net"
+    },
+    {
+       "id":"709e583b-c398-4c76-b1ba-ed9e68ae27f1",
+       "name":"De Mavo voor Theater MT010",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"1d02f51f-3149-4db3-96e8-d862e9eb509e",
+       "name":"De Toorop Mavo",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"545fda55-b760-474c-beb6-e8129b4f7897",
+       "name":"deamsterdamsemavo",
+       "url":"https://deamsterdamsemavo.magister.net"
+    },
+    {
+       "id":"15b873a9-57e1-4686-8b35-3daf43caaa35",
+       "name":"Duin en Kruidberg mavo",
+       "url":"https://duinenkruid.magister.net"
+    },
+    {
+       "id":"5b2a65a1-7d71-4cd9-83cd-9df741b8a224",
+       "name":"Frits Philips Lyceum Mavo",
+       "url":"https://huygenscollege.magister.net"
+    },
+    {
+       "id":"85a0af66-1544-446d-9b20-0f66d5f8c31e",
+       "name":"Hildegardis Mavo",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"8c3ea364-c519-4a2b-bf7a-15b450823c5e",
+       "name":"Lucius Petrus Mavo",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"c87810b1-0c26-457a-bfdd-db053ccb8711",
+       "name":"lvo-Mavo",
+       "url":"https://helmond.magister.net"
+    },
+    {
+       "id":"c51399bb-412b-4634-aa7d-b361774fe8c8",
+       "name":"Mavo Roermond",
+       "url":"https://mavoroermond.magister.net"
+    },
+    {
+       "id":"03a3247e-498d-4ef4-b451-762c6e8d0316",
+       "name":"Mavo Schravenlant XL",
+       "url":"https://mavoschravenlant.magister.net"
+    },
+    {
+       "id":"4e4c4d69-a5bf-4864-a09a-adb4dd7616a9",
+       "name":"Mgr. A.E. Rientjes Mavo",
+       "url":"https://rientjes.magister.net"
+    },
+    {
+       "id":"0e399eba-1eda-42b4-bed7-a77c870ae738",
+       "name":"Paulus Mavo/Vmbo",
+       "url":"https://paulus.magister.net"
+    },
+    {
+       "id":"422c4b43-5c29-440c-9edd-30162584c622",
+       "name":"Roncalli Mavo",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"bf6f8c55-6ff9-4e6a-a31c-fb204cccfb8c",
+       "name":"St.-Jozefmavo",
+       "url":"https://sjm.magister.net"
+    },
+    {
+       "id":"13476bc0-625d-42e0-814b-db8371c10386",
+       "name":"MaxX",
+       "url":"https://maxx.magister.net"
+    },
+    {
+       "id":"7cd95dd1-ce83-4f67-bd99-4284ac224fd8",
+       "name":"Raayland College",
+       "url":"https://raayland.magister.net"
+    },
+    {
+       "id":"08603f43-9718-4392-9139-05fce6695983",
+       "name":"ROC West-Brabant",
+       "url":"https://rocwb.magister.net"
+    },
+    {
+       "id":"697ce2c5-a183-4362-9c7b-87de0a78f5fc",
+       "name":"ROC West-Brabant (ROCWB)",
+       "url":"https://rocwb.magister.net"
+    },
+    {
+       "id":"09b97c55-0905-47fe-a3fa-2033c3f6f460",
+       "name":"Calvijn College Krabbendijke",
+       "url":"https://calvijn.magister.net"
+    },
+    {
+       "id":"6c7c1a99-9b72-4f65-abeb-4e43130eea1c",
+       "name":"Scholen Combinatie Zoetermeer",
+       "url":"https://scz.magister.net"
+    },
+    {
+       "id":"4228b58d-8607-411e-a7ed-a4afb0c60148",
+       "name":"Scholencombinatie Delfland",
+       "url":"https://sc-delfland.magister.net"
+    },
+    {
+       "id":"0abc7b62-965a-44a1-ad33-9e0f7288d872",
+       "name":"Symbion",
+       "url":"https://symbion.magister.net"
+    },
+    {
+       "id":"f1bd2fd8-1aae-4901-b4f9-f7510b910d5c",
+       "name":"Chr. VMBO-Harderwijk",
+       "url":"https://morgencollege.magister.net"
+    },
+    {
+       "id":"81e61c2a-a4e5-4e02-9194-5ba340c053f3",
+       "name":"Griendencollege-VMBO",
+       "url":"https://grienden.magister.net"
+    },
+    {
+       "id":"1c32a0b3-c753-4091-9705-4b8adbd8ee4a",
+       "name":"Haemstede Barger VMBO-T",
+       "url":"https://barger.magister.net"
+    },
+    {
+       "id":"58fc2d72-be56-4e64-a3d5-fe11cc62d9ce",
+       "name":"HMC MBO Vakschool",
+       "url":"https://hmlc.magister.net"
+    },
+    {
+       "id":"cf2cd978-2992-4288-bee5-6bb65358a179",
+       "name":"MBO Terra",
+       "url":"https://aocterra.magister.net"
+    },
+    {
+       "id":"c5f16cb2-e799-43a4-b5e8-798fecea879e",
+       "name":"SiNTLUCAS VMBO",
+       "url":"https://sintlucas-vmbo.magister.net"
+    },
+    {
+       "id":"d09b4185-6cd6-495c-901c-9be5f5dc2e46",
+       "name":"Trias VMBO",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"1d882f72-3c35-4ece-a9cb-3df0745b4ebc",
+       "name":"VMBO De Krijtenburg",
+       "url":"https://krijtenburg.magister.net"
+    },
+    {
+       "id":"174329e6-8fec-4972-a8d2-e9cb425d011e",
+       "name":"VMBO Het Venster",
+       "url":"https://geldersmozaiek.magister.net"
+    },
+    {
+       "id":"41bb790c-617c-42f5-8fcf-5d9118e56412",
+       "name":"VMBO Ichthus Almere",
+       "url":"https://via.magister.net"
+    },
+    {
+       "id":"b5f0e4ce-3038-4e15-8e2b-1b8042ea53d9",
+       "name":"Kwadrant Scholengroep Cambreur College",
+       "url":"https://sgkwadrant.magister.net"
+    },
+    {
+       "id":"766afc6c-ce25-4894-9bc8-a8a5379c5964",
+       "name":"Rembrandt College",
+       "url":"https://rembrandt.magister.net"
+    },
+    {
+       "id":"6abd3a85-ca22-4267-ae37-36dd2bcd25ce",
+       "name":"Strabrecht College",
+       "url":"https://strabrecht.magister.net"
+    },
+    {
+       "id":"ed0ebd98-38ce-4e20-a403-4639852a2d2e",
+       "name":"VAVO Noord- en Midden- Limburg",
+       "url":"https://vavo-nml.magister.net"
+    },
+    {
+       "id":"d427e746-5ac8-47cf-b458-ddf33f08ab64",
+       "name":"Montessori College Arnhem (MCA)",
+       "url":"https://mca.magister.net"
+    },
+    {
+       "id":"5dfdd8b7-59cd-4047-bcca-96b2d3422d33",
+       "name":"DaCapo College",
+       "url":"https://dacapo.magister.net"
+    },
+    {
+       "id":"838d8186-bdf1-4d4a-a8b5-52e6f25fedaf",
+       "name":"Accent Amersfoort",
+       "url":"https://accentamersfoort.magister.net"
+    },
+    {
+       "id":"d490ced3-145d-4edd-af40-777582cdc8c3",
+       "name":"Accent Nijkerk",
+       "url":"https://accent.magister.net"
+    },
+    {
+       "id":"2dad138a-28ef-488e-aa30-ba817c734503",
+       "name":"UMCG Wenckebach Instituut",
+       "url":"https://wenckebach.magister.net"
+    },
+    {
+       "id":"91d0f7a4-3ab7-491d-9d91-037750dedf77",
+       "name":"Arentheem College locatie Middachten",
+       "url":"https://arentheem.magister.net"
+    },
+    {
+       "id":"3590b9df-6bfe-4779-b9a6-b629248c8597",
+       "name":"Wim Gertenbach College",
+       "url":"https://gertenbach.magister.net"
+    },
+    {
+       "id":"b9387c56-8e86-46ae-86d7-e739d4942377",
+       "name":"Eckartcollege",
+       "url":"https://eckart.magister.net"
+    },
+    {
+       "id":"c9aa9346-b1e5-4e32-8edb-1c79a0c48155",
+       "name":"Merletcollege",
+       "url":"https://merlet.magister.net"
+    },
+    {
+       "id":"55236af6-fb42-4bfe-a0b4-0544e0cdf40b",
+       "name":"Reynaertcollege",
+       "url":"https://reynaert.magister.net"
+    },
+    {
+       "id":"7dd7ce63-e347-4469-926f-63817bd8dcf6",
+       "name":"Wellantcollege",
+       "url":"https://wellantcollege.magister.net"
+    },
+    {
+       "id":"b7739f9a-e19d-4b56-83eb-db8a934f18b6",
+       "name":"Zeldenrust-Steelantcollege",
+       "url":"https://zsc.magister.net"
+    },
+    {
+       "id":"0fcbfeb5-5b39-4ab3-99bc-ef7a9327336e",
+       "name":"Blariacumcollege",
+       "url":"https://blariacum.magister.net"
+    },
+    {
+       "id":"4aa5c772-ab32-49c9-9c25-29ed821bf928",
+       "name":"Bonaventuracollege",
+       "url":"https://bonaventura.magister.net"
+    },
+    {
+       "id":"bcf77303-b8f7-4176-9fbc-0076c67370f4",
+       "name":"Dockingacollege",
+       "url":"https://dockinga.magister.net"
+    },
+    {
+       "id":"8a98fc24-2811-41ee-aece-8e1fa62dab22",
+       "name":"dr. Aletta Jacobs College",
+       "url":"https://aletta.magister.net"
+    },
+    {
+       "id":"1d01b90e-2e2a-4915-bcd1-e02f960e249c",
+       "name":"Jacob-Roelandslyceum",
+       "url":"https://jacob-roelands.magister.net"
+    },
+    {
+       "id":"e5daff6b-cbdf-46dc-a033-ac8729958ad1",
+       "name":"Jacobus Fruytier SG",
+       "url":"https://jfsg.magister.net"
+    },
+    {
+       "id":"23250ed3-706a-4e21-9d09-5b8a5514630e",
+       "name":"Mediacollege Amsterdam",
+       "url":"https://mediacollege.magister.net"
+    },
+    {
+       "id":"906c5ac6-6203-4eac-9759-845a892c4416",
+       "name":"Ulenhofcollege",
+       "url":"https://ulenhof.magister.net"
+    },
+    {
+       "id":"366135a8-e7a5-493e-8ce0-9f9772d3bcdf",
+       "name":"Actief College - Hoeksch Lyceum",
+       "url":"https://hoekschlyceum.magister.net"
+    },
+    {
+       "id":"2f5e61c9-4fbc-4a9d-bcf3-3edf5b286a9e",
+       "name":"Vechtdal College",
+       "url":"https://vechtdal.magister.net"
+    },
+    {
+       "id":"0716b5d1-3381-4b4c-929e-55076e7691da",
+       "name":"Kath. SG Hoofddorp",
+       "url":"https://ksgh.magister.net"
+    },
+    {
+       "id":"d9418c47-b24f-4ead-b18c-df8318628afa",
+       "name":"Adelbert College",
+       "url":"https://adelbert.magister.net"
+    },
+    {
+       "id":"b08654e4-5c9d-46be-9b20-82257e5c9d19",
+       "name":"Atlas College SG De Triade",
+       "url":"https://atlas.magister.net"
+    },
+    {
+       "id":"ac096d87-c1b4-4d7f-b66c-b67ee73ab168",
+       "name":"Purmerendse SG W.J. Bladergroen",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"16b2edd1-fca2-4604-8a73-e4b043070ac9",
+       "name":"RSG Simon Vestdijk",
+       "url":"https://vestdijk.magister.net"
+    },
+    {
+       "id":"5c3a0645-2263-443d-bc61-9008ce3591d1",
+       "name":"Het Kwadrant",
+       "url":"https://hetkwadrant.magister.net"
+    },
+    {
+       "id":"39e1e4cc-9ba4-45b2-bc69-d1af731779e0",
+       "name":"Het Kwadrant Bergen op Zoom",
+       "url":"https://hetkwadrant.magister.net"
+    },
+    {
+       "id":"8316ac62-76d7-402c-a3ea-62870ba99611",
+       "name":"Kwadrant Scholengroep",
+       "url":"https://sgkwadrant.magister.net"
+    },
+    {
+       "id":"b65459d3-0cb3-46cb-8085-5ea9ccdd1da9",
+       "name":"Kwadrant Scholengroep Dongen",
+       "url":"https://sgkwadrant.magister.net"
+    },
+    {
+       "id":"057df082-9f34-4765-8634-61c0dc7a2ede",
+       "name":"Kwadrant Scholengroep Hanze College",
+       "url":"https://sgkwadrant.magister.net"
+    },
+    {
+       "id":"b2c4f3e6-f31f-4376-a7d2-25b360a5df6b",
+       "name":"LVO Weert Het Kwadrant",
+       "url":"https://weert.magister.net"
+    },
+    {
+       "id":"e8ca9970-7011-4d2b-b22d-9d5c6450d4c4",
+       "name":"Radulphus College",
+       "url":"https://radulphus.magister.net"
+    },
+    {
+       "id":"fed4f5a1-ddb8-45b7-abdb-766a9d15da9b",
+       "name":"SWPTeam",
+       "url":"https://swpteam.magister.net"
+    },
+    {
+       "id":"96d33b16-1551-4581-95a3-30337decd47f",
+       "name":"Meander College",
+       "url":"https://landstedevo.magister.net"
+    },
+    {
+       "id":"6fb1775e-81b2-4278-8973-cf6be825bd8f",
+       "name":"CSG Dingstede",
+       "url":"https://dingstede.magister.net"
+    },
+    {
+       "id":"46e831a8-76de-4fe1-a858-1d78c7791ca2",
+       "name":"Damstede",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"5c335185-c8db-4533-8bd5-d89b53a5f3f2",
+       "name":"Drechtsteden College",
+       "url":"https://drechtstedencollege.magister.net"
+    },
+    {
+       "id":"34ddaf61-6578-4284-acd0-cdf7fff692fe",
+       "name":"Het Stedelijk Lyceum Enschede",
+       "url":"https://hetstedelijk.magister.net"
+    },
+    {
+       "id":"0a9ace2c-7044-4579-8e9b-eeb14fdc780f",
+       "name":"Het Stedelijk Lyceum Scholingsboulevard Enschede",
+       "url":"https://hetstedelijk.magister.net"
+    },
+    {
+       "id":"8e9872a3-2867-4930-8182-d53be20cd05a",
+       "name":"Hofstede Praktijkschool",
+       "url":"https://hofstede.magister.net"
+    },
+    {
+       "id":"5cfd2bcd-7e05-4b3d-91d7-f9be9508a338",
+       "name":"Landstede Groep VO Zwolle eo",
+       "url":"https://landstedevo.magister.net"
+    },
+    {
+       "id":"06606e1f-2cf9-453e-acf2-20c3f55c5b7e",
+       "name":"Landstede Groep Volwasseneneducatie Gelderland",
+       "url":"https://landstedevavo.magister.net"
+    },
+    {
+       "id":"c5bdefe6-77e6-47ba-911e-26446f85559e",
+       "name":"Stedelijk College Zoetermeer",
+       "url":"https://scz.magister.net"
+    },
+    {
+       "id":"90204e41-1bfa-403a-aa72-af292f72c888",
+       "name":"Stedelijk Dalton Lyceum",
+       "url":"https://daltondordrecht.magister.net"
+    },
+    {
+       "id":"b8d2cd88-b042-46df-b82f-1ec29cc24760",
+       "name":"Stedelijk Gymnasium Arnhem",
+       "url":"https://sga.magister.net"
+    },
+    {
+       "id":"173b851c-0b67-4112-aace-41962e4cad56",
+       "name":"Stedelijk Gymnasium Breda",
+       "url":"https://gymnasiumbreda.magister.net"
+    },
+    {
+       "id":"a4575e10-6ab7-4b1f-877e-fe4536ddb8e2",
+       "name":"Stedelijk Gymnasium Den Bosch",
+       "url":"https://sgdenbosch.magister.net"
+    },
+    {
+       "id":"5f537b31-59db-4e47-aef2-e246a71992d0",
+       "name":"Stedelijk Gymnasium Johan van Oldenbarnevelt",
+       "url":"https://jvo.magister.net"
+    },
+    {
+       "id":"aba7b191-1dae-44a3-8d14-eb9b387e32e4",
+       "name":"Stedelijk Gymnasium Leiden",
+       "url":"https://sgleiden.magister.net"
+    },
+    {
+       "id":"43b1612b-6290-44bf-81b6-187789696e36",
+       "name":"Stedelijk Gymnasium Schiedam",
+       "url":"https://sgymschiedam.magister.net"
+    },
+    {
+       "id":"b2d81ead-e808-4f0c-b369-06697d2b3e24",
+       "name":"Stedelijke SG De Rede",
+       "url":"https://derede.magister.net"
+    },
+    {
+       "id":"466f8952-0df6-49dc-9b5b-25f95155a104",
+       "name":"Stedelijke SG Nijmegen",
+       "url":"https://ssgn.magister.net"
+    },
+    {
+       "id":"72b476f8-4dc9-4b3b-bf16-aa80b54ab513",
+       "name":"Drenthe College Steenwijk",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"f910ba81-b409-4da5-81ed-40ea39728e51",
+       "name":"Het Ravelijn Steenbergen",
+       "url":"https://mollerlyceum.magister.net"
+    },
+    {
+       "id":"1f66d3f4-93b9-4c44-89af-69272c7dc5dd",
+       "name":"Praedinius Gymnasium",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"26090548-a3ad-44f6-9ae5-2838bb208172",
+       "name":"Bindelmeer College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"d8f81f6f-df04-488b-9249-03eaa1ca0ffd",
+       "name":"Burgemeester Walda SG",
+       "url":"https://sgwalda.magister.net"
+    },
+    {
+       "id":"bdbcfa3e-33cc-499d-92ab-48ce24a34b80",
+       "name":"Christelijke Scholengemeenschap Vincent van Gogh",
+       "url":"https://csvvg.magister.net"
+    },
+    {
+       "id":"1160cd41-60c2-4eea-aeee-046b344db2eb",
+       "name":"College de Meer",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"5c706ce2-bb41-48f3-a420-23e932799dd4",
+       "name":"Gemeentelijk Gymnasium",
+       "url":"https://ggh.magister.net"
+    },
+    {
+       "id":"56c370f3-a35b-44b3-a227-7b8caf6910c3",
+       "name":"Gemeentelijk Gymnasium Hilversum",
+       "url":"https://ggh.magister.net"
+    },
+    {
+       "id":"61c959b0-0462-464b-a215-b34f5b881d5a",
+       "name":"Het Atrium Zoetermeer",
+       "url":"https://scz.magister.net"
+    },
+    {
+       "id":"58cfb04c-cd5f-4ac5-834c-f6b34c04fb69",
+       "name":"Nijmeegse Sg Groenewoud",
+       "url":"https://groenewoud.magister.net"
+    },
+    {
+       "id":"f11dc71c-34c4-4ca3-8267-d63e8296cc0b",
+       "name":"Open Schoolgemeenschap Bijlmer",
+       "url":"https://openschoolgemeenschapbijlmer.magister.net"
+    },
+    {
+       "id":"de34b3d7-715e-4e8e-8e35-0bdcdc887b01",
+       "name":"Picasso Lyceum Zoetermeer",
+       "url":"https://scz.magister.net"
+    },
+    {
+       "id":"320e74ae-c3b3-409e-bdb5-b3781e388a91",
+       "name":"RSG Tromp Meesters",
+       "url":"https://trompmeesters.magister.net"
+    },
+    {
+       "id":"2e6f1c20-887b-4ea2-9f4f-ce94b2fd127d",
+       "name":"Scholengemeenschap Were Di",
+       "url":"https://weredi.magister.net"
+    },
+    {
+       "id":"189c2431-ebef-4e8f-81b7-e153a2129276",
+       "name":"Karel de Grote College Nijmegen",
+       "url":"https://sgvvs.magister.net"
+    },
+    {
+       "id":"b5eca808-7ea0-4fa7-9305-24db041557d0",
+       "name":"Pro College regio Nijmegen",
+       "url":"https://procollege.magister.net"
+    },
+    {
+       "id":"755e663c-a9b0-46a8-8aef-7a56ad8336b7",
+       "name":"ROC Nijmegen",
+       "url":"https://vavoroc-nijmegen.magister.net"
+    },
+    {
+       "id":"247c8f6b-0f2e-4677-83ce-303c2511a6ef",
+       "name":"Tobiasschool Nijmegen",
+       "url":"https://sgvvs.magister.net"
+    },
+    {
+       "id":"bba6e360-b641-4644-b586-f92eba4b02a1",
+       "name":"Cals College IJsselstein",
+       "url":"https://cals.magister.net"
+    },
+    {
+       "id":"1a4f92ee-186f-4eb0-8e76-478b2262cdcf",
+       "name":"Esloo Onderwijsgroep I.C.Edith Stein",
+       "url":"https://esloo.magister.net"
+    },
+    {
+       "id":"1e2c79fd-f910-40d2-b0b0-56cdb6b8c59d",
+       "name":"Praktijkschool De Steiger",
+       "url":"https://desteiger.magister.net"
+    },
+    {
+       "id":"b9c1822a-1a07-43b2-99d3-8764baf40adf",
+       "name":"Rudolf Steiner College Rotterdam",
+       "url":"https://vszh.magister.net"
+    },
+    {
+       "id":"a83ba0f1-6e00-47f7-af0d-044d4d10ece7",
+       "name":"Van Lodenstein College",
+       "url":"https://lodenstein.magister.net"
+    },
+    {
+       "id":"1e4a1668-7876-49f9-8b3d-724b2fd20d22",
+       "name":"Van Lodensteincollege",
+       "url":"https://lodenstein.magister.net"
+    },
+    {
+       "id":"993d3d69-9c35-4bbc-9faf-aa7273d61bdf",
+       "name":"Amstellyceum",
+       "url":"https://msa.magister.net"
+    },
+    {
+       "id":"33070153-ca06-48a5-a3c7-09106b38ba96",
+       "name":"Christelijk College Groevenbeek",
+       "url":"https://groevenbeek.magister.net"
+    },
+    {
+       "id":"90ed6ab2-4593-41b7-925b-1dfe0cd09451",
+       "name":"Christelijk College Nassau-Veluwe",
+       "url":"https://ccnv.magister.net"
+    },
+    {
+       "id":"b3ddabc8-f41d-4b61-b069-c21fd738ee0a",
+       "name":"Christelijk Gymnasium",
+       "url":"https://cgu.magister.net"
+    },
+    {
+       "id":"78d7d53f-48b5-42c5-98fd-1b60dc00178d",
+       "name":"Christelijk Gymnasium Utrecht",
+       "url":"https://cgu.magister.net"
+    },
+    {
+       "id":"4a5488e9-f121-4f2a-8a03-8ceb2a80467a",
+       "name":"Christelijk Lyceum Apeldoorn",
+       "url":"https://cl-apeldoorn.magister.net"
+    },
+    {
+       "id":"769e6734-85b3-4429-b377-577d4821ebfa",
+       "name":"Christelijk Lyceum Delft",
+       "url":"https://chrlyceumdelft.magister.net"
+    },
+    {
+       "id":"d731d198-48a3-48b6-96f5-346a413b2f9a",
+       "name":"christelijk lyceum Zandvliet",
+       "url":"https://zandvliet.magister.net"
+    },
+    {
+       "id":"ea13f428-caef-46b5-b789-8814e031700a",
+       "name":"Eerste Christelijk Lyceum",
+       "url":"https://eclh.magister.net"
+    },
+    {
+       "id":"8db815dc-db57-4c99-b1fc-b803cd0d3660",
+       "name":"Francois Vatelschool",
+       "url":"https://francoisvatel.magister.net"
+    },
+    {
+       "id":"9729570c-d0b8-4aba-bfb4-04d2cb537686",
+       "name":"Instelling VO Deurne",
+       "url":"https://ivodeurne.magister.net"
+    },
+    {
+       "id":"468860a5-5931-4429-a5ac-f0702ac79b2e",
+       "name":"Instelling VO Deurne Alfrinkcollege",
+       "url":"https://ivodeurne.magister.net"
+    },
+    {
+       "id":"9505dfcf-52ee-4015-90fc-5f278ae0064b",
+       "name":"Instelling VO Deurne Hub van Doornecollege",
+       "url":"https://ivodeurne.magister.net"
+    },
+    {
+       "id":"af4d562f-289f-4261-9615-c61aa8c4efd6",
+       "name":"Instelling VO Deurne Peellandcollege",
+       "url":"https://ivodeurne.magister.net"
+    },
+    {
+       "id":"9b46371f-d5b7-400b-98a4-0c88c7d6ba82",
+       "name":"SiNTLUCAS Boxtel",
+       "url":"https://sintlucas.magister.net"
+    },
+    {
+       "id":"37f2f411-55d1-451c-879f-0dcb0cbdf323",
+       "name":"Stellingwerf College",
+       "url":"https://swc.magister.net"
+    },
+    {
+       "id":"b5f86754-d0fa-4027-a61e-3e546f7607a1",
+       "name":"Vrijzinnig-Christelijk Lyceum",
+       "url":"https://vcl.magister.net"
+    },
+    {
+       "id":"f4a7fe78-49de-46fd-abca-b6223a4c2928",
+       "name":"Gymnasium Felisenum",
+       "url":"https://felisenum.magister.net"
+    },
+    {
+       "id":"5478cc81-af03-481e-a7b2-e9dcc740f0f6",
+       "name":"Chr. College de Noordgouw Hattem",
+       "url":"https://noordgouw.magister.net"
+    },
+    {
+       "id":"1b72da39-a1f2-4409-bc14-1c43a8b3562b",
+       "name":"CSG Het Noordik Almelo",
+       "url":"https://noordik.magister.net"
+    },
+    {
+       "id":"1ec10658-dc65-488a-9d19-94ae3d686acb",
+       "name":"Emelwerda College",
+       "url":"https://emelwerda.magister.net"
+    },
+    {
+       "id":"52694846-bc26-4cc9-8a9f-bf10f668c6b4",
+       "name":"Murmellius Gymnasium",
+       "url":"https://murmellius.magister.net"
+    },
+    {
+       "id":"4247356f-9811-4cd2-944d-32ac9782188a",
+       "name":"2College Durendael",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"a560d4fd-55fa-4bdc-ac8c-ea4d69007eec",
+       "name":"St. Michael College",
+       "url":"https://michael.magister.net"
+    },
+    {
+       "id":"f51c8cb8-9b8f-484f-b7b9-78d064eff1e0",
+       "name":"Agnieten College",
+       "url":"https://landstedevo.magister.net"
+    },
+    {
+       "id":"9be80456-f6cb-4070-b29c-a2c0c98b4690",
+       "name":"Almere College Dronten",
+       "url":"https://almerecollege.magister.net"
+    },
+    {
+       "id":"7576b441-a6b7-4770-a24b-ffa5145b7a1c",
+       "name":"Aloysius De Roosten",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"49b4b31c-2098-4d7b-9e19-2988fdd4f584",
+       "name":"CSG Buitenveldert",
+       "url":"https://buitenveldert.magister.net"
+    },
+    {
+       "id":"8c513ff9-868d-424a-ab1f-92caba190a90",
+       "name":"CSG Ulbe van Houten",
+       "url":"https://cvo-nf.magister.net"
+    },
+    {
+       "id":"4f9dde6c-dbbc-47b3-b8a2-4b6e96a9e272",
+       "name":"Drenthe College Winschoten",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"55aa0f52-4f47-4dff-a79a-02dd355ed278",
+       "name":"Gwendoline van Puttenschool",
+       "url":"https://gwendoline.magister.net"
+    },
+    {
+       "id":"3627ba84-e60f-45d3-8209-9b811138c911",
+       "name":"Hartenlustschool",
+       "url":"https://hartenlustmavo.magister.net"
+    },
+    {
+       "id":"06ccc846-f687-4d3c-8219-9b86aeb89eb6",
+       "name":"Hartenlustschool",
+       "url":"https://hartenlustmavo.magister.net"
+    },
+    {
+       "id":"ffe8564a-1360-4558-adaf-e595bff8fb2f",
+       "name":"Het Perron Dronten",
+       "url":"https://hetperron.magister.net"
+    },
+    {
+       "id":"0a62298d-a64c-438f-a4e2-2eeea12b637d",
+       "name":"Houtens",
+       "url":"https://houtens.magister.net"
+    },
+    {
+       "id":"667f34a3-2829-4bbd-9d72-e0d8dd1235de",
+       "name":"KSE Etten-Leur",
+       "url":"https://kse.magister.net"
+    },
+    {
+       "id":"ca89c89b-ff59-4383-b405-7275bb1ea34b",
+       "name":"Reconvalescentenschool",
+       "url":"https://recon.magister.net"
+    },
+    {
+       "id":"b6bc19c5-08c5-44e3-8de4-84a94c81d6b9",
+       "name":"Tender College",
+       "url":"https://tender.magister.net"
+    },
+    {
+       "id":"069ff91b-9845-49ae-8c7a-bb5bf9c71732",
+       "name":"Tender Wellant",
+       "url":"https://tenderwellant.magister.net"
+    },
+    {
+       "id":"b7006299-8657-4b15-ad48-de6a55f70094",
+       "name":"Almende College Bluemers",
+       "url":"https://almende.magister.net"
+    },
+    {
+       "id":"90628474-0030-4819-bccc-215284a458d9",
+       "name":"Almende College Isala",
+       "url":"https://almende.magister.net"
+    },
+    {
+       "id":"e1735dbe-9375-436e-aab8-86663494b35d",
+       "name":"Almende College Wesenthorst",
+       "url":"https://almende.magister.net"
+    },
+    {
+       "id":"808c429e-f7c4-4d17-b0c5-86f8c9cd7e76",
+       "name":"BC Broekhin Swalmen",
+       "url":"https://broekhinsw.magister.net"
+    },
+    {
+       "id":"15ed7fc0-57c1-41d2-9f3c-b26992009788",
+       "name":"Comenius Lyceum Amsterdam",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"f25014f8-d6bf-4aee-a590-54cb8c9a3ca4",
+       "name":"CSG Comenius",
+       "url":"https://cvo-nf.magister.net"
+    },
+    {
+       "id":"555e7788-fee1-47fe-8051-7425b416fcfd",
+       "name":"CVO 't Gooi Comenius College",
+       "url":"https://cvotgooi.magister.net"
+    },
+    {
+       "id":"6cc1332f-cac4-4e11-928f-72a96af0993f",
+       "name":"Drenthe College Emmen",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"893def2e-a8de-44c8-957d-2653f57e9dff",
+       "name":"Esdal College Emmen",
+       "url":"https://esdal.magister.net"
+    },
+    {
+       "id":"7fc8ea51-303b-49df-853b-c77494b08b69",
+       "name":"Het Segment",
+       "url":"https://segmentgouda.magister.net"
+    },
+    {
+       "id":"4efc6194-48af-4262-aec4-6b81a5bd97a9",
+       "name":"Mencia de Mendoza",
+       "url":"https://mencia.magister.net"
+    },
+    {
+       "id":"7c8ff536-73c0-498a-8b19-6ac824edae48",
+       "name":"Mendelcollege",
+       "url":"https://mendel.magister.net"
+    },
+    {
+       "id":"723859ce-edc6-472b-9998-4f7bc87f5aa8",
+       "name":"Menno Reitsma",
+       "url":"https://menno.magister.net"
+    },
+    {
+       "id":"79ef319d-e4ca-4ef2-a882-878c88025deb",
+       "name":"Palmentuin",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"1ac90ff1-14cb-4f80-bcab-cc47e6c174a3",
+       "name":"ROC Menso Alting",
+       "url":"https://mensoalting.magister.net"
+    },
+    {
+       "id":"2874798b-f2cb-4d69-90c3-19b1134f0b87",
+       "name":"Thamen",
+       "url":"https://thamen.magister.net"
+    },
+    {
+       "id":"9b86de97-8477-4e50-8275-d417e1852adf",
+       "name":"Thamen RKSG",
+       "url":"https://thamen.magister.net"
+    },
+    {
+       "id":"4cf7969b-21f9-4d4a-a0f9-0243815ae188",
+       "name":"Compaen College",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"18d85d51-91c2-4102-82f3-649e3f29d2e9",
+       "name":"Saenredam College",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"d44ead83-f482-4d61-9c54-6ca4e953a945",
+       "name":"Saenstroom OPDC",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"60a68e24-9204-418f-bcdc-a2f403ebb89a",
+       "name":"Drenthe College Meppel",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"3d1d62bf-f67c-4669-92a5-5be2a0cdee79",
+       "name":"Greijdanus Meppel",
+       "url":"https://greijdanus.magister.net"
+    },
+    {
+       "id":"c5139321-69dc-4fb0-8abb-35bde3278919",
+       "name":"College Den Hulster",
+       "url":"https://denhulster.magister.net"
+    },
+    {
+       "id":"ce62cef9-dc05-400d-a073-9bdbaaffdf1a",
+       "name":"De Amsterdamsche School",
+       "url":"https://amsterdamsche.magister.net"
+    },
+    {
+       "id":"69464252-dce8-4305-9f2e-93fdf02d32b9",
+       "name":"De Bolster",
+       "url":"https://bolster.magister.net"
+    },
+    {
+       "id":"ad0164b9-61f7-44e1-b50a-814c11eb1721",
+       "name":"De Jutter",
+       "url":"https://krijtenburg.magister.net"
+    },
+    {
+       "id":"1a44899b-051a-4d8b-a7f9-0e0a870efe02",
+       "name":"De Theaterhavo/vwo",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"117bd618-9903-4526-a6a1-b49f4dc89524",
+       "name":"Esdal College Oosterhesselen",
+       "url":"https://esdal.magister.net"
+    },
+    {
+       "id":"79364242-0454-4f6a-9b59-f6b5a1fcc7ff",
+       "name":"GGCA - Geert Groote College Amsterdam",
+       "url":"https://vsvonh.magister.net"
+    },
+    {
+       "id":"c37a8e64-5a66-422f-9683-49b035163434",
+       "name":"Grafisch Lyceum Rotterdam",
+       "url":"https://glr.magister.net"
+    },
+    {
+       "id":"f57296f1-b42a-4040-8b86-4116176ca89b",
+       "name":"Het Amsterdams Lyceum",
+       "url":"https://amsterdams.magister.net"
+    },
+    {
+       "id":"369fec9d-b4f3-4ef7-ac6c-ab3fa01772e6",
+       "name":"Het Lyceum Rotterdam",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"fb682ede-4163-4ca5-9e46-8bd1315340a5",
+       "name":"Het Schoter",
+       "url":"https://20rc.magister.net"
+    },
+    {
+       "id":"94f1e824-08d6-473e-bb9e-980ec54cc406",
+       "name":"Het Wateringse Veld College",
+       "url":"https://sgdenhaag.magister.net"
+    },
+    {
+       "id":"c89dd689-3e09-4390-b94b-1531d1902fb7",
+       "name":"Horeca Vakschool Rotterdam",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"7fb653b4-9a95-4be5-9205-96df87026d6c",
+       "name":"Hout- en Meubileringscollege HMC Amsterdam",
+       "url":"https://hmlc.magister.net"
+    },
+    {
+       "id":"4c276607-33bc-46f1-804b-958aff4cb495",
+       "name":"Hout- en Meubileringscollege HMC Rotterdam",
+       "url":"https://hmlc.magister.net"
+    },
+    {
+       "id":"ec7c8f84-6031-497c-af95-fbae17943ff5",
+       "name":"Interconf. Scholengroep Westland",
+       "url":"https://isw.magister.net"
+    },
+    {
+       "id":"a33e8715-416b-44d6-b554-ae639c2aa457",
+       "name":"International School Almere",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"e1112bfb-ea86-4288-9829-de959b5eec2c",
+       "name":"International School Hilversum",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"5e625c0e-1d4f-484c-84b5-1cb3b0b1c618",
+       "name":"J.C. Pleysierschool Westerbeek College",
+       "url":"https://pleysier.magister.net"
+    },
+    {
+       "id":"527d4783-f7f5-4aa8-aae5-476be4e8807e",
+       "name":"Montessori Lyceum Amsterdam",
+       "url":"https://msa.magister.net"
+    },
+    {
+       "id":"3513401d-09ac-466a-b2f4-eb2a584e69a5",
+       "name":"Montessori Lyceum Rotterdam",
+       "url":"https://rml.magister.net"
+    },
+    {
+       "id":"61f4c953-9df1-4cf5-a051-6a69e72e77ef",
+       "name":"OCL Het Waterland",
+       "url":"https://waterland.magister.net"
+    },
+    {
+       "id":"895542b3-71b0-42fa-9e5d-71a451ab8b96",
+       "name":"Oost-ter-Hout School voor Praktische Vorming",
+       "url":"https://15NE.magister.net"
+    },
+    {
+       "id":"2a19e009-c455-4ed4-98d7-1dea3576da95",
+       "name":"Oosterlicht College",
+       "url":"https://oosterlicht.magister.net"
+    },
+    {
+       "id":"52f4a180-2734-4851-9c6a-82ec32d8e8a5",
+       "name":"Over Betuwe College De Heister",
+       "url":"https://obc.magister.net"
+    },
+    {
+       "id":"1ba3be9f-4272-4231-bccc-19b0aa05a72f",
+       "name":"Pieter Nieuwland College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"2c96c4e9-dcae-4419-b481-814be6a44f9f",
+       "name":"Pieter Zandt sg.",
+       "url":"https://pieterzandt.magister.net"
+    },
+    {
+       "id":"35688c9d-f286-4434-a07c-ad90ab2e6822",
+       "name":"ROC van Amsterdam",
+       "url":"https://vavojokesmit.magister.net"
+    },
+    {
+       "id":"ed890868-a8b7-42c0-9961-cca59c2bf77f",
+       "name":"RSG Ter Apel",
+       "url":"https://rsgterapel.magister.net"
+    },
+    {
+       "id":"81c17aa6-c4a8-49c3-8298-35c3066e56fc",
+       "name":"Schoter SG",
+       "url":"https://20rc.magister.net"
+    },
+    {
+       "id":"f9e3a6a1-0455-48cb-9277-3c0623efb113",
+       "name":"Sint-Laurenscollege Rotterdam",
+       "url":"https://slc.magister.net"
+    },
+    {
+       "id":"5bc2e586-cae7-44dd-bb28-402537a25f71",
+       "name":"Sterren College",
+       "url":"https://sterrencollege.magister.net"
+    },
+    {
+       "id":"af90da89-02b3-4b5a-a805-b9eb2d9546fc",
+       "name":"Terra Nigra",
+       "url":"https://terranigra.magister.net"
+    },
+    {
+       "id":"44275eff-373e-45b3-9764-844e5ce1c91e",
+       "name":"VO Terra",
+       "url":"https://voterra.magister.net"
+    },
+    {
+       "id":"85cf854e-c1db-4c53-96cf-5f561aa218ce",
+       "name":"Voortgezet Onderwijs van Amsterdam",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"ca8bb541-9afa-4063-b172-8cd3a67d206b",
+       "name":"Waterlant College IJdoorn",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"1e759943-a8fd-40f8-b487-023275627635",
+       "name":"Young Business School Rotterdam",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"34e5f862-7053-4c00-97ec-9607f5d44b6e",
+       "name":"Esprit Scholen Cartesius Lyceum",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"098948d2-f43e-4d5c-9bf2-579014815d3c",
+       "name":"Jordan - Montessori Lyceum Utrecht",
+       "url":"https://hermanjordan.magister.net"
+    },
+    {
+       "id":"256b5f41-07d7-4500-a9e8-378dec460a32",
+       "name":"Metis Montessori Lyceum",
+       "url":"https://msa.magister.net"
+    },
+    {
+       "id":"1bede4b5-37b6-41c6-8497-2b89f9987787",
+       "name":"Montessori College Aerdenhout",
+       "url":"https://02YH.magister.net"
+    },
+    {
+       "id":"51881ca4-c37b-4a7f-86b5-00018788342e",
+       "name":"Montessori College Oost",
+       "url":"https://msa.magister.net"
+    },
+    {
+       "id":"38326b47-4c6d-44b4-ab01-857a63244fdf",
+       "name":"Montessori Lyceum Groningen",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"f760a8d4-8415-4be3-9577-c13aa017907e",
+       "name":"Montessori Lyceum Utrecht",
+       "url":"https://hermanjordan.magister.net"
+    },
+    {
+       "id":"407fb786-4d25-40fc-aa9a-ddc6e2d7f418",
+       "name":"Montessori Vaklyceum",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"809ae3c0-bfaf-409e-9d08-b246242ce852",
+       "name":"OSG Hengelo Montessori College",
+       "url":"https://osghengelo.magister.net"
+    },
+    {
+       "id":"baf75dac-5889-42a4-9c58-4343132f5d0e",
+       "name":"Pontes Scholengroep",
+       "url":"https://pontessg.magister.net"
+    },
+    {
+       "id":"433fd7d4-9bde-4feb-8e5a-555268f2f39b",
+       "name":"Tessenderlandt",
+       "url":"https://tessenderlandt.magister.net"
+    },
+    {
+       "id":"d2e4623a-8952-42f7-9d0a-dd16f00a4ad3",
+       "name":"Bonhoeffer College",
+       "url":"https://bonhoeffer.magister.net"
+    },
+    {
+       "id":"6ec1ad20-dc5b-4ba9-be95-673001cb90a1",
+       "name":"CVO 't Gooi Hilfertsheem-Beatrix",
+       "url":"https://cvotgooi.magister.net"
+    },
+    {
+       "id":"55ab868b-0e15-4417-bfc7-1b9bbe9d6310",
+       "name":"Wolfert van Borselen scholengroep",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"8f0b8bb3-2ee2-47a7-917b-e92454b74791",
+       "name":"Wolfert van Borselen scholengroep Wolfert College",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"306c70e6-cb7b-4de7-95b8-a3c362a7fca6",
+       "name":"Wolfert van Borselen scholengroep Wolfert Dalton",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"c7693449-6692-4bb1-86a9-31c1786a9f62",
+       "name":"Wolfert van Borselen scholengroep Wolfert ISK",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"491ee4d8-e00b-404f-91fa-7d050917e286",
+       "name":"Wolfert van Borselen scholengroep Wolfert Lyceum",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"c908483e-b822-4348-8cde-66712deb49a1",
+       "name":"Wolfert van Borselen scholengroep Wolfert PRO",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"3a36d309-bacd-4447-b4ff-41d8b2c4f596",
+       "name":"Wolfert van Borselen scholengroep Wolfert RISS",
+       "url":"https://wolfert.magister.net"
+    },
+    {
+       "id":"372b80df-2128-4610-b8d5-d22737308e73",
+       "name":"Almere College",
+       "url":"https://almerecollege.magister.net"
+    },
+    {
+       "id":"de3b37e9-9f64-4165-8299-2e90f247ed9b",
+       "name":"Almere College Kampen",
+       "url":"https://almerecollege.magister.net"
+    },
+    {
+       "id":"864bbada-e779-4be2-bb8a-9fac82ee111d",
+       "name":"Kamerlingh Onnes",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"1b5c5f33-2060-4fbe-935f-b88d8faaec3b",
+       "name":"Kennemer College",
+       "url":"https://kennemer.magister.net"
+    },
+    {
+       "id":"15798b10-b296-41a2-b409-c1b6532081d2",
+       "name":"Kennemer Lyceum Overveen",
+       "url":"https://kennemerlyceum.magister.net"
+    },
+    {
+       "id":"dba78045-0f2c-436a-8198-2d42fa311dd4",
+       "name":"OPDC Noord-Kennemerland",
+       "url":"https://opdcnk.magister.net"
+    },
+    {
+       "id":"cdbfb55f-65c2-4fc4-89ed-c818cd29fa90",
+       "name":"OSG De Amersfoortse Berg",
+       "url":"https://amersfoortseberg.magister.net"
+    },
+    {
+       "id":"ec186143-f94d-4abd-b818-447cdac13fd6",
+       "name":"Purmerendse SG",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"3e44ed27-6f8d-4bdf-b77b-80eef320468f",
+       "name":"Purmerendse SG Anton Gaudi",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"f8c158e1-35b6-4135-96db-4764af938646",
+       "name":"Purmerendse SG Da Vinci College",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"ac127115-6d48-4543-8b3e-fd5f3b30ee4c",
+       "name":"Purmerendse SG Gerrit Rietveld",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"a6e36ab3-1c24-45af-a13a-3a296aa51227",
+       "name":"Purmerendse SG Jan van Egmond Lyceum",
+       "url":"https://psg.magister.net"
+    },
+    {
+       "id":"d06e6c09-e6cd-4898-a7b6-a6c185ea624b",
+       "name":"t Atrium Amersfoort",
+       "url":"https://atrium.magister.net"
+    },
+    {
+       "id":"6af6202b-8281-4c92-80fb-bbace4381244",
+       "name":"Chr. College Schaersvoorde",
+       "url":"https://schaersvoorde.magister.net"
+    },
+    {
+       "id":"66bc4ce9-5cc6-43a2-8eae-883631d37a1b",
+       "name":"Corlaer College",
+       "url":"https://corlaer.magister.net"
+    },
+    {
+       "id":"63599505-b065-46a9-88ea-d0b961aeeca4",
+       "name":"Het Reinaert",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"d63ed9c5-298e-4382-9f00-f0253bcc6ce3",
+       "name":"SG De Waerdenborch",
+       "url":"https://waerdenborch.magister.net"
+    },
+    {
+       "id":"c5a925f1-38bb-4508-b419-165f56406e10",
+       "name":"Calvijn met Junior College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"f33bb3a7-bc1e-4e32-b4be-a59335c529dc",
+       "name":"Metzo College",
+       "url":"https://metzo.magister.net"
+    },
+    {
+       "id":"dc5e2f23-e302-490e-859d-b710878de227",
+       "name":"Nimeto",
+       "url":"https://nimeto.magister.net"
+    },
+    {
+       "id":"49a57f56-0486-4ecf-9385-0d05dc3ea778",
+       "name":"Carolus Borromeus College",
+       "url":"https://helmond.magister.net"
+    },
+    {
+       "id":"17df2a76-2e03-4619-b791-f9f953081cfb",
+       "name":"OSG Willem Blaeu",
+       "url":"https://sovon.magister.net"
+    },
+    {
+       "id":"eae569b5-9c24-4660-a095-19375a90a685",
+       "name":"CSG Reggesteyn",
+       "url":"https://reggesteyn.magister.net"
+    },
+    {
+       "id":"614289c0-0574-427a-b265-0a3d12c1677d",
+       "name":"OPDC Griffioen",
+       "url":"https://griffioen.magister.net"
+    },
+    {
+       "id":"b021d4d1-5ce9-422f-8efa-45b09bbc53b6",
+       "name":"Montfort College",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"c176c6c1-25af-4c20-bb44-a60c7098431c",
+       "name":"Praktijkschool Westfriesland",
+       "url":"https://praktijkschoolwf.magister.net"
+    },
+    {
+       "id":"d5f38544-ed97-461e-8d2e-f036295aec3f",
+       "name":"Gymnasium Haganum",
+       "url":"https://haganum.magister.net"
+    },
+    {
+       "id":"6271ed13-9583-4cfb-ad96-b93ef1223f07",
+       "name":"2College Cobbenhagen",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"89984381-7722-4c7f-ae0c-7099a3d06d0f",
+       "name":"Atheneum College Hageveld",
+       "url":"https://hageveld.magister.net"
+    },
+    {
+       "id":"a7f1e58b-8d29-4ce8-8d75-3f6589797195",
+       "name":"Esprit Scholen Berlage Lyceum",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"62188948-6f6f-4265-9fde-379a5650aa75",
+       "name":"Erfgooiers College",
+       "url":"https://erfgooiers.magister.net"
+    },
+    {
+       "id":"bf23d1b9-ecfb-4545-af95-5aba4884899c",
+       "name":"Mgr. Frencken College",
+       "url":"https://frencken.magister.net"
+    },
+    {
+       "id":"67a79d0b-7a09-42be-8a50-8febd989fd76",
+       "name":"Sint-Oelbertgymnasium",
+       "url":"https://oelbert.magister.net"
+    },
+    {
+       "id":"a30cb939-20d7-465b-970b-ab8a9d309997",
+       "name":"Arentheem College locatie Baken Warnsborn",
+       "url":"https://arentheem.magister.net"
+    },
+    {
+       "id":"0e9a30fe-880d-488f-972a-616e46ac2195",
+       "name":"Arentheem College locatie Titus Brandsma",
+       "url":"https://arentheem.magister.net"
+    },
+    {
+       "id":"98b85598-90d6-4759-bd96-f3c238e8b258",
+       "name":"Drenthe College",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"b17fb802-c6ff-44c2-9100-138e2495a6cb",
+       "name":"Drenthe College Assen",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"8a6c6464-104c-4e18-a9f9-c58951d76381",
+       "name":"Drenthe College Coevorden",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"fa75b2b6-9feb-4b46-9790-6c62fa6a1ed5",
+       "name":"Drenthe College Hardenberg",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"ffa32c48-2edd-4190-8f83-6201b870f80d",
+       "name":"Drenthe College Hoogeveen",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"7f5269c5-2d05-47c0-88d8-626ab2dcbb1f",
+       "name":"Drenthe College Roden",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"817f82c9-abc9-40a3-b4c5-cca4342984a6",
+       "name":"Drenthe College Ruinen",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"a0c88fe8-05d9-4bcc-ac4c-8599e1b9e5e7",
+       "name":"Drenthe College Zwolle",
+       "url":"https://dc.magister.net"
+    },
+    {
+       "id":"a219aff8-7b13-4159-aadd-d6f16ca44d12",
+       "name":"Pallas Athene College",
+       "url":"https://pac.magister.net"
+    },
+    {
+       "id":"48650d91-3d0d-4654-8c48-949fbfeb8673",
+       "name":"Theresialyceum",
+       "url":"https://theresia.magister.net"
+    },
+    {
+       "id":"115822cc-2d3d-44f4-81db-cc75f4eaca0d",
+       "name":"Alberdingk Thijm College",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"2b7b6dac-3980-487f-9fe9-9b92172a575b",
+       "name":"Jac. P. Thijsse College",
+       "url":"https://jpthijsse.magister.net"
+    },
+    {
+       "id":"c6e4f149-8330-4262-b599-ee812ba77eb6",
+       "name":"Heyerdahl College",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"3c7c6c56-fc06-4bce-b76e-beaf8390c73b",
+       "name":"Calvijn College Tholen",
+       "url":"https://calvijn.magister.net"
+    },
+    {
+       "id":"71d0ce00-ef06-460b-a484-d2f1e55f58c4",
+       "name":"Praktijkschool Uithoorn",
+       "url":"https://emma.magister.net"
+    },
+    {
+       "id":"15d8b501-388d-4ad1-868f-a0b180d44aa5",
+       "name":"Rythovius College",
+       "url":"https://rythovius.magister.net"
+    },
+    {
+       "id":"06610080-b06c-45dd-a741-0b627025fe3d",
+       "name":"Thorbecke SG",
+       "url":"https://thorbecke.magister.net"
+    },
+    {
+       "id":"1fda90d2-913b-47ef-b5ef-267b6831c8ea",
+       "name":"Thorbecke SG Zwolle",
+       "url":"https://thorbecke.magister.net"
+    },
+    {
+       "id":"2d52c0c6-5699-4b21-8c5e-7d91a6e76d80",
+       "name":"Thorbecke VO",
+       "url":"https://tvo-rotterdam.magister.net"
+    },
+    {
+       "id":"1bd277c0-b0ea-4ad2-a1b1-79e21d1a20fa",
+       "name":"Vathorst College",
+       "url":"https://vathorst.magister.net"
+    },
+    {
+       "id":"974948fc-6b00-4a5a-98b6-400e3a6e7220",
+       "name":"Het Hogeland College Uithuizen",
+       "url":"https://hogeland.magister.net"
+    },
+    {
+       "id":"6a394ac3-7e97-4700-85c5-633b0afd66b4",
+       "name":"Ichthus College",
+       "url":"https://ichthus.magister.net"
+    },
+    {
+       "id":"3761cb63-10c4-4697-a108-7c447d364684",
+       "name":"Ichthus Lyceum",
+       "url":"https://ichthuslyceum.magister.net"
+    },
+    {
+       "id":"29610f12-537c-4978-9845-5d2e4a9f08ec",
+       "name":"J.C. Pleysierschool Het Palmhuis",
+       "url":"https://pleysier.magister.net"
+    },
+    {
+       "id":"41378f34-3b9f-4e3a-bb89-6755e90c0e6d",
+       "name":"Prakticum",
+       "url":"https://prakticum.magister.net"
+    },
+    {
+       "id":"0b4b3cf1-8ade-403a-9191-c06942506176",
+       "name":"Stichting CVO Apeldoorn",
+       "url":"https://cl-apeldoorn.magister.net"
+    },
+    {
+       "id":"4127c8fa-992c-48e0-9aba-36c026ea92e6",
+       "name":"Stichting Kolom",
+       "url":"https://kolom.magister.net"
+    },
+    {
+       "id":"395a0b5e-583c-4138-91b1-db779fb6e78e",
+       "name":"Stichting Kolom De Atlant",
+       "url":"https://kolom.magister.net"
+    },
+    {
+       "id":"fbd93e96-6bd7-45ef-a6fb-a4177f13cd79",
+       "name":"Stichting Kolom De Dreef",
+       "url":"https://kolom.magister.net"
+    },
+    {
+       "id":"6fb0eb9f-6d49-4ddd-b8d9-fd8695c6bcd8",
+       "name":"Stichting Kolom Het Plein",
+       "url":"https://kolom.magister.net"
+    },
+    {
+       "id":"a6150d8f-3a7d-4cad-ab5a-a4eb057e7456",
+       "name":"Stichting Kolom Noord",
+       "url":"https://kolom.magister.net"
+    },
+    {
+       "id":"1bfa237b-3e29-4081-b77b-64da32bf1348",
+       "name":"Stichtse Vrije School",
+       "url":"https://sgvvs.magister.net"
+    },
+    {
+       "id":"aa951bca-55b4-4bb2-90c5-5907e8f1a85e",
+       "name":"Esprit Scholen AICS",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"c5eda2e6-7773-499a-9463-be6e43688c89",
+       "name":"Calvijn College Middelburg",
+       "url":"https://calvijn.magister.net"
+    },
+    {
+       "id":"e8332386-1322-45db-9bfd-17c44669b746",
+       "name":"Edudelta Onderwijsgroep Middelharnis",
+       "url":"https://edudelta.magister.net"
+    },
+    {
+       "id":"8e14b508-30d5-4358-a3a4-33a0b9956043",
+       "name":"Middelharnis",
+       "url":"https://middelharnis.magister.net"
+    },
+    {
+       "id":"735c7215-e57c-440c-ba53-77b6a5fc9657",
+       "name":"VSO De Piramide",
+       "url":"https://piramide.magister.net"
+    },
+    {
+       "id":"f77e61b1-6138-4153-9e90-898edc79bb66",
+       "name":"Atlas Onderwijsgroep Locatie Rijswijk",
+       "url":"https://aog.magister.net"
+    },
+    {
+       "id":"1ad4486f-bb79-475f-92c2-948d893dc6b2",
+       "name":"J.C. Pleysierschool Zefier",
+       "url":"https://pleysier.magister.net"
+    },
+    {
+       "id":"2ac2faaa-bb32-4844-a168-796759bd66d5",
+       "name":"Scholengroep Gelders Mozaiek",
+       "url":"https://geldersmozaiek.magister.net"
+    },
+    {
+       "id":"879e21c2-984d-4da0-97ad-6ec556f5628e",
+       "name":"Bernard Nieuwentijt College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"d56b9ee2-6d17-4380-8381-489f4be553e2",
+       "name":"Chr. Praktijkschool De Boog",
+       "url":"https://deboog.magister.net"
+    },
+    {
+       "id":"806f2fe0-7907-496c-86d4-92869fa8b6c1",
+       "name":"De Pijler School voor Praktijkonderwijs",
+       "url":"https://depijler.magister.net"
+    },
+    {
+       "id":"f4cd3cd3-5bd8-46f8-b680-e1b7ea8c54e3",
+       "name":"Esloo Onderwijsgroep Esloo Praktijkonderwijs",
+       "url":"https://esloo.magister.net"
+    },
+    {
+       "id":"4635e729-8986-4007-868e-6d4a2d6983af",
+       "name":"Het Praktijkcollege Centrum",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"0bf8b3d8-379f-4719-8f23-06dbccc6b59f",
+       "name":"Het Praktijkcollege Charlois",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"65601872-1862-4903-8ed2-a5919e60e613",
+       "name":"Het Praktijkcollege Zuidwijk",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"070e2bba-efb3-49c7-9936-39dde68f9358",
+       "name":"Instituut Blankestijn",
+       "url":"https://blankestijn.magister.net"
+    },
+    {
+       "id":"5d78d4bf-a363-4694-b16b-4482ead0e4c1",
+       "name":"Laurentius Praktijkschool",
+       "url":"https://laurentius.magister.net"
+    },
+    {
+       "id":"6a7a6b9f-588d-464a-bb21-71612c4f5230",
+       "name":"LUCA Praktijkschool",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"17bbc80d-771d-4d5e-8be3-249bfc059c2c",
+       "name":"Praktijk College",
+       "url":"https://sluis.magister.net"
+    },
+    {
+       "id":"04fddb29-8974-42d0-9608-3f7eb8126b29",
+       "name":"Praktijk College Spijkenisse",
+       "url":"https://sluis.magister.net"
+    },
+    {
+       "id":"57fc47a5-0ce8-40b7-a605-ea2b69c2954e",
+       "name":"Praktijkonderwijs Roermond",
+       "url":"https://petrusdonders.magister.net"
+    },
+    {
+       "id":"2a6c4c55-5822-4959-bd1f-2d243571620b",
+       "name":"Praktijkonderwijs Zutphen",
+       "url":"https://zutphen.magister.net"
+    },
+    {
+       "id":"a6bd7559-7c53-4cae-862b-c8a05ffb99ca",
+       "name":"Praktijkschool Apeldoorn",
+       "url":"https://praktijkschoolapeldoorn.magister.net"
+    },
+    {
+       "id":"093f96ad-6a21-4ddf-a060-c8dcc1f7a565",
+       "name":"Praktijkschool De Brug",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"611815a1-4824-46c8-8aa7-fb616a0a1464",
+       "name":"Praktijkschool De Einder",
+       "url":"https://einder.magister.net"
+    },
+    {
+       "id":"97cd9ca2-b43e-400d-b1b8-f6472c30cecd",
+       "name":"Praktijkschool de Linie",
+       "url":"https://linie.magister.net"
+    },
+    {
+       "id":"fdcf597e-3154-4c9e-86b2-b1b0432b4ddc",
+       "name":"Praktijkschool De Poort",
+       "url":"https://depoort.magister.net"
+    },
+    {
+       "id":"ac75228d-0d5b-4d9b-8ade-4a1e0e128c09",
+       "name":"Praktijkschool Eindhoven",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"9e68d10f-0e2c-4b87-930a-663e12973386",
+       "name":"Praktijkschool Focus",
+       "url":"https://polsstok.magister.net"
+    },
+    {
+       "id":"1541f3f7-4a59-4b8a-88c3-82c871548c19",
+       "name":"Praktijkschool Helmond",
+       "url":"https://pshelmond.magister.net"
+    },
+    {
+       "id":"70ba235e-c9f3-47da-8a19-3255edcf0519",
+       "name":"Praktijkschool Het Bolwerk",
+       "url":"https://bolwerk.magister.net"
+    },
+    {
+       "id":"053001a4-0fa3-498b-875f-122f2b6884c3",
+       "name":"Pronova Praktijkonderwijs",
+       "url":"https://pronova.magister.net"
+    },
+    {
+       "id":"6dd3885a-c07d-43f0-8537-1ed651b638df",
+       "name":"Mijnschool",
+       "url":"https://mijnschool.magister.net"
+    },
+    {
+       "id":"84e86c0e-d6c6-4f48-96a1-17ed2ceab1f0",
+       "name":"De Rooi Pannen Tilburg",
+       "url":"https://derooipannen.magister.net"
+    },
+    {
+       "id":"bc58920c-00fb-41bc-9e98-c1bad0769071",
+       "name":"Onderwijsgroep Tilburg",
+       "url":"https://onderwijsgroeptilburg.magister.net"
+    },
+    {
+       "id":"28245558-3b30-427c-a72b-ba9b70f21881",
+       "name":"Mill Hillcollege",
+       "url":"https://mill-hill.magister.net"
+    },
+    {
+       "id":"20ac9f01-4cf0-4695-a2cf-1b9a14a66a2c",
+       "name":"Jan Tinbergen College",
+       "url":"https://tinbergen.magister.net"
+    },
+    {
+       "id":"3ed7be5d-dc42-491c-b105-2064038f9eba",
+       "name":"Dominicus College",
+       "url":"https://dominicus.magister.net"
+    },
+    {
+       "id":"8e025098-10bb-456c-ab69-fa969257b0eb",
+       "name":"Gemini College Lekkerkerk",
+       "url":"https://ozhw.magister.net"
+    },
+    {
+       "id":"c2cac2c8-0cdb-4142-95f1-244dec18bb34",
+       "name":"Gemini College Ridderkerk",
+       "url":"https://ozhw.magister.net"
+    },
+    {
+       "id":"65c6de60-734d-46d5-b243-f603b60863da",
+       "name":"Minkema College",
+       "url":"https://minkema.magister.net"
+    },
+    {
+       "id":"7ee2d41c-51a1-44db-86af-db24c9889ef4",
+       "name":"Fioretti College",
+       "url":"https://fioretti.magister.net"
+    },
+    {
+       "id":"9ffd1cbd-b75a-49b2-97f2-2e69bf4c90b4",
+       "name":"Lorentz Casimir Lyceum",
+       "url":"https://lcl.magister.net"
+    },
+    {
+       "id":"d478b78c-eee6-4f81-9e64-e1fc45a0df55",
+       "name":"SG Bonaire",
+       "url":"https://sgbonaire.magister.net"
+    },
+    {
+       "id":"fb1cdd1a-6f33-4b43-810a-eb4e36d9b492",
+       "name":"Joke Smit VAVO",
+       "url":"https://vavojokesmit.magister.net"
+    },
+    {
+       "id":"f18ff795-65b6-4c94-9fb2-23a72040fc3a",
+       "name":"SG Ubbo Emmius",
+       "url":"https://ubboemmius.magister.net"
+    },
+    {
+       "id":"0b9ddaf1-6262-4dd8-8033-3fe6d70b381d",
+       "name":"Baudartius College",
+       "url":"https://baudartius.magister.net"
+    },
+    {
+       "id":"c52cf8d8-0f58-4fb1-8e18-ab91fbbe7caa",
+       "name":"Grotius College",
+       "url":"https://grotiuscollege.magister.net"
+    },
+    {
+       "id":"bdd0f479-972d-465d-9e74-4562bd21ae93",
+       "name":"Grotius College Delft",
+       "url":"https://grotiuscollege.magister.net"
+    },
+    {
+       "id":"449d8743-d733-4318-b000-b34215f7e179",
+       "name":"Grotius College Heerlen",
+       "url":"https://parkstad.magister.net"
+    },
+    {
+       "id":"872cd5f4-7fc6-41d0-b643-271f13312db3",
+       "name":"St. Ignatiusgymnasium",
+       "url":"https://ignatius.magister.net"
+    },
+    {
+       "id":"a23bdbaa-1cd2-4076-ae93-e9cc7ed076ed",
+       "name":"Vakcollege Eindhoven",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"bb0890fc-0b58-4879-afb4-1ab19c13646b",
+       "name":"Vakcollege Helmond",
+       "url":"https://helmond.magister.net"
+    },
+    {
+       "id":"8361b142-a6a8-45cc-bd85-61815e26fdde",
+       "name":"Vakcollege Noordoostpolder",
+       "url":"https://noordoostpolder.magister.net"
+    },
+    {
+       "id":"b0f0c7ee-2dc6-4e71-913d-6bca6cf08e7c",
+       "name":"RSG Goeree-Overflakkee",
+       "url":"https://middelharnis.magister.net"
+    },
+    {
+       "id":"704c987f-4aa5-48fc-8ffb-7d9ed00fb3b6",
+       "name":"Bossche Vakschool",
+       "url":"https://bosschevakschool.magister.net"
+    },
+    {
+       "id":"b443e01d-4975-4de6-a901-be4bdfc09b18",
+       "name":"College de Heemlanden",
+       "url":"https://heemlanden.magister.net"
+    },
+    {
+       "id":"a122f69b-8875-4ce4-b6b1-1ab0828105a6",
+       "name":"Atlas College",
+       "url":"https://atlas.magister.net"
+    },
+    {
+       "id":"b44705c6-ac79-44e7-b1f3-0cd96ba8fd85",
+       "name":"Atlas College Copernicus SG",
+       "url":"https://atlas.magister.net"
+    },
+    {
+       "id":"3998a070-97e2-4eca-bf9f-67a47fa401e9",
+       "name":"Atlas College OSG West-Friesland",
+       "url":"https://atlas.magister.net"
+    },
+    {
+       "id":"d2d15c0c-2ab1-4e0d-aa1a-2f5712c291e6",
+       "name":"Atlas College SG De Dijk",
+       "url":"https://atlas.magister.net"
+    },
+    {
+       "id":"87513089-8f90-4ebc-980c-2ec0bd2c4c59",
+       "name":"Atlas College SG Newton",
+       "url":"https://atlas.magister.net"
+    },
+    {
+       "id":"1b498a28-6ca8-4092-8ab0-e884fc5aae6f",
+       "name":"Atlas Onderwijsgroep",
+       "url":"https://aog.magister.net"
+    },
+    {
+       "id":"ef3ea4b6-1773-444b-b050-8366e9b4d547",
+       "name":"Atlas Onderwijsgroep Lyceum Ypenburg",
+       "url":"https://aog.magister.net"
+    },
+    {
+       "id":"9b264f4d-39cc-4bc7-8575-44b85f5465fe",
+       "name":"SG de Rietlanden",
+       "url":"https://svol.magister.net"
+    },
+    {
+       "id":"a019565e-f64d-4aab-b997-f4535e0d249c",
+       "name":"SG de Rietlanden",
+       "url":"https://rietlanden.magister.net"
+    },
+    {
+       "id":"43b0deca-f1e5-42e4-aa73-aa6e69c72421",
+       "name":"Walburg College Zwijndrecht",
+       "url":"https://ozhw.magister.net"
+    },
+    {
+       "id":"02d27a39-5803-4e83-85a7-a854e666f936",
+       "name":"ISG Ibn Ghaldoun",
+       "url":"https://avicennacollege.magister.net"
+    },
+    {
+       "id":"41e38526-9bf3-448f-9747-411648aea67e",
+       "name":"SG Groenewald",
+       "url":"https://groenewald.magister.net"
+    },
+    {
+       "id":"88b73da0-75d1-4c17-80f1-a4f2f4d3f607",
+       "name":"Flex College",
+       "url":"https://flexcollege.magister.net"
+    },
+    {
+       "id":"50e53005-9b55-4c74-89e3-ab7d62da9187",
+       "name":"Alfrink College",
+       "url":"https://alfrink.magister.net"
+    },
+    {
+       "id":"14670a8b-7d30-4ebe-8831-36863fd460bb",
+       "name":"Lyceum Kralingen",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"ef11ff89-06f4-458b-bc35-83096755271f",
+       "name":"Novalis College",
+       "url":"https://sgvvs.magister.net"
+    },
+    {
+       "id":"04bb4b14-c7e2-474f-90e0-388358fc8ae1",
+       "name":"Alkwin Kollege",
+       "url":"https://alkwin.magister.net"
+    },
+    {
+       "id":"2a8953ce-0396-4f1c-8807-ec4096356e2a",
+       "name":"CS Vincent van Gogh Salland",
+       "url":"https://csvvg.magister.net"
+    },
+    {
+       "id":"ae681243-4cce-44c7-b780-5bb539759c7d",
+       "name":"Roncalli SG Bergen op Zoom",
+       "url":"https://roncalli.magister.net"
+    },
+    {
+       "id":"fca0d5fc-7372-4cc8-b4bd-00746db3c519",
+       "name":"Aloysius College",
+       "url":"https://aloysius.magister.net"
+    },
+    {
+       "id":"ad243724-c257-47bd-b66c-45d548ca1176",
+       "name":"St. Aloysius College Hilversum",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"b93f8cbe-1bfb-4915-af3a-329c54a5765c",
+       "name":"Cals College",
+       "url":"https://cals.magister.net"
+    },
+    {
+       "id":"840d8102-c7aa-44ef-9951-728e32105a76",
+       "name":"Cals College Nieuwegein",
+       "url":"https://cals.magister.net"
+    },
+    {
+       "id":"896e8982-db9d-4459-b629-42fcb72310f3",
+       "name":"Kalsbeek College",
+       "url":"https://kalsbeek.magister.net"
+    },
+    {
+       "id":"02edf610-8745-4641-a3eb-c4dcfffc523b",
+       "name":"Dalton Lyceum Barendrecht",
+       "url":"https://ozhw.magister.net"
+    },
+    {
+       "id":"09ffed65-2381-4a52-8ad9-9bb513a74a59",
+       "name":"Dalton Voorburg",
+       "url":"https://daltonvoorburg.magister.net"
+    },
+    {
+       "id":"fc33e6a5-48ab-4ede-bd07-7ed99f71eb09",
+       "name":"SG Dalton",
+       "url":"https://daltonvoorburg.magister.net"
+    },
+    {
+       "id":"9083fba1-9c1f-4142-a9be-ff996e2eefb8",
+       "name":"SG Dalton Voorburg",
+       "url":"https://daltonvoorburg.magister.net"
+    },
+    {
+       "id":"a410603e-0b97-401a-aa63-40528f46c2c7",
+       "name":"Valuascollege",
+       "url":"https://valuas.magister.net"
+    },
+    {
+       "id":"37b69058-7f91-41f1-8336-0ef32566dc17",
+       "name":"SiNTLUCAS",
+       "url":"https://sintlucas.magister.net"
+    },
+    {
+       "id":"5ec4f529-4fbe-4bda-8871-7137c98b3b2d",
+       "name":"SiNTLUCAS Eindhoven",
+       "url":"https://sintlucas.magister.net"
+    },
+    {
+       "id":"1b83645f-039c-4b3f-a159-749d983f8058",
+       "name":"Calvijn College Goes",
+       "url":"https://calvijn.magister.net"
+    },
+    {
+       "id":"6697d097-5895-4f8c-882b-384fe20598be",
+       "name":"Kromme Rijn College",
+       "url":"https://krommerijncollege.magister.net"
+    },
+    {
+       "id":"f7685068-e158-4701-bcbe-e6750f067e31",
+       "name":"Havo Notre Dame des Anges",
+       "url":"https://notredame.magister.net"
+    },
+    {
+       "id":"c4fbdad1-88a7-44ea-b983-9e52be504894",
+       "name":"De Campus",
+       "url":"https://decampus.magister.net"
+    },
+    {
+       "id":"0417350c-063c-4687-b8d3-9bfd91459921",
+       "name":"ICT Campus Hilversum",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"6dc1a6ea-39a3-4e2e-adc9-a98c61e8a76f",
+       "name":"Chr. Gymnasium Beyers Naud?",
+       "url":"https://cgbn.magister.net"
+    },
+    {
+       "id":"2a7a2849-03a5-4992-bc74-c60e76cba0e0",
+       "name":"Chr. Gymnasium Beyers Naude",
+       "url":"https://cgbn.magister.net"
+    },
+    {
+       "id":"b75ba470-0b41-4e47-859a-494e3f694e0e",
+       "name":"Chr. Gymnasium Sorghvliet",
+       "url":"https://sorghvliet.magister.net"
+    },
+    {
+       "id":"1226b5b1-2337-477b-8546-bc42bbac1690",
+       "name":"Cygnus Gymnasium",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"c346cb81-03b1-4a0f-ab6e-fe5ccd62d07a",
+       "name":"Esprit Scholen Het 4e Gymnasium",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"c694f81b-41b1-4c68-b9c5-3610eff7ed1c",
+       "name":"Gymnasium Beekvliet",
+       "url":"https://beekvliet.magister.net"
+    },
+    {
+       "id":"0fb79584-02ba-4e01-9301-59215f8437a3",
+       "name":"Gymnasium Bernrode",
+       "url":"https://bernrode.magister.net"
+    },
+    {
+       "id":"e034e557-2343-460f-bd7f-89f96f954fad",
+       "name":"Gymnasium Celeanum",
+       "url":"https://celeanum.magister.net"
+    },
+    {
+       "id":"3fdbf8d3-7ed2-4400-9bb3-f3eacd0aa211",
+       "name":"Gymnasium Novum",
+       "url":"https://novum.magister.net"
+    },
+    {
+       "id":"c536bd26-4763-49ca-9602-2a672ac202cf",
+       "name":"Vossius Gymnasium",
+       "url":"https://vossius.magister.net"
+    },
+    {
+       "id":"63c51acb-310e-46ca-a78d-125148eaa353",
+       "name":"Willem Lodewijk Gymnasium",
+       "url":"https://wlg.magister.net"
+    },
+    {
+       "id":"05c4f86a-33f0-4ede-995d-e8e9db5d3aad",
+       "name":"Porta Mosana College",
+       "url":"https://portamosana.magister.net"
+    },
+    {
+       "id":"7e9a42af-ec3b-44cc-a7c5-5e3dbf903676",
+       "name":"2College Wandelbos",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"4d203b4e-3902-40b7-8939-3d3168a8f3da",
+       "name":"Bertrand Russel College",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"296eee16-cf74-4adf-9224-6f3af52cc96f",
+       "name":"Broeckland College",
+       "url":"https://broeckland.magister.net"
+    },
+    {
+       "id":"83beae75-1b72-4f89-90fb-dc36e73790bd",
+       "name":"Heerenlanden College",
+       "url":"https://heerenlanden.magister.net"
+    },
+    {
+       "id":"9d13572a-b45b-4462-86c7-ae8d7c30242c",
+       "name":"Het Hogeland College",
+       "url":"https://hogeland.magister.net"
+    },
+    {
+       "id":"6fa27095-1030-462b-958f-dfca5645a87f",
+       "name":"Het Hogeland College Wehe-den Hoorn",
+       "url":"https://hogeland.magister.net"
+    },
+    {
+       "id":"64d69fb2-e766-4eae-a66a-11453740b7f2",
+       "name":"Iedersland College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"68aa22be-4582-4a88-8421-9bd03cfe80e2",
+       "name":"Kandinsky College",
+       "url":"https://kandinsky.magister.net"
+    },
+    {
+       "id":"56435c75-48b1-4d05-be16-f46849431814",
+       "name":"OSG Singelland",
+       "url":"https://singelland.magister.net"
+    },
+    {
+       "id":"91e09bf8-0190-4041-bdc3-0d885d882c65",
+       "name":"VeenLanden College",
+       "url":"https://veenlanden.magister.net"
+    },
+    {
+       "id":"403b92ec-86dc-4926-98b0-27b0f267564d",
+       "name":"Kranenburgschool",
+       "url":"https://kranenburg.magister.net"
+    },
+    {
+       "id":"e7089938-c98f-4a78-ad21-a7089eeb5739",
+       "name":"Evang. School voor VO \"De Passie\"",
+       "url":"https://passie.magister.net"
+    },
+    {
+       "id":"4d309fb6-1a4d-49b9-ad95-39756bc619f4",
+       "name":"Evang. School voor VO \"De Passie\" de Passie Utrecht",
+       "url":"https://passie.magister.net"
+    },
+    {
+       "id":"879f4e66-ac2a-441b-8912-c94d7727088f",
+       "name":"Canisius College",
+       "url":"https://canisius.magister.net"
+    },
+    {
+       "id":"4abe01cc-6c4d-49ee-971b-6a162ff2a5e7",
+       "name":"Petrus Canisius College",
+       "url":"https://pcc.magister.net"
+    },
+    {
+       "id":"c5dc7c71-064a-4a02-998b-e7a81b9d62b8",
+       "name":"CSG Willem van Oranje",
+       "url":"https://dewillem.magister.net"
+    },
+    {
+       "id":"f732f8f0-5cf0-4847-bcea-39242c568dc5",
+       "name":"Oranje Nassau College",
+       "url":"https://onc.magister.net"
+    },
+    {
+       "id":"5068234c-807a-45b7-b0f9-3c8d25725872",
+       "name":"Anna van Rijn College",
+       "url":"https://annavanrijn.magister.net"
+    },
+    {
+       "id":"ee03c178-c2cb-497e-b147-78fb56cb303c",
+       "name":"De Rooi Pannen",
+       "url":"https://rooipannen.magister.net"
+    },
+    {
+       "id":"d5621f14-fa33-4bd3-95c4-e12e573f0590",
+       "name":"De Rooi Pannen Breda",
+       "url":"https://derooipannen.magister.net"
+    },
+    {
+       "id":"2b424be3-53fb-4b64-8955-cc86f9f5bcba",
+       "name":"De Rooi Pannen Eindhoven",
+       "url":"https://derooipannen.magister.net"
+    },
+    {
+       "id":"b96e7c25-5a88-4a52-86f9-ec56fbb3df7c",
+       "name":"Colegio Arubano",
+       "url":"https://colegioarubano.magister.net"
+    },
+    {
+       "id":"f8fb52cf-7bbc-4211-959f-55f819aa66f0",
+       "name":"Libanon Lyceum",
+       "url":"https://llr.magister.net"
+    },
+    {
+       "id":"4592755c-88a3-4708-a12e-f92b76407cf2",
+       "name":"Hans Petrischool",
+       "url":"https://hanspetri.magister.net"
+    },
+    {
+       "id":"ad101020-9183-4309-ae5c-c1bb20d429d4",
+       "name":"Havo/vwo voor Muziek en Dans",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"0ff1d6e0-b9f8-472f-90cb-6a1d427b826d",
+       "name":"Sint-Janslyceum",
+       "url":"https://sintjans.magister.net"
+    },
+    {
+       "id":"eb4fdb7f-e6ae-49e9-b51d-2368cb73b796",
+       "name":"Antoon Schellenscollege",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"3d444c0f-eb79-47ed-a7a7-d38c7608858e",
+       "name":"Groot Goylant",
+       "url":"https://atscholen.magister.net"
+    },
+    {
+       "id":"1e578018-41c4-456d-a9eb-1fc6c6bed0ab",
+       "name":"Hogelant",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"65f77838-d02c-4399-8de8-1a416aa991bf",
+       "name":"Lyceum Schravenlant",
+       "url":"https://schravenlant.magister.net"
+    },
+    {
+       "id":"90bdfa2e-9b99-420b-bcb6-b6eb14b1a9f6",
+       "name":"RSG Wiringherlant",
+       "url":"https://wiringherlant.magister.net"
+    },
+    {
+       "id":"416db5dc-7054-4795-946c-47b44f7b0c6c",
+       "name":"Greijdanus",
+       "url":"https://greijdanus.magister.net"
+    },
+    {
+       "id":"5e639941-a130-4333-a179-bae58046bf25",
+       "name":"Greijdanus Enschede",
+       "url":"https://greijdanus.magister.net"
+    },
+    {
+       "id":"a7b9887f-4de4-4d22-a8f5-e2fb9d54ef98",
+       "name":"Greijdanus Hardenberg",
+       "url":"https://greijdanus.magister.net"
+    },
+    {
+       "id":"ea94cd79-0b23-4518-9a08-cb3afffc3b7b",
+       "name":"Greijdanus Zwolle",
+       "url":"https://greijdanus.magister.net"
+    },
+    {
+       "id":"68e31a96-6e25-4273-a3f6-4f65df6b196f",
+       "name":"Sophianum",
+       "url":"https://sophianum.magister.net"
+    },
+    {
+       "id":"0b21d7a8-5d4f-4345-8e13-b6c0c92e77d4",
+       "name":"Trevianum Scholengroep",
+       "url":"https://trevianum.magister.net"
+    },
+    {
+       "id":"d0959acc-4250-4fe0-8431-eb0dd223928b",
+       "name":"Tobiasschool",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"a86d3006-5e8b-4831-abff-159608898f27",
+       "name":"Mollercollege",
+       "url":"https://mollerlyceum.magister.net"
+    },
+    {
+       "id":"e7251c8f-b64c-4fc2-afb4-b74c38cd9f7f",
+       "name":"Mollerlyceum",
+       "url":"https://mollerlyceum.magister.net"
+    },
+    {
+       "id":"96d82611-d609-45fc-b144-ec05456cc8d6",
+       "name":"VSO Hendrik Mol",
+       "url":"https://hendrikmol.magister.net"
+    },
+    {
+       "id":"6a0a5816-c571-4414-8c12-662b5a6bb541",
+       "name":"BC Broekhin Roermond",
+       "url":"https://broekhinrm.magister.net"
+    },
+    {
+       "id":"ee3d07f2-6feb-40dd-88ed-2e9680372d22",
+       "name":"De Zwengel - Helmond",
+       "url":"https://zwengel.magister.net"
+    },
+    {
+       "id":"040def93-346a-4a85-988b-81da1b52342c",
+       "name":"Dongemond college",
+       "url":"https://dongemond.magister.net"
+    },
+    {
+       "id":"cca0abe3-08cc-4947-a640-52574636d1ad",
+       "name":"Mondial College",
+       "url":"https://mondial.magister.net"
+    },
+    {
+       "id":"fad59627-eb1a-4be2-a1d7-90c39703319f",
+       "name":"Niekee Roermond",
+       "url":"https://niekee.magister.net"
+    },
+    {
+       "id":"bbd948ec-6569-47b1-bdad-55440dea0233",
+       "name":"OMO Scholengroep Helmond",
+       "url":"https://helmond.magister.net"
+    },
+    {
+       "id":"1cc009f8-c81c-4e2c-8895-5644be601471",
+       "name":"Simon van Hasselt",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"f4713db3-c41a-465f-81c4-c2d66d1b143a",
+       "name":"Fontys Hogescholen",
+       "url":"https://fontys.magister.net"
+    },
+    {
+       "id":"206ccc93-0c4e-4405-bc8a-edff2b524971",
+       "name":"OMO SG Tongerlo",
+       "url":"https://sgtongerlo.magister.net"
+    },
+    {
+       "id":"8808005e-b618-479d-a6e8-a33e0dd682ec",
+       "name":"OMO SG Tongerlo Da Vinci College",
+       "url":"https://sgtongerlo.magister.net"
+    },
+    {
+       "id":"723e435c-39e9-4457-8244-125ca495d66b",
+       "name":"OMO SG Tongerlo Gertrudiscollege",
+       "url":"https://sgtongerlo.magister.net"
+    },
+    {
+       "id":"15fc4cdb-bd48-430f-8979-435bb2f3e462",
+       "name":"OMO SG Tongerlo Norbertuscollege",
+       "url":"https://sgtongerlo.magister.net"
+    },
+    {
+       "id":"68b4f5dc-0f96-4c75-a71e-c3d0bb340271",
+       "name":"Morgen College",
+       "url":"https://morgencollege.magister.net"
+    },
+    {
+       "id":"73bd0f7a-a20d-4b89-9c34-518653d96bb6",
+       "name":"Winford B.V.",
+       "url":"https://winford.magister.net"
+    },
+    {
+       "id":"979d0a1b-19e3-45a9-9e12-d85015b7b6e9",
+       "name":"Koninklijk Conservatorium",
+       "url":"https://svjt.magister.net"
+    },
+    {
+       "id":"18a74722-4af2-466f-97ae-993423731384",
+       "name":"Scholengroep Gelders Moza?ek",
+       "url":"https://geldersmozaiek.magister.net"
+    },
+    {
+       "id":"f9ee54c5-da92-4498-ae67-8709c855ff48",
+       "name":"Kempenhorst College",
+       "url":"https://vobo.magister.net"
+    },
+    {
+       "id":"8e804e3c-7c51-451b-b02b-c55d10e217a2",
+       "name":"Capellenborg Wijhe",
+       "url":"https://capellen.magister.net"
+    },
+    {
+       "id":"649077c4-3e9e-40d6-9ff2-e94fe7c23008",
+       "name":"Van der Capellen SG",
+       "url":"https://capellen.magister.net"
+    },
+    {
+       "id":"a2b48244-d84a-4ff4-b474-bf62226de1e6",
+       "name":"Willem de Zwijger College Papendrecht",
+       "url":"https://willemdezwijger.magister.net"
+    },
+    {
+       "id":"3487daac-54d1-437e-83ec-aac9eb99e807",
+       "name":"Vrijeschool Zutphen",
+       "url":"https://vsz.magister.net"
+    },
+    {
+       "id":"c2a93c07-696c-4e00-8bfa-b4a4539ae4ca",
+       "name":"De Apollo",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"81c6a3c6-a0cf-4869-be40-387f189cd45a",
+       "name":"Olympus College",
+       "url":"https://olympus.magister.net"
+    },
+    {
+       "id":"0cc2f737-456b-4dc2-93cd-c4469b29ec8e",
+       "name":"ISG Arcus",
+       "url":"https://arcus.magister.net"
+    },
+    {
+       "id":"ac2f6691-8a14-453c-bb6b-6d734ffed510",
+       "name":"ISG Arcus",
+       "url":"https://svol.magister.net"
+    },
+    {
+       "id":"1d461518-7c90-4b8f-a26b-9d158ca6964b",
+       "name":"Parcival College",
+       "url":"https://pcg.magister.net"
+    },
+    {
+       "id":"00e9b513-4d40-4459-a4c4-702f7c333d7e",
+       "name":"Parcival College Groningen",
+       "url":"https://pcg.magister.net"
+    },
+    {
+       "id":"337159d2-56a4-403e-944f-ed1d37752988",
+       "name":"Lennard van Ekris",
+       "url":"https://lennard.magister.net"
+    },
+    {
+       "id":"0d63434f-75ea-421a-9e12-82355c12633b",
+       "name":"Leonardo College",
+       "url":"https://davinci.magister.net"
+    },
+    {
+       "id":"b9bac2b0-f691-47b6-abe3-eea3de134e61",
+       "name":"SG Leonardo Da Vinci",
+       "url":"https://davinci.magister.net"
+    },
+    {
+       "id":"2b94d8ae-1899-4403-ab2e-e468556024b6",
+       "name":"Willem de Zwijger College Hardinxveld-Giessendam",
+       "url":"https://willemdezwijger.magister.net"
+    },
+    {
+       "id":"c6526755-64c7-413c-81c3-bb500e0290d9",
+       "name":"CSG Jan Arentsz",
+       "url":"https://ja.magister.net"
+    },
+    {
+       "id":"3d2aec09-cc2d-4d35-a43f-29bf554117ec",
+       "name":"Edudelta Onderwijsgroep Barendrecht",
+       "url":"https://edudelta.magister.net"
+    },
+    {
+       "id":"aae4f5ac-f735-4456-b59c-639cea7a98f0",
+       "name":"Harens Lyceum",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"0244d14b-3987-4105-899f-71958774bc18",
+       "name":"Keizer Karel College",
+       "url":"https://keizerkarel.magister.net"
+    },
+    {
+       "id":"b6073e08-a8fe-4065-8d1e-b104f51fa560",
+       "name":"Varendonck-College",
+       "url":"https://varendonck.magister.net"
+    },
+    {
+       "id":"b2967686-8938-47c4-aec5-a98a96aa5f5a",
+       "name":"CSG Het Streek",
+       "url":"https://hetstreek.magister.net"
+    },
+    {
+       "id":"4e17ab2d-ed90-4f7b-857d-5c4872c2ed90",
+       "name":"De Utrechtse School",
+       "url":"https://utrechtse.magister.net"
+    },
+    {
+       "id":"ced75dff-205b-4035-927a-9925eb5f1e74",
+       "name":"OPDC Utrecht",
+       "url":"https://utrechtse.magister.net"
+    },
+    {
+       "id":"0d612995-f36d-400f-9352-048ccf5470c3",
+       "name":"Gerrit Komrij College",
+       "url":"https://gerritkomrijcollege.magister.net"
+    },
+    {
+       "id":"494867aa-9e8c-4f71-8d74-6ec4262ae416",
+       "name":"CS Vincent van Gogh Lariks",
+       "url":"https://csvvg.magister.net"
+    },
+    {
+       "id":"32b7e0f3-abe0-4715-81c6-b73355259133",
+       "name":"'t Atrium",
+       "url":"https://atrium.magister.net"
+    },
+    {
+       "id":"93d75805-e0e2-4929-b6bd-ae933f21885d",
+       "name":"Beatrix College",
+       "url":"https://beatrix.magister.net"
+    },
+    {
+       "id":"0d942f8a-94c8-4a6c-817c-e718d843fc1a",
+       "name":"Het Atrium",
+       "url":"https://hetatrium.magister.net"
+    },
+    {
+       "id":"0bb904b4-6dbf-4fa3-86b6-049723f49f13",
+       "name":"Trivium College",
+       "url":"https://triviumcollege.magister.net"
+    },
+    {
+       "id":"ac73e89b-3094-405d-8d6f-f46c558ebf78",
+       "name":"CSG Groene Hart Leerpark",
+       "url":"https://groenehart.magister.net"
+    },
+    {
+       "id":"b41e44db-f58b-4577-871c-7a5cdd71c4c1",
+       "name":"Zuiderpark",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"77218239-568a-42ba-9e15-ddf56b62a93d",
+       "name":"Carolus Clusius College",
+       "url":"https://landstedevo.magister.net"
+    },
+    {
+       "id":"c709675a-27d9-470b-bd6a-f410555397d1",
+       "name":"Carré College",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"06dfa70b-8715-4d1c-8b3a-3e7454e271cb",
+       "name":"CSG Groene Hart",
+       "url":"https://groenehart.magister.net"
+    },
+    {
+       "id":"f8b61b7b-4668-46ce-8d22-a668d8561a00",
+       "name":"CSG Groene Hart Lyceum",
+       "url":"https://groenehart.magister.net"
+    },
+    {
+       "id":"a71e2c74-42d1-4d26-833a-275f2fd2019c",
+       "name":"CSG Groene Hart Rijnwoude",
+       "url":"https://groenehart.magister.net"
+    },
+    {
+       "id":"edd2188b-b2f2-45bd-a840-813eecc0a26d",
+       "name":"Petrus Dondersschool",
+       "url":"https://petrusdonders.magister.net"
+    },
+    {
+       "id":"dcaecb76-1784-4ec2-8cc3-f2de542f73db",
+       "name":"CVO Zuid-West Fryslan",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"cb510dc5-a9fe-4168-b456-959400be4ed3",
+       "name":"Vereniging voor CVO in Noord Fryslan",
+       "url":"https://cvo-nf.magister.net"
+    },
+    {
+       "id":"82ecd09e-1ef4-44ef-9c5a-7cec96d02e1c",
+       "name":"MSA",
+       "url":"https://msa.magister.net"
+    },
+    {
+       "id":"ba771201-9c5a-4e0f-a1c1-6ce9be914f27",
+       "name":"MSA IVKO",
+       "url":"https://msa.magister.net"
+    },
+    {
+       "id":"9bf2ef4f-e31a-4543-a2e6-ab08dfc82785",
+       "name":"Pascal College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"cc0e833d-c947-4882-89bb-8aef379cba3b",
+       "name":"Pascal Zuid",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"e33836bc-1d8a-4a38-8320-cd29b79b1aa6",
+       "name":"CSG Het Noordik Vroomshoop",
+       "url":"https://noordik.magister.net"
+    },
+    {
+       "id":"a33b049a-c00b-42b6-9760-91ae36e2abc2",
+       "name":"Erasmus College",
+       "url":"https://erasmus.magister.net"
+    },
+    {
+       "id":"8ca8e7f4-18e6-4e1f-ad93-e97e6b7c5f2c",
+       "name":"Erasmus VO",
+       "url":"https://erasmusvo.magister.net"
+    },
+    {
+       "id":"d2217124-48be-4b40-b4d9-28f0b1ae8e2c",
+       "name":"Het Erasmus",
+       "url":"https://osgerasmus.magister.net"
+    },
+    {
+       "id":"a9ef19a9-928c-4a98-bd4a-1811d7b9f8cf",
+       "name":"Chr. College Nassau-Veluwe",
+       "url":"https://ccnv.magister.net"
+    },
+    {
+       "id":"ebd9acaf-e1cc-4b8a-8ae3-8a34177ed717",
+       "name":"De Nassau SG",
+       "url":"https://denassau.magister.net"
+    },
+    {
+       "id":"5250039f-3652-4f77-afce-f7f05b3b5db7",
+       "name":"Het Passer College",
+       "url":"https://piloot.magister.net"
+    },
+    {
+       "id":"8f78a0d6-f1cc-4701-b4e6-7d5f0d35abcb",
+       "name":"Vox-klassen",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"2114af69-125e-4a3d-a37b-e695155bf2c5",
+       "name":"Esloo Onderwijsgroep College St. Paul",
+       "url":"https://esloo.magister.net"
+    },
+    {
+       "id":"ceb40f1c-4cba-4e0f-8b69-8bc7bb445c50",
+       "name":"Esprit scholen Mundus college",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"dc9ff3e4-0156-46e9-8728-5b3216ecb0fc",
+       "name":"Kaj Munk College",
+       "url":"https://kajmunk.magister.net"
+    },
+    {
+       "id":"daab58f9-c18f-4e98-b790-67862abef366",
+       "name":"Munnikenheide College",
+       "url":"https://munnikenheide.magister.net"
+    },
+    {
+       "id":"7de8fa16-6d52-4c4e-b9d7-21f318a9f365",
+       "name":"Futura College",
+       "url":"https://futura.magister.net"
+    },
+    {
+       "id":"dcc30e19-9385-4cc7-8fb9-fcdf01073ab8",
+       "name":"Hubertus & Berkhoff",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"d8534a38-e5ec-4227-8cf3-981701095919",
+       "name":"Sint Vituscollege",
+       "url":"https://sv.magister.net"
+    },
+    {
+       "id":"12a2b528-9de5-4dab-8fea-0272e14e476a",
+       "name":"Over Betuwe College",
+       "url":"https://obc.magister.net"
+    },
+    {
+       "id":"70933987-2855-4751-8606-1223633aa4d0",
+       "name":"Over Betuwe College Elst",
+       "url":"https://obc.magister.net"
+    },
+    {
+       "id":"cf36f424-9aaa-4b73-8de6-ddafa05bb214",
+       "name":"Over Betuwe College Huissen",
+       "url":"https://obc.magister.net"
+    },
+    {
+       "id":"2aac5c91-9560-4c16-a420-f83dca40fd31",
+       "name":"Over Betuwe College Junior",
+       "url":"https://obc.magister.net"
+    },
+    {
+       "id":"6e4ea452-5557-4a67-95b9-5abd6873d200",
+       "name":"Esdal College Klazienaveen",
+       "url":"https://esdal.magister.net"
+    },
+    {
+       "id":"2f91f9cc-fe69-4d88-823b-edcc66eda307",
+       "name":"s Gravendreef College",
+       "url":"https://sgravendreef.magister.net"
+    },
+    {
+       "id":"f293ad1f-28e3-460b-a731-ce5552549d5d",
+       "name":"Gerrit Rietveld College",
+       "url":"https://grc.magister.net"
+    },
+    {
+       "id":"001e416a-094c-4bfc-bfeb-695de6c89cca",
+       "name":"Rietveld Lyceum",
+       "url":"https://rietveldlyceum.magister.net"
+    },
+    {
+       "id":"0740da9c-e2c5-407e-be8e-3d3fa2a9522f",
+       "name":"Avicenna College",
+       "url":"https://avicennacollege.magister.net"
+    },
+    {
+       "id":"9de732c3-1557-4501-9608-2a29ba9e7773",
+       "name":"De nieuwe Havo",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"647d0872-b329-43fe-9654-63baea419d9b",
+       "name":"Havo De Hof",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"f1c10adf-936d-408a-9264-538411093117",
+       "name":"Mytylschool De Brug",
+       "url":"https://debrug.magister.net"
+    },
+    {
+       "id":"059bc07c-f470-4856-80a1-201b74f7fda4",
+       "name":"Chr. College Groevenbeek",
+       "url":"https://groevenbeek.magister.net"
+    },
+    {
+       "id":"c3d65b08-dd4f-4499-aae0-f0aaf0c84208",
+       "name":"Dr.-Knippenbergcollege",
+       "url":"https://helmond.magister.net"
+    },
+    {
+       "id":"8c3ca385-02fa-4ed6-9012-c912eeb45616",
+       "name":"Groevenbeek",
+       "url":"https://groevenbeek.magister.net"
+    },
+    {
+       "id":"f5796a89-0651-45b8-9142-2f6026edc20c",
+       "name":"Leeuwenborgh Opleidingen",
+       "url":"https://leeuwenborgh.magister.net"
+    },
+    {
+       "id":"5f749c16-04ac-4327-abc9-6a1220c39e87",
+       "name":"Rodenborch-College",
+       "url":"https://rodenborch.magister.net"
+    },
+    {
+       "id":"4f100fb9-4dea-48f2-8e5e-728bc35c56ee",
+       "name":"Nuborgh College",
+       "url":"https://nuborgh.magister.net"
+    },
+    {
+       "id":"5a617fb3-a797-4917-a991-d99160e50d4b",
+       "name":"Segbroek College",
+       "url":"https://segbroek.magister.net"
+    },
+    {
+       "id":"be65a7b2-7278-4cb5-8ce4-b17c86f0e9bc",
+       "name":"Lyceum Ypenburg",
+       "url":"https://ypenburg.magister.net"
+    },
+    {
+       "id":"f0004ba1-1ee6-4c47-ab34-aacdaeab6aef",
+       "name":"Vespucci College",
+       "url":"https://vespucci.magister.net"
+    },
+    {
+       "id":"2a685bd6-4cab-4d51-bf48-07ac41ad6c7d",
+       "name":"CS Vincent van Gogh",
+       "url":"https://csvvg.magister.net"
+    },
+    {
+       "id":"c7b45862-663a-4cf4-a24c-0945763436b6",
+       "name":"Da Vinci College",
+       "url":"https://davinci.magister.net"
+    },
+    {
+       "id":"6fd307b1-2cdf-4c60-8c91-6c7cca08b65a",
+       "name":"Sweelinck College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"787533f3-9c0d-443d-8fcb-7729458e5807",
+       "name":"Pleincollege Nuenen",
+       "url":"https://eckart.magister.net"
+    },
+    {
+       "id":"36945aab-d70e-4881-91e7-6b4ceceef685",
+       "name":"Pleincollege Sint Joris 20AT",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"65720482-612c-4af7-b605-3959540abd15",
+       "name":"Veurs Lyceum Leidschendam",
+       "url":"https://veurslyceum.magister.net"
+    },
+    {
+       "id":"e2db576f-1d21-4569-bce1-d25047c037a5",
+       "name":"Edudelta Onderwijsgroep",
+       "url":"https://edudelta.magister.net"
+    },
+    {
+       "id":"baaced33-d38b-4bc8-9870-702d975f3081",
+       "name":"Edudelta Onderwijsgroep Goes",
+       "url":"https://edudelta.magister.net"
+    },
+    {
+       "id":"53e1140b-669a-444c-8400-368e657ab163",
+       "name":"Esloo Onderwijsgroep Corbulo College",
+       "url":"https://esloo.magister.net"
+    },
+    {
+       "id":"e44d579c-74d4-4f5a-9527-388e2a983405",
+       "name":"Linde College",
+       "url":"https://lindecollege.magister.net"
+    },
+    {
+       "id":"802aeb95-55b3-4599-86d5-4a72ee9f499a",
+       "name":"Lyceum Schondeln",
+       "url":"https://schondeln.magister.net"
+    },
+    {
+       "id":"89bb3dd7-ef5a-4130-a56e-2259c7210736",
+       "name":"Sondervick College",
+       "url":"https://sondervick.magister.net"
+    },
+    {
+       "id":"6fa8372b-500e-4e27-83d5-cdd4a82b351a",
+       "name":"Udens College",
+       "url":"https://udens.magister.net"
+    },
+    {
+       "id":"b687e831-c454-48f3-a131-f5e1fe797baf",
+       "name":"Ludger College",
+       "url":"https://ludger.magister.net"
+    },
+    {
+       "id":"cf1b89ed-0b4d-4b02-8078-ac9aedf17f5f",
+       "name":"G.K. van Hogendorp",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"73ee6f75-c640-441c-814a-cf40b9eb19ea",
+       "name":"Dendron College",
+       "url":"https://dendron.magister.net"
+    },
+    {
+       "id":"b8789ed6-7a0f-4a4b-b987-a09c4e77399a",
+       "name":"Hendrik Pierson College",
+       "url":"https://hpc.magister.net"
+    },
+    {
+       "id":"1e12ce1f-0d2d-4ebd-ba7e-549484087da2",
+       "name":"Connect College",
+       "url":"https://connectcollege.magister.net"
+    },
+    {
+       "id":"a35722ce-4741-493d-9ca4-27a2ae6a1528",
+       "name":"OSG De Hogeberg",
+       "url":"https://dehogeberg.magister.net"
+    },
+    {
+       "id":"2f07d294-b1f2-4afa-907e-ae54558d6faa",
+       "name":"RSG Lingecollege",
+       "url":"https://rsglc.magister.net"
+    },
+    {
+       "id":"c8a55e81-da7c-4f15-ac47-64c50226b40b",
+       "name":"Beekdal Lyceum",
+       "url":"https://geldersmozaiek.magister.net"
+    },
+    {
+       "id":"2504990e-8d53-495a-9dcb-53d8a5226582",
+       "name":"Heerbeeck College",
+       "url":"https://vobo.magister.net"
+    },
+    {
+       "id":"8a736391-275a-4542-8a29-06224db4e186",
+       "name":"Lyceum Bisschop Bekkers",
+       "url":"https://bisschopbekkers.magister.net"
+    },
+    {
+       "id":"c0583993-5e73-4f0c-937e-1a280ed2f388",
+       "name":"De Zwengel - Veldhoven",
+       "url":"https://zwengel.magister.net"
+    },
+    {
+       "id":"4bc592ea-f486-44bf-8717-a152ddd74a97",
+       "name":"De Zwengel - Vught",
+       "url":"https://zwengel.magister.net"
+    },
+    {
+       "id":"def97ac2-16b0-48ef-ae7d-e6fc66735169",
+       "name":"Leon van Gelder",
+       "url":"https://o2groningen.magister.net"
+    },
+    {
+       "id":"5c02e552-904b-4141-ab98-5b474626dcbb",
+       "name":"OSG Hengelo",
+       "url":"https://osghengelo.magister.net"
+    },
+    {
+       "id":"4b5fad94-1d08-49e6-9be3-2c9bdcf358a7",
+       "name":"OSG Hengelo Het Genseler",
+       "url":"https://osghengelo.magister.net"
+    },
+    {
+       "id":"6ca268ce-f32e-4fe3-b6ed-7e1fcea003ce",
+       "name":"OSG Hengelo Het Gilde College",
+       "url":"https://osghengelo.magister.net"
+    },
+    {
+       "id":"df6f9926-74d7-459c-ba3c-84212ec184e5",
+       "name":"Sprengeloo",
+       "url":"https://sprengeloo.magister.net"
+    },
+    {
+       "id":"ec86ab42-7628-489d-931c-7fd7e0788431",
+       "name":"Helicon Opleidingen",
+       "url":"https://helicon.magister.net"
+    },
+    {
+       "id":"84821359-45fd-4646-947d-69a72b9ff156",
+       "name":"Huygens College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"9dc68a69-008c-458c-9168-de08bbaf76bc",
+       "name":"IVA Driebergen",
+       "url":"https://ivadriebergen.magister.net"
+    },
+    {
+       "id":"149acaba-1951-47be-9282-8fde19984a28",
+       "name":"Luzac Opleidingen",
+       "url":"https://luzac.magister.net"
+    },
+    {
+       "id":"8dda3bd3-a226-44b8-a914-a1db04a6a974",
+       "name":"OMO Scholengroep Bergen op Zoom e.o.",
+       "url":"https://mollerlyceum.magister.net"
+    },
+    {
+       "id":"48fe14c9-f349-4d5c-a986-deab0ed55aed",
+       "name":"Van Kinsbergen college Elburg",
+       "url":"https://capellen.magister.net"
+    },
+    {
+       "id":"d5932201-e45b-499b-a722-81ef29ce335b",
+       "name":"Berechja College",
+       "url":"https://berechja.magister.net"
+    },
+    {
+       "id":"efee506e-0445-4c0c-b458-d8dfabe18df3",
+       "name":"Berger SG",
+       "url":"https://bsg.magister.net"
+    },
+    {
+       "id":"85a1d6c6-78e2-49da-8f09-fd48c41ae3e7",
+       "name":"Bredero Beroepscollege",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"a863f4bc-ed23-4b0d-9e35-510ee9b0873a",
+       "name":"Herbert Vissers College",
+       "url":"https://hvc.magister.net"
+    },
+    {
+       "id":"7daadc1b-b831-41d8-996a-22a0156c2328",
+       "name":"Rosa Beroepscollege",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"7b0416da-3b58-431b-ae4e-5b0b8efb3e2f",
+       "name":"Vak College Hillegersberg",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"7e53979b-7a65-4dd8-bc17-e09b6c23c367",
+       "name":"CSG Willem de Zwijger",
+       "url":"https://zwijger.magister.net"
+    },
+    {
+       "id":"a5fed261-e1a7-44ee-b2fc-455943563cc0",
+       "name":"CSG Willem de Zwijger Schoonhoven",
+       "url":"https://zwijger.magister.net"
+    },
+    {
+       "id":"99abe46a-67a7-44b7-9241-a323dec24905",
+       "name":"Esdal College Borger",
+       "url":"https://esdal.magister.net"
+    },
+    {
+       "id":"6c18a296-8947-4e3a-a3f7-68f0ee37b307",
+       "name":"Gerrit van der Veen College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"ad61e49e-425c-457b-986f-4799bf3f5081",
+       "name":"GSG 't Schylger Jouw",
+       "url":"https://schylgerjouw.magister.net"
+    },
+    {
+       "id":"189b24ff-3551-4cb3-9071-ebfef2d5fd75",
+       "name":"RSG Slingerbos",
+       "url":"https://rsgslingerbos.magister.net"
+    },
+    {
+       "id":"44baacb7-c2c7-44dc-94fe-1cb0ca909ad2",
+       "name":"Willem de Zwijger College",
+       "url":"https://wdz.magister.net"
+    },
+    {
+       "id":"cbe21e0d-ee65-4e3a-a7e9-deec9a96d6a6",
+       "name":"Willem de Zwijger College",
+       "url":"https://willemdezwijger.magister.net"
+    },
+    {
+       "id":"72b4628e-ecdc-4483-89a8-4a46649ba5b3",
+       "name":"Willem de Zwijger College Bussum",
+       "url":"https://wdz.magister.net"
+    },
+    {
+       "id":"6c2a0d1e-8002-489e-9913-b55381fd6bf8",
+       "name":"VO Best Oirschot",
+       "url":"https://vobo.magister.net"
+    },
+    {
+       "id":"96c727d7-20f1-40db-b351-ae2fdd576e0f",
+       "name":"SG Groenewoud",
+       "url":"https://groenewoud.magister.net"
+    },
+    {
+       "id":"2a1824ce-baf7-455c-be2b-9a5274b2aa2f",
+       "name":"CSG Eekeringe",
+       "url":"https://eekeringe.magister.net"
+    },
+    {
+       "id":"c5a0035c-7755-47e3-b4c8-c47ef098f7c4",
+       "name":"ORS Lek en Linge",
+       "url":"https://lekenlinge.magister.net"
+    },
+    {
+       "id":"ca245b0c-8b78-45aa-9f38-f7b06b83646c",
+       "name":"Slinge",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"cac81e95-0442-44c4-a3ff-dfc9b00c542f",
+       "name":"OSG Hugo de Groot",
+       "url":"https://boor.magister.net"
+    },
+    {
+       "id":"8b52363e-fc50-4810-b129-bbecd1937dbf",
+       "name":"Esprit Scholengroep",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"171e39f2-2890-4c47-ae9c-88fa71b9aaf0",
+       "name":"Johan de Witt Scholengroep",
+       "url":"https://jdw.magister.net"
+    },
+    {
+       "id":"b9bb6d13-92e3-4060-9a30-7407528a52ce",
+       "name":"Scholengroep Het Plein",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"ead758f9-404e-4c5c-a468-f4ded6988076",
+       "name":"Prof. Dr. Gunningschool",
+       "url":"https://18ec.magister.net"
+    },
+    {
+       "id":"0c791591-7853-4c2c-a3b5-4be1fbf32ea8",
+       "name":"Coornhert Lyceum",
+       "url":"https://20RF.magister.net"
+    },
+    {
+       "id":"22f90a43-2f2c-45e7-850a-59257dc5b276",
+       "name":"Het Schoonhovens College",
+       "url":"https://schoonhovens.magister.net"
+    },
+    {
+       "id":"dddaf92e-ac5b-451d-88dc-4e1674760874",
+       "name":"2College De Nieuwste School",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"c73b1016-40b0-49e3-a5f1-0b0449064056",
+       "name":"De Nieuwste School",
+       "url":"https://denieuwsteschool.magister.net"
+    },
+    {
+       "id":"72c7d0ac-bed5-4ac0-a36f-b736309eda5f",
+       "name":"SG Het Nieuwe Lyceum",
+       "url":"https://nieuwelyceum.magister.net"
+    },
+    {
+       "id":"d051f37c-9467-441d-b892-3711e0aeea51",
+       "name":"De Zuiderpoort",
+       "url":"https://cvozwfryslan.magister.net"
+    },
+    {
+       "id":"ab3246a9-aa41-4a1d-bd55-4a73a3732015",
+       "name":"GSG Guido De Bres",
+       "url":"https://guido.magister.net"
+    },
+    {
+       "id":"440c052c-f754-4532-8e8a-bd27b739c8e5",
+       "name":"Hervormd Lyceum Zuid",
+       "url":"https://hlz.magister.net"
+    },
+    {
+       "id":"08102515-298a-4d2d-85b1-18f4eea9c8d1",
+       "name":"Het Zuid-West College",
+       "url":"https://sgdenhaag.magister.net"
+    },
+    {
+       "id":"c0a00bc5-b28f-456b-861e-737a67194fbf",
+       "name":"Zuiderlicht College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"9e746934-ee8e-4c4d-b370-48137a68bc76",
+       "name":"Zuiderzee College",
+       "url":"https://sovozaanstad.magister.net"
+    },
+    {
+       "id":"0493d0bd-4789-45a0-a93c-cc8685109b21",
+       "name":"Zuiderzee College",
+       "url":"https://zuiderzee-college.magister.net"
+    },
+    {
+       "id":"9bade3a2-cc0d-4994-9448-2c1731dc59fd",
+       "name":"Koning Willem I College",
+       "url":"https://vavo-kw1c.magister.net"
+    },
+    {
+       "id":"9eafe861-cbd9-4068-9085-f6712ea48b0b",
+       "name":"Koning Willem II College",
+       "url":"https://willem2.magister.net"
+    },
+    {
+       "id":"ec64d15a-c46c-4cc5-b678-5cb23f3a1de1",
+       "name":"Esprit scholen DENISE",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"adc890b6-b98b-478f-aa7a-5ea82be40a4b",
+       "name":"2College Ruiven",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"e912584f-bd25-413c-accd-0f4f2268bfe0",
+       "name":"RSG Enkhuizen",
+       "url":"https://rsgenkhuizen.magister.net"
+    },
+    {
+       "id":"91239097-b1ee-42fd-bfc3-4942502f5eeb",
+       "name":"OSG Winkler Prins",
+       "url":"https://winkler.magister.net"
+    },
+    {
+       "id":"32b9a866-2101-40ad-837c-66ce66315ce1",
+       "name":"Insula College",
+       "url":"https://insula.magister.net"
+    },
+    {
+       "id":"6bee4155-df51-4b2d-84fb-5ddec31142b4",
+       "name":"SG Sint Ursula",
+       "url":"https://ursula.magister.net"
+    },
+    {
+       "id":"236a7d4d-f6a6-4cd8-820a-7a968d7e81a1",
+       "name":"Chr. College De Populier",
+       "url":"https://depopulier.magister.net"
+    },
+    {
+       "id":"0515ef40-4ffa-4feb-a2d9-b16d113bf576",
+       "name":"Globe College",
+       "url":"https://globe.magister.net"
+    },
+    {
+       "id":"a5f43cd8-a2b5-41f8-bb28-cc77cf136801",
+       "name":"Sint Odulphuslyceum",
+       "url":"https://odulphus.magister.net"
+    },
+    {
+       "id":"b8a58060-deda-4623-9dd6-f0880fd25477",
+       "name":"Het Goese Lyceum",
+       "url":"https://pontessg.magister.net"
+    },
+    {
+       "id":"5037456a-cdc4-428d-b772-83998603df86",
+       "name":"Bouwens van der Boije College",
+       "url":"https://bbc.magister.net"
+    },
+    {
+       "id":"b51ffc05-902b-4ec9-892f-292f6e616c91",
+       "name":"Bouwens van der Boijecollege",
+       "url":"https://hetbouwens.magister.net"
+    },
+    {
+       "id":"9ff70fd8-c173-4bbd-ac83-fda0aa5220fb",
+       "name":"CVO 't Gooi",
+       "url":"https://cvotgooi.magister.net"
+    },
+    {
+       "id":"80709613-a436-4646-98d5-38a4ef808444",
+       "name":"Chr. College de Noordgouw",
+       "url":"https://noordgouw.magister.net"
+    },
+    {
+       "id":"15d5118f-5899-47e4-aff7-6289da9b7240",
+       "name":"Chr. College de Noordgouw Heerde",
+       "url":"https://noordgouw.magister.net"
+    },
+    {
+       "id":"2bc665e5-a89b-48ec-b834-b04bb41afef8",
+       "name":"CSG Het Noordik",
+       "url":"https://noordik.magister.net"
+    },
+    {
+       "id":"a1548117-4f5c-4992-b18b-094415e1b149",
+       "name":"CSG Het Noordik Vriezenveen",
+       "url":"https://noordik.magister.net"
+    },
+    {
+       "id":"b8b6d09e-25f9-41af-9ab8-6a4cdf2d15f6",
+       "name":"Noorderlicht",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"6747275b-080e-4753-8242-633f02fc19ea",
+       "name":"Noorderpoort LBS",
+       "url":"https://noorderpoortlbs.magister.net"
+    },
+    {
+       "id":"8a853272-0b93-4e15-bf59-e79a4700613e",
+       "name":"OSG Schoonoord",
+       "url":"https://osgschoonoord.magister.net"
+    },
+    {
+       "id":"458cacd4-40b8-4d77-8a25-ece1a0e8cfe6",
+       "name":"Veenoord",
+       "url":"https://lmc-vo.magister.net"
+    },
+    {
+       "id":"200e69f8-11e3-438a-8503-c5ee2d8541d4",
+       "name":"BOOR",
+       "url":"https://boor.magister.net"
+    },
+    {
+       "id":"57537798-2274-4db7-bf5b-78f3b57f6d8e",
+       "name":"St-Gregorius College",
+       "url":"https://gregorius.magister.net"
+    },
+    {
+       "id":"46d166ee-3215-4e84-86b6-d2df8cc62021",
+       "name":"Don Bosco College",
+       "url":"https://donbosco.magister.net"
+    },
+    {
+       "id":"6ff3e333-7e0b-441b-bf11-dd908ace51cc",
+       "name":"Jeroen Bosch College",
+       "url":"https://jeroenbosch.magister.net"
+    },
+    {
+       "id":"3cf985f2-2c65-4a2e-b77d-f2f712fae560",
+       "name":"ROC Nova College",
+       "url":"https://novacollege.magister.net"
+    },
+    {
+       "id":"9b810649-3a21-4188-be4b-8b23d8e128e6",
+       "name":"Nuovo",
+       "url":"https://nuovo.magister.net"
+    },
+    {
+       "id":"5694ac61-d863-46a3-a6d8-4319c317112a",
+       "name":"Spinoza Lyceum",
+       "url":"https://spinoza.magister.net"
+    },
+    {
+       "id":"b830812c-019d-49fa-af73-eb3e3c5071fc",
+       "name":"KSG De Breul",
+       "url":"https://debreul.magister.net"
+    },
+    {
+       "id":"bf65f7a2-52b5-4e27-9060-dfdc82e8dae4",
+       "name":"Cburg College",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"eac3ded8-611a-4211-8339-755c28cdc1dd",
+       "name":"IJburg College",
+       "url":"https://ijburg.magister.net"
+    },
+    {
+       "id":"0ca58f5c-c35f-46ab-b9c3-69406d41fd80",
+       "name":"Veurs Voorburg",
+       "url":"https://veursvoorburg.magister.net"
+    },
+    {
+       "id":"0f64bd29-4a0b-49ef-b1dd-5c3c825aee92",
+       "name":"BC Broekhin",
+       "url":"https://broekhinsw.magister.net"
+    },
+    {
+       "id":"24e69637-22fd-43e6-8793-29ce702e1a9e",
+       "name":"BC Broekhin Reuver",
+       "url":"https://broekhinsw.magister.net"
+    },
+    {
+       "id":"a31f6ef4-817d-4ecc-b977-fbec2047d0cf",
+       "name":"RSG Broklede",
+       "url":"https://broklede.magister.net"
+    },
+    {
+       "id":"5e053ec5-9c0f-41a8-a6b7-6f5289bbc8cb",
+       "name":"Veurs Lyceum",
+       "url":"https://veurslyceum.magister.net"
+    },
+    {
+       "id":"024f8f7c-033e-4461-9309-e0d8154200e5",
+       "name":"Pleinschool Helder",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"1c189de8-92b4-4e41-8ab7-9216ec97716a",
+       "name":"Vinse School",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"728ab8ec-481f-4a4f-81e8-05078a2f81fa",
+       "name":"NSG",
+       "url":"https://groenewoud.magister.net"
+    },
+    {
+       "id":"8d773d1b-85c0-48cb-995c-0fe4689c4d3c",
+       "name":"Lorentz Lyceum",
+       "url":"https://20tz.magister.net"
+    },
+    {
+       "id":"a801d825-3ce9-4736-9b2e-bc60e8a1f4b1",
+       "name":"SGVVS",
+       "url":"https://sgvvs.magister.net"
+    },
+    {
+       "id":"fd26bfd8-58a0-44f1-a7d2-688c39807761",
+       "name":"Dorenweerd College",
+       "url":"https://dorenweerd.magister.net"
+    },
+    {
+       "id":"f02472e8-9d64-4f8e-a082-210c4b5cac3b",
+       "name":"Onze Lieve Vrouwelyceum",
+       "url":"https://olvbreda.magister.net"
+    },
+    {
+       "id":"3657aeab-8392-4c3e-979d-3fb4b083b066",
+       "name":"RSG NO Veluwe",
+       "url":"https://rsgno.magister.net"
+    },
+    {
+       "id":"da635a05-70f7-4925-9ed9-9e115b5cc15d",
+       "name":"OSG Sevenwolden",
+       "url":"https://sevenwolden.magister.net"
+    },
+    {
+       "id":"0e844633-c899-47a0-a287-d235795493e1",
+       "name":"Zuyderzee Lyceum",
+       "url":"https://zuyderzee.magister.net"
+    },
+    {
+       "id":"78639db9-55ac-4fea-a8af-77088c3d068a",
+       "name":"Luzac",
+       "url":"https://luzac.magister.net"
+    },
+    {
+       "id":"213bebaf-e25f-4531-9261-223793dd0462",
+       "name":"De School van HIP",
+       "url":"https://deschoolvanhip.magister.net"
+    },
+    {
+       "id":"237f4f66-60f1-4b20-9cfd-1f5689564d15",
+       "name":"Philips van Horne Sg.",
+       "url":"https://weert.magister.net"
+    },
+    {
+       "id":"3638120c-990c-4848-b027-e4f1264c6267",
+       "name":"Oscar",
+       "url":"https://oscar.magister.net"
+    },
+    {
+       "id":"7a21d0d4-0f44-40da-8764-caae11f1d352",
+       "name":"Produs",
+       "url":"https://symbion.magister.net"
+    },
+    {
+       "id":"a8341b2d-45dc-4440-8dc6-f80a489c3c76",
+       "name":"OdyZee College",
+       "url":"https://odyzee.magister.net"
+    },
+    {
+       "id":"79e9881a-71bd-4bf3-8275-d0e6656f078a",
+       "name":"RSG Het Rhedens",
+       "url":"https://rhedens.magister.net"
+    },
+    {
+       "id":"cda17626-32d1-490d-b9a6-21a8f55cca80",
+       "name":"RSG Het Rhedens Dieren",
+       "url":"https://rhedens.magister.net"
+    },
+    {
+       "id":"52c83f4a-e173-4e41-aae0-20997f81fd95",
+       "name":"Vecht-College",
+       "url":"https://vecht-college.magister.net"
+    },
+    {
+       "id":"7046543b-6b81-4b25-b40e-47a593fc6251",
+       "name":"helpdesk",
+       "url":"https://helpdesk.magister.net"
+    },
+    {
+       "id":"6522cab9-5066-4afc-9161-c974cbb3b961",
+       "name":"Vellesan College",
+       "url":"https://20EK.magister.net"
+    },
+    {
+       "id":"1dbdf8f2-3445-4d4a-82e4-89f489381bb9",
+       "name":"Wildveld",
+       "url":"https://wildveld.magister.net"
+    },
+    {
+       "id":"9a6a2d09-d643-4ec2-9fc6-6b96089117da",
+       "name":"Hervormd Lyceum West",
+       "url":"https://hlw.magister.net"
+    },
+    {
+       "id":"02b1226b-c890-4e05-a540-b44ec05ea075",
+       "name":"Het College Vos",
+       "url":"https://collegevos.magister.net"
+    },
+    {
+       "id":"491129f8-5b83-441b-8e37-158cff6e3aed",
+       "name":"LVO Weert Het College",
+       "url":"https://weert.magister.net"
+    },
+    {
+       "id":"b763053e-85fa-4758-89eb-6f9f44a52845",
+       "name":"Over-Y College",
+       "url":"https://zaam.magister.net"
+    },
+    {
+       "id":"6c953e5e-c0ad-4ad2-a778-f0a401807aa9",
+       "name":"Hyperion Lyceum",
+       "url":"https://vova.magister.net"
+    },
+    {
+       "id":"b8835031-d25b-4784-aa17-8ffc4391a565",
+       "name":"Ir. Lely Lyceum",
+       "url":"https://lelylyceum.magister.net"
+    },
+    {
+       "id":"33c662a5-f310-48c4-9bd7-f2dfb49ab619",
+       "name":"Lyceum Elst",
+       "url":"https://20tz.magister.net"
+    },
+    {
+       "id":"1eb967e6-30af-4798-841f-4d12aac86f00",
+       "name":"Orion Lyceum",
+       "url":"https://orion.magister.net"
+    },
+    {
+       "id":"96fe661b-8d45-4535-b932-740b051a57b8",
+       "name":"Visser 't Hooft Lyceum",
+       "url":"https://vhl.magister.net"
+    },
+    {
+       "id":"f9d251b5-e25a-4ea7-91a3-0a9cdf2ec0d3",
+       "name":"OSG Schiedam",
+       "url":"https://mavoschravenlant.magister.net"
+    },
+    {
+       "id":"32c75544-37d0-40e2-9540-17e6942f5134",
+       "name":"Esprit Scholen",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"58a59918-3941-403e-ba82-856324abb720",
+       "name":"Esprit Scholen Wissel",
+       "url":"https://esprit.magister.net"
+    },
+    {
+       "id":"a121fffd-f1e9-4401-a4d7-62a8e4521074",
+       "name":"J.C. Pleysierschool",
+       "url":"https://pleysier.magister.net"
+    },
+    {
+       "id":"cfe7c617-73ec-4051-b174-33a3bfad6a39",
+       "name":"Stg Vrije Scholen voor VO N-H",
+       "url":"https://vsvonh.magister.net"
+    },
+    {
+       "id":"ffefe0f7-23bf-471f-8e99-58ada0229921",
+       "name":"2College",
+       "url":"https://2college.magister.net"
+    },
+    {
+       "id":"8ac65471-c89a-4b9d-b036-1ce38f40860b",
+       "name":"Corderius College",
+       "url":"https://corderius.magister.net"
+    },
+    {
+       "id":"9a3b0eec-e56a-4717-9401-f9f561454b58",
+       "name":"Ds. Pierson College",
+       "url":"https://dspierson.magister.net"
+    },
+    {
+       "id":"f9787cbf-3353-4b2a-a6db-83d12810fc8b",
+       "name":"Elde College",
+       "url":"https://elde.magister.net"
+    },
+    {
+       "id":"f99e4f21-d01a-4962-be94-74920c8079cb",
+       "name":"Esdal College",
+       "url":"https://esdal.magister.net"
+    },
+    {
+       "id":"97fb7348-be13-4718-9e56-a011be3bfcc1",
+       "name":"ID College",
+       "url":"https://idcollege.magister.net"
+    },
+    {
+       "id":"7601b052-6682-4a47-bf96-da62344e814e",
+       "name":"IJsselcollege",
+       "url":"https://ijsselcollege.magister.net"
+    },
+    {
+       "id":"57e9e1db-31dc-4e6c-81d0-52cd03ee07dd",
+       "name":"MY college",
+       "url":"https://mycollege.magister.net"
+    },
+    {
+       "id":"660dad93-11f3-4903-9dbc-c28953e1b034",
+       "name":"Prisma College",
+       "url":"https://prisma.magister.net"
+    },
+    {
+       "id":"63cc8518-ee1f-4028-94a3-9772cb5351f6",
+       "name":"Reeshof College",
+       "url":"https://reeshof.magister.net"
+    },
+    {
+       "id":"6e3a8ec3-9704-4faa-80ef-f5c344b967c5",
+       "name":"Sint Joriscollege",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"555e0cf5-2921-40b1-846b-9c36d12800fb",
+       "name":"Sint-Joriscollege",
+       "url":"https://sghetplein.magister.net"
+    },
+    {
+       "id":"1ea4d503-a16e-4076-a0c4-d139ae7c7784",
+       "name":"SOMA College",
+       "url":"https://soma.magister.net"
+    },
+    {
+       "id":"62ce3b7f-823a-4b07-8918-ad67b51829db",
+       "name":"Zone.college",
+       "url":"https://zone.magister.net"
+    },
+    {
+       "id":"d61899e5-7d3a-4a7a-a78b-61b90d3f9737",
+       "name":"Zwijsen College",
+       "url":"https://zwijsen.magister.net"
+    },
+    {
+       "id":"16029482-8e80-4951-ba26-65eb5ba14ee8",
+       "name":"Zwin College",
+       "url":"https://zwin.magister.net"
+    },
+    {
+       "id":"ad80d9d8-5512-4df6-b52f-409290089193",
+       "name":"OPDCNK",
+       "url":"https://opdcnk.magister.net"
+    },
+    {
+       "id":"e640df6e-a606-4fa0-99d7-8a7a942483e2",
+       "name":"SVOL",
+       "url":"https://svol.magister.net"
+    },
+    {
+       "id":"0c24cc2f-c35f-489c-a579-2c88ad9cce7a",
+       "name":"De Piloot",
+       "url":"https://piloot.magister.net"
+    },
+    {
+       "id":"ed96d0b6-8404-4c9d-94f3-b3ba96bbef17",
+       "name":"Cor",
+       "url":"https://cor.magister.net"
+    },
+    {
+       "id":"d011a816-14e9-4f93-ae39-d001c6bff8c6",
+       "name":"LVO Weert",
+       "url":"https://weert.magister.net"
+    },
+    {
+       "id":"939b61d9-a08a-465f-a33a-bc115f6bb739",
+       "name":"De Delta",
+       "url":"https://dedelta.magister.net"
+    },
+    {
+       "id":"7823a371-72a2-4b83-823c-dc32e9da5276",
+       "name":"SWV de Delta",
+       "url":"https://dedelta.magister.net"
+    },
+    {
+       "id":"b9b8434e-d6e0-4e78-b2a4-63a56044a803",
+       "name":"De Rijzert",
+       "url":"https://rijzert.magister.net"
+    },
+    {
+       "id":"79b28397-6f90-4b92-b14c-b0c9131ecc08",
+       "name":"ISW",
+       "url":"https://isw.magister.net"
+    },
+    {
+       "id":"ccdc9d22-fc97-4527-8165-fbbb40d3b313",
+       "name":"KSE",
+       "url":"https://kse.magister.net"
+    }
+ ]
