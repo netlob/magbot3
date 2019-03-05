@@ -1,0 +1,31 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.signup-form {
+  width: auto;
+  padding-right: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.animateFade {
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  border: none !important;
+  /* margin-top: 20px !important; */
+  display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px white inset !important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    border-bottom: 1px solid #0096db !important;
+}
+input {
+  color: black !important;
+}
