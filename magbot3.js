@@ -190,9 +190,10 @@ async function purge() {
         //             }
         //         });
         //         user.log.info(`Notified user of purge!`);
-        //     } catch (err) {
-        //         user.log.error(`Error warning to-be purged user! `, err.toString())
-        //     }
+        log.info(`PURGED ${purged++} USERS!`);
+            } catch (err) {
+                user.log.error(`Error warning to-be purged user! `, err.toString())
+            }
         //     try {
         //         user.log.info(`Disabling!`)
         //         user.set('isdisabled', true);
@@ -200,8 +201,7 @@ async function purge() {
         //     } catch (err) {
         //         log.error(`MAJOR PURGE ERROR `, err);
         //     }
-        // }
-        log.info(`PURGED ${purged++} USERS!`);
+        }
     } catch (err) { log.error('Purging error! ', err); }
     const next = scheduleTime() * 20;
     log.info(`Going for next purge in ${next} millis...`);
