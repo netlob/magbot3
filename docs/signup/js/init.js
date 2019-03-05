@@ -47,7 +47,8 @@ function signInCallback(authResult) {
             console.log(this.responseText);
             if(this.responseText == 'success: user created') {
               M.toast({html: 'Succesvol geactiveerd!'})
-              success()
+              var errorModal = document.getElementById('successmodal-open');
+              errorModal.click()
             } else {
               if(this.responseText == 'success: user updated' || this.responseText == 'user already exists') {
                 setError('Succes', getError(this.responseText), '#')
@@ -86,11 +87,6 @@ function signInCallback(authResult) {
     M.toast({html: 'Error: '+authResult})
     // There was an error.
   }
-}
-
-function success() {
-  var errorModal = document.getElementById('successmodal-open');
-  errorModal.click()
 }
 
 function getError(error) {
