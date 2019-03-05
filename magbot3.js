@@ -31,11 +31,9 @@ const MagisterAuth = require('./lib/magister/authcode.function');
 const User = require('./lib/magbot/User');
 const secret = require('./secret');
 const oAuth = [
-//   '404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com', (main)
-    '312564690694-duurunfnut127m50dh0j1ajlhe9oq598.apps.googleusercontent.com', // (test)
+    '404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com',
     secret.clientsecret,
-// 'http://magbot.nl/action/googleCallback.php' (main)
-    'https://magbot.nl' // (test)
+    'https://magbot.nl'
 ];
 const log = winston.loggers.get('main');
 
