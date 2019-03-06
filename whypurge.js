@@ -54,6 +54,7 @@ async function oops() {
                 return prev;
             }, {});
             console.dir(calsFromGoogle);
+            break; // Show the user.
             // let apps = await user.calendarAppointments('primary');
             // for (let appId in apps) {
             //     let app = apps[appId];
@@ -64,7 +65,8 @@ async function oops() {
             // }
             // break; //Only show me
         } catch (err) {
-            log.error(err);
+            // log.error(err);
         }
     }
+    log.info('done');
 }
