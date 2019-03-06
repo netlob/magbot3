@@ -49,7 +49,7 @@ const log = winston.loggers.get('main');
 const next = Math.floor(Math.random() * 100000);
 log.info(`Starting first sync in ${next} and first purge in ${next * 2} millis...`);
 setTimeout(sync, next);
-setTimeout(purge, next * 20);
+//setTimeout(purge, next * 20);
 
 http.createServer((req, res) => {
     // Set CORS headers
