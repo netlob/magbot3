@@ -47,20 +47,17 @@ async function oops() {
     for (let user of users) {
         try {
             await user.login(oAuth, mAuth);
-            console.dir(await user.calendar.events.list({
-                calendarId: 'primary',
-                timeMin: new Date(new Date().setHours(0,0,0,0)),
-                timeMax: new Date(new Date(Date.now() + user.getSecondsToCheck())
-                            .setHours(23,59,59,999)),
-                showDeleted: true,
-                singleEvents: true,
-                orderBy: 'startTime'
-            }).data.items.reduce((prev, cur) => {
-                prev[cur.id] = cur; return prev
-            }, {}));
-            break; //Only show me
+            let apps = await user.calendarAppointments('primary');
+            for (let appId in apps) {
+                let app = apps[appId];
+                if ('MAGBOT' in app.summary) {
+                    console.dir(app);
+                    break;
+                }
+            }
+            // break; //Only show me
         } catch (err) {
-            log.err(err);
+            log.error(err);
         }
     }
 }
