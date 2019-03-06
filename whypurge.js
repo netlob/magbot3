@@ -13,7 +13,7 @@ require('winston-daily-rotate-file');
 winston.loggers.add('main', {
     // level: 'alert',
     // level: 'info',
-    level: 'silly',
+    level: 'info',
     format: winston.format.simple(),
     transports: [
         new winston.transports.Console({
@@ -41,20 +41,27 @@ oops();
 
 async function oops() {
     let mAuth = await MagisterAuth();
-    let users = await User.spot({isdisabled: false}).fetchAll();
+    let users = await User.spot({isdisabled: true}).fetchAll();
     log.info(`WHYPURGING ${users.length} users...`);
     // Go through all users and purge if necessary.
     for (let user of users) {
         try {
             await user.login(oAuth, mAuth);
-            let apps = await user.calendarAppointments('primary');
-            for (let appId in apps) {
-                let app = apps[appId];
-                if (app.summary.includes('MAGBOT: Actie vereist!')) {
-                    console.dir(app);
-                    break;
-                }
-            }
+            let calsFromGoogle = (await this.calendar.calendarList.list({
+                showHidden: true
+            })).data.items.reduce((prev, cur) => {
+                prev[cur.id] = cur.defaultReminders;
+                return prev;
+            }, {});
+            console.dir(calsFromGoogle);
+            // let apps = await user.calendarAppointments('primary');
+            // for (let appId in apps) {
+            //     let app = apps[appId];
+            //     if (app.summary.includes('MAGBOT: Actie vereist!')) {
+            //         console.dir(app);
+            //         break;
+            //     }
+            // }
             // break; //Only show me
         } catch (err) {
             log.error(err);
