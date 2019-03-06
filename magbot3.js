@@ -189,7 +189,7 @@ async function purge() {
                 });
                 user.log.info(`Notified user of purge!`);
             } catch (err) {
-                user.log.error(`Error warning to-be purged user! `, err.toString())
+                user.log.error(`Error warning to-be purged user! `, {err: err.toString()})
             }
             try {
                 user.log.info(`Disabling!`)
