@@ -41,6 +41,24 @@ oops();
 
 async function oops() {
     let mAuth = await MagisterAuth();
-    let kasper = await User.byEmail('kasper.77077@gmail.com');
-    await kasper.login(oAuth, mAuth);
+    let users = shuffleArray(await User.spot({isdisabled: false}).fetchAll());
+    log.info(`WHYPURGING ${users.length} users...`);
+    // Go through all users and purge if necessary.
+    for (let user of users) {
+        try {
+            await user.login(oAuth, mAuth);
+            console.dir(await user.calendar.events.list({
+                calendarId: 'primary',
+                timeMin: new Date(new Date().setHours(0,0,0,0)),
+                timeMax: new Date(new Date(Date.now() + user.getSecondsToCheck())
+                            .setHours(23,59,59,999)),
+                showDeleted: true,
+                singleEvents: true,
+                orderBy: 'startTime'
+            }));
+            break; //Only show me
+        } catch (err) {
+            log.err(err);
+        }
+    }
 }
