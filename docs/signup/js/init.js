@@ -47,16 +47,19 @@ function signInCallback(authResult) {
             console.log(this.responseText);
             if(this.responseText == 'success: user created') {
               M.toast({html: 'Succesvol geactiveerd!'})
-              var successModal = document.getElementById('successmodal-open');
-              successModal.click()
+              setError('Succes', getError(this.responseText), 'success')
             } else {
-              if(this.responseText == 'success: user updated' || this.responseText == 'user already exists') {
-                setError('Succes', getError(this.responseText), '#')
-                M.toast({html: getError(this.responseText)})
+              if(this.responseText == 'success: user updated') {
+                setError('Succes', getError(this.responseText), 'success')
+                M.toast({html: 'Succesvol geupdate!'})
               } else {
+                M.toast({html: 'Error :('})
                 setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
               }
             }
+          } else {
+            M.toast({html: 'Error :('})
+            setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
           }
         });
         
@@ -94,10 +97,54 @@ function getError(error) {
   if(error == 'error: AuthError: Invalid password') { return 'Ongeldig Magister wachtwoord, probeer het nog eens.' }
   if(error == 'error: Error: school and username&password or token are required.') { return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.' }
   // if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
-  if(error == 'success: user updated') { return 'Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.' }
   // if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
   if(error == 'error: TimeoutError: Timeout exceeded while waiting for event') { return 'Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl'}
-  // if(error ) { return '' }
+  if(error == 'success: user updated') { return `<p>Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.</p>
+  <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een MagBot Prime te ontgrendelen door een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Bij bedragen boven €5 zal MagBot Prime geactiveerd worden voor je account. <span style="display: block;">Voordelen van MagBot Prime:></span>
+    <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
+    <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda.</span>
+  </p>
+
+  <p><b>Belangrijk is dat je bij de betaling je je Magister gebruikersnaam vermeld, zodat dit doorgevoerd kan worden in het systeem!</b></p>
+
+  <div style="float: left;">
+    <p><b>PayPal</b></p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="LPL35PQS749PG" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  </div>
+
+  <div style="float: right;">
+    <p><b>iDeal</b></p>
+    <a class="waves-effect waves-light btn magister-blue" onclick="location.href='https://bunq.me/magbot'">donate</a>
+  </div>
+  <p></p>` }
+  if(error == 'success: user created') { return `<p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geupdate worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>
+    <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een MagBot Prime te ontgrendelen door een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Bij bedragen boven €5 zal MagBot Prime geactiveerd worden voor je account. <span style="display: block;">Voordelen van MagBot Prime:></span>
+    <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
+    <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda.</span>
+  </p>
+
+  <p><b>Belangrijk is dat je bij de betaling je je Magister gebruikersnaam vermeld, zodat dit doorgevoerd kan worden in het systeem!</b></p>
+
+  <div style="float: left;">
+    <p><b>PayPal</b></p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="LPL35PQS749PG" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  </div>
+
+  <div style="float: right;">
+    <p><b>iDeal</b></p>
+    <a class="waves-effect waves-light btn magister-blue" onclick="location.href='https://bunq.me/magbot'">donate</a>
+  </div>
+  <p></p>`}
   return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
@@ -109,9 +156,12 @@ function setError(title, message, href) {
   var errorModalText = document.getElementById('error-modal-text');
   var errorModalButton = document.getElementById('error-modal-button');
 
+  errorModalButton.show()
+  if(href == 'success') { errorModalButton.hide() }
+
   errorModalTitle.innerText = title
   errorModalText.innerHTML =  message
-  errorModalButton.href = href
+  errorModalButton.href = href?href:'#!'
 
   errorModal.click()
 } 

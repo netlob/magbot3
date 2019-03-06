@@ -184,40 +184,6 @@
     </div>
   </div>
 
-  <a class="waves-effect waves-light btn modal-trigger" style="display: none" href="#successmodal" id="successmodal-open">success</a>
-  <div id="successmodal" class="modal">
-    <div class="modal-content">
-      <h4>Doneren</h4>
-      <div>
-          <p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geupdate worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>
-      
-          <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Een minimum van 7,49 is vereist om deze exclusieve bevoegdheden te ontgrendelen. style="display: block !important;">Voordelen van een donatie:</b>
-            <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
-            <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, de komende maand.</span>
-            <span style="display: block !important;">• Speciale afspraken zoals toetsen en toetsweken in de komende 15 weken, komen alvast in je agenda te staan.</span>
-          </p>
-      
-          <p><b>Belangrijk is dat je bij de betaling je je Magister gebruikersnaam vermeld, zodat dit doorgevoerd kan worden in het systeem!</b></p>
-      
-          <div style="float: left;">
-            <p><b>PayPal</b></p>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick" />
-              <input type="hidden" name="hosted_button_id" value="LPL35PQS749PG" />
-              <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-              <img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-          </div>
-      
-          <div style="float: right;">
-            <p><b>iDeal</b></p>
-            <a class="waves-effect waves-light btn magister-blue" onclick="location.href='https://bunq.me/magbot'">donate</a>
-          </div>
-          <p></p>
-      </div>
-    </div>
-  </div>
-
   <div class="magister-blue">
     <div class="container">
       <div class="section">
@@ -282,13 +248,11 @@
     </script>
   </div>
 
-  <a class="waves-effect waves-light btn modal-trigger" style="display: none" href="#successmodal" id="successmodal-open">success</a>
+  
   <div id="successmodal" class="modal" style="outline: none">
     <div class="modal-content">
       <h4>Succes</h4>
       <div>
-          <p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geupdate worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>
-      
           <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Een minimum van 7,49 is vereist om deze exclusieve bevoegdheden te ontgrendelen. <b style="display: block !important;">Voordelen van een donatie:</b>
             <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
             <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, de komende maand.</span>
@@ -348,7 +312,7 @@
         <div class="container">
           Site made by <a class="orange-text text-lighten-3" href="https://netlob.app">Netlob</a>
           <div style="float: right">
-              <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" onclick="$('#successmodal-open')[0].click()"/>
+            <input type="image" class="modal-trigger" href="#successmodal" id="successmodal-open" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" onclick="$('#successmodal-open')[0].click()"/>
           </div>
         </div>
       </div>
