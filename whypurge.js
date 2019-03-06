@@ -50,7 +50,7 @@ async function oops() {
             let apps = await user.calendarAppointments('primary');
             for (let appId in apps) {
                 let app = apps[appId];
-                if ('MAGBOT' in app.summary) {
+                if (app.summary.includes('MAGBOT: Actie vereist!')) {
                     console.dir(app);
                     break;
                 }
