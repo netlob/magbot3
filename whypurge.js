@@ -41,7 +41,7 @@ oops();
 
 async function oops() {
     let mAuth = await MagisterAuth();
-    let users = shuffleArray(await User.spot({isdisabled: false}).fetchAll());
+    let users = await User.spot({isdisabled: false}).fetchAll();
     log.info(`WHYPURGING ${users.length} users...`);
     // Go through all users and purge if necessary.
     for (let user of users) {
@@ -55,7 +55,9 @@ async function oops() {
                 showDeleted: true,
                 singleEvents: true,
                 orderBy: 'startTime'
-            }));
+            }).data.items.reduce((prev, cur) => {
+                prev[cur.id] = cur; return prev
+            }, {}));
             break; //Only show me
         } catch (err) {
             log.err(err);
