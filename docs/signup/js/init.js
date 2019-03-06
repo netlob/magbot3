@@ -100,14 +100,16 @@ function getError(error) {
   // if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
   if(error == 'error: TimeoutError: Timeout exceeded while waiting for event') { return 'Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl'}
   if(error == 'success: user updated') { return `<p>Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.</p>
-  <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een MagBot Prime te ontgrendelen door een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Bij bedragen boven €5 zal MagBot Prime geactiveerd worden voor je account. <span style="display: block;">Voordelen van MagBot Prime:></span>
-    <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
-    <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda.</span>
-  </p>
-
+  <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een MagBot Prime te ontgrendelen door een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Bij bedragen boven €5 zal MagBot Prime geactiveerd worden voor je account.</p>
+  <!-- <br> -->
+  <span>Voordelen van MagBot Prime:</span>
+  <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
+  <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda. Zo kan je toetsen en andere belangerijke afspraken al ruim van te voren ontdekken.</span>
+  <span style="display: block !important;">• Mogelijk nog meer in de toekomst!</span>
+  <br>
   <p><b>Belangrijk is dat je bij de betaling je je Magister gebruikersnaam vermeld, zodat dit doorgevoerd kan worden in het systeem!</b></p>
 
-  <div style="float: left;">
+  <div style="float: left; margin-bottom: 23px;">
     <p><b>PayPal</b></p>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_s-xclick" />
@@ -117,20 +119,21 @@ function getError(error) {
     </form>
   </div>
 
-  <div style="float: right;">
+  <div style="float: right; margin-bottom: 23px;">
     <p><b>iDeal</b></p>
     <a class="waves-effect waves-light btn magister-blue" onclick="location.href='https://bunq.me/magbot'">donate</a>
-  </div>
-  <p></p>` }
+  </div>` }
   if(error == 'success: user created') { return `<p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geupdate worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>
-    <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een MagBot Prime te ontgrendelen door een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Bij bedragen boven €5 zal MagBot Prime geactiveerd worden voor je account. <span style="display: block;">Voordelen van MagBot Prime:></span>
-    <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
-    <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda.</span>
-  </p>
-
+  <p>Omdat het maken en levend houden van dit programma maandelijks geld kost, is er een mogelijkheid om een MagBot Prime te ontgrendelen door een éénmalige donatie te doen, dat kan via PayPal of per bankoverschrijving. Bij bedragen boven €5 zal MagBot Prime geactiveerd worden voor je account.</p>
+  <!-- <br> -->
+  <span>Voordelen van MagBot Prime:</span>
+  <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
+  <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda. Zo kan je toetsen en andere belangerijke afspraken al ruim van te voren ontdekken.</span>
+  <span style="display: block !important;">• Mogelijk nog meer in de toekomst!</span>
+  <br>
   <p><b>Belangrijk is dat je bij de betaling je je Magister gebruikersnaam vermeld, zodat dit doorgevoerd kan worden in het systeem!</b></p>
 
-  <div style="float: left;">
+  <div style="float: left; margin-bottom: 23px;">
     <p><b>PayPal</b></p>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_s-xclick" />
@@ -140,11 +143,10 @@ function getError(error) {
     </form>
   </div>
 
-  <div style="float: right;">
+  <div style="float: right; margin-bottom: 23px;">
     <p><b>iDeal</b></p>
     <a class="waves-effect waves-light btn magister-blue" onclick="location.href='https://bunq.me/magbot'">donate</a>
-  </div>
-  <p></p>`}
+  </div>`}
   return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
