@@ -116,7 +116,7 @@ function setError(title, message, href) {
   //errorModalButton.show();
   //if(href == 'success') { errorModalButton.hide() }
 
-  errorModalTitle.innerText = title;
+  errorModalTitle.innerHTML = title;
   errorModalText.innerHTML = message;
   errorModalButton.href = href?href:'#!';
 
