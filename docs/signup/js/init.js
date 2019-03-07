@@ -58,8 +58,9 @@ function signInCallback(authResult) {
               }
             }
           } else {
-            M.toast({html: 'Error :('})
-            setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
+            // TODO hier error bij timeout? Dit werkt niet helemaal lekker lol.
+            //M.toast({html: 'Error :('})
+            //setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
           }
         });
         
@@ -113,7 +114,7 @@ function setError(title, message, href) {
   var errorModalButton = document.getElementById('error-modal-button');
 
   //errorModalButton.show();
-  if(href == 'success') { errorModalButton.hide() }
+  //if(href == 'success') { errorModalButton.hide() }
 
   errorModalTitle.innerText = title;
   errorModalText.innerHTML = message;
