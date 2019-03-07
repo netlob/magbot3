@@ -59,6 +59,13 @@ function signInCallback(authResult) {
             }
           }
         });
+		  
+	  	xhr.ontimeout = function (e) {
+			M.toast({html: 'Error: geen reactie van de server'})
+			setError('Oopsie', getError('error: timed out'), 'https://magbot.nl/signup/')
+  			// XMLHttpRequest timed out. Do something here.
+		};
+
         
         xhr.open("POST", "https://server.magbot.nl");
         xhr.setRequestHeader("code", authResult.code);
@@ -98,7 +105,8 @@ function getError(error) {
   if(error == 'error: TimeoutError: Timeout exceeded while waiting for event') { return 'Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl'}
   if(error == 'success: user updated') { return `<p>Je gegevens en voorkeuren zijn succesvol geupdate. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.</p>` }
   if(error == 'success: user created') { return `<p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geupdate worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>`}
-  return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
+  if(error == 'error: timed out') { return '<p>Helaas hebben we geen antwoord van de server gekregen. Dit kan een aantal dingen betekenen: <span style="display: block">• Je internet werkt niet goed</span><span style="display: block">• De server is gecrasht</span><span style="display: block">• We zijn even aan het sleutelen aan het systeem</span>Probeer het later nog eens.</p>' }
+	return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
 }
 
 $('.modal-overlay').on( "click", function(){ location.reload()} );
