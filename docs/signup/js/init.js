@@ -57,10 +57,6 @@ function signInCallback(authResult) {
                 setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
               }
             }
-          } else {
-            // TODO hier error bij timeout? Dit werkt niet helemaal lekker lol.
-            //M.toast({html: 'Error :('})
-            //setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
           }
         });
         
