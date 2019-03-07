@@ -158,14 +158,14 @@ function setError(title, message, href) {
   var errorModalText = document.getElementById('error-modal-text');
   var errorModalButton = document.getElementById('error-modal-button');
 
-  errorModalButton.show()
+  //errorModalButton.show();
   if(href == 'success') { errorModalButton.hide() }
 
   errorModalTitle.innerText = title
   errorModalText.innerHTML =  message
   errorModalButton.href = href?href:'#!'
 
-  errorModal.click()
+  errorModal.click();
 } 
 
 var schools = {
