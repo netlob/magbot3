@@ -47,10 +47,10 @@ function signInCallback(authResult) {
             console.log(this.responseText);
             if(this.responseText == 'success: user created') {
               M.toast({html: 'Succesvol geactiveerd!'})
-              setError('Succes', getError(this.responseText), 'success')
+              setError('Succes', getError(this.responseText), 'https://magbot.nl/')
             } else {
               if(this.responseText == 'success: user updated') {
-                setError('Succes', getError(this.responseText), 'success')
+                setError('Succes', getError(this.responseText), 'https://magbot.nl/')
                 M.toast({html: 'Succesvol geupdate!'})
               } else {
                 M.toast({html: 'Error :('})
