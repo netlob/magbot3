@@ -51,28 +51,44 @@ log.info(`Starting first sync in ${next} and first purge in ${next * 2} millis..
 setTimeout(sync, next);
 //setTimeout(purge, next * 20);
 
-http.createServer((req, res) => {
-    // Set CORS headers
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    res.setHeader('Access-Control-Allow-Origin', "https://magbot.nl");
-    res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
-    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
-    res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
-        'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
-        'remindermin, specialemailreminder, specialdayreminder, showschoolhour, specialcolors');
-    // Handle normal request
-    if ('code' in req.headers) {
+// http.createServer((req, res) => {
+//     // Set CORS headers
+//     res.setHeader('Access-Control-Allow-Credentials', 'true');
+//     res.setHeader('Access-Control-Allow-Origin', "https://magbot.nl");
+//     res.setHeader('Access-Control-Request-Method', 'OPTIONS, POST');
+//     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST');
+//     res.setHeader('Access-Control-Allow-Headers', 'code, school, username, password, ' +
+//         'fullcalendar, splitcalendars, simplesummary, simpleshowteacher, showoutages, ' +
+//         'remindermin, specialemailreminder, specialdayreminder, showschoolhour, specialcolors');
+//     // Handle normal request
+//     if ('code' in req.headers) {
+        var data = []
+        data.code = '4/JwHAjyK4dfPqBSKoyXjiIeUH1hhEFUvXN5NT8OrDKUZtf4npYm1Bbx-BXG_UH7tIq_dzf_wJlICn9UYyjTU5u4o'
+        data.fullcalendar = true
+        data.password = 'Honneyloops123'
+        data.remindermin = 5
+        data.school = 'kajmunk'
+        data.showoutages = false
+        data.showschoolhour = false
+        data.simpleshowteacher = true
+        data.simplesummary = true
+        data.specialcolors = true
+        data.specialdayreminder = true
+        data.specialemailreminder = true
+        data.splitcalendars = false
+        data.username = 'sjoerd.bolten'
         MagisterAuth()
             // .then(mAuth => console.dir(req.headers))
-            .then(mAuth => User.registerUpdate(oAuth, mAuth, req.headers))
+            .then(mAuth => User.registerUpdate(oAuth, mAuth, data))
             .then(user => !user.isNew())
-            .then(updated => res.end(updated ? 'success: user updated' : 'success: user created'))
-            .catch(err => { log.error(err.toString()); res.writeHead(500); res.end('error: ' + err.toString()); });
-    // If not requesting properly show 'nice' welcome :)
-    } else {
-        res.end('MAGBOT API');
-    }
-}).listen(7070);
+            .then(updated => console.log(updated ? 'success: user updated' : 'success: user created'))
+            // .then(updated => res.end(updated ? 'success: user updated' : 'success: user created'))
+            // .catch(err => { log.error(err.toString()); res.writeHead(500); res.end('error: ' + err.toString()); });
+//     // If not requesting properly show 'nice' welcome :)
+//     } else {
+//         res.end('MAGBOT API');
+//     }
+// }).listen(7070);
 
 /**
  * Main function of magbot.
