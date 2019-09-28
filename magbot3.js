@@ -69,6 +69,8 @@ http.createServer((req, res) => {
             .then(updated => res.end(updated ? 'success: user updated' : 'success: user created'))
             .catch(err => { log.error(err.toString()); res.writeHead(500); res.end('error: ' + err.toString()); });
     // If not requesting properly show 'nice' welcome :)
+    } if(req.url == "/userCount") {
+        User.spot().fetchAll().then(users => res.end(users.length))
     } else {
         res.end('MAGBOT API');
     }
