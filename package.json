@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/mamorgen/magbot3#readme",
   "dependencies": {
+    "@magisterjs/dynamic-authcode": "^1.1.0",
     "bookshelf": "^0.14.2",
     "bookshelf-json-columns": "^2.1.1",
     "bookshelf-spotparse": "^1.0.2",
