@@ -96,8 +96,8 @@ async function sync() {
                 await user.setupCalendars();
                 // Sync the actual appointments.
                 await user.syncCalendars();
-                // Wait some time (~0-10 seconds).
-                await sleep(Math.floor(Math.random() * 10000));
+                // Wait some time (~0-5 seconds).
+                await sleep(Math.floor(Math.random() * 5000));
             } catch(err) {
                 try {
                     user.log.warn(`Error syncing user! `, {err: err.toString()});
@@ -138,7 +138,7 @@ async function purge() {
                 // Try logging in.
                 await user.login(oAuth, mAuth);
                 // Sleep a bit (0-10 sec) after logging in, to ease magister.
-                await sleep(Math.floor(Math.random() * 10000));
+                await sleep(Math.floor(Math.random() * 5000));
                 // If all tokens etc are valid and we log in,
                 // then we actually get here. Check if there
                 // are calendars left and if so, skip the purge.
