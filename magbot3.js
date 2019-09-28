@@ -76,7 +76,7 @@ http.createServer((req, res) => {
         } else if(req.url.substring(6,13) == "/active") {
             User.spot({isdisabled: false}).fetchAll().then(users => res.end(users.length))
         } else {
-            User.spot().fetchAll().then(users => res.end(users.length))
+            User.fetchAll().then(users => res.end(users.length))
         }
     } else {
         res.end('MAGBOT API');
