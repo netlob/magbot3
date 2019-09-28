@@ -27,7 +27,7 @@ winston.loggers.add('main', {
     ]
 });
 const http = require('http');
-const MagisterAuth = require('./lib/magister/authcode.function');
+const MagisterAuth = require('@magisterjs/dynamic-authcode')//require('./lib/magister/authcode.function');
 const User = require('./lib/magbot/User');
 const secret = require('./secret');
 const oAuth = [
