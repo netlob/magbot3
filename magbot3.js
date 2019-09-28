@@ -69,8 +69,15 @@ http.createServer((req, res) => {
             .then(updated => res.end(updated ? 'success: user updated' : 'success: user created'))
             .catch(err => { log.error(err.toString()); res.writeHead(500); res.end('error: ' + err.toString()); });
     // If not requesting properly show 'nice' welcome :)
-    } if(req.url == "/userCount") {
-        User.spot().fetchAll().then(users => res.end(users.length))
+    } else if(req.url.substring(0,6) == "/users") {
+        if(req.url.substring(6,13) == "/school") {
+            var school = req.url.substring(14) == "" ? "kajmunk" : req.url.substring(14)
+            User.spot({school: school}).fetchAll().then(users => res.end(users.length))
+        } else if(req.url.substring(6,13) == "/active") {
+            User.spot({isdisabled: false}).fetchAll().then(users => res.end(users.length))
+        } else {
+            User.spot().fetchAll().then(users => res.end(users.length))
+        }
     } else {
         res.end('MAGBOT API');
     }
