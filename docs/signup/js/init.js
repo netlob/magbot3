@@ -51,7 +51,7 @@ function signInCallback(authResult) {
             } else {
               if(this.responseText == 'success: user updated') {
                 setError('Succes', getError(this.responseText), 'https://magbot.nl/')
-                M.toast({html: 'Succesvol geupdate!'})
+                M.toast({html: 'Succesvol geüpdatet!'})
               } else {
                 M.toast({html: 'Error :('})
                 setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
