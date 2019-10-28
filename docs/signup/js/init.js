@@ -77,7 +77,7 @@ function signInCallback(authResult) {
 				};
 
 
-				xhr.open("POST", "http://88.99.14.247:7070");
+				xhr.open("POST", "https://server.magbot.nl");
 				xhr.setRequestHeader("code", authResult.code);
 				xhr.setRequestHeader("school", school);
 				xhr.setRequestHeader("username", username);
