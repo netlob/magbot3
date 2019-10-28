@@ -227,7 +227,7 @@ function sleep(millis) {
  * Gets the the right amount of time to
  * wait before scheduling a new sync operation.
  * Remember a sync operation takes about
- * count(users) * 10 seconds to complete.
+ * count(users) * 5 seconds to complete.
  * Meaning 500 users gives ~83 minutes of sync time.
  * After this, the randomised offset is applied 
  * before next sync.
