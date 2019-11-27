@@ -1,214 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <meta name="google-signin-client_id" content="404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com">
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://apis.google.com/js/client:platform.js" async defer></script>
-  <title>MagBot - Magister to calendar</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+	<meta name="google-signin-client_id"
+		content="404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+	<title>MagBot - Rooster to calendar</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-  <script>
-    $(document).ready(function() {
-      console.log("Initializing the Google oauth button!");
-      gapi.load('auth2', function() {
-        auth2 = gapi.auth2.init({
-          client_id: '404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com',
-          scope: 'https://www.googleapis.com/auth/calendar',
-          redirect_uri: 'https://magbot.nl'
-        });
-      })
-    });
-    $.fn.extend({
-      toggleText: function(a, b){
-          return this.text(this.text() == b ? a : b);
-      }
-    });
-  </script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-5828722100736313",
-      enable_page_level_ads: true
-    });
-  </script>
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+	<script>
+		$(document).ready(function () {
+			console.log("Initializing the Google oauth button!");
+			gapi.load('auth2', function () {
+				auth2 = gapi.auth2.init({
+					client_id: '404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com',
+					scope: 'https://www.googleapis.com/auth/calendar',
+					redirect_uri: 'https://magbot.nl'
+				});
+			})
+		});
+		$.fn.extend({
+			toggleText: function (a, b) {
+				return this.text(this.text() == b ? a : b);
+			}
+		});
+	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-5828722100736313",
+			enable_page_level_ads: true
+		});
+	</script>
 </head>
+
 <body>
-  <div class="navbar-fixed">
-    <nav class="magister-blue" role="navigation">
-      <div class="nav-wrapper container"><img src="logo.png" style="margin-top: 15px; margin-right: 5px;" height="35px" width="auto"></img><a id="logo-container" href="/" class="brand-logo">MagBot</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="/signup/">Inloggen</a></li>
-        </ul>
+	<div class="navbar-fixed">
+		<nav class="magister-blue" role="navigation">
+			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">MagBot</a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="/signup/">Inloggen</a></li>
+				</ul>
 
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="/signup/">Inloggen</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-  </div>
-  <!-- <div class="parallax-container" style="min-height: 750px !important;"> -->
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h1 class="header center magister-blue-text">Activatie</h1>
-      <div class="signup-form" autocomplete="on">
-        <div class="input-field">
-          <i class="material-icons prefix magister-blue-text">school</i>
-          <input type="text" id="autocomplete-input" class="autocomplete magister-blue-text" onkeypress="autocompleteDropdown()">
-          <label for="autocomplete-input" style="user-select: none !important" autocomplete="school">School</label>
-        </div>
-        <div class="input-field">
-          <i class="material-icons prefix magister-blue-text">person</i>
-          <input id="username" type="text" class="validate">
-          <label for="username" style="user-select: none !important" autocomplete="username">Magister gebruikersnaam</label>
-        </div>
-        <div class="input-field">
-          <i class="material-icons prefix magister-blue-text">lock</i>
-          <input id="password" type="password" class="validate">
-          <label for="password" style="user-select: none !important" autocomplete="password">Magister wachtwoord</label>
-        </div>
-        <div class="input-field">
-          <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">notifications_active</i>
-          <p class="range-field" style="width: calc(100% - 3rem); margin-left: calc(0% + 3rem)">
-            <input type="range" id="notify" min="0" max="10" />
-          </p>
-        </div>
-        <div class="input-field">
-          <p style="margin-left: calc(0% + 3rem);">
-            <label>
-              <input type="checkbox" id="specialemailreminder" class="filled-in" checked="true" />
-              <span style="margin-top: -10px">Stuur één week voor een toets een herinneringsmail</span>
-            </label>
-          </p>
-        </div>
-        <div class="input-field">
-          <p style="margin-left: calc(0% + 3rem);">
-            <label>
-              <input type="checkbox" id="specialcolors" class="filled-in" checked="true" />
-              <span style="margin-top: -10px">Voeg speciale kleuren toe voor huiswerk, toetsen en uitval in de enkele calendar</span>
-            </label>
-          </p>
-        </div>
-        <div class="input-field">
-          <p style="margin-left: calc(0% + 3rem);">
-            <label>
-              <input type="checkbox" id="showschoolhour" class="filled-in" />
-              <span style="margin-top: -10px">Laat het lesuur voor de afspraak zien, bijvoorbeeld: "1 - Nederlands"</span>
-            </label>
-          </p>
-        </div>
-        <hr style="margin-left: calc(0% + 3rem); margin-right: -calc(0% + 6rem);">
-        <a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" id="toggleOptions" onclick="$('#showMore').slideToggle(250, function(){ $('#toggleOptions').toggleText('Meer opties', 'Minder opties')});">Meer opties</a>
-        <div id="showMore" class="animateFade">
-          <div class="input-field">
-            <!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
-            <p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
-              <label>
-                <input type="checkbox" id="fullcalendar" class="filled-in" checked="true" />
-                <span style="margin-top: -10px">Maak één agenda met al je magister afspraken</span>
-              </label>
-            </p>
-          </div>
-          <div class="input-field">
-            <p style="margin-left: calc(0% + 3rem);">
-              <label>
-                <input type="checkbox" id="splitcalendar" class="filled-in" />
-                <span style="margin-top: -10px">Maak aparte agenda's voor toetsen, uitgevallen lessen, normale lessen en huiswerk</span>
-              </label>
-            </p>
-          </div>
-          <div class="input-field">
-            <p style="margin-left: calc(0% + 3rem);">
-              <label>
-                <input type="checkbox" id="simplesummary" class="filled-in" checked="true" onchange="$('#simplesummarydiv').toggle()" />
-                <span style="margin-top: -10px">Laat een versimpelde versie van je afspraak zien, bijvoorbeeld: "Nederlands"</span>
-              </label>
-            </p>
-          </div>
-          <div id="simplesummarydiv" class="input-field">
-            <p style="margin-left: calc(0% + 3rem);">
-              <label>
-                <input type="checkbox" id="simpleshowteacher" class="filled-in" checked="true" />
-                <span style="margin-top: -10px">Laat docenten achter je afspraak zien, bijvoorbeeld: "Nederlands van A. Olmberg"</span>
-              </label>
-            </p>
-          </div>
-          <div class="input-field">
-            <p style="margin-left: calc(0% + 3rem);">
-              <label>
-                <input type="checkbox" id="showoutages" class="filled-in" />
-                <span style="margin-top: -10px">Laat uitgevallen lessen zien in je agenda</span>
-              </label>
-            </p>
-          </div>
-          <div class="input-field">
-            <p style="margin-left: calc(0% + 3rem);">
-              <label>
-                <input type="checkbox" id="specialdayreminder" class="filled-in" checked="true" />
-                <span style="margin-top: -10px">Stuur één dag voor een toets een melding om je te herinneren</span>
-              </label>
-            </p>
-          </div>
-        </div>
-        <br>
-      
-        <!-- Google Sign in button -->
-        <a id="signinButton" class="waves-effect waves-light btn magister-blue" style="zoom: 120%; width: 100%; margin-top: 30px !important;">Log in met Google</a>
-        <script>
-          $('#signinButton').click(function() {
-            // TODO: when everything works replace with this to make user have to login less or so.
-            // auth2.grantOfflineAccess({prompt: 'select_account'}).then(signInCallback);
-            auth2.grantOfflineAccess().then(signInCallback);
-          });
-        </script>
-    
-        <br><br><br>
-      </div>
-    </div>
-  </div>
+				<ul id="nav-mobile" class="sidenav">
+					<li><a href="/signup/">Inloggen</a></li>
+				</ul>
+				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+	</div>
+	<!-- <div class="parallax-container" style="min-height: 750px !important;"> -->
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<h1 class="header center magister-blue-text">Activatie</h1>
+			<div class="signup-form" autocomplete="on">
+				<div class="input-field">
+					<i class="material-icons prefix magister-blue-text">school</i>
+					<input type="text" id="autocomplete-input" class="autocomplete magister-blue-text"
+						onkeypress="autocompleteDropdown()">
+					<label for="autocomplete-input" style="user-select: none !important"
+						autocomplete="school">School</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix magister-blue-text">person</i>
+					<input id="username" type="text" class="validate">
+					<label for="username" style="user-select: none !important" autocomplete="username">
+						Gebruikersnaam</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix magister-blue-text">lock</i>
+					<input id="password" type="password" class="validate">
+					<label for="password" style="user-select: none !important" autocomplete="password">
+						Wachtwoord</label>
+				</div>
+				<div class="input-field">
+					<i class="material-icons prefix magister-blue-text"
+						style="margin-top: -7.5px;">notifications_active</i>
+					<p class="range-field" style="width: calc(100% - 3rem); margin-left: calc(0% + 3rem)">
+						<input type="range" id="notify" min="0" max="10" />
+					</p>
+				</div>
+				<div class="input-field">
+					<p style="margin-left: calc(0% + 3rem);">
+						<label>
+							<input type="checkbox" id="specialemailreminder" class="filled-in" checked="true" />
+							<span style="margin-top: -10px">Stuur één week voor een toets een herinneringsmail</span>
+						</label>
+					</p>
+				</div>
+				<div class="input-field">
+					<p style="margin-left: calc(0% + 3rem);">
+						<label>
+							<input type="checkbox" id="specialcolors" class="filled-in" checked="true" />
+							<span style="margin-top: -10px">Voeg speciale kleuren toe voor huiswerk, toetsen en uitval
+								in de enkele calendar</span>
+						</label>
+					</p>
+				</div>
+				<div class="input-field">
+					<p style="margin-left: calc(0% + 3rem);">
+						<label>
+							<input type="checkbox" id="showschoolhour" class="filled-in" />
+							<span style="margin-top: -10px">Laat het lesuur voor de afspraak zien, bijvoorbeeld: "1 -
+								Nederlands"</span>
+						</label>
+					</p>
+				</div>
+				<hr style="margin-left: calc(0% + 3rem); margin-right: -calc(0% + 6rem);">
+				<a style="margin-left: calc(0% + 3rem); user-select: none; cursor: pointer;;" id="toggleOptions"
+					onclick="$('#showMore').slideToggle(250, function(){ $('#toggleOptions').toggleText('Meer opties', 'Minder opties')});">Meer
+					opties</a>
+				<div id="showMore" class="animateFade">
+					<div class="input-field">
+						<!-- <i class="material-icons prefix magister-blue-text" style="margin-top: -7.5px;">cancel</i> -->
+						<p style="margin-left: calc(0% + 3rem); margin-top: 7.5px">
+							<label>
+								<input type="checkbox" id="fullcalendar" class="filled-in" checked="true" />
+								<span style="margin-top: -10px">Maak één agenda met al je lessen en afspraken</span>
+							</label>
+						</p>
+					</div>
+					<div class="input-field">
+						<p style="margin-left: calc(0% + 3rem);">
+							<label>
+								<input type="checkbox" id="splitcalendar" class="filled-in" />
+								<span style="margin-top: -10px">Maak aparte agenda's voor toetsen, uitgevallen lessen,
+									normale lessen en huiswerk</span>
+							</label>
+						</p>
+					</div>
+					<div class="input-field">
+						<p style="margin-left: calc(0% + 3rem);">
+							<label>
+								<input type="checkbox" id="simplesummary" class="filled-in" checked="true"
+									onchange="$('#simplesummarydiv').toggle()" />
+								<span style="margin-top: -10px">Laat een versimpelde versie van je afspraak zien,
+									bijvoorbeeld: "Nederlands"</span>
+							</label>
+						</p>
+					</div>
+					<div id="simplesummarydiv" class="input-field">
+						<p style="margin-left: calc(0% + 3rem);">
+							<label>
+								<input type="checkbox" id="simpleshowteacher" class="filled-in" checked="true" />
+								<span style="margin-top: -10px">Laat docenten achter je afspraak zien, bijvoorbeeld:
+									"Nederlands van A. Olmberg"</span>
+							</label>
+						</p>
+					</div>
+					<div class="input-field">
+						<p style="margin-left: calc(0% + 3rem);">
+							<label>
+								<input type="checkbox" id="showoutages" class="filled-in" />
+								<span style="margin-top: -10px">Laat uitgevallen lessen zien in je agenda</span>
+							</label>
+						</p>
+					</div>
+					<div class="input-field">
+						<p style="margin-left: calc(0% + 3rem);">
+							<label>
+								<input type="checkbox" id="specialdayreminder" class="filled-in" checked="true" />
+								<span style="margin-top: -10px">Stuur één dag voor een toets een melding om je te
+									herinneren</span>
+							</label>
+						</p>
+					</div>
+				</div>
+				<br>
 
-  <a class="waves-effect waves-light btn modal-trigger" style="display: none" href="#errormodal" id="error-modal-open">error</a>
-  <div id="errormodal" class="modal" style="outline: none">
-    <div class="modal-content">
-      <h4 id="error-modal-title">Error</h4>
-      <div id="error-modal-text">An error occurred</div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-blue btn-flat" id="error-modal-button">Begrepen</a>
-    </div>
-  </div>
+				<!-- Google Sign in button -->
+				<a id="signinButton" class="waves-effect waves-light btn magister-blue"
+					style="zoom: 120%; width: 100%; margin-top: 30px !important;">Log in met Google</a>
+				<script>
+					$('#signinButton').click(function () {
+						// TODO: when everything works replace with this to make user have to login less or so.
+						// auth2.grantOfflineAccess({prompt: 'select_account'}).then(signInCallback);
+						auth2.grantOfflineAccess().then(signInCallback);
+					});
+				</script>
 
-  <div class="magister-blue">
-    <div class="container">
-      <div class="section">
+				<br><br><br>
+			</div>
+		</div>
+	</div>
 
-        <!--   Icon Section   -->
-        <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center white-text"><i class="material-icons">alarm</i></h2>
-              <h5 class="center white-text">Altijd op tijd</h5>
+	<a class="waves-effect waves-light btn modal-trigger" style="display: none" href="#errormodal"
+		id="error-modal-open">error</a>
+	<div id="errormodal" class="modal" style="outline: none">
+		<div class="modal-content">
+			<h4 id="error-modal-title">Error</h4>
+			<div id="error-modal-text">An error occurred</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-blue btn-flat" id="error-modal-button">Begrepen</a>
+		</div>
+	</div>
 
-              <p class="light white-text text-center">Je kan zelf instellen hoeveel minuten voor de les je een notificatie krijgt. Zo weet je altijd waar je moet zijn en kom je nooit meer te laat.</p>
-            </div>
-          </div>
+	<div class="magister-blue">
+		<div class="container">
+			<div class="section">
 
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center white-text"><i class="material-icons">all_inclusive</i></h2>
-              <h5 class="center white-text">Automatisch</h5>
+				<!--   Icon Section   -->
+				<div class="row">
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center white-text"><i class="material-icons">alarm</i></h2>
+							<h5 class="center white-text">Altijd op tijd</h5>
 
-              <p class="light white-text text-center">Nadat je het systeem één keer hebt geactiveerd, zal hij oneindig lang je magister afspraken elke X tijd blijven synchroniseren met je calendar. Je hoeft er zelf niks meer voor te doen.</p>
-            </div>
-          </div>
+							<p class="light white-text text-center">Je kan zelf instellen hoeveel minuten voor de les je
+								een notificatie krijgt. Zo weet je altijd waar je moet zijn en kom je nooit meer te
+								laat.</p>
+						</div>
+					</div>
 
-          <!-- <div class="col s12 m4">
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center white-text"><i class="material-icons">all_inclusive</i></h2>
+							<h5 class="center white-text">Automatisch</h5>
+
+							<p class="light white-text text-center">Nadat je het systeem één keer hebt geactiveerd, zal
+								hij oneindig lang je lessen en afspraken elke X tijd blijven synchroniseren met je
+								calendar. Je hoeft er zelf niks meer voor te doen.</p>
+						</div>
+					</div>
+
+					<!-- <div class="col s12 m4">
             <div class="icon-block">
               <h2 class="center white-text"><i class="material-icons">attach_money</i></h2>
               <h5 class="center white-text">Gratis</h5>
@@ -216,115 +239,84 @@
               <p class="light white-text text-center">Dit systeem is gratis, en zal altijd gratis blijven.</p>
             </div>
           </div> -->
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center white-text"><i class="material-icons">functions</i></h2>
-              <h5 class="center white-text">Functioneel</h5>
-              <p class="light white-text text-center">Met de vele instelbare functies loopt dit systeem vooruit op Magisters software en kun je alles aanpassen zoals je zelf wilt!</p>
-            </div>
-          </div>
-        </div>
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center white-text"><i class="material-icons">functions</i></h2>
+							<h5 class="center white-text">Functioneel</h5>
+							<p class="light white-text text-center">Met de vele instelbare functies kun je alles
+								aanpassen zoals je zelf wilt!</p>
+						</div>
+					</div>
+				</div>
 
-      </div>
-      <br><br>
-    </div>
-  </div>
+			</div>
+			<br><br>
+		</div>
+	</div>
 
-  <div class="parallax-container" style="max-height: 100px !important;">
-    <div class="parallax"><img src="1.jpg" style="max-width: 100%; height: auto; width: auto; filter: blur(10px); -webkit-filter: blur(10px);"></div>
-  </div>
+	<div class="parallax-container" style="max-height: 100px !important;">
+		<div class="parallax"><img src="1.jpg"
+				style="max-width: 100%; height: auto; width: auto; filter: blur(10px); -webkit-filter: blur(10px);">
+		</div>
+	</div>
 
-  <div align="center">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- MagBot -->
-    <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-7087395823701039"
-          data-ad-slot="8931342739"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-  
-  <div id="successmodal" class="modal" style="outline: none">
-    <div class="modal-content">
-      <h4>Doneren</h4>
-      <div>
-
-        <p>Heeft u veel aan magbot? Laat van u horen en stuur ons een mailtje op <a href='mailto:info@magbot.nl'>info@magbot.nl</a>!<br>
-        Het maken en levend houden van MagBot kost geld. Wilt u ons daarbij helpen? Dat kan!</p>
-        <!-- <br> -->
-        <span><em>Waarom doneren?</em></span>
-        <span style="display: block !important;">• Supporten van Magbot, zodat iedereen er gebruik kan van blijven maken.</span>
-        <span style="display: block !important;">• In plaats van de komende 2 weken in je agenda, krijg je de komende 8(!) weken in je agenda. 
-          Zo kan je toetsen en andere belangerijke afspraken al ruim van te voren zien aankomen.</span>
-        <br>
-        <p>Wij geven het synchroniseren van meer weken cadeau als dank voor donaties boven de €5,-<br>
-        <b>Wilt u meer weken? Vermeldt bij de betaling uw magister gebruikersnaam en/of email, zodat dit doorgevoerd kan worden in het systeem!</b><br>
-        <br><em> - Sjoerd & Kasper</em></p>
-    
-        <div style="float: left; margin-bottom: 23px;">
-          <p><b>PayPal</b></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input type="hidden" name="hosted_button_id" value="RJKJQXHT9HZTL" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" width="1" height="1" />
-          </form>
-        </div>
-    
-        <div style="float: right; margin-bottom: 23px;">
-          <p><b>iDeal</b></p>
-          <a class="waves-effect waves-light btn magister-blue" onclick="location.href='https://bunq.me/magbot'">donate</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="page-footer magister-blue">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">MagBot credits</h5>
-            <a class="grey-text text-lighten-4">Magbot3 => <a class="grey-text text-lighten-2">@sj3rd en @7kasper</a></a><br>
-            <a class="grey-text text-lighten-4">MagisterJS => <a class="grey-text text-lighten-2">@lieuwex, @idiidk, @7kasper en @sj3rd</a></a><br>
-            <a class="grey-text text-lighten-4">MaterializeCSS => <a class="grey-text text-lighten-2">@materialize</a></a><br>
-            <a class="grey-text text-lighten-4">Google API's => <a class="grey-text text-lighten-2">@google</a></a><br>
-            <a class="grey-text text-lighten-4">Magister => <a class="grey-text text-lighten-2">@schoolmaster</a></a>
-  
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Informatie</h5>
-            <ul>
-              <li><a class="white-text" href="https://magbot.nl/privacy">Privacy Policy</a></li>
-              <li><a class="white-text" href="https://magbot.nl/terms">Terms of Service (EULA)</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Makers</h5>
-            <ul>
-              <li><a class="white-text" href="https://github.com/7kasper">7kasper</a></li>
-              <li><a class="white-text" href="https://github.com/Sj3rd">sj3rd</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          Site made by <a class="orange-text text-lighten-3" href="https://netlob.app">Netlob</a>
-          <div style="float: right">
-            <input type="image" class="modal-trigger" href="#successmodal" id="successmodal-open" src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif" border="0" onclick="$('#successmodal-open')[0].click()"/>
-          </div>
-        </div>
-      </div>
-    </footer>
+	<div align="center">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- MagBot -->
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7087395823701039"
+			data-ad-slot="8931342739" data-ad-format="auto" data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
 
 
-  <!--  Scripts-->
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  </body>
+
+
+	<footer class="page-footer magister-blue">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">MagBot credits</h5>
+					<a class="grey-text text-lighten-4">Magbot3 => <a class="grey-text text-lighten-2">@sj3rd en
+							@7kasper</a></a><br>
+					<a class="grey-text text-lighten-4">MagisterJS => <a class="grey-text text-lighten-2">@lieuwex,
+							@idiidk, @7kasper en @sj3rd</a></a><br>
+					<a class="grey-text text-lighten-4">MaterializeCSS => <a
+							class="grey-text text-lighten-2">@materialize</a></a><br>
+					<a class="grey-text text-lighten-4">Google API's => <a
+							class="grey-text text-lighten-2">@google</a></a><br>
+					<a class="grey-text text-lighten-4">Magister => <a
+							class="grey-text text-lighten-2">@schoolmaster</a></a>
+
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Informatie</h5>
+					<ul>
+						<li><a class="white-text" href="https://magbot.nl/privacy">Privacy Policy</a></li>
+						<li><a class="white-text" href="https://magbot.nl/terms">Terms of Service (EULA)</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Makers</h5>
+					<ul>
+						<li><a class="white-text" href="https://github.com/7kasper">7kasper</a></li>
+						<li><a class="white-text" href="https://github.com/Sj3rd">sj3rd</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				Site made by <a class="orange-text text-lighten-3" href="https://netlob.app">Netlob</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--  Scripts-->
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+</body>
+
 </html>

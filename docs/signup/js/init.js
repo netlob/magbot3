@@ -100,7 +100,7 @@ function signInCallback(authResult) {
 				setError('Oopsie', 'Geen geldige school. Kies een school uit de lijst', 'https://magbot.nl/signup/')
 			}
 		} else {
-			setError('Oopsie', 'Vul alle velden in (Schoolnaam, Magistergebruikersnaam en Magisterwachtwoord) en probeer het opnieuw', 'https://magbot.nl/signup/')
+			setError('Oopsie', 'Vul alle velden in (Schoolnaam, gebruikersnaam en wachtwoord) en probeer het opnieuw', 'https://magbot.nl/signup/')
 		}
 	} else {
 		M.toast({
@@ -112,10 +112,10 @@ function signInCallback(authResult) {
 
 function getError(error) {
 	if (error == 'error: AuthError: Invalid username') {
-		return 'Ongeldige Magister gebruikersnaam, probeer het nog eens.'
+		return 'Ongeldige gebruikersnaam, probeer het nog eens.'
 	}
 	if (error == 'error: AuthError: Invalid password') {
-		return 'Ongeldig Magister wachtwoord, probeer het nog eens.'
+		return 'Ongeldig wachtwoord, probeer het nog eens.'
 	}
 	if (error == 'error: Error: school and username&password or token are required.') {
 		return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.'
