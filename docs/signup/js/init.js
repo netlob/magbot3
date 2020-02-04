@@ -38,7 +38,7 @@ function signInCallback(authResult) {
 		if (school && username && password) {
 			if (school in schools) {
 				school = schools[school]; //get school url
-				$('#signinButton').attr('style', 'display: none');
+				// $('#signinButton').attr('style', 'display: none');
 				var data = null;
 
 				var xhr = new XMLHttpRequest();
