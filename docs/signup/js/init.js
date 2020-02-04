@@ -1,39 +1,43 @@
-(function ($) {
-	$(function () {
-
-		$('.sidenav').sidenav();
-		$('.modal').modal();
-		$('.parallax').parallax();
-		$('input.autocomplete').autocomplete({
-			data: completeSchools,
+(function($) {
+	$(function() {
+		$(".sidenav").sidenav();
+		$(".modal").modal();
+		$(".parallax").parallax();
+		$("input.autocomplete").autocomplete({
+			data: completeSchools
 		});
-
 	});
 })(jQuery);
 
 function autocompleteDropdown() {
-	var instance = M.Autocomplete.getInstance($('input.autocomplete'));
+	var instance = M.Autocomplete.getInstance($("input.autocomplete"));
 	instance.open();
 }
 
 function signInCallback(authResult) {
-	if (authResult['code']) {
+	if (authResult.code) {
 		M.toast({
-			html: 'Bezig met authorizeren...'
-		})
-		var school = document.getElementById('autocomplete-input').value;
-		var username = document.getElementById('username').value;
-		var password = document.getElementById('password').value;
-		var fullcalendar = $("#fullcalendar").is(":checked") ? true : false
-		var splitcalendars = $("#splitcalendars").is(":checked") ? true : false
-		var simplesummary = $("#simplesummary").is(":checked") ? true : false
-		var simpleshowteacher = $("#simpleshowteacher").is(":checked") ? true : false
-		var showschoolhour = $("#showschoolhour").is(":checked") ? true : false
-		var showoutages = $("#showoutages").is(":checked") ? true : false
-		var remindermin = document.getElementById('notify').value;
-		var specialemailreminder = $("#specialemailreminder").is(":checked") ? true : false
-		var specialdayreminder = $("#specialdayreminder").is(":checked") ? true : false
-		var specialcolors = $("#specialcolors").is(":checked") ? true : false
+			html: "Bezig met authorizeren..."
+		});
+		var school = document.getElementById("autocomplete-input").value;
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		var fullcalendar = $("#fullcalendar").is(":checked") ? true : false;
+		var splitcalendars = $("#splitcalendars").is(":checked") ? true : false;
+		var simplesummary = $("#simplesummary").is(":checked") ? true : false;
+		var simpleshowteacher = $("#simpleshowteacher").is(":checked")
+			? true
+			: false;
+		var showschoolhour = $("#showschoolhour").is(":checked") ? true : false;
+		var showoutages = $("#showoutages").is(":checked") ? true : false;
+		var remindermin = document.getElementById("notify").value;
+		var specialemailreminder = $("#specialemailreminder").is(":checked")
+			? true
+			: false;
+		var specialdayreminder = $("#specialdayreminder").is(":checked")
+			? true
+			: false;
+		var specialcolors = $("#specialcolors").is(":checked") ? true : false;
 
 		if (school && username && password) {
 			if (school in schools) {
@@ -44,38 +48,53 @@ function signInCallback(authResult) {
 				var xhr = new XMLHttpRequest();
 				xhr.withCredentials = true;
 
-				xhr.addEventListener("readystatechange", function () {
+				xhr.addEventListener("readystatechange", function() {
 					if (this.readyState === 4) {
 						console.log(this.responseText);
-						if (this.responseText == 'success: user created') {
+						if (this.responseText == "success: user created") {
 							M.toast({
-								html: 'Succesvol geactiveerd!'
-							})
-							setError('Succes', getError(this.responseText), 'https://magbot.nl/')
+								html: "Succesvol geactiveerd!"
+							});
+							setError(
+								"Succes",
+								getError(this.responseText),
+								"https://magbot.nl/"
+							);
 						} else {
-							if (this.responseText == 'success: user updated') {
-								setError('Succes', getError(this.responseText), 'https://magbot.nl/')
+							if (this.responseText == "success: user updated") {
+								setError(
+									"Succes",
+									getError(this.responseText),
+									"https://magbot.nl/"
+								);
 								M.toast({
-									html: 'Succesvol geüpdatet!'
-								})
+									html: "Succesvol geüpdatet!"
+								});
 							} else {
 								M.toast({
-									html: 'Error :('
-								})
-								setError('Oopsie', getError(this.responseText), 'https://magbot.nl/signup/')
+									html: "Error :("
+								});
+								setError(
+									"Oopsie",
+									getError(this.responseText),
+									"https://magbot.nl/signup/"
+								);
 							}
 						}
 					}
 				});
 
-				xhr.ontimeout = function (e) {
+				xhr.ontimeout = function(e) {
 					M.toast({
-						html: 'Error: geen reactie van de server'
-					})
-					setError('Oopsie', getError('error: timed out'), 'https://magbot.nl/signup/')
+						html: "Error: geen reactie van de server"
+					});
+					setError(
+						"Oopsie",
+						getError("error: timed out"),
+						"https://magbot.nl/signup/"
+					);
 					// XMLHttpRequest timed out. Do something here.
 				};
-
 
 				xhr.open("POST", "https://server.magbot.nl");
 				xhr.setRequestHeader("code", authResult.code);
@@ -89,70 +108,87 @@ function signInCallback(authResult) {
 				xhr.setRequestHeader("showschoolhour", showschoolhour);
 				xhr.setRequestHeader("showoutages", showoutages);
 				xhr.setRequestHeader("remindermin", remindermin);
-				xhr.setRequestHeader("specialemailreminder", specialemailreminder);
+				xhr.setRequestHeader(
+					"specialemailreminder",
+					specialemailreminder
+				);
 				xhr.setRequestHeader("specialdayreminder", specialdayreminder);
 				xhr.setRequestHeader("specialcolors", specialcolors);
 				M.toast({
-					html: 'Even geduld a.u.b.'
-				})
+					html: "Even geduld a.u.b."
+				});
 				xhr.send(data);
 			} else {
-				setError('Oopsie', 'Geen geldige school. Kies een school uit de lijst', 'https://magbot.nl/signup/')
+				setError(
+					"Oopsie",
+					"Geen geldige school. Kies een school uit de lijst",
+					"https://magbot.nl/signup/"
+				);
 			}
 		} else {
-			setError('Oopsie', 'Vul alle velden in (Schoolnaam, gebruikersnaam en wachtwoord) en probeer het opnieuw', 'https://magbot.nl/signup/')
+			setError(
+				"Oopsie",
+				"Vul alle velden in (Schoolnaam, gebruikersnaam en wachtwoord) en probeer het opnieuw",
+				"https://magbot.nl/signup/"
+			);
 		}
 	} else {
+		console.dir("google res", authResult);
 		M.toast({
-			html: 'Error: ' + authResult
-		})
+			html: "Error: " + authResult
+		});
 		// There was an error.
 	}
 }
 
 function getError(error) {
-	if (error == 'error: AuthError: Invalid username') {
-		return 'Ongeldige gebruikersnaam, probeer het nog eens.'
+	if (error == "error: AuthError: Invalid username") {
+		return "Ongeldige gebruikersnaam, probeer het nog eens.";
 	}
-	if (error == 'error: AuthError: Invalid password') {
-		return 'Ongeldig wachtwoord, probeer het nog eens.'
+	if (error == "error: AuthError: Invalid password") {
+		return "Ongeldig wachtwoord, probeer het nog eens.";
 	}
-	if (error == 'error: Error: school and username&password or token are required.') {
-		return 'Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.'
+	if (
+		error ==
+		"error: Error: school and username&password or token are required."
+	) {
+		return "Het lijkt erop dat de school die je hebt ingevuld niet klopt, probeer het nog eens.";
 	}
 	// if(error == 'user already exists') { return 'Het lijkt erop dat dit Magbot al geactiveerd is voor dit Magister account. Je hoeft dus niks meer te doen. <br> Wil je je calendar delen met vrienden of famillie? Dat kan, open de calendar in je Google Calendar app, en druk op delen.' }
 	// if(error == 'error: geen geldig Google calendarId') { return 'Magbot kan geen nieuwe calendar aanmaken voor dit Google Account. Probeer het nog eens.' }
-	if (error == 'error: TimeoutError: Timeout exceeded while waiting for event') {
-		return 'Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl'
+	if (
+		error == "error: TimeoutError: Timeout exceeded while waiting for event"
+	) {
+		return "Timeout: het duurt te lang voordat de server een antwoord kreeg van Magister of Google. Probeer het later nog eens.<br>Blijft dit probleem voortduren? Stuur dan een mailtje naar support@magbot.nl";
 	}
-	if (error == 'success: user updated') {
-		return `<p>Je gegevens en voorkeuren zijn succesvol geüpdatet!. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.</p>`
+	if (error == "success: user updated") {
+		return `<p>Je gegevens en voorkeuren zijn succesvol geüpdatet!. Het kan even duren voordat alles is doorgevoerd en correct in je agenda komt.</p>`;
 	}
-	if (error == 'success: user created') {
-		return `<p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geüpdatet worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>`
+	if (error == "success: user created") {
+		return `<p>Je account is succesvol geactiveerd, en zal afhankelijk van het tijdstip, ongeveer elk half uur geüpdatet worden. Mocht je je voorkeuren willen veranderen, kan dat zo: ga naar magbot.nl -> activeren, en vul opnieuw je gegevens in met je nieuwe voorkeuren. Je agenda zal van dan af gevuld worden met afspraken zoals jij het wilt!</p>`;
 	}
-	if (error == 'error: timed out') {
-		return '<p>Helaas hebben we geen antwoord van de server gekregen. Dit kan een aantal dingen betekenen: <span style="display: block">• Je internet werkt niet goed</span><span style="display: block">• De server is gecrasht</span><span style="display: block">• We zijn even aan het sleutelen aan het systeem</span>Probeer het later nog eens.</p>'
+	if (error == "error: timed out") {
+		return '<p>Helaas hebben we geen antwoord van de server gekregen. Dit kan een aantal dingen betekenen: <span style="display: block">• Je internet werkt niet goed</span><span style="display: block">• De server is gecrasht</span><span style="display: block">• We zijn even aan het sleutelen aan het systeem</span>Probeer het later nog eens.</p>';
 	}
-	return 'Er is een onbekende fout opgetreden, probeer het nog eens.'
+	return "Er is een onbekende fout opgetreden, probeer het nog eens.";
 }
 
-$('.modal-overlay').on("click", function () {
-	location.reload()
+$(".modal-overlay").on("click", function() {
+	location.reload();
 });
 
 function setError(title, message, href) {
-	var errorModal = document.getElementById('error-modal-open');
-	var errorModalTitle = document.getElementById('error-modal-title');
-	var errorModalText = document.getElementById('error-modal-text');
-	var errorModalButton = document.getElementById('error-modal-button');
+	var errorModal = document.getElementById("error-modal-open");
+	var errorModalTitle = document.getElementById("error-modal-title");
+	var errorModalText = document.getElementById("error-modal-text");
+	var errorModalButton = document.getElementById("error-modal-button");
 
 	//errorModalButton.show();
 	//if(href == 'success') { errorModalButton.hide() }
 
 	errorModalTitle.innerHTML = title;
 	errorModalText.innerHTML = message;
-	errorModalButton.href = href ? href : '#!';
+	errorModalButton.href = href ? href : "#!";
 
 	errorModal.click();
 }
@@ -185,7 +221,7 @@ var schools = {
 	"Aloysius De Roosten": "sghetplein",
 	"Amadeus Lyceum": "amadeus",
 	"Amsfort College": "amsfortcollege",
-	"Amstellyceum": "msa",
+	Amstellyceum: "msa",
 	"Anna van Rijn College": "annavanrijn",
 	"Antoon Schellenscollege": "sghetplein",
 	"Arentheem College locatie Baken Warnsborn": "arentheem",
@@ -205,7 +241,7 @@ var schools = {
 	"Atlas Onderwijsgroep Locatie Rijswijk": "aog",
 	"Atlas Onderwijsgroep Lyceum Ypenburg": "aog",
 	"Avicenna College": "avicennacollege",
-	"Baanderherencollege": "bhc",
+	Baanderherencollege: "bhc",
 	"Baudartius College": "baudartius",
 	"BC Broekhin": "broekhinsw",
 	"BC Broekhin Reuver": "broekhinsw",
@@ -220,16 +256,16 @@ var schools = {
 	"Beroepscollege Zoetermeer Praktijk": "beroepscollegezoetermeer-praktijk",
 	"Bertrand Russel College": "sovozaanstad",
 	"Bindelmeer College": "zaam",
-	"Blariacumcollege": "blariacum",
+	Blariacumcollege: "blariacum",
 	"Bogerman Balk": "cvozwfryslan",
 	"Bogerman Koudum": "cvozwfryslan",
 	"Bogerman Sneek": "cvozwfryslan",
 	"Bogerman Wommels": "cvozwfryslan",
-	"Bonaventuracollege": "bonaventura",
+	Bonaventuracollege: "bonaventura",
 	"Bonhoeffer College": "bonhoeffer",
 	"Bonifatius mavo": "vario",
 	"Bonnefanten College": "bonnefanten",
-	"BOOR": "boor",
+	BOOR: "boor",
 	"Bossche Vakschool": "bosschevakschool",
 	"Bouwens van der Boije College": "bbc",
 	"Bouwens van der Boijecollege": "hetbouwens",
@@ -262,7 +298,7 @@ var schools = {
 	"Chr. Gymnasium Beyers Naude": "cgbn",
 	"Chr. Gymnasium Sorghvliet": "sorghvliet",
 	"Chr. Lyceum Veenendaal": "clv",
-	"Chr. Mavo \"De Saad\"": "desaad",
+	'Chr. Mavo "De Saad"': "desaad",
 	"Chr. VMBO-Harderwijk": "morgencollege",
 	"Christelijk College Groevenbeek": "groevenbeek",
 	"Christelijk College Nassau-Veluwe": "ccnv",
@@ -284,7 +320,7 @@ var schools = {
 	"Compaen College": "sovozaanstad",
 	"Connect College": "connectcollege",
 	"Coornhert Lyceum": "20RF",
-	"Cor": "cor",
+	Cor: "cor",
 	"Corderius College": "corderius",
 	"Corlaer College": "corlaer",
 	"CS Vincent van Gogh": "csvvg",
@@ -328,7 +364,7 @@ var schools = {
 	"Dalton Den Haag": "daltondenhaag",
 	"Dalton Lyceum Barendrecht": "ozhw",
 	"Dalton Voorburg": "daltonvoorburg",
-	"Damstede": "zaam",
+	Damstede: "zaam",
 	"De Amsterdamsche School": "amsterdamsche",
 	"De Apollo": "zaam",
 	"De Baander": "baander",
@@ -364,8 +400,8 @@ var schools = {
 	"debrug.magister.net": "debrug",
 	"Dendron College": "dendron",
 	"Deutsche internationale Schule Den Haag": "disdh",
-	"Development": "dev.zentest.nl",
-	"Dockingacollege": "dockinga",
+	Development: "dev.zentest.nl",
+	Dockingacollege: "dockinga",
 	"Dominicus College": "dominicus",
 	"Don Bosco College": "donbosco",
 	"Dongemond college": "dongemond",
@@ -388,18 +424,18 @@ var schools = {
 	"Drenthe College Zwolle": "dc",
 	"Ds. Pierson College": "dspierson",
 	"Duin en Kruidberg mavo": "20EK",
-	"Eckartcollege": "eckart",
+	Eckartcollege: "eckart",
 	"Edudelta Onderwijsgroep": "edudelta",
 	"Edudelta Onderwijsgroep Barendrecht": "edudelta",
 	"Edudelta Onderwijsgroep Goes": "edudelta",
 	"Edudelta Onderwijsgroep Middelharnis": "edudelta",
-	"Eemsdeltacollege": "eemsdelta",
+	Eemsdeltacollege: "eemsdelta",
 	"Eerste Christelijk Lyceum": "eclh",
 	"Elde College": "elde",
 	"Elzendaalcollege Boxmeer": "elzendaalboxmeer",
 	"Elzendaalcollege Gennep": "elzendaalgennep",
 	"Emelwerda College": "emelwerda",
-	"Emmauscollege": "emmaus",
+	Emmauscollege: "emmaus",
 	"Erasmiaans Gymnasium": "erasmiaans",
 	"Erasmus College": "erasmus",
 	"Erasmus VO": "erasmusvo",
@@ -426,8 +462,8 @@ var schools = {
 	"Esprit scholen Mundus college": "esprit",
 	"Esprit Scholen Wissel": "esprit",
 	"Esprit Scholengroep": "esprit",
-	"Evang. School voor VO \"De Passie\"": "passie",
-	"Evang. School voor VO \"De Passie\" de Passie Utrecht": "passie",
+	'Evang. School voor VO "De Passie"': "passie",
+	'Evang. School voor VO "De Passie" de Passie Utrecht': "passie",
 	"Farel en Oostwende College": "farel",
 	"Fioretti College": "fioretti",
 	"Flex College": "flexcollege",
@@ -459,13 +495,13 @@ var schools = {
 	"Graaf Huyn College": "ghc",
 	"Graafschap College": "gc",
 	"Grafisch Lyceum Rotterdam": "glr",
-	"Greijdanus": "greijdanus",
+	Greijdanus: "greijdanus",
 	"Greijdanus Enschede": "greijdanus",
 	"Greijdanus Hardenberg": "greijdanus",
 	"Greijdanus Meppel": "greijdanus",
 	"Greijdanus Zwolle": "greijdanus",
 	"Griendencollege-VMBO": "grienden",
-	"Groevenbeek": "groevenbeek",
+	Groevenbeek: "groevenbeek",
 	"Groot Goylant": "atscholen",
 	"Grotius College": "grotiuscollege",
 	"Grotius College Delft": "grotiuscollege",
@@ -487,13 +523,13 @@ var schools = {
 	"Haemstede Barger VMBO-T": "barger",
 	"Hans Petrischool": "hanspetri",
 	"Harens Lyceum": "o2groningen",
-	"Hartenlustschool": "hartenlustmavo",
+	Hartenlustschool: "hartenlustmavo",
 	"Havo De Hof": "zaam",
 	"Havo Notre Dame des Anges": "notredame",
 	"Havo/vwo voor Muziek en Dans": "lmc-vo",
 	"Heerbeeck College": "vobo",
 	"Helicon Opleidingen": "helicon",
-	"helpdesk": "helpdesk",
+	helpdesk: "helpdesk",
 	"Hendrik Pierson College": "hpc",
 	"Herbert Vissers College": "hvc",
 	"Hermann Wesselink College": "hermannwesselink",
@@ -532,12 +568,12 @@ var schools = {
 	"Hildegardis Mavo": "lmc-vo",
 	"HMC MBO Vakschool": "hmlc",
 	"Hofstede Praktijkschool": "hofstede",
-	"Hogelant": "zaam",
+	Hogelant: "zaam",
 	"Hoofdvaart College": "hoofdvaart",
 	"Horeca Vakschool Rotterdam": "lmc-vo",
 	"Hout- en Meubileringscollege HMC Amsterdam": "hmlc",
 	"Hout- en Meubileringscollege HMC Rotterdam": "hmlc",
-	"Houtens": "houtens",
+	Houtens: "houtens",
 	"Houtkamp College": "houtkamp",
 	"Hubertus & Berkhoff": "vova",
 	"Huygens College": "zaam",
@@ -549,7 +585,7 @@ var schools = {
 	"ID College": "idcollege",
 	"Iedersland College": "zaam",
 	"IJburg College": "ijburg",
-	"IJsselcollege": "ijsselcollege",
+	IJsselcollege: "ijsselcollege",
 	"Instituut Blankestijn": "blankestijn",
 	"Interconf. Hofstadcollege Heldring VMBO": "hofstadcollege",
 	"Interconf. Hofstadcollege Hofstad Lyceum": "hofstadcollege",
@@ -560,7 +596,7 @@ var schools = {
 	"Ir. Lely Lyceum": "lelylyceum",
 	"ISG Arcus": "svol",
 	"ISG Ibn Ghaldoun": "avicennacollege",
-	"ISW": "isw",
+	ISW: "isw",
 	"IVA Driebergen": "ivadriebergen",
 	"IVO Deurne": "ivodeurne",
 	"IVO Deurne Alfrinkcollege": "ivodeurne",
@@ -593,10 +629,10 @@ var schools = {
 	"Koning Willem I College": "vavo-kw1c",
 	"Koning Willem II College": "willem2",
 	"Koninklijk Conservatorium": "svjt",
-	"Kranenburgschool": "kranenburg",
+	Kranenburgschool: "kranenburg",
 	"Krimpenerwaard College": "kwcollege",
 	"Kromme Rijn College": "krommerijncollege",
-	"KSE": "kse",
+	KSE: "kse",
 	"KSE Etten-Leur": "kse",
 	"KSG De Breul": "debreul",
 	"Kwadrant Scholengroep": "sgkwadrant",
@@ -612,8 +648,8 @@ var schools = {
 	"Leonardo College": "davinci",
 	"Libanon Lyceum": "llr",
 	"Linde College": "lindecollege",
-	"Lingecollege": "lingecollege",
-	"lmc": "lmc-vo",
+	Lingecollege: "lingecollege",
+	lmc: "lmc-vo",
 	"LMC-VO": "lmc-vo",
 	"Lodewijk College": "vozvl",
 	"Lorentz Casimir Lyceum": "lcl",
@@ -621,7 +657,7 @@ var schools = {
 	"LUCA Praktijkschool": "vova",
 	"Lucius Petrus Mavo": "lmc-vo",
 	"Ludger College": "ludger",
-	"Luzac": "luzac",
+	Luzac: "luzac",
 	"Luzac Opleidingen": "luzac",
 	"LVO Parkstad": "parkstad",
 	"LVO Weert": "weert",
@@ -634,7 +670,7 @@ var schools = {
 	"Lyceum Schondeln": "schondeln",
 	"Lyceum Ypenburg": "ypenburg",
 	"Maarten van Rossem": "20tz",
-	"Maaslandcollege": "maaslandcollege",
+	Maaslandcollege: "maaslandcollege",
 	"Maaslandcollege Oss": "maaslandcollege",
 	"Maerlant College Brielle": "maerlant",
 	"Maerlant Lyceum Den Haag": "maerlantlyceum",
@@ -647,7 +683,7 @@ var schools = {
 	"Maritieme Academie Harlingen": "mch",
 	"Marne College": "cvozwfryslan",
 	"Marnix College": "marnix",
-	"Martinuscollege": "martinus",
+	Martinuscollege: "martinus",
 	"Maurick College": "maurick",
 	"Mavo Roermond": "mavoroermond",
 	"Mavo Schravenlant XL": "mavoschravenlant",
@@ -656,7 +692,7 @@ var schools = {
 	"Meander College": "landstedevo",
 	"Mediacollege Amsterdam": "mediacollege",
 	"Mencia de Mendoza": "mencia",
-	"Mendelcollege": "mendel",
+	Mendelcollege: "mendel",
 	"Menno Reitsma": "menno",
 	"Meridiaan College": "zaam",
 	"Meridiaan College `t Hooghe Landt": "meridiaan-college",
@@ -664,18 +700,18 @@ var schools = {
 	"Meridiaan College Het Nieuwe Eemland": "meridiaan-college",
 	"Meridiaan College Mavo Muurhuizen": "meridiaan-college",
 	"Meridiaan College Vakcollege Amersfoort": "meridiaan-college",
-	"Merletcollege": "merlet",
-	"Metameer": "stevensbeek",
+	Merletcollege: "merlet",
+	Metameer: "stevensbeek",
 	"Metis Montessori Lyceum": "msa",
 	"Metzo College": "metzo",
 	"Mgr. A.E. Rientjes Mavo": "rientjes",
 	"Mgr. Frencken College": "frencken",
-	"Middelharnis": "middelharnis",
-	"Mijnschool": "mijnschool",
+	Middelharnis: "middelharnis",
+	Mijnschool: "mijnschool",
 	"Mill Hillcollege": "mill-hill",
 	"Minkema College": "minkema",
-	"Mollercollege": "mollerlyceum",
-	"Mollerlyceum": "mollerlyceum",
+	Mollercollege: "mollerlyceum",
+	Mollerlyceum: "mollerlyceum",
 	"Mondial College": "mondial",
 	"Montessori College Aerdenhout": "02YH",
 	"Montessori College Arnhem (MCA)": "mca",
@@ -687,23 +723,23 @@ var schools = {
 	"Montessori Vaklyceum": "o2groningen",
 	"Montfort College": "lmc-vo",
 	"Morgen College": "morgencollege",
-	"MSA": "msa",
+	MSA: "msa",
 	"MSA IVKO": "msa",
 	"Munnikenheide College": "munnikenheide",
 	"Murmellius Gymnasium": "murmellius",
 	"MY college": "mycollege",
 	"Mytylschool De Brug": "debrug",
-	"Newmancollege": "newman",
+	Newmancollege: "newman",
 	"Niekee Roermond": "niekee",
 	"Niftarlake College": "niftarlake",
 	"Nijmeegse Sg Groenewoud": "groenewoud",
-	"Nimeto": "nimeto",
-	"Noorderlicht": "zaam",
+	Nimeto: "nimeto",
+	Noorderlicht: "zaam",
 	"Noorderpoort LBS": "noorderpoortlbs",
 	"Novalis College": "sgvvs",
-	"NSG": "groenewoud",
+	NSG: "groenewoud",
 	"Nuborgh College": "nuborgh",
-	"Nuovo": "nuovo",
+	Nuovo: "nuovo",
 	"OCL Het Waterland": "waterland",
 	"OdyZee College": "odyzee",
 	"Olympus College": "olympus",
@@ -750,7 +786,7 @@ var schools = {
 	"Over-Y College": "zaam",
 	"OVO Zaanstad": "sovozaanstad",
 	"Pallas Athene College": "pac",
-	"Palmentuin": "lmc-vo",
+	Palmentuin: "lmc-vo",
 	"Panora Lyceum": "panora",
 	"Parcival College": "pcg",
 	"Parcival College Groningen": "pcg",
@@ -784,7 +820,7 @@ var schools = {
 	"Prisma College": "prisma",
 	"Pro College regio Nijmegen": "procollege",
 	"pro-roermond.magister.net": "pro-roermond",
-	"Produs": "symbion",
+	Produs: "symbion",
 	"Prof. Dr. Gunningschool": "18ec",
 	"Pronova Praktijkonderwijs": "pronova",
 	"Purmerendse SG": "psg",
@@ -796,10 +832,10 @@ var schools = {
 	"Purmerendse SG W.J. Bladergroen": "psg",
 	"Raayland College": "raayland",
 	"Radulphus College": "radulphus",
-	"Reconvalescentenschool": "recon",
+	Reconvalescentenschool: "recon",
 	"Reeshof College": "reeshof",
 	"Rembrandt College": "rembrandt",
-	"Reynaertcollege": "vozvl",
+	Reynaertcollege: "vozvl",
 	"Rietveld Lyceum": "rietveldlyceum",
 	"ROC Menso Alting": "mensoalting",
 	"ROC Mondriaan MBO": "rocmondriaanmbo",
@@ -861,7 +897,7 @@ var schools = {
 	"SG Maarsbergen": "vakcollege-osgs",
 	"SG Sint Ursula": "ursula",
 	"SG Ubbo Emmius": "ubboemmius",
-	"SGVVS": "sgvvs",
+	SGVVS: "sgvvs",
 	"Simon van Hasselt": "o2groningen",
 	"Sint Joriscollege": "sghetplein",
 	"Sint Odulphuslyceum": "odulphus",
@@ -875,17 +911,17 @@ var schools = {
 	"Sint-Nicolaaslyceum": "nicolaas",
 	"Sint-Oelbertgymnasium": "oelbert",
 	"Sint-Stanislascollege": "stanislas",
-	"SiNTLUCAS": "sintlucas",
+	SiNTLUCAS: "sintlucas",
 	"SiNTLUCAS Boxtel": "sintlucas",
 	"SiNTLUCAS Eindhoven": "sintlucas",
 	"SiNTLUCAS VMBO": "sintlucas-vmbo",
-	"Slinge": "lmc-vo",
+	Slinge: "lmc-vo",
 	"SMC Maastricht": "smc",
 	"SOMA College": "soma",
 	"Sondervick College": "sondervick",
-	"Sophianum": "sophianum",
+	Sophianum: "sophianum",
 	"Spinoza Lyceum": "spinoza",
-	"Sprengeloo": "sprengeloo",
+	Sprengeloo: "sprengeloo",
 	"St-Gregorius College": "gregorius",
 	"St. Aloysius College Hilversum": "atscholen",
 	"St. Bonifatiuscollege": "bonifatius",
@@ -895,8 +931,8 @@ var schools = {
 	"St.-Jozefmavo Vlaardingen": "sjm",
 	"St.-Jozefschool voor MAVO Vlaardingen": "sjm",
 	"Stad en Esch": "stadenesch",
-	"Stadslyceum": "o2groningen",
-	"Stanislascollege": "stanislas",
+	Stadslyceum: "o2groningen",
+	Stanislascollege: "stanislas",
 	"Staring College": "staring",
 	"Stedelijk College Zoetermeer": "scz",
 	"Stedelijk Dalton College Alkmaar": "daltonalkmaar",
@@ -924,26 +960,26 @@ var schools = {
 	"Stichting voor Voortgezet Onderwijs Lelystad": "svol",
 	"Stichtse Vrije School": "sgvvs",
 	"Strabrecht College": "strabrecht",
-	"SVOL": "svol",
+	SVOL: "svol",
 	"Sweelinck College": "zaam",
-	"SWPTeam": "swpteam",
+	SWPTeam: "swpteam",
 	"SWV de Delta": "dedelta",
-	"Symbion": "symbion",
+	Symbion: "symbion",
 	"t Atrium Amersfoort": "atrium",
 	"Tabor College": "tabor",
-	"Talentstad": "landstedevo",
+	Talentstad: "landstedevo",
 	"Technisch en Maritiem College Velsen": "tmcv",
 	"Tender College": "tender",
 	"Tender Wellant": "tenderwellant",
 	"Terra Nigra": "terranigra",
-	"Tessenderlandt": "tessenderlandt",
-	"Thamen": "thamen",
+	Tessenderlandt: "tessenderlandt",
+	Thamen: "thamen",
 	"Thamen RKSG": "thamen",
-	"Theresialyceum": "theresia",
+	Theresialyceum: "theresia",
 	"Thorbecke SG": "thorbecke",
 	"Thorbecke SG Zwolle": "thorbecke",
 	"Thorbecke VO": "tvo-rotterdam",
-	"Tobiasschool": "vova",
+	Tobiasschool: "vova",
 	"Tobiasschool Den Haag": "vszh",
 	"Tobiasschool Nijmegen": "sgvvs",
 	"Topsport Talentschool": "o2groningen",
@@ -951,13 +987,13 @@ var schools = {
 	"Trias VMBO": "sovozaanstad",
 	"Trivium College": "triviumcollege",
 	"Udens College": "udens",
-	"Ulenhofcollege": "ulenhof",
+	Ulenhofcollege: "ulenhof",
 	"Vak College Hillegersberg": "lmc-vo",
 	"Vakcollege Eindhoven": "sghetplein",
 	"Vakcollege Helmond": "helmond",
 	"Vakcollege Maarsbergen": "vakcollege-osgs",
 	"Vakcollege Noordoostpolder": "noordoostpolder",
-	"Valuascollege": "valuas",
+	Valuascollege: "valuas",
 	"Van der Meij College": "vmc",
 	"Van Lodenstein College": "lodenstein",
 	"Van Lodensteincollege": "lodenstein",
@@ -970,7 +1006,7 @@ var schools = {
 	"Vecht-College": "vecht-college",
 	"Vechtdal College": "vechtdal",
 	"VeenLanden College": "veenlanden",
-	"Veenoord": "lmc-vo",
+	Veenoord: "lmc-vo",
 	"Vellesan College": "20EK",
 	"Vereniging voor CVO in Noord Fryslan": "cvo-nf",
 	"Vespucci College": "vespucci",
@@ -999,10 +1035,10 @@ var schools = {
 	"VSO Hendrik Mol": "viertaalcollege",
 	"Walburg College Zwijndrecht": "ozhw",
 	"Waterlant College IJdoorn": "zaam",
-	"Wellantcollege": "wellantcollege",
+	Wellantcollege: "wellantcollege",
 	"Werkman VMBO": "o2groningen",
-	"Wilco": "wilco.zenacc.nl",
-	"Wildveld": "wildveld",
+	Wilco: "wilco.zenacc.nl",
+	Wildveld: "wildveld",
 	"Willem de Zwijger College": "willemdezwijger",
 	"Willem de Zwijger College Bussum": "wdz",
 	"Willem de Zwijger College Hardinxveld-Giessendam": "willemdezwijger",
@@ -1019,20 +1055,20 @@ var schools = {
 	"Wolfert van Borselen scholengroep Wolfert RISS": "wolfert",
 	"Wolfert van Borselen scholengroep Wolfert Tweetalig": "wolfert",
 	"Young Business School Rotterdam": "lmc-vo",
-	"ZAAM": "zaam",
+	ZAAM: "zaam",
 	"Zaanlands Lyceum": "sovozaanstad",
 	"Zone.college": "zone",
 	"Zorg & Werk Academy": "zorgenwerk",
 	"Zuiderlicht College": "zaam",
-	"Zuiderpark": "lmc-vo",
+	Zuiderpark: "lmc-vo",
 	"Zuiderzee College": "sovozaanstad",
 	"Zuyderzee Lyceum": "vario",
 	"Zwijsen College": "zwijsen",
 	"Zwin College": "vozvl"
-}
+};
 
 // For autocomplete
-var completeSchools = Object.keys(schools).reduce(function (prev, cur) {
+var completeSchools = Object.keys(schools).reduce(function(prev, cur) {
 	prev[cur] = null;
 	return prev;
 }, {});
