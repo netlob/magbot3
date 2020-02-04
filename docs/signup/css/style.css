@@ -1,31 +1,70 @@
+body {
+	background-color: #311b92;
+}
 .icon-block {
-  padding: 0 15px;
+	padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
 }
 .signup-form {
-  width: auto;
-  padding-right: 20px;
-  max-width: 500px;
-  margin: 0 auto;
+	width: auto;
+	padding-right: 20px;
+	max-width: 500px;
+	margin: 0 auto;
 }
 .animateFade {
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
-  border: none !important;
-  /* margin-top: 20px !important; */
-  display: none;
+	transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out;
+	border: none !important;
+	/* margin-top: 20px !important; */
+	display: none;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: 0 0 0 30px white inset !important;
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-    border-bottom: 1px solid #311b92 !important;
+	box-shadow: 0 0 0 30px white inset !important;
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+	border-bottom: 1px solid #311b92 !important;
 }
 input {
-  color: black !important;
+	color: black !important;
+}
+
+#customBtn {
+	display: inline-block;
+	background: white;
+	color: #444;
+	width: 190px;
+	border-radius: 5px;
+	border: thin solid #888;
+	box-shadow: 1px 1px 1px grey;
+	white-space: nowrap;
+}
+#customBtn:hover {
+	cursor: pointer;
+}
+span.label {
+	font-family: serif;
+	font-weight: normal;
+}
+span.icon {
+	background: url("/identity/sign-in/g-normal.png") transparent 5px 50%
+		no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+}
+span.buttonText {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 42px;
+	padding-right: 42px;
+	font-size: 14px;
+	font-weight: bold;
+	/* Use the Roboto font that is loaded in the <head> */
+	font-family: "Roboto", sans-serif;
 }

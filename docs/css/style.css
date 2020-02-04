@@ -1,12 +1,15 @@
+body {
+	background-color: #311b92;
+}
 .icon-block {
-  padding: 0 15px;
+	padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
 }
 .signup-form {
-  width: auto;
-  padding-right: 20px;
-  max-width: 500px;
-  margin: 0 auto;
+	width: auto;
+	padding-right: 20px;
+	max-width: 500px;
+	margin: 0 auto;
 }
