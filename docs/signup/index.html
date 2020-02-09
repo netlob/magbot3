@@ -31,6 +31,7 @@
             media="screen,projection"/>
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon"/>
         <script>
+var auth2;
             // $(document)     .ready(function () {         console.log("Initializing the
             // Google oauth button!");         gapi.load("auth2", function () {
             // auth2 = gapi                 .auth2                 .init({client_id:
@@ -50,7 +51,7 @@
 
                 console.log("Initializing the Google oauth button!");
                 gapi.load("auth2", function () {
-                    var auth2 = gapi
+                    auth2 = gapi
                         .auth2
                         .init({client_id: "404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com", scope: "https://www.googleapis.com/auth/calendar", redirect_uri: "https://magbot.nl"});
                 });
