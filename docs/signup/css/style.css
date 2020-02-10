@@ -68,3 +68,19 @@ span.buttonText {
 	/* Use the Roboto font that is loaded in the <head> */
 	font-family: "Roboto", sans-serif;
 }
+.overlay {
+	position: absolute;
+	display: block;
+	top: 63px;
+	width: 100vw;
+	left: 0px;
+	height: 700px;
+	z-index: 100;
+	color: #000;
+	backdrop-filter: blur(10px);
+	cursor: block;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+#index-banner {
+	background-color: #fff;
+}
