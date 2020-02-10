@@ -31,7 +31,7 @@
             media="screen,projection"/>
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon"/>
         <script>
-var auth2;
+            var auth2;
             // $(document)     .ready(function () {         console.log("Initializing the
             // Google oauth button!");         gapi.load("auth2", function () {
             // auth2 = gapi                 .auth2                 .init({client_id:
@@ -50,10 +50,26 @@ var auth2;
             function renderButton() {
 
                 console.log("Initializing the Google oauth button!");
-                gapi.load("auth2", function () {
+                M.toast({
+                    html: "Initalizing oauth..."
+                });
+                gapi.load("auth2", () => {
                     auth2 = gapi
                         .auth2
-                        .init({client_id: "404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com", scope: "https://www.googleapis.com/auth/calendar", redirect_uri: "https://magbot.nl"});
+                        .init({client_id: "404820325442-ivr8klgohd73pm2lme8bmpc241prn03c.apps.googleusercontent.com", scope: "https://www.googleapis.com/auth/calendar", redirect_uri: "https://magbot.nl"})
+                        console.log("Initalized the Google oauth button!");
+                        M.toast({
+                            html: "Successfully initalized oauth!"
+                        });
+                        $('#signinButton')
+                            .click(() => {
+                                // TODO: when everything works
+                                // replace with this to make user have to login less or so
+                                // auth2.grantOfflineAccess({prompt: 'select_account'}).then(signInCallback);
+                                auth2
+                                    .grantOfflineAccess({prompt: 'select_account'})
+                                    .then(signInCallback);
+                            });
                 });
                 // gapi.signin2.render('my-signin2', {     'scope':
                 // 'https://www.googleapis.com/auth/calendar',     'width': 300,     'height':
@@ -313,15 +329,6 @@ var auth2;
 
                     <script>
                         // attachSignin(document.getElementById("customBtn"));
-                        $('#signinButton')
-                            .click(function () {
-                                // TODO: when everything works
-                                // replace with this to make user have to login less or so
-                                // auth2.grantOfflineAccess({prompt: 'select_account'}).then(signInCallback);
-                                auth2
-                                    .grantOfflineAccess({prompt: 'select_account'})
-                                    .then(signInCallback);
-                            });
                     </script>
 
                     <br/><br/><br/>
