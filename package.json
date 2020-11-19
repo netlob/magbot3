@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mamorgen/magbot3.git"
+    "url": "git+https://github.com/netlob/magbot3.git"
   },
   "keywords": [
     "magister",
@@ -22,9 +22,9 @@
   "author": "Sj3rd, 7kasper",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mamorgen/magbot3/issues"
+    "url": "https://github.com/netlob/magbot3/issues"
   },
-  "homepage": "https://github.com/mamorgen/magbot3#readme",
+  "homepage": "https://github.com/netlob/magbot3#readme",
   "dependencies": {
     "@magisterjs/dynamic-authcode": "^1.1.0",
     "bookshelf": "^0.14.2",
